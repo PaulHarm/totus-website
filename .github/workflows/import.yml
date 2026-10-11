@@ -1,0 +1,46 @@
+name: Live-Seite importieren (einmalig)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Dateien von totus.info laden
+        run: |
+          mkdir -p site
+          FILES="index.html en.html plattform.html invest.html resicore.html pani.html tracker.html
+          eninvest.html enresicore.html enpani.html entracker.html
+          plattformimprint.html plattformprivacy.html plattformprodukt.html plattformdealpipeline.html
+          plattformunderwriting.html plattformaiicmemos.html plattformsellside.html plattformdemo.html
+          plattformabout.html plattformcareers.html plattformcontact.html plattformpress.html
+          plattformterms.html plattformsecurity.html
+          style.css main.js robots.txt sitemap.xml manifest.json favicon.ico favicon32x32.png appletouchicon.png
+          interlatin.woff2 spacegrotesklatin.woff2 plattformjetbrainsmono.woff2
+          plattformfavicon.ico plattformfavicon16x16.png plattformfavicon32x32.png plattformfavicon48x48.png
+          plattformappletouchicon.png plattformogimage.png plattformtotuslogo.jpg
+          ogindex.png ogen.png oginvest.png ogeninvest.png ogresicore.png ogenresicore.png ogpani.png ogenpani.png
+          ogtracker.png ogentracker.png
+          resicoreobjekt.png resicorelogo.png resicoreunterlagen.png resicorevotum.jpg
+          panihvuebersicht.jpg panihvemails.jpg panihvcompliance.jpg panihvmieterportal.jpg panihveigentuemer.jpg
+          panilogo.svg panitrackerlogo.svg paniprojekte.png panianalytics.png
+          investpipeline.png totusinvestlogo.png investdealdetail.png investinbox.png investdashboard.jpg investmap.jpg"
+          for f in $FILES; do
+            echo "-> $f"
+            curl -fsSL --retry 3 "https://totus.info/$f" -o "site/$f"
+          done
+          ls -la site
+
+      - name: Ins Repo committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site
+          git commit -m "Live-Seite von totus.info importiert" || echo "Keine Aenderungen"
+          git push

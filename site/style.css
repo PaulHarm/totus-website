@@ -1,0 +1,1437 @@
+/* ============================================================
+   TOTUS CRE, Design System v8 "Monochrome"
+   Enterprise-Light (langdock-artig): Weiß/Off-White-Flächen,
+   Schwarz und Grautöne, near-black #141414 als Akzent für
+   Primär-Buttons und dunkle Highlight-Boxen. Petrol nur noch
+   als sehr dezenter Rest-Akzent (Hover, feine Linien).
+   Gilt für: index.html, invest.html, resicore.html, pani.html,
+   tracker.html sowie en/.
+   ============================================================ */
+
+/* ---------- 0. Schriftarten (selbst gehostet, DSGVO-konform) ----------
+   Inter und Space Grotesk als variable woff2-Dateien lokal ausgeliefert;
+   keine Verbindung zu Google-Servern. Latin-Subset deckt DE/EN inkl.
+   Umlaute und typografische Anführungszeichen ab. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("interlatin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url("spacegrotesklatin.woff2") format("woff2");
+}
+
+/* ---------- 1. Tokens ---------- */
+:root {
+  /* Flächen */
+  --bg: #FFFFFF;
+  --bg-soft: #F7F7F8;
+  --bg-tint: #F0F0F1;
+
+  /* Text */
+  --ink: #16181D;
+  --ink-2: #555B66;
+  --ink-3: #5F6570;
+
+  /* Linien */
+  --line: #E7E8EA;
+  --line-strong: #D9DADD;
+
+  /* Akzent Petrol-Teal (einzige Akzentfarbe, aus den Produkt-Screenshots)
+     #0E5E63 auf Weiß ≈ 7.5:1 (AAA); Weiß auf #0E5E63 ≈ 7.5:1 (AAA). */
+  --accent: #0E5E63;
+  --accent-ink: #0A474B;
+  --accent-soft: #E3EFEF;
+
+  /* Rest-Akzent Petrol (identisch mit Akzent; für Alt-Referenzen) */
+  --petrol: #0E5E63;
+
+  /* Produkt-Akzente (jetzt monochrom, nur Chips / Hairlines) */
+  --invest: #141414;
+  --invest-soft: #EFEFEF;
+  --resicore: #141414;
+  --resicore-soft: #EFEFEF;
+  --pani: #141414;
+  --pani-soft: #EFEFEF;
+
+  /* Dunkle Boxen */
+  --box-dark: #141414;
+  --box-dark-ink: rgba(255, 255, 255, 0.80);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius: 12px;
+  --radius-lg: 14px;
+
+  /* Schatten */
+  --shadow-card: 0 1px 2px rgba(22, 24, 29, 0.05);
+  --shadow-lift: 0 12px 32px rgba(22, 24, 29, 0.10);
+  --shadow-mockup: 0 24px 60px rgba(20, 20, 20, 0.14);
+
+  /* Typo */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+
+  /* Layout */
+  --wrap: 1160px;
+  --nav-h: 68px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 0.6s;
+}
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* clip statt hidden: schneidet ab, ohne einen Scroll-Container zu erzeugen, 
+   horizontales Scrollen wäre wieder als Layout-Bug sichtbar. */
+html, body { overflow-x: clip; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-ink); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+  color: var(--ink);
+}
+
+h1 { font-size: clamp(2rem, 5.4vw, 3.6rem); }
+h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.35rem); }
+
+/* Lange Komposita (lang="de") dürfen umbrechen statt überzulaufen */
+h1, h2 { overflow-wrap: break-word; hyphens: auto; }
+
+p { margin: 0 0 1em; }
+
+.muted { color: var(--ink-2); }
+.small { font-size: 0.875rem; }
+
+.wrap {
+  width: min(var(--wrap), 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+
+/* Anker-Ziele nicht unter der Sticky-Nav verstecken */
+[id] { scroll-margin-top: calc(var(--nav-h) + 12px); }
+#main:focus-visible { outline: none; }
+/* Programmatischer Fokus auf Anker-Sektionen (Mobile-Menü) ohne Ring */
+section[id]:focus-visible { outline: none; }
+
+.section-head { max-width: 620px; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.section-head p { color: var(--ink-2); font-size: 1.06rem; margin: 0; }
+.section-head.center { margin-inline: auto; text-align: center; }
+
+.kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+
+/* ---------- 3. Skip-Link & Scroll-Progress ---------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+.skip-link:focus { left: 0; color: #fff; }
+
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent-ink), var(--accent));
+  z-index: 120;
+  pointer-events: none;
+}
+
+/* ---------- 4. Navigation ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.18rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-right: auto;
+  white-space: nowrap;
+}
+.nav-brand span { color: var(--accent); }
+.nav-brand:hover { color: var(--ink); }
+
+.nav-back { color: var(--ink-2); font-weight: 500; font-size: 0.94rem; }
+.nav-back:hover { color: var(--ink); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+.nav-links a {
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--ink); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  width: 44px; height: 44px;
+  cursor: pointer;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+.nav-toggle svg { display: block; }
+.nav-toggle .icon-close { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-burger { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+/* ----- Dual-CTA-Gruppe (Nav rechts: sekundär + primär) ----- */
+.nav-cta { display: flex; align-items: center; gap: 0.6rem; }
+.nav .nav-cta .btn { padding: 0.62rem 1.05rem; font-size: 0.9rem; }
+
+/* ----- CTA-Sichtbarkeit: exakt EIN CTA-Paar pro Viewport -----
+   Bug-Fix v8: Die früheren Hide-Regeln (.nav-cta-mobile / .nav-cta-desktop,
+   Spezifität 0,1,0) standen VOR .btn { display: inline-flex } (ebenfalls
+   0,1,0). Bei gleicher Spezifität gewinnt die spätere Regel im Stylesheet,
+   .btn machte also BEIDE CTAs wieder sichtbar, "Kontakt" erschien doppelt.
+   Fix: Sichtbarkeit ausschließlich über Spezifität (0,2,0) mit .nav-Präfix,
+   beide Varianten an derselben Media-Query-Grenze (960px). Kein visibility,
+   kein JS nötig. Gilt für neue Wrapper (.nav-cta.nav-cta-*) UND die
+   Legacy-Einzel-Buttons (a.nav-cta-*) der Produktseiten. */
+@media (min-width: 960px) {
+  .nav .nav-cta-mobile { display: none; }
+  .nav-links { margin-inline: auto; } /* Hauptnavigation mittig */
+}
+@media (max-width: 959.98px) {
+  .nav .nav-cta-desktop { display: none; }
+}
+
+@media (max-width: 959.98px) {
+  .nav-toggle { display: inline-flex; }
+  .nav-links {
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 1.25rem 1rem;
+    display: none;
+    box-shadow: var(--shadow-lift);
+  }
+  .nav-links.is-open {
+    display: flex;
+    /* Offenes Menü scrollt intern (Body ist per JS gesperrt), 
+       100vh als Fallback, 100dvh für mobile Browser-UI. */
+    max-height: calc(100vh - var(--nav-h));
+    max-height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .nav-links a { padding: 0.8rem 0.25rem; border-bottom: 1px solid var(--line); }
+  .nav-links a:last-child { border-bottom: 0; }
+  /* CTA-Paar im offenen Mobile-Menü: gestapelt, volle Breite */
+  .nav-links .nav-cta { display: grid; gap: 0.6rem; margin-top: 0.9rem; }
+  .nav-links .nav-cta a {
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 0;
+  }
+  .nav-links .nav-cta .btn-primary,
+  .nav-links .nav-cta .btn-primary:hover { color: #fff; }
+  .nav-links .nav-cta .btn-secondary,
+  .nav-links .nav-cta .btn-secondary:hover { color: var(--ink); }
+  /* Legacy-Einzel-CTA der Produktseiten (a.btn.nav-cta-mobile) */
+  .nav-links a.nav-cta-mobile {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 0;
+    color: #fff;
+  }
+  .nav-links a.nav-cta-mobile:hover { color: #fff; }
+}
+
+/* ---------- 5. Buttons & Links ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.96rem;
+  line-height: 1;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+              transform 0.2s var(--ease-out), box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(0); }
+
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover {
+  background: var(--accent-ink);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--bg);
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.btn-secondary:hover {
+  color: var(--ink);
+  border-color: var(--ink-3);
+  background: var(--bg-soft);
+}
+
+.btn .arrow { transition: transform 0.25s var(--ease-out); }
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+.link-arrow .arrow { transition: transform 0.25s var(--ease-out); }
+
+/* ---------- 6. Hero ---------- */
+.hero {
+  position: relative;
+  padding: clamp(3.5rem, 7vw, 6rem) 0 clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 960px) {
+  .hero-grid { grid-template-columns: 0.92fr 1.08fr; gap: 3.5rem; }
+}
+/* Verhindert Min-Content-Blowout der Grid-Spalten durch lange Wörter */
+.hero-grid > * { min-width: 0; }
+
+.hero h1 { margin-bottom: 1.1rem; }
+.hero-sub {
+  font-size: 1.13rem;
+  color: var(--ink-2);
+  max-width: 34rem;
+  margin-bottom: 1.9rem;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+.hero-actions.center,
+.tabs-list.center { justify-content: center; }
+
+/* Micro-Trust-Zeile: dezente, mittelpunktgetrennte Zeile direkt unter den
+   Buttons (eng), noch VOR den Trust-Chips. Markup: <p class="hero-microtrust">
+   mit <span>-Einträgen, getrennt durch " · " (Mittelpunkt). */
+.hero-microtrust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.75rem;
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+.hero-microtrust > * { display: inline-flex; align-items: center; gap: 0.35rem; }
+/* Mittelpunkt-Trenner zwischen den Einträgen (nicht vor dem ersten) */
+.hero-microtrust > * + *::before {
+  content: "·";
+  margin-right: 0.75rem;
+  color: var(--line-strong);
+  font-weight: 700;
+}
+.hero-microtrust svg { flex: none; width: 15px; height: 15px; color: var(--accent); }
+.hero-microtrust.center { justify-content: center; }
+
+/* Gemeinsame Hero-Markenzeile aller Produktseiten */
+.hero-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.hero-brand h1 { min-width: 0; overflow-wrap: break-word; hyphens: auto; }
+.hero-brand .tile-img {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  box-shadow: var(--shadow-card);
+  padding: 4px;
+  object-fit: contain;
+  flex: none;
+}
+.hero-brand h1 { margin: 0; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+.badge::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.badge-pani { background: var(--pani-soft); color: var(--pani); }
+.badge-pani::before { background: var(--pani); }
+
+/* ---------- 7. Mockups & Gradient-Blob ---------- */
+.mockup-scene {
+  position: relative;
+  padding: clamp(1rem, 3vw, 2.25rem);
+}
+
+.blob {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 32px;
+  background:
+    radial-gradient(60% 70% at 20% 15%, rgba(20, 20, 20, 0.06), transparent 65%),
+    radial-gradient(55% 65% at 85% 80%, rgba(20, 20, 20, 0.08), transparent 62%),
+    radial-gradient(45% 55% at 70% 20%, rgba(20, 20, 20, 0.04), transparent 60%),
+    linear-gradient(160deg, #FDFDFD 10%, var(--bg-tint) 90%);
+  overflow: hidden;
+  pointer-events: none;
+}
+.blob::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  aspect-ratio: 1;
+  left: 8%; top: 4%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(20, 20, 20, 0.07), transparent 68%);
+  animation: blobDrift 18s ease-in-out infinite alternate;
+}
+
+@keyframes blobDrift {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(14%, 10%) scale(1.12); }
+  100% { transform: translate(26%, 4%) scale(0.96); }
+}
+
+.mockup {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  box-shadow: var(--shadow-mockup);
+}
+.mockup img {
+  border-radius: calc(var(--radius-lg) - 6px);
+  border: 1px solid var(--line);
+}
+
+.float { animation: floatY 7s ease-in-out infinite; }
+.float-slow { animation: floatY 10s ease-in-out infinite; }
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+/* ---------- 8. Logo-Band (statisch) ---------- */
+.logo-band {
+  padding: 2.5rem 0 3rem;
+  border-block: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+.logo-band-claim {
+  text-align: center;
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+}
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo-tile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  white-space: nowrap;
+}
+a.logo-tile {
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+a.logo-tile:hover { color: var(--accent); transform: translateY(-2px); }
+a.logo-tile:hover .tile-img { border-color: var(--accent); }
+.logo-tile .tile-img {
+  width: 44px; height: 44px;
+  border-radius: 11px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  box-shadow: var(--shadow-card);
+  padding: 4px;
+  object-fit: contain;
+  flex: none;
+  transition: border-color 0.15s ease;
+}
+/* Schmale Viewports: lange Produktnamen dürfen umbrechen statt
+   am overflow-x: clip abgeschnitten zu werden. */
+@media (max-width: 640px) {
+  .logo-tile { white-space: normal; text-align: left; min-width: 0; }
+}
+
+/* ---------- 9. Kennzahlen-Band (Counter) ---------- */
+.stats-band {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1.5rem;
+  text-align: center;
+}
+/* 4 Spalten erst ab Desktop, 2×2 liest sich auf Tablets besser */
+@media (min-width: 960px) { .stats-band { grid-template-columns: repeat(4, 1fr); } }
+/* Variante mit drei Kennzahlen (Startseite) */
+@media (min-width: 960px) { .stats-band.stats-3 { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 959.98px) {
+  .stats-band.stats-3 > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  display: block;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--ink-2);
+  font-size: 0.9rem;
+}
+
+/* ---------- 10. Karten & Produkt-Grid ---------- */
+.card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+/* Auf weißen Sektionen liefern sanfte Karten den Kontrast */
+section:not(.bg-soft) .card { background: var(--bg-soft); }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 860px) { .cards-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Nur Startseite: vier Produktkarten als 2×2-Raster, schon ab Tablet.
+   DE nutzt #portfolio, en/ nutzt #produkte, beide Anker abdecken. */
+@media (min-width: 640px) {
+  #produkte .cards-grid,
+  #portfolio .cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  color: var(--ink);
+  position: relative;
+  overflow: hidden;
+}
+.product-card:hover { color: var(--ink); }
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--card-accent, var(--accent));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.product-card .card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+.product-card .tile-img {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  padding: 4px;
+  object-fit: contain;
+  flex: none;
+}
+.product-card h3 { margin: 0; font-size: 1.15rem; }
+.product-card .card-desc {
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  margin: 0 0 1.1rem;
+  min-height: 3.2em;
+}
+
+.card-thumb {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: var(--bg);
+  margin-bottom: 1.1rem;
+  aspect-ratio: 16 / 10;
+}
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.product-card .card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chip {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink-2);
+}
+.chip-invest { color: var(--invest); border-color: rgba(20, 20, 20, 0.25); background: var(--invest-soft); }
+.chip-resicore { color: var(--resicore); border-color: rgba(20, 20, 20, 0.25); background: var(--resicore-soft); }
+.chip-pani { color: var(--pani); border-color: rgba(20, 20, 20, 0.25); background: var(--pani-soft); }
+
+/* ---------- 12. Split-Sektionen (Bild/Text abwechselnd) ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 960px) {
+  .split { grid-template-columns: 1.05fr 0.95fr; gap: 4rem; }
+  .split.reverse .split-media { order: 2; }
+  .split.reverse .split-copy { order: 1; }
+}
+/* Gestapelt (mobil/Tablet): Text vor dem Mockup */
+@media (max-width: 959.98px) {
+  .split .split-copy { order: -1; }
+}
+
+.split-copy h2 { margin-bottom: 0.7rem; }
+.split-copy > p { color: var(--ink-2); margin-bottom: 1.4rem; max-width: 30rem; }
+
+.check-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+.check-list li::before {
+  content: "";
+  flex: none;
+  width: 20px; height: 20px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23141414' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+
+/* ---------- 13. Feature-Grid ---------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) {
+  .feature-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Einzelne Karte in der letzten 3er-Reihe mittig statt linksbündig */
+  .feature-grid > :last-child:nth-child(3n + 1) { grid-column: 2; }
+}
+
+.feature { padding: 1.5rem; }
+.feature .icon-tile {
+  width: 44px; height: 44px;
+  border-radius: 11px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+}
+.feature .icon-tile svg { width: 22px; height: 22px; }
+.feature h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+.feature p { color: var(--ink-2); font-size: 0.92rem; margin: 0; }
+
+/* ---------- 14. Workflow-Schritte (Detailseiten) ---------- */
+.workflow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  counter-reset: step;
+}
+@media (min-width: 760px) { .workflow { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1080px) { .workflow { grid-template-columns: repeat(var(--steps, 5), 1fr); } }
+/* 2-Spalten-Bereich: letzter ungerader Schritt (z. B. 05) über volle Breite */
+@media (min-width: 760px) and (max-width: 1079.98px) {
+  .workflow .step:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+.workflow .step {
+  padding: 1.4rem 1.25rem;
+  position: relative;
+}
+.workflow .step::before {
+  counter-increment: step;
+  content: "0" counter(step);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.workflow .step h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+.workflow .step p { font-size: 0.88rem; color: var(--ink-2); margin: 0; }
+
+/* ---------- 15. Tabs (ARIA-Galerien mit Crossfade) ---------- */
+.tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.tab {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink-2);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.65rem 1.15rem;
+  min-height: 44px; /* Touch-Target */
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+.tab:hover { color: var(--ink); border-color: var(--line-strong); }
+.tab[aria-selected="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Ohne JS: alle Panels gestapelt sichtbar, Tab-Buttons ausgeblendet.
+   Mit JS: alle Panels in derselben Grid-Zelle gestapelt, die Galerie ist
+   immer so hoch wie das höchste Panel, kein Höhensprung beim Tab-Wechsel. */
+.js [data-tabs] { display: grid; }
+.js [data-tabs] .tabs-list { grid-row: 1; }
+.js [data-tabs] .tab-panel { grid-row: 2; grid-column: 1; }
+.js .tab-panel { display: block; visibility: hidden; }
+.js .tab-panel.is-active { visibility: visible; animation: panelFade 0.45s var(--ease-out); }
+html:not(.js) .tabs-list { display: none; }
+
+@keyframes panelFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.showcase-foot { display: flex; justify-content: center; margin-top: 1.75rem; }
+
+/* ---------- 16. CTA-Sektion ---------- */
+.cta-panel {
+  background:
+    radial-gradient(80% 120% at 15% 0%, rgba(255, 255, 255, 0.10), transparent 60%),
+    linear-gradient(150deg, #000000, #1C1C1C);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 4rem);
+  text-align: center;
+}
+.cta-panel h2 { color: #fff; }
+.cta-panel p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 32rem;
+  margin: 0 auto 1.8rem;
+}
+.cta-panel .btn-primary { background: #fff; color: var(--accent-ink); }
+.cta-panel .btn-primary:hover {
+  background: var(--bg-soft);
+  color: var(--accent-ink);
+}
+.cta-panel .btn-secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+.cta-panel .btn-secondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* ---------- 17. Footer ---------- */
+.footer {
+  border-top: 1px solid var(--line);
+  background: var(--bg-soft);
+  padding: clamp(2.5rem, 5vw, 4rem) 0 2rem;
+  font-size: 0.92rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 760px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+
+.footer h2 {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.9rem;
+}
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.25rem; }
+.footer ul a { display: inline-block; padding: 0.3rem 0; } /* Touch-Target */
+.footer a { color: var(--ink-2); }
+.footer a:hover { color: var(--ink); }
+.footer .pending { color: var(--ink-3); cursor: default; }
+
+.footer-brand .nav-brand { font-size: 1.1rem; }
+.footer-brand p { color: var(--ink-2); max-width: 22rem; margin: 0.6rem 0 0; }
+
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  color: var(--ink-3);
+  font-size: 0.85rem;
+}
+
+/* ---------- 18. Scroll-Reveals (nur bei aktivem JS) ---------- */
+.js [data-reveal],
+.js [data-reveal-group] > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--dur) ease, transform var(--dur) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.js [data-reveal].is-in,
+.js [data-reveal-group] > .is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Parallax-Elemente: Parallax besitzt transform exklusiv (kein 0.6s-Tween
+   hinter dem Scroll, kein Überschreiben des Reveal-Zustands), Fade bleibt. */
+.js [data-reveal][data-parallax] {
+  transform: none;
+  transition: opacity var(--dur) ease;
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+/* ---------- 18b. Hover-Effekte nur für echte Zeiger ----------
+   Verhindert „klebende" Hover-Zustände nach Tap auf Touch-Geräten. */
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary:hover { box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28); }
+  .btn:hover .arrow { transform: translateX(4px); }
+  .link-arrow:hover .arrow { transform: translateX(5px); }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--line-strong);
+  }
+  .product-card:hover::before { opacity: 1; }
+  .cta-panel .btn-primary:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); }
+}
+
+/* ---------- 19. Reduced Motion (alles aus) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .float, .float-slow { animation: none; }
+  .blob::after { animation: none; }
+  .js [data-reveal],
+  .js [data-reveal-group] > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .scroll-progress { display: none; }
+}
+
+/* ---------- 20. Utilities & Fokus ---------- */
+.bg-soft { background: var(--bg-soft); border-block: 1px solid var(--line); }
+.center { text-align: center; }
+.stats-note { margin-top: 1.4rem; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- 21. Sprach-Umschalter (DE/EN) ----------
+   Kompakter Pill-Umschalter für Desktop-Nav und Mobile-Menü.
+   Aktiver Link: .is-active oder aria-current (z. B. aria-current="true"). */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.lang-toggle a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 34px; /* Pill gesamt ≥ 40px hoch */
+  padding: 0 0.7rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ink-2);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.lang-toggle a:hover { color: var(--ink); }
+.lang-toggle a.is-active,
+.lang-toggle a[aria-current] {
+  background: var(--accent);
+  color: #fff;
+}
+.lang-toggle a.is-active:hover,
+.lang-toggle a[aria-current]:hover { background: var(--accent-ink); color: #fff; }
+.lang-toggle a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 999px;
+}
+
+/* Im Mobile-Menü: Menü-Link-Styles neutralisieren, Targets vergrößern */
+@media (max-width: 959.98px) {
+  .nav-links .lang-toggle { margin-top: 0.75rem; align-self: flex-start; }
+  .nav-links .lang-toggle a {
+    padding: 0 0.9rem;
+    min-height: 40px;
+    border-bottom: 0;
+    color: var(--ink-2);
+  }
+  .nav-links .lang-toggle a.is-active,
+  .nav-links .lang-toggle a[aria-current] { color: #fff; }
+}
+
+/* ============================================================
+   v8-Bausteine (Startseite): zentrierter Hero mit Montage,
+   Social Proof, Leistungs-Karten, Vorteils-Grid (hell/dunkel),
+   Ressourcen-Karten, Cookie-Banner.
+   ============================================================ */
+
+/* ---------- 22. Hero zentriert + Screenshot-Montage ---------- */
+.hero-center {
+  max-width: 50rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.hero-center .hero-sub { margin-inline: auto; }
+.hero-center .hero-actions { justify-content: center; }
+
+.hero-stage {
+  position: relative;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(90% 130% at 50% 0%, #FFFFFF 0%, var(--bg-tint) 100%);
+  padding: clamp(1.25rem, 4vw, 3rem);
+  overflow: hidden;
+}
+
+.hero-montage { position: relative; }
+.montage-front {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin: 0;
+}
+.montage-back { display: none; }
+@media (min-width: 760px) {
+  .montage-front { width: 74%; margin-inline: auto; }
+  .montage-back {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 36%;
+    margin: 0;
+    box-shadow: 0 16px 40px rgba(20, 20, 20, 0.12);
+  }
+  .montage-left  { left: 0; top: 9%; transform: rotate(-1.6deg); }
+  .montage-right { right: 0; bottom: 9%; transform: rotate(1.6deg); }
+}
+
+.hero-visual-foot { margin: 1.5rem 0 0; text-align: center; }
+
+/* ---------- 23. Social Proof: Kennzahl-Headline + Zitat ---------- */
+.proof-head { max-width: 720px; }
+.proof-head h2 { font-variant-numeric: tabular-nums; }
+
+.quote-panel {
+  max-width: 46rem;
+  margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+  text-align: center;
+}
+.quote { margin: 0; }
+.quote p {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 1.1rem;
+}
+.quote-attrib { color: var(--ink-2); font-size: 0.92rem; }
+
+/* ---------- 24. Leistungs-Karten (5er-Reihe) ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 560px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1080px) { .services-grid { grid-template-columns: repeat(5, 1fr); } }
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem;
+  color: var(--ink);
+}
+.service-card:hover { color: var(--ink); }
+.service-thumb {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg);
+  aspect-ratio: 16 / 10;
+  margin-bottom: 0.9rem;
+}
+.service-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+.service-body { display: flex; flex-direction: column; flex: 1; }
+.service-card h3 { font-size: 1rem; margin-bottom: 0.35rem; }
+.service-card p { color: var(--ink-2); font-size: 0.88rem; margin: 0 0 0.9rem; }
+.service-card .link-arrow { margin-top: auto; font-size: 0.88rem; }
+
+/* 2-Spalten-Band: fünfte Karte quer über volle Breite */
+@media (min-width: 560px) and (max-width: 1079.98px) {
+  .services-grid > .service-card:nth-child(5) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .services-grid > .service-card:nth-child(5) .service-thumb {
+    width: 40%;
+    flex: none;
+    margin-bottom: 0;
+  }
+}
+
+/* ---------- 25. Vorteils-Grid (asymmetrisch, hell/dunkel) ---------- */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 860px) {
+  .benefit-grid { grid-template-columns: repeat(6, 1fr); }
+  .b-span-2 { grid-column: span 2; }
+  .b-span-3 { grid-column: span 3; }
+  .b-span-4 { grid-column: span 4; }
+  .b-span-6 { grid-column: 1 / -1; }
+}
+
+.box {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.box h3 { font-size: 1.15rem; margin-bottom: 0.45rem; }
+.box p { color: var(--ink-2); font-size: 0.95rem; margin: 0; }
+.box p:not(:last-child) { margin-bottom: 1.1rem; }
+.box .link-arrow { margin-top: auto; }
+.box .chip-row { margin-top: auto; padding-top: 1.1rem; }
+
+.box-dark {
+  background: var(--box-dark);
+  border-color: var(--box-dark);
+  color: #fff;
+}
+.box-dark h3 { color: #fff; }
+.box-dark p { color: var(--box-dark-ink); }
+.box-dark a { color: #fff; }
+.box-dark a:hover { color: rgba(255, 255, 255, 0.85); }
+.box-dark .chip {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.30);
+  color: #EDEDED;
+}
+
+/* Schmale Querkachel: Titel und Text nebeneinander */
+@media (min-width: 860px) {
+  .box-slim { flex-direction: row; align-items: baseline; gap: 2rem; padding-block: 1.4rem; }
+  .box-slim h3 { flex: none; margin: 0; }
+}
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+/* Fokus-Ringe auf dunklen Flächen sichtbar halten */
+.box-dark :focus-visible,
+.cta-panel :focus-visible { outline-color: #fff; }
+
+/* ---------- 26. Ressourcen-Karten (zweispaltig) ---------- */
+.resource-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 760px) { .resource-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  color: var(--ink);
+}
+.resource-card:hover { color: var(--ink); }
+.resource-card h3 { margin-bottom: 0.4rem; }
+.resource-card p { color: var(--ink-2); margin: 0 0 1.25rem; }
+.resource-card .link-arrow { margin-top: auto; }
+
+/* ---------- 27. Cookie-Banner (fixiert, localStorage) ---------- */
+.cookie-banner {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 140;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -10px 30px rgba(20, 20, 20, 0.10);
+  padding: 1rem 0;
+}
+.cookie-banner[hidden] { display: none; }
+
+.cookie-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.cookie-text {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 0.88rem;
+  max-width: 46rem;
+}
+.cookie-text a { color: var(--ink); text-decoration: underline; }
+.cookie-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-left: auto; }
+.cookie-actions .btn { padding: 0.7rem 1.2rem; font-size: 0.9rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .cookie-banner:not([hidden]) { animation: cookieUp 0.5s var(--ease-out); }
+}
+@keyframes cookieUp {
+  from { transform: translateY(100%); }
+  to   { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner { animation: none !important; }
+}
+
+/* ============================================================
+   v9-Bausteine (alle Seiten): wiederverwendbare Lightbox,
+   Zoom-Hinweis, ehrliche Compliance-Chips.
+   ============================================================ */
+
+/* ---------- 28. Lightbox (Bild-Overlay, alle Seiten) ---------- */
+/* Auslöser: <img data-lightbox> (optional data-lightbox-src fuer eine
+   hoeher aufgeloeste Variante). Cursor + dezenter Hover signalisieren
+   die Klickbarkeit; Tastaturbedienung ergaenzt main.js. */
+[data-lightbox] { cursor: zoom-in; }
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  [data-lightbox] { transition: filter 0.2s ease, transform 0.25s var(--ease-out); }
+  [data-lightbox]:hover { filter: brightness(1.05); transform: scale(1.012); }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: rgba(10, 10, 10, 0.86);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.lightbox[hidden] { display: none; }
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius);
+  background: var(--bg);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: clamp(0.75rem, 2.5vw, 1.6rem);
+  right: clamp(0.75rem, 2.5vw, 1.6rem);
+  width: 48px; height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  color: #fff;
+  cursor: pointer;
+}
+.lightbox-close svg { display: block; width: 22px; height: 22px; }
+.lightbox-close:hover { background: rgba(255, 255, 255, 0.22); color: #fff; }
+.lightbox-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* Motion nur auf Wunsch; reduced-motion = hartes Ein/Aus */
+@media (prefers-reduced-motion: no-preference) {
+  .lightbox { animation: lbFade 0.2s ease; }
+  .lightbox-img { animation: lbZoom 0.25s var(--ease-out); }
+}
+@keyframes lbFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbZoom { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .lightbox, .lightbox-img { animation: none !important; }
+}
+
+/* ---------- 29. Zoom-Hinweis (optionaler Wrapper um ein Bild) ----------
+   Markup: <span class="zoomable"><img data-lightbox ...></span>
+   Zeigt eine kleine Lupe unten rechts als Affordanz. */
+.zoomable { position: relative; display: inline-block; max-width: 100%; }
+.zoomable > [data-lightbox] { display: block; }
+.zoomable::after {
+  content: "";
+  position: absolute;
+  bottom: 0.55rem;
+  right: 0.55rem;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.60) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.3-4.3M11 8v6M8 11h6'/%3E%3C/svg%3E") center / 16px no-repeat;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* ---------- 30. Compliance-Chips (ehrlich, neutral) ----------
+   Kleine Pills mit feiner Border und Inline-SVG-Haekchen/Schild.
+   KEINE Zertifikatssiegel. Inhalt setzen die Seiten. Nutzbar nahe
+   Hero/CTA. Auf dunklen Flaechen (.cta-panel, .box-dark) heller. */
+.trust-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  /* Klarer Abstand nach oben: löst den Hero-Bug, in dem Buttons und Chips
+     direkt aneinander klebten. Greift auch, wenn eine .hero-microtrust-Zeile
+     dazwischen liegt. */
+  margin: clamp(1.25rem, 3vw, 2rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.trust-chips.center { justify-content: center; }
+
+.chip-compliance {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink-2);
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  white-space: nowrap;
+}
+.chip-compliance svg {
+  flex: none;
+  width: 15px; height: 15px;
+  color: var(--accent);
+}
+
+/* Auf near-black-Flaechen: heller Text, feine helle Border */
+.cta-panel .chip-compliance,
+.box-dark .chip-compliance {
+  color: #EDEDED;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+.cta-panel .chip-compliance svg,
+.box-dark .chip-compliance svg { color: #fff; }

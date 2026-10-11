@@ -1,0 +1,2651 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="plattformfavicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="plattformfavicon16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="plattformfavicon32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="plattformfavicon48x48.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="plattformappletouchicon.png" />
+<meta name="theme-color" content="#0E5E63" />
+<link rel="canonical" href="https://totus.info/plattformaiicmemos.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://totus.info/plattformaiicmemos.html" />
+<meta property="og:title" content="AI & IC-Memos · TOTUS CRE" />
+<meta property="og:description" content="AI-gestützte Deal-Assessments und automatisch strukturierte IC-Memos. Entscheidungsvorlagen in Minuten statt Tagen, mit Claude von Anthropic, EU-verarbeitet." />
+<meta property="og:image" content="https://totus.info/plattformogimage.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:site_name" content="TOTUS CRE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI & IC-Memos · TOTUS CRE" />
+<meta name="twitter:description" content="AI-gestützte Deal-Assessments und automatisch strukturierte IC-Memos. Entscheidungsvorlagen in Minuten statt Tagen, mit Claude von Anthropic, EU-verarbeitet." />
+<meta name="twitter:image" content="https://totus.info/plattformogimage.png" />
+
+<title>TOTUS CRE · AI &amp; IC-Memos</title>
+<meta name="description" content="TOTUS CRE AI & IC-Memos · Investment-Committee-Memos, die sich selbst schreiben." />
+
+
+<link rel="preload" href="interlatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="spacegrotesklatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="plattformjetbrainsmono.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--slate);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;font-size:.9rem;font-weight:600;}
+.skip-link:focus{left:0;outline:3px solid var(--accent);outline-offset:2px;}
+
+/* Selbst gehostete Schriften - keine Verbindung zu Google */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url('interlatin.woff2') format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500 700;font-display:swap;src:url('spacegrotesklatin.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url('plattformjetbrainsmono.woff2') format('woff2');}
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal: #0E5E63;
+    --teal-dark: #0A474B;
+    --teal-deep: #0A474B;
+    --teal-light: #4A8F93;
+    --teal-pale: #E3EFEF;
+    --slate: #16181D;
+    --slate-light: #2C2F36;
+    --cream: #F7F7F8;
+    --white: #FFFFFF;
+    --text: #16181D;
+    --text-muted: #555B66;
+    --accent: #0E5E63;
+    --accent-light: #E3EFEF;
+    --success: #1F7A4D;
+    --danger: #A3342A;
+    --radius: 14px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+    --ease: cubic-bezier(.2,.7,.2,1);
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.55;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+  ::selection { background: var(--teal); color: var(--white); }
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+  p { margin: 0; }
+
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+  @media (max-width: 720px) { .container { padding: 0 24px; } }
+  section { position: relative; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+  }
+  .eyebrow::before { content: ''; width: 24px; height: 1.5px; background: var(--teal); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 36px;
+    font-size: 0.95rem; font-weight: 600;
+    border-radius: 100px;
+    transition: all 0.3s var(--ease);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--teal); color: var(--white); }
+  .btn-primary:hover {
+    background: var(--teal-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(14, 94, 99, 0.3);
+  }
+  .btn-secondary { background: transparent; color: var(--slate); border-color: rgba(22, 24, 29, 0.15); }
+  .btn-secondary:hover { border-color: var(--teal); color: var(--teal-dark); }
+  .btn .arrow { width: 14px; height: 14px; transition: transform 0.25s var(--ease); }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 18px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(247, 247, 248, 0.85);
+    border-bottom: 1px solid rgba(14, 94, 99, 0.1);
+    transition: all 0.3s ease;
+  }
+  nav.scrolled { padding: 12px 48px; box-shadow: 0 4px 30px rgba(22, 24, 29, 0.06); }
+  @media (max-width: 720px) {
+    nav { padding: 14px 24px; }
+    nav.scrolled { padding: 10px 24px; }
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 12px; color: var(--text); }
+  .logo-mark {
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    flex: none;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 14px rgba(14, 94, 99, 0.25);
+  }
+  .nav-logo .brand-name {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a {
+    color: var(--text-muted);
+    font-size: 0.88rem; font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a:hover { color: var(--teal-dark); }
+  .nav-links a.active { color: var(--slate); }
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 2px;
+    background: var(--teal);
+    border-radius: 2px;
+  }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+
+  .lang-toggle {
+    display: inline-flex;
+    background: var(--white);
+    border: 1px solid rgba(14, 94, 99, 0.15);
+    border-radius: 100px;
+    padding: 3px; gap: 2px;
+  }
+  .lang-toggle button {
+    padding: 6px 12px;
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    border-radius: 100px;
+    transition: all 0.25s var(--ease);
+    line-height: 1;
+  }
+  .lang-toggle button.active { background: var(--slate); color: var(--white); }
+  .lang-toggle button:not(.active):hover { color: var(--slate); }
+
+  .nav-cta {
+    background: var(--slate);
+    color: var(--white) !important;
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-size: 0.85rem !important; font-weight: 600 !important;
+    transition: all 0.3s !important;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .nav-cta:hover { background: var(--teal-deep) !important; transform: translateY(-1px); }
+  @media (max-width: 880px) { .nav-links { display: none; } }
+
+  /* HERO */
+  .hero {
+    padding: 160px 48px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.10) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -200px; left: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative; z-index: 1;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 72px;
+    align-items: center;
+  }
+  @media (max-width: 980px) {
+    .hero { padding: 120px 24px 60px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+  }
+
+  .hero-badge-ai {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, rgba(14, 94, 99, 0.15), rgba(14, 94, 99, 0.15));
+    color: var(--teal-deep);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    border: 1px solid rgba(14, 94, 99, 0.2);
+    animation: fadeSlideUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  .hero-badge-ai svg { width: 14px; height: 14px; }
+
+  .hero h1 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 4.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    color: var(--slate);
+    margin-bottom: 24px;
+    animation: fadeSlideUp 0.8s ease 0.15s forwards;
+    opacity: 0;
+  }
+  .hero h1 em { color: var(--teal); }
+  .hero-sub {
+    font-size: 1.12rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin-bottom: 36px;
+    animation: fadeSlideUp 0.8s ease 0.3s forwards;
+    opacity: 0;
+  }
+  .hero-actions {
+    display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+    margin-bottom: 40px;
+    animation: fadeSlideUp 0.8s ease 0.45s forwards;
+    opacity: 0;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 540px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(14, 94, 99, 0.2);
+    animation: fadeSlideUp 0.8s ease 0.6s forwards;
+    opacity: 0;
+  }
+  .hero-stat .num {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 2rem;
+    color: var(--teal-deep);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .hero-stat .lab {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+  }
+  .hero-visual {
+    position: relative;
+    animation: fadeSlideUp 0.8s ease 0.5s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* === IC MEMO MOCKUP === */
+  .mock-memo {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 28px 70px rgba(22, 24, 29, 0.10), 0 1px 3px rgba(22, 24, 29, 0.04);
+    border: 1px solid rgba(14, 94, 99, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+  .memo-header {
+    background: linear-gradient(180deg, var(--slate) 0%, var(--slate-light) 100%);
+    color: var(--cream);
+    padding: 26px 28px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .memo-header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.18) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .memo-meta-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 14px;
+    gap: 16px;
+    position: relative;
+  }
+  .memo-tag {
+    font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent-light);
+    background: rgba(14, 94, 99, 0.18);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .memo-stamp {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: rgba(14, 94, 99, 0.18);
+    border: 2px dashed var(--teal-light);
+    color: var(--teal-light);
+    display: grid; place-items: center;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 0.72rem;
+    text-align: center;
+    line-height: 1.1;
+    transform: rotate(-8deg);
+    flex-shrink: 0;
+  }
+  .memo-h-title {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: -0.015em;
+    max-width: 80%;
+    position: relative;
+  }
+  .memo-h-meta {
+    display: flex; flex-wrap: wrap; gap: 16px;
+    font-size: 0.72rem;
+    color: rgba(247, 247, 248, 0.6);
+    position: relative;
+  }
+  .memo-h-meta b {
+    color: rgba(247, 247, 248, 0.85);
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .memo-content {
+    padding: 26px 28px;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .memo-sec h4 {
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--teal-deep);
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .memo-sec h4 .num {
+    font-family: var(--mono);
+    color: var(--teal);
+    font-weight: 700;
+  }
+  .memo-sec p {
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: var(--slate);
+  }
+  .memo-sec p .hl {
+    background: linear-gradient(120deg, transparent 40%, rgba(14, 94, 99, 0.25) 40%);
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  .memo-kpis {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+  }
+  .memo-kpi .k {
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .memo-kpi .v {
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--slate);
+  }
+  .memo-kpi .v.pos { color: var(--success); }
+  .memo-kpi .v.teal { color: var(--teal-deep); }
+
+  .memo-thesis {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .memo-thesis-item {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+  .memo-thesis-item .n {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--teal-pale);
+    color: var(--teal-deep);
+    display: grid; place-items: center;
+    font-size: 0.62rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .memo-thesis-item .txt {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--slate);
+  }
+
+  .memo-risks {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .memo-risk {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 12px;
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid;
+  }
+  .memo-risk.low { border-color: var(--success); }
+  .memo-risk.med { border-color: var(--accent); }
+  .memo-risk.high { border-color: var(--danger); }
+  .memo-risk .lvl {
+    font-size: 0.6rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .memo-risk.low .lvl { color: var(--success); }
+  .memo-risk.med .lvl { color: #0A474B; }
+  .memo-risk.high .lvl { color: var(--danger); }
+  .memo-risk .desc {
+    font-size: 0.78rem;
+    color: var(--slate);
+    line-height: 1.4;
+  }
+
+  .memo-footer {
+    padding: 14px 28px;
+    background: var(--cream);
+    border-top: 1px solid rgba(22, 24, 29, 0.06);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+  .memo-footer .left { display: flex; align-items: center; gap: 16px; }
+  .memo-footer .page {
+    font-family: var(--mono);
+    background: var(--white);
+    padding: 3px 9px;
+    border-radius: 100px;
+    color: var(--slate);
+    font-weight: 600;
+  }
+
+  /* AI badge floating */
+  .ai-float {
+    position: absolute;
+    top: -16px; right: -20px;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    box-shadow: 0 12px 36px rgba(22, 24, 29, 0.12);
+    border: 1px solid rgba(14, 94, 99, 0.1);
+    display: flex; align-items: center; gap: 12px;
+    z-index: 3;
+  }
+  .ai-float .ai-pulse {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), var(--accent));
+    display: grid; place-items: center;
+    color: var(--white);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .ai-float .ai-pulse::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    border: 2px solid var(--teal);
+    opacity: 0.4;
+    animation: pulse 2s infinite;
+  }
+  .ai-float .ai-pulse svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+  .ai-float .lbl {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 2px;
+    letter-spacing: 0.02em;
+  }
+  .ai-float .val {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--slate);
+  }
+  @media (max-width: 980px) {
+    .ai-float { right: 10px; }
+  }
+
+  /* SECTIONS */
+  section.section { padding: 120px 48px; }
+  @media (max-width: 720px) { section.section { padding: 80px 24px; } }
+  .section-inner { max-width: 1280px; margin: 0 auto; }
+  .section-head { max-width: 760px; margin-bottom: 56px; }
+  .section-title {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--slate);
+    margin-bottom: 20px;
+  }
+  .section-title em { color: var(--teal); }
+  .section-desc {
+    font-size: 1.05rem; line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 620px;
+  }
+
+  /* WHY */
+  .why-section {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--teal-pale) 100%);
+    border-top: 1px solid rgba(14, 94, 99, 0.1);
+    border-bottom: 1px solid rgba(14, 94, 99, 0.1);
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 880px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .why-grid { grid-template-columns: 1fr; } }
+  .why-card {
+    background: var(--white);
+    border: 1px solid rgba(14, 94, 99, 0.1);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    transition: all 0.3s var(--ease);
+  }
+  .why-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--teal-light);
+    box-shadow: 0 14px 36px rgba(22, 24, 29, 0.06);
+  }
+  .why-card .ic {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: rgba(163, 52, 42, 0.08);
+    color: var(--danger);
+    display: grid; place-items: center;
+    margin-bottom: 18px;
+  }
+  .why-card .ic svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+  .why-card h4 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.2rem;
+    color: var(--slate);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .why-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* FLOW: How it works */
+  .flow-section {
+    background: var(--white);
+  }
+  .flow-rows {
+    display: flex; flex-direction: column;
+  }
+  .flow-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    padding: 32px 0;
+    border-bottom: 1px solid rgba(14, 94, 99, 0.15);
+    align-items: start;
+  }
+  .flow-row:last-child { border-bottom: 0; }
+  .flow-row:first-child { padding-top: 0; }
+  .flow-row .num-w {
+    display: flex; align-items: center; gap: 14px;
+  }
+  .flow-row .num {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--teal-pale);
+    color: var(--teal-deep);
+    display: grid; place-items: center;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    flex-shrink: 0;
+    transition: all 0.3s var(--ease);
+  }
+  .flow-row:hover .num {
+    background: var(--teal);
+    color: var(--white);
+    transform: scale(1.05);
+  }
+  .flow-row .body { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: center; }
+  @media (max-width: 880px) {
+    .flow-row { grid-template-columns: 1fr; gap: 16px; padding: 24px 0; }
+    .flow-row .body { grid-template-columns: 1fr; gap: 16px; }
+  }
+  .flow-row h3 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: var(--slate);
+    margin-bottom: 8px;
+    line-height: 1.15;
+  }
+  .flow-row h3 em { color: var(--teal); }
+  .flow-row p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+  .flow-row .vis {
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    font-size: 0.78rem;
+    color: var(--slate);
+    font-family: var(--mono);
+    line-height: 1.7;
+    border-left: 3px solid var(--teal);
+  }
+  .flow-row .vis b {
+    color: var(--teal-deep);
+    font-weight: 600;
+  }
+  .flow-row .vis .arrow {
+    color: var(--teal);
+    margin: 0 4px;
+  }
+
+  /* DEEP DIVE */
+  .deep-dive {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .deep-dive.reverse { grid-template-columns: 1.15fr 1fr; }
+  .deep-dive.reverse .dd-text { order: 2; }
+  .deep-dive.reverse .dd-visual { order: 1; }
+  @media (max-width: 980px) {
+    .deep-dive, .deep-dive.reverse { grid-template-columns: 1fr; gap: 48px; }
+    .deep-dive.reverse .dd-text { order: 1; }
+    .deep-dive.reverse .dd-visual { order: 2; }
+  }
+  .dd-text { max-width: 480px; }
+  .dd-text h2 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.1;
+    color: var(--slate);
+    margin-bottom: 20px;
+    letter-spacing: -0.025em;
+  }
+  .dd-text h2 em { color: var(--teal); }
+  .dd-text > p {
+    font-size: 1.02rem; line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+  .dd-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .dd-list li {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .dd-list .check {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--teal-pale);
+    color: var(--teal-deep);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .dd-list .check svg { width: 12px; height: 12px; }
+  .dd-list .ti {
+    font-weight: 600;
+    color: var(--slate);
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+  }
+  .dd-list .te {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* === AI ASSISTANT PANEL === */
+  .mock-ai {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(22, 24, 29, 0.08);
+    border: 1px solid rgba(14, 94, 99, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+  .ai-head {
+    padding: 22px 24px 18px;
+    border-bottom: 1px solid rgba(22, 24, 29, 0.06);
+    background: linear-gradient(135deg, rgba(14, 94, 99, 0.04), rgba(14, 94, 99, 0.04));
+    position: relative;
+  }
+  .ai-head-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 14px;
+  }
+  .ai-head-l {
+    display: flex; gap: 14px; align-items: center;
+  }
+  .ai-orb {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal-dark), var(--accent));
+    display: grid; place-items: center;
+    color: var(--white);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .ai-orb::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid var(--teal);
+    opacity: 0.3;
+    animation: pulse 2.5s infinite;
+  }
+  .ai-orb svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  .ai-title-w h4 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.2rem;
+    color: var(--slate);
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+  .ai-title-w .sub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+  .ai-status {
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--success);
+    background: rgba(31, 122, 77, 0.10);
+    padding: 4px 10px;
+    border-radius: 100px;
+    display: inline-flex; align-items: center; gap: 6px;
+    flex-shrink: 0;
+  }
+  .ai-status::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  .ai-prompt {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: var(--white);
+    border: 1px solid rgba(14, 94, 99, 0.18);
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; gap: 10px;
+    position: relative;
+  }
+  .ai-prompt .ic {
+    width: 18px; height: 18px;
+    color: var(--teal-deep);
+    flex-shrink: 0;
+  }
+  .ai-prompt input {
+    flex: 1;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.82rem;
+    color: var(--slate);
+    outline: none;
+    pointer-events: none;
+  }
+  .ai-prompt input::placeholder { color: var(--text-muted); }
+  .ai-prompt .kbd {
+    font-size: 0.62rem;
+    font-family: var(--mono);
+    background: var(--cream);
+    color: var(--text-muted);
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+
+  .ai-body {
+    padding: 18px 24px 22px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .ai-section-title {
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  /* AI suggestion cards */
+  .ai-sug {
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    border: 1.5px solid transparent;
+    transition: all 0.25s var(--ease);
+    cursor: pointer;
+  }
+  .ai-sug:hover {
+    border-color: rgba(14, 94, 99, 0.3);
+    background: var(--teal-pale);
+  }
+  .ai-sug.active {
+    background: linear-gradient(135deg, rgba(14, 94, 99, 0.08), rgba(14, 94, 99, 0.08));
+    border-color: rgba(14, 94, 99, 0.3);
+  }
+  .ai-sug-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .ai-sug-ic {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--teal-deep);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .ai-sug-ic svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  .ai-sug-info { flex: 1; }
+  .ai-sug-info h5 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--slate);
+    margin-bottom: 3px;
+    line-height: 1.2;
+  }
+  .ai-sug-info p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+  .ai-sug-action {
+    background: var(--white);
+    color: var(--teal-dark);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid rgba(14, 94, 99, 0.2);
+    white-space: nowrap;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .ai-sug:hover .ai-sug-action {
+    background: var(--teal);
+    color: var(--white);
+    border-color: var(--teal);
+  }
+
+  .ai-sug-meta {
+    display: flex; gap: 12px; align-items: center;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(22, 24, 29, 0.1);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+  .ai-sug-meta .conf {
+    display: flex; align-items: center; gap: 6px;
+  }
+  .ai-sug-meta .conf .bar {
+    width: 50px; height: 4px;
+    background: var(--white);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .ai-sug-meta .conf .bar::after {
+    content: '';
+    display: block;
+    width: var(--conf, 80%);
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal), var(--teal-dark));
+    border-radius: 100px;
+  }
+  .ai-sug-meta .src {
+    display: flex; gap: 4px; align-items: center;
+  }
+  .ai-sug-meta .src::before {
+    content: '·';
+    color: rgba(22, 24, 29, 0.2);
+    font-weight: 700;
+    margin-right: 4px;
+  }
+
+  .ai-activity {
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .ai-act {
+    display: grid;
+    grid-template-columns: 18px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.78rem;
+  }
+  .ai-act .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    justify-self: center;
+  }
+  .ai-act .txt {
+    color: var(--slate);
+  }
+  .ai-act .txt b { font-weight: 600; }
+  .ai-act .t {
+    color: var(--text-muted);
+    font-family: var(--mono);
+    font-size: 0.68rem;
+  }
+
+  /* === APPROVAL WORKFLOW === */
+  .mock-approval {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(22, 24, 29, 0.08);
+    border: 1px solid rgba(14, 94, 99, 0.1);
+    overflow: hidden;
+  }
+  .appr-head {
+    padding: 22px 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid rgba(22, 24, 29, 0.06);
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .appr-title-w { display: flex; flex-direction: column; }
+  .appr-eyebrow {
+    font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 2px;
+  }
+  .appr-title {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: var(--slate);
+  }
+  .appr-status {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(14, 94, 99, 0.12);
+    color: #0A474B;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .appr-status .pgs {
+    font-family: var(--mono);
+    font-weight: 700;
+  }
+
+  .appr-progress {
+    height: 6px;
+    background: var(--cream);
+    margin: 0 24px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+  }
+  .appr-progress::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal-light), var(--teal));
+    border-radius: 100px;
+  }
+
+  .appr-body {
+    padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 22px;
+  }
+
+  /* Reviewers grid */
+  .reviewers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+  @media (max-width: 580px) { .reviewers { grid-template-columns: repeat(3, 1fr); } }
+  .rev {
+    text-align: center;
+    padding: 12px 8px;
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    transition: all 0.25s var(--ease);
+    position: relative;
+  }
+  .rev.done { background: rgba(31, 122, 77, 0.06); }
+  .rev.pending { background: rgba(14, 94, 99, 0.08); }
+  .rev .av {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: var(--white);
+    display: grid; place-items: center;
+    margin: 0 auto 6px;
+    font-size: 0.72rem; font-weight: 700;
+    position: relative;
+  }
+  .rev .av.gold { background: var(--accent); color: var(--slate); }
+  .rev .av.dark { background: var(--teal-dark); }
+  .rev .av.slate { background: var(--slate); }
+  .rev .av .badge {
+    position: absolute;
+    bottom: -2px; right: -2px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--cream);
+    background: var(--success);
+    color: var(--white);
+    display: grid; place-items: center;
+    font-size: 0.5rem;
+    font-weight: 700;
+  }
+  .rev.done .av .badge { background: var(--success); }
+  .rev.pending .av .badge { background: var(--accent); }
+  .rev.pending::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .rev .nm {
+    font-size: 0.72rem;
+    color: var(--slate);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .rev .role {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    margin-top: 1px;
+  }
+
+  /* Version timeline */
+  .versions {
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+  }
+  .ver-item {
+    display: grid;
+    grid-template-columns: 18px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(22, 24, 29, 0.06);
+  }
+  .ver-item:last-child { border-bottom: 0; }
+  .ver-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    justify-self: center;
+    opacity: 0.5;
+  }
+  .ver-item.cur .ver-dot {
+    background: var(--teal);
+    opacity: 1;
+    box-shadow: 0 0 0 3px rgba(14, 94, 99, 0.2);
+  }
+  .ver-info { display: flex; flex-direction: column; }
+  .ver-info .lbl {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--slate);
+    font-weight: 600;
+  }
+  .ver-info .lbl .pill {
+    background: var(--teal);
+    color: var(--white);
+    padding: 1px 7px;
+    border-radius: 100px;
+    font-size: 0.55rem;
+    margin-left: 6px;
+  }
+  .ver-info .det {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+  .ver-info .det b { color: var(--slate); font-weight: 600; }
+  .ver-t {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    font-family: var(--mono);
+    white-space: nowrap;
+  }
+
+  /* Comments */
+  .comments-title {
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .comments-title .ct {
+    background: var(--teal-pale);
+    color: var(--teal-deep);
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-family: var(--mono);
+    font-weight: 700;
+  }
+  .comments { display: flex; flex-direction: column; gap: 10px; }
+  .cmt {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+  }
+  .cmt-av {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--teal-dark);
+    color: var(--white);
+    display: grid; place-items: center;
+    font-size: 0.62rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .cmt-av.gold { background: var(--accent); color: var(--slate); }
+  .cmt-body {
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 9px 12px;
+  }
+  .cmt-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 4px;
+  }
+  .cmt-name {
+    font-size: 0.78rem;
+    color: var(--slate);
+    font-weight: 600;
+  }
+  .cmt-t {
+    font-size: 0.64rem;
+    color: var(--text-muted);
+    font-family: var(--mono);
+  }
+  .cmt-txt {
+    font-size: 0.78rem;
+    color: var(--slate);
+    line-height: 1.45;
+  }
+  .cmt-txt .mention {
+    color: var(--teal-dark);
+    font-weight: 600;
+    background: var(--teal-pale);
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+
+  /* VS section */
+  .vs-section {
+    background: var(--slate);
+    color: var(--cream);
+    overflow: hidden;
+  }
+  .vs-section::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.16) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .vs-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%; left: -10%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.08) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .vs-section .section-title { color: var(--cream); position: relative; }
+  .vs-section .section-desc { color: rgba(247, 247, 248, 0.6); position: relative; }
+  .vs-section .eyebrow { color: var(--teal-light); position: relative; }
+  .vs-section .eyebrow::before { background: var(--teal-light); }
+
+  .vs-table {
+    border: 1px solid rgba(247, 247, 248, 0.12);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: rgba(247, 247, 248, 0.02);
+    position: relative;
+  }
+  .vs-head, .vs-row {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1.1fr;
+  }
+  .vs-head > div, .vs-row > div {
+    padding: 22px 28px;
+    border-bottom: 1px solid rgba(247, 247, 248, 0.08);
+    border-right: 1px solid rgba(247, 247, 248, 0.08);
+  }
+  .vs-head > div:last-child, .vs-row > div:last-child { border-right: 0; }
+  .vs-row:last-child > div { border-bottom: 0; }
+  .vs-head > div {
+    background: rgba(247, 247, 248, 0.03);
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(247, 247, 248, 0.5);
+  }
+  .vs-head .totus-col { color: var(--teal-light); }
+  .vs-row .f {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(247, 247, 248, 0.85);
+  }
+  .vs-row .ex { font-size: 0.95rem; color: rgba(247, 247, 248, 0.5); }
+  .vs-row .to {
+    font-size: 0.95rem;
+    color: var(--cream);
+    font-weight: 500;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .vs-row .to::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 12px rgba(14, 94, 99, 0.5);
+  }
+  @media (max-width: 720px) {
+    .vs-head, .vs-row { grid-template-columns: 1fr; }
+    .vs-head > div, .vs-row > div { border-right: 0; padding: 16px 20px; }
+    .vs-head .f-col { display: none; }
+  }
+
+  /* CONNECTS-TO */
+  .connects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 880px) { .connects-grid { grid-template-columns: 1fr; } }
+  .connect-card {
+    background: var(--white);
+    border: 1px solid rgba(14, 94, 99, 0.1);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: flex; gap: 18px;
+    align-items: flex-start;
+    transition: all 0.25s var(--ease);
+  }
+  .connect-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--teal-light);
+    box-shadow: 0 14px 36px rgba(22, 24, 29, 0.06);
+  }
+  .connect-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--teal-pale);
+    color: var(--teal-deep);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .connect-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+  .connect-text h4 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.2rem;
+    color: var(--slate);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .connect-text p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    padding: 140px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.10) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .final-cta::after {
+    content: '';
+    position: absolute;
+    top: 20%; right: 10%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.08) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .final-cta .container { position: relative; }
+  .final-cta .eyebrow { justify-content: center; margin-bottom: 24px; }
+  .final-cta h2 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--slate);
+    margin-bottom: 24px;
+    max-width: 900px;
+    margin: 0 auto 24px;
+  }
+  .final-cta h2 em { color: var(--teal); }
+  .final-cta p {
+    font-size: 1.12rem; line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto 40px;
+  }
+  .final-cta .ctas {
+    display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+  }
+  @media (max-width: 720px) { .final-cta { padding: 80px 24px; } }
+
+  /* FOOTER */
+  footer {
+    background: var(--slate);
+    color: rgba(247, 247, 248, 0.7);
+    padding: 80px 48px 32px;
+  }
+  @media (max-width: 720px) { footer { padding: 60px 24px 24px; } }
+  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+  }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .footer-brand .nav-logo { margin-bottom: 16px; color: var(--cream); }
+  .footer-brand .brand-name { color: var(--cream); }
+  .footer-tagline {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.1rem; line-height: 1.4;
+    color: rgba(247, 247, 248, 0.6);
+    max-width: 300px;
+  }
+  .footer-col h4 {
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-col a {
+    font-size: 0.92rem;
+    color: rgba(247, 247, 248, 0.6);
+    transition: color 0.2s ease;
+  }
+  .footer-col a:hover { color: var(--teal-light); }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(247, 247, 248, 0.08);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+    font-size: 0.82rem;
+    color: rgba(247, 247, 248, 0.4);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .back-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--slate); color: var(--cream); display: grid; place-items: center; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(12px); transition: all 0.35s cubic-bezier(.2,.7,.2,1); z-index: 900; box-shadow: 0 8px 30px rgba(22, 24, 29,0.3); border: 1px solid rgba(247, 247, 248,0.1); }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .back-top:hover { background: var(--teal-deep); transform: translateY(-3px); }
+  .back-top svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<!-- ====================== NAV ====================== -->
+<nav id="nav">
+  <a href="plattform.html" class="nav-logo">
+    <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+    <span class="brand-name">Totus</span>
+  </a>
+  <div class="nav-links">
+    <a href="plattformprodukt.html" data-i18n="nav.product">Produkt</a>
+    <a href="plattformunderwriting.html" data-i18n="nav.underwriting">Underwriting</a>
+    <a href="plattformdealpipeline.html" data-i18n="nav.pipeline">Pipeline</a>
+    <a href="plattformsellside.html" data-i18n="nav.sellside">Sell-Side</a>
+    <a href="plattformaiicmemos.html" class="active" data-i18n="nav.ai">AI &amp; IC-Memos</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="de" class="active" aria-label="Deutsch">DE</button>
+      <button data-lang="en" aria-label="English">EN</button>
+    </div>
+    <a href="#demo" class="nav-cta">
+      <span data-i18n="nav.cta">Demo anfragen</span>
+      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+        <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<!-- ====================== HERO ====================== -->
+<section id="inhalt" class="hero">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge-ai">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M7 1l1.5 4.5L13 7l-4.5 1.5L7 13l-1.5-4.5L1 7l4.5-1.5z" stroke-linejoin="round"/>
+          </svg>
+          <span data-i18n="hero.badge">Modul 04 · AI-Powered</span>
+        </div>
+        <h1 data-i18n-html="hero.h1">Investment-Memos, die sich <em>selbst schreiben</em>.</h1>
+        <p class="hero-sub" data-i18n="hero.sub">IC-Memos werden direkt aus Underwriting-Daten generiert, strukturiert, immer aktuell und mit AI-Assistenz für Executive Summary, Investment Thesis und Risiko-Identifikation.</p>
+        <div class="hero-actions">
+          <a href="#demo" class="btn btn-primary">
+            <span data-i18n="hero.cta1">Demo anfragen</span>
+            <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+              <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#how" class="btn btn-secondary" data-i18n="hero.cta2">So funktioniert es</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">~2h</div>
+            <div class="lab" data-i18n="hero.s1">statt 2 Tage Memo-Vorbereitung</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">100%</div>
+            <div class="lab" data-i18n="hero.s2">aktuelle Daten · jederzeit</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">DE/EN</div>
+            <div class="lab" data-i18n="hero.s3">Auto-Übersetzung</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IC MEMO MOCKUP -->
+      <div class="hero-visual">
+        <div class="mock-memo">
+          <div class="memo-header">
+            <div class="memo-meta-top">
+              <span class="memo-tag" data-i18n="memo.tag">IC-Memo · Draft v3</span>
+              <div class="memo-stamp" data-i18n-html="memo.stamp">Zur<br/>Prüfung</div>
+            </div>
+            <h2 class="memo-h-title" data-i18n="memo.title">Office Tower, Mainzer Landstraße · Investment Proposal</h2>
+            <div class="memo-h-meta">
+              <span><b data-i18n="memo.author">Autor:</b>J. Krämer</span>
+              <span><b data-i18n="memo.date">Datum:</b>17.11.2026</span>
+              <span><b data-i18n="memo.ic">IC-Termin:</b>19.11.2026</span>
+            </div>
+          </div>
+
+          <div class="memo-content">
+            <div class="memo-sec">
+              <h4><span class="num">01</span> <span data-i18n="memo.s1">Executive Summary</span></h4>
+              <p data-i18n-html="memo.s1d">Vorgeschlagener Ankauf eines <span class="hl">Class-A Office-Towers</span> in Frankfurt-City zu €68,5 Mio. · Yield on Cost <span class="hl">5,8 %</span>, IRR (5J) <span class="hl">11,4 %</span>, WAULT 6,2 Jahre. Anker-Mieter ist Deloitte (Restlaufzeit 8,4 Jahre).</p>
+            </div>
+
+            <div class="memo-sec">
+              <h4><span class="num">02</span> <span data-i18n="memo.s2">Key Financials</span></h4>
+              <div class="memo-kpis">
+                <div class="memo-kpi"><div class="k" data-i18n="memo.k.price">Kaufpreis</div><div class="v">€68,5M</div></div>
+                <div class="memo-kpi"><div class="k">YoC</div><div class="v teal">5,8 %</div></div>
+                <div class="memo-kpi"><div class="k">IRR 5J</div><div class="v pos">11,4 %</div></div>
+                <div class="memo-kpi"><div class="k">WAULT</div><div class="v">6,2 J</div></div>
+              </div>
+            </div>
+
+            <div class="memo-sec">
+              <h4><span class="num">03</span> <span data-i18n="memo.s3">Investment Thesis</span></h4>
+              <div class="memo-thesis">
+                <div class="memo-thesis-item"><span class="n">1</span><span class="txt" data-i18n="memo.t1">A-Lage Frankfurt-City mit nachweislicher Mieternachfrage trotz Marktabkühlung.</span></div>
+                <div class="memo-thesis-item"><span class="n">2</span><span class="txt" data-i18n="memo.t2">Bonität der Top-3 Mieter (Deloitte, KPMG, A&amp;O) deutlich über Marktdurchschnitt.</span></div>
+                <div class="memo-thesis-item"><span class="n">3</span><span class="txt" data-i18n="memo.t3">Cap-Rate-Cushion von ~75 bps vor Erreichen der Mindest-IRR.</span></div>
+              </div>
+            </div>
+
+            <div class="memo-sec">
+              <h4><span class="num">04</span> <span data-i18n="memo.s4">Risk Assessment</span></h4>
+              <div class="memo-risks">
+                <div class="memo-risk low">
+                  <span class="lvl" data-i18n="memo.r.low">Niedrig</span>
+                  <span class="desc" data-i18n="memo.r1">Mieterbonität: Top-3 mit Investment Grade Rating.</span>
+                </div>
+                <div class="memo-risk med">
+                  <span class="lvl" data-i18n="memo.r.med">Mittel</span>
+                  <span class="desc" data-i18n="memo.r2">Re-Letting-Risiko in Jahr 4 (KPMG Vertragsende).</span>
+                </div>
+                <div class="memo-risk med">
+                  <span class="lvl" data-i18n="memo.r.med">Mittel</span>
+                  <span class="desc" data-i18n="memo.r3">Exit Cap Rate-Annahme bei aktueller Marktvolatilität.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="memo-footer">
+            <div class="left">
+              <span data-i18n="memo.f1">Generiert aus Underwriting v12</span>
+              <span class="page" data-i18n="memo.page">Seite 1 / 12</span>
+            </div>
+            <span data-i18n="memo.confidential">Vertraulich · TOTUS CRE</span>
+          </div>
+        </div>
+
+        <!-- Floating AI badge -->
+        <div class="ai-float">
+          <div class="ai-pulse">
+            <svg viewBox="0 0 14 14"><path d="M7 1l1.5 4.5L13 7l-4.5 1.5L7 13l-1.5-4.5L1 7l4.5-1.5z" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="lbl" data-i18n="float.lbl">AI hat aktualisiert</div>
+            <div class="val" data-i18n="float.val">Exec Summary · vor 8 Min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== WHY ====================== -->
+<section class="section why-section reveal">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="why.eyebrow">Status Quo</span>
+      <h2 class="section-title" data-i18n-html="why.title">IC-Memos kosten heute <em>Tage</em>, und sind veraltet, sobald sie fertig sind.</h2>
+      <p class="section-desc" data-i18n="why.desc">Der typische IC-Memo-Prozess: Excel öffnen, Zahlen kopieren, Word-Template ausfüllen, Powerpoint daneben bauen, alle drei am Vortag nochmal aktualisieren. Vier Probleme, die das fast unvermeidbar machen.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+        </div>
+        <h4 data-i18n="why.1.t">2-3 Tage Vorlauf</h4>
+        <p data-i18n="why.1.d">Memo-Vorbereitung blockiert Analysten und Investment Manager: Zeit, die im Deal-Sourcing fehlt.</p>
+      </div>
+      <div class="why-card">
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><path d="M3 12h6l3 9 6-18 3 9h0" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4 data-i18n="why.2.t">Veraltete Daten</h4>
+        <p data-i18n="why.2.d">Annahmen ändern sich bis zum IC-Termin, manuelles Memo bleibt auf dem Stand der Erstellung.</p>
+      </div>
+      <div class="why-card">
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l6 6M15 9l-6 6" stroke-linecap="round"/></svg>
+        </div>
+        <h4 data-i18n="why.3.t">Inkonsistenz</h4>
+        <p data-i18n="why.3.d">Jedes Memo sieht anders aus, jeder Autor strukturiert anders, schlecht für Vergleichbarkeit.</p>
+      </div>
+      <div class="why-card">
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6" stroke-linejoin="round"/></svg>
+        </div>
+        <h4 data-i18n="why.4.t">Tool-Sprung</h4>
+        <p data-i18n="why.4.d">Excel-Modell, Word-Memo, Powerpoint-Deck, drei Tools, dreimal die gleichen Zahlen, dreimal das Risiko.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== HOW IT WORKS ====================== -->
+<section class="section flow-section reveal" id="how">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="how.eyebrow">So funktioniert es</span>
+      <h2 class="section-title" data-i18n-html="how.title">Vom Underwriting zum unterschriebenen Memo, in <em>fünf Schritten</em>.</h2>
+      <p class="section-desc" data-i18n="how.desc">Der gesamte Memo-Prozess läuft in TOTUS, von der ersten Datenübernahme bis zur finalen IC-Unterschrift, mit AI-Unterstützung an jedem Schritt.</p>
+    </div>
+
+    <div class="flow-rows">
+      <div class="flow-row">
+        <div class="num-w"><span class="num">1</span></div>
+        <div class="body">
+          <div>
+            <h3 data-i18n-html="flow.1.t"><em>Daten ziehen</em></h3>
+            <p data-i18n="flow.1.d">Cashflow-KPIs, Rent Roll, Risk Score und Pipeline-Stage werden automatisch übernommen, kein manuelles Kopieren.</p>
+          </div>
+          <div class="vis"><b data-i18n="flow.1.v.s">Underwriting v12</b> <span class="arrow">→</span> <b data-i18n="flow.1.v.e">Memo Draft v1</b></div>
+        </div>
+      </div>
+
+      <div class="flow-row">
+        <div class="num-w"><span class="num">2</span></div>
+        <div class="body">
+          <div>
+            <h3 data-i18n-html="flow.2.t"><em>Template wählen</em></h3>
+            <p data-i18n="flow.2.d">Fund-spezifisches Template, Family-Office-Format oder Komitee-Standard, einmal aufgesetzt, immer wiederverwendbar.</p>
+          </div>
+          <div class="vis"><b data-i18n="flow.2.v.s">Template: Fonds IC</b> <span class="arrow">→</span> <b data-i18n="flow.2.v.e">12 Sektionen, 4 Tabellen</b></div>
+        </div>
+      </div>
+
+      <div class="flow-row">
+        <div class="num-w"><span class="num">3</span></div>
+        <div class="body">
+          <div>
+            <h3 data-i18n-html="flow.3.t">AI generiert <em>den Entwurf</em></h3>
+            <p data-i18n="flow.3.d">Executive Summary, Investment Thesis und Risk Assessment werden von der AI vorgeschlagen, basierend auf Deal-Daten und Memos vorheriger Deals.</p>
+          </div>
+          <div class="vis"><b data-i18n="flow.3.v.s">+ Exec Summary</b> <span class="arrow">·</span> <b data-i18n="flow.3.v.m">Thesis</b> <span class="arrow">·</span> <b data-i18n="flow.3.v.e">Risks</b></div>
+        </div>
+      </div>
+
+      <div class="flow-row">
+        <div class="num-w"><span class="num">4</span></div>
+        <div class="body">
+          <div>
+            <h3 data-i18n-html="flow.4.t">Team <em>reviewt &amp; kommentiert</em></h3>
+            <p data-i18n="flow.4.d">Multi-User-Review mit Inline-Kommentaren, @-Mentions und Vorschlagsmodus. Versionen werden automatisch protokolliert.</p>
+          </div>
+          <div class="vis"><b data-i18n="flow.4.v.s">v1 → v2 → v3</b> <span class="arrow">·</span> <b data-i18n="flow.4.v.e">14 Kommentare aufgelöst</b></div>
+        </div>
+      </div>
+
+      <div class="flow-row">
+        <div class="num-w"><span class="num">5</span></div>
+        <div class="body">
+          <div>
+            <h3 data-i18n-html="flow.5.t"><em>Freigabe</em> &amp; Vote</h3>
+            <p data-i18n="flow.5.d">IC-Mitglieder geben digital frei, mit Audit-Trail, Zeitstempel und finaler PDF-Version für die Akte.</p>
+          </div>
+          <div class="vis"><b data-i18n="flow.5.v.s">3 / 5 freigegeben</b> <span class="arrow">→</span> <b data-i18n="flow.5.v.e">Final PDF · 12 Seiten</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== DEEP DIVE 1: AI ASSISTANT ====================== -->
+<section class="section reveal" style="background: linear-gradient(180deg, var(--cream) 0%, var(--teal-pale) 100%); border-top: 1px solid rgba(14, 94, 99, 0.1); border-bottom: 1px solid rgba(14, 94, 99, 0.1);">
+  <div class="section-inner">
+    <div class="deep-dive">
+      <div class="dd-text">
+        <span class="eyebrow" data-i18n="d1.eyebrow">AI Assistant</span>
+        <h2 data-i18n-html="d1.title">AI mit <em>Deal-Kontext</em>, nicht aus dem Nichts.</h2>
+        <p data-i18n="d1.intro">Die TOTUS-AI kennt die Daten Ihres Deals, Ihre vorherigen Memos und die Schreibweise Ihres Hauses. Sie schlägt vor · Sie entscheiden. Mit Quellenangabe und Konfidenz-Anzeige bei jeder Generierung.</p>
+        <ul class="dd-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="ti" data-i18n="d1.l1.t">Executive Summary aus Underwriting-Daten</div>
+              <div class="te" data-i18n="d1.l1.d">Ein klarer, faktischer Absatz auf Basis von Cashflow, Rent Roll und Risiko-Score, keine Halluzinationen, nur Daten.</div>
+            </div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="ti" data-i18n="d1.l2.t">Investment Thesis aus Comparables</div>
+              <div class="te" data-i18n="d1.l2.d">Die AI vergleicht den Deal mit ähnlichen aus der eigenen Pipeline und schlägt eine kohärente Thesis vor.</div>
+            </div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="ti" data-i18n="d1.l3.t">Risiko-Identifikation</div>
+              <div class="te" data-i18n="d1.l3.d">Re-Letting-Cliffs, Cap-Rate-Sensitivitäten, Konzentrations-Risiken, die AI markiert sie und schlägt Wording vor.</div>
+            </div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="ti" data-i18n="d1.l4.t">DE ↔ EN Auto-Übersetzung</div>
+              <div class="te" data-i18n="d1.l4.d">Internationale Investoren bekommen das Memo auf Knopfdruck in Englisch, mit fachlich korrekter Terminologie.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- AI ASSISTANT MOCKUP -->
+      <div class="dd-visual">
+        <div class="mock-ai">
+          <div class="ai-head">
+            <div class="ai-head-row">
+              <div class="ai-head-l">
+                <div class="ai-orb">
+                  <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 1-5.5 5L18 22l-6-3.5L6 22l1.5-7L2 10l7-1z" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ai-title-w">
+                  <h4 data-i18n="ai.title">TOTUS AI Assistant</h4>
+                  <div class="sub" data-i18n="ai.sub">Trainiert auf Ihren vorherigen Memos</div>
+                </div>
+              </div>
+              <span class="ai-status" data-i18n="ai.status">Aktiv</span>
+            </div>
+            <div class="ai-prompt">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              <input type="text" placeholder="z.B. Schreibe die Investment Thesis…" data-i18n-placeholder="ai.placeholder" />
+              <span class="kbd">⌘ K</span>
+            </div>
+          </div>
+
+          <div class="ai-body">
+            <div class="ai-section-title" data-i18n="ai.sug.title">Vorschläge für dieses Memo</div>
+
+            <div class="ai-sug active">
+              <div class="ai-sug-row">
+                <div class="ai-sug-ic">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM4 12h10v4H4zM4 20h16" stroke-linecap="round"/></svg>
+                </div>
+                <div class="ai-sug-info">
+                  <h5 data-i18n="ai.s1.t">Executive Summary aktualisieren</h5>
+                  <p data-i18n="ai.s1.d">Neue Rent-Roll-Daten zeigen WAULT von 6,2 J, aktueller Entwurf nennt noch 5,8 J.</p>
+                </div>
+                <span class="ai-sug-action" data-i18n="ai.s1.a">Übernehmen</span>
+              </div>
+              <div class="ai-sug-meta">
+                <div class="conf">
+                  <span data-i18n="ai.conf">Konfidenz</span>
+                  <div class="bar" style="--conf: 92%;"></div>
+                  <span>92%</span>
+                </div>
+                <div class="src"><span data-i18n="ai.src">Quelle: Rent Roll, Underwriting v12</span></div>
+              </div>
+            </div>
+
+            <div class="ai-sug">
+              <div class="ai-sug-row">
+                <div class="ai-sug-ic">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l9 3.5v6.5c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6.5L12 3z" stroke-linejoin="round"/><path d="M12 9v4M12 16v.5" stroke-linecap="round"/></svg>
+                </div>
+                <div class="ai-sug-info">
+                  <h5 data-i18n="ai.s2.t">Zusätzliches Risiko identifiziert</h5>
+                  <p data-i18n="ai.s2.d">KPMG-Vertrag läuft in Y4 aus · Re-Letting-Cliff. Empfehle: in Risk Section ergänzen.</p>
+                </div>
+                <span class="ai-sug-action" data-i18n="ai.s2.a">Hinzufügen</span>
+              </div>
+              <div class="ai-sug-meta">
+                <div class="conf">
+                  <span data-i18n="ai.conf">Konfidenz</span>
+                  <div class="bar" style="--conf: 87%;"></div>
+                  <span>87%</span>
+                </div>
+                <div class="src"><span data-i18n="ai.src2">Quelle: Rent Roll, Comparables</span></div>
+              </div>
+            </div>
+
+            <div class="ai-sug">
+              <div class="ai-sug-row">
+                <div class="ai-sug-ic">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16" stroke-linecap="round"/></svg>
+                </div>
+                <div class="ai-sug-info">
+                  <h5 data-i18n="ai.s3.t">3 vergleichbare Deals gefunden</h5>
+                  <p data-i18n="ai.s3.d">Office Tower Eschborn (2024), CBD-Office HH (2025), Westend FFM (2025). Cap Rate-Spanne 5,1-5,9 %.</p>
+                </div>
+                <span class="ai-sug-action" data-i18n="ai.s3.a">Anzeigen</span>
+              </div>
+              <div class="ai-sug-meta">
+                <div class="conf">
+                  <span data-i18n="ai.conf">Konfidenz</span>
+                  <div class="bar" style="--conf: 95%;"></div>
+                  <span>95%</span>
+                </div>
+                <div class="src"><span data-i18n="ai.src3">Quelle: TOTUS-Datenbank</span></div>
+              </div>
+            </div>
+
+            <div class="ai-section-title" style="margin-top: 6px;" data-i18n="ai.act.title">Letzte AI-Aktivität</div>
+            <div class="ai-activity">
+              <div class="ai-act">
+                <span class="dot"></span>
+                <span class="txt" data-i18n-html="ai.a1">Exec Summary aktualisiert nach neuer Rent Roll <b>v3</b></span>
+                <span class="t" data-i18n="ai.a1.t">vor 8 Min</span>
+              </div>
+              <div class="ai-act">
+                <span class="dot"></span>
+                <span class="txt" data-i18n-html="ai.a2">DE → EN Übersetzung für <b>internationale Investoren</b> erstellt</span>
+                <span class="t" data-i18n="ai.a2.t">vor 1 Std</span>
+              </div>
+              <div class="ai-act">
+                <span class="dot"></span>
+                <span class="txt" data-i18n-html="ai.a3">Investment Thesis basierend auf <b>3 Comparables</b> generiert</span>
+                <span class="t" data-i18n="ai.a3.t">gestern</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== DEEP DIVE 2: APPROVAL & VERSIONING ====================== -->
+<section class="section reveal">
+  <div class="section-inner">
+    <div class="deep-dive reverse">
+      <!-- APPROVAL MOCKUP -->
+      <div class="dd-visual">
+        <div class="mock-approval">
+          <div class="appr-head">
+            <div class="appr-title-w">
+              <span class="appr-eyebrow" data-i18n="appr.eyebrow">IC-Memo · Approval</span>
+              <span class="appr-title" data-i18n="appr.title">Office Tower FFM · IC am 19.11.</span>
+            </div>
+            <span class="appr-status">
+              <span data-i18n="appr.status">Pending Vote</span>
+              <span class="pgs">3 / 5</span>
+            </span>
+          </div>
+          <div class="appr-progress"></div>
+
+          <div class="appr-body">
+            <!-- Reviewers -->
+            <div>
+              <div class="ai-section-title" data-i18n="appr.rev.title">IC-Mitglieder</div>
+              <div class="reviewers">
+                <div class="rev done">
+                  <div class="av">CH<span class="badge">✓</span></div>
+                  <div class="nm">C. Hartmann</div>
+                  <div class="role" data-i18n="appr.role.cio">CIO</div>
+                </div>
+                <div class="rev done">
+                  <div class="av dark">SP<span class="badge">✓</span></div>
+                  <div class="nm">S. Peters</div>
+                  <div class="role" data-i18n="appr.role.head">Head of IM</div>
+                </div>
+                <div class="rev done">
+                  <div class="av gold">MR<span class="badge">✓</span></div>
+                  <div class="nm">M. Reiter</div>
+                  <div class="role" data-i18n="appr.role.head">Head of IM</div>
+                </div>
+                <div class="rev pending">
+                  <div class="av slate">DF<span class="badge">⋯</span></div>
+                  <div class="nm">D. Forst</div>
+                  <div class="role" data-i18n="appr.role.risk">Risk</div>
+                </div>
+                <div class="rev pending">
+                  <div class="av">BK<span class="badge">⋯</span></div>
+                  <div class="nm">B. Klein</div>
+                  <div class="role" data-i18n="appr.role.cfo">CFO</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Versions -->
+            <div>
+              <div class="ai-section-title" data-i18n="appr.ver.title">Versionsverlauf</div>
+              <div class="versions">
+                <div class="ver-item cur">
+                  <span class="ver-dot"></span>
+                  <div class="ver-info">
+                    <div class="lbl">v3<span class="pill" data-i18n="appr.cur">Aktuell</span></div>
+                    <div class="det"><b>J. Krämer</b> · <span data-i18n="appr.v3">Risk Section ergänzt, Comparables eingebunden</span></div>
+                  </div>
+                  <span class="ver-t" data-i18n="appr.v3.t">heute · 14:22</span>
+                </div>
+                <div class="ver-item">
+                  <span class="ver-dot"></span>
+                  <div class="ver-info">
+                    <div class="lbl">v2</div>
+                    <div class="det"><b>T. Lang</b> · <span data-i18n="appr.v2">Investment Thesis überarbeitet, KPI-Tabelle ergänzt</span></div>
+                  </div>
+                  <span class="ver-t" data-i18n="appr.v2.t">gestern · 16:45</span>
+                </div>
+                <div class="ver-item">
+                  <span class="ver-dot"></span>
+                  <div class="ver-info">
+                    <div class="lbl">v1</div>
+                    <div class="det"><b data-i18n="appr.ai">TOTUS AI</b> · <span data-i18n="appr.v1">Initialer Entwurf aus Underwriting v12 generiert</span></div>
+                  </div>
+                  <span class="ver-t" data-i18n="appr.v1.t">15.11. · 09:12</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comments -->
+            <div>
+              <div class="comments-title">
+                <span data-i18n="appr.cm.title">Kommentare</span>
+                <span class="ct">7</span>
+              </div>
+              <div class="comments">
+                <div class="cmt">
+                  <div class="cmt-av">CH</div>
+                  <div class="cmt-body">
+                    <div class="cmt-head">
+                      <span class="cmt-name">C. Hartmann</span>
+                      <span class="cmt-t" data-i18n="cmt.t1">vor 2 Std</span>
+                    </div>
+                    <div class="cmt-txt" data-i18n-html="cmt.txt1"><span class="mention">@J. Krämer</span> Bitte WAULT-Annahmen zur Renewal-Wahrscheinlichkeit ergänzen.</div>
+                  </div>
+                </div>
+                <div class="cmt">
+                  <div class="cmt-av gold">MR</div>
+                  <div class="cmt-body">
+                    <div class="cmt-head">
+                      <span class="cmt-name">M. Reiter</span>
+                      <span class="cmt-t" data-i18n="cmt.t2">heute · 09:14</span>
+                    </div>
+                    <div class="cmt-txt" data-i18n="cmt.txt2">Comparable mit Westend-Deal sehr stark. Sehe Mehrwert in Section 3.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dd-text">
+        <span class="eyebrow" data-i18n="d2.eyebrow">Approval &amp; Versioning</span>
+        <h2 data-i18n-html="d2.title">Nachvollziehbar bis zur <em>letzten Annahme</em>.</h2>
+        <p data-i18n="d2.intro">Jede Änderung am Memo wird protokolliert: Wer, Wann, Was. Reviewer geben digital frei. Kommentare bleiben am Memo, nicht in einer parallelen E-Mail-Kette. Compliance freut sich, das Investmentteam auch.</p>
+        <ul class="dd-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="ti" data-i18n="d2.l1.t">Versionierung pro Speichern</div>
+              <div class="te" data-i18n="d2.l1.d">Jede Version ist abrufbar, was hat sich seit v2 geändert, was hat die AI vorgeschlagen, was hat der Mensch akzeptiert.</div>
+            </div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="ti" data-i18n="d2.l2.t">Inline-Kommentare &amp; @-Mentions</div>
+              <div class="te" data-i18n="d2.l2.d">Diskussion direkt am Memo-Abschnitt. Mentions lösen Benachrichtigungen aus, ohne E-Mail-Flut.</div>
+            </div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="ti" data-i18n="d2.l3.t">Digitaler IC-Vote</div>
+              <div class="te" data-i18n="d2.l3.d">Reviewer geben mit zwei Klicks frei oder lehnen ab, mit Begründung. Audit-Trail bleibt bestehen.</div>
+            </div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="ti" data-i18n="d2.l4.t">Finales PDF für die Akte</div>
+              <div class="te" data-i18n="d2.l4.d">Nach finaler Freigabe wird ein versioniertes PDF erzeugt, für interne Akte, externe Prüfer und Investoren.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== VS TRADITIONAL ====================== -->
+<section class="section vs-section reveal">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="vs.eyebrow">vs. Word + PowerPoint</span>
+      <h2 class="section-title" data-i18n-html="vs.title">Vom Tool-Sprung zum <em>einen Workflow</em>.</h2>
+      <p class="section-desc" data-i18n="vs.desc">Was heute über drei Tools verteilt ist: Excel-Modell, Word-Memo, Powerpoint-Deck, lebt in TOTUS in einem Dokument. Mit allen Daten live verlinkt.</p>
+    </div>
+
+    <div class="vs-table">
+      <div class="vs-head">
+        <div class="f-col" data-i18n="vs.h1">Anforderung</div>
+        <div data-i18n="vs.h2">Word + PPT</div>
+        <div class="totus-col">TOTUS IC-Memos</div>
+      </div>
+      <div class="vs-row">
+        <div class="f" data-i18n="vs.r1.f">Erstellung</div>
+        <div class="ex" data-i18n="vs.r1.e">2-3 Tage manuelle Arbeit</div>
+        <div class="to" data-i18n="vs.r1.t">Erster Draft in ~30 Min</div>
+      </div>
+      <div class="vs-row">
+        <div class="f" data-i18n="vs.r2.f">Datenstand</div>
+        <div class="ex" data-i18n="vs.r2.e">Snapshot zum Zeitpunkt der Erstellung</div>
+        <div class="to" data-i18n="vs.r2.t">Live aus Underwriting</div>
+      </div>
+      <div class="vs-row">
+        <div class="f" data-i18n="vs.r3.f">AI-Unterstützung</div>
+        <div class="ex" data-i18n="vs.r3.e">Generische Tools · kein Deal-Kontext</div>
+        <div class="to" data-i18n="vs.r3.t">Trainiert auf Ihren Daten</div>
+      </div>
+      <div class="vs-row">
+        <div class="f" data-i18n="vs.r4.f">Review-Workflow</div>
+        <div class="ex" data-i18n="vs.r4.e">E-Mail-Anhänge, Track Changes</div>
+        <div class="to" data-i18n="vs.r4.t">Inline-Kommentare, Mentions, Voting</div>
+      </div>
+      <div class="vs-row">
+        <div class="f" data-i18n="vs.r5.f">Audit-Trail</div>
+        <div class="ex" data-i18n="vs.r5.e">Versionschaos auf SharePoint</div>
+        <div class="to" data-i18n="vs.r5.t">Vollständig pro Speichern</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CONNECTS TO ====================== -->
+<section class="section reveal">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="con.eyebrow">Integration</span>
+      <h2 class="section-title" data-i18n-html="con.title">Das IC-Memo lebt <em>nicht alleine</em>.</h2>
+      <p class="section-desc" data-i18n="con.desc">Es bezieht seine Daten aus den anderen Modulen, und gibt seine Entscheidungen wieder an sie zurück. So bleibt der Investment-Workflow geschlossen.</p>
+    </div>
+
+    <div class="connects-grid">
+      <div class="connect-card">
+        <div class="connect-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 20V4m0 16h18M3 20l5-7 4 3 7-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="connect-text">
+          <h4 data-i18n="con.1.t">← Underwriting</h4>
+          <p data-i18n="con.1.d">Cashflow-KPIs, Rent Roll, Szenarien werden live in das Memo übernommen, kein manuelles Kopieren.</p>
+        </div>
+      </div>
+      <div class="connect-card">
+        <div class="connect-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="5" height="16" rx="1"/><rect x="9.5" y="4" width="5" height="11" rx="1"/><rect x="16" y="4" width="5" height="6" rx="1"/></svg>
+        </div>
+        <div class="connect-text">
+          <h4 data-i18n="con.2.t">↔ Pipeline</h4>
+          <p data-i18n="con.2.d">Der IC-Beschluss bewegt den Deal automatisch in die nächste Stage, entweder „Closing“ oder „Hold“.</p>
+        </div>
+      </div>
+      <div class="connect-card">
+        <div class="connect-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="connect-text">
+          <h4 data-i18n="con.3.t">→ Comparables-DB</h4>
+          <p data-i18n="con.3.d">Jedes finalisierte Memo fließt in die hauseigene Vergleichsdatenbank, bessere AI-Vorschläge mit jedem neuen Deal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FINAL CTA ====================== -->
+<section class="final-cta reveal" id="demo">
+  <div class="container">
+    <span class="eyebrow" data-i18n="cta.eyebrow">Demo anfragen</span>
+    <h2 data-i18n-html="cta.title">Sehen Sie, wie Ihr <em>nächstes IC-Memo</em> aussehen könnte.</h2>
+    <p data-i18n="cta.desc">In einer 30-Minuten-Demo zeigen wir das Memo-Modul anhand eines konkreten Deals, wenn Sie wollen, mit Ihrem aktuellen Memo-Template als Vorlage.</p>
+    <div class="ctas">
+      <a href="plattformdemo.html" class="btn btn-primary">
+        <span data-i18n="cta.btn1">Demo anfragen</span>
+        <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+          <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="plattformprodukt.html" class="btn btn-secondary" data-i18n="cta.btn2">Zur Produktseite</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<button class="back-top" id="backTop" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="plattform.html" class="nav-logo">
+          <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+          <span class="brand-name">Totus</span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Die Decision-Plattform für professionelle Immobilieninvestments.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col1">Produkt</h4>
+        <ul>
+          <li><a href="plattformprodukt.html" data-i18n="footer.c1.1">Überblick</a></li>
+          <li><a href="plattformunderwriting.html" data-i18n="footer.c1.2">Underwriting</a></li>
+          <li><a href="plattformdealpipeline.html" data-i18n="footer.c1.3">Deal Pipeline</a></li>
+          <li><a href="plattformaiicmemos.html" data-i18n="footer.c1.4">IC-Memos &amp; AI</a></li>
+          <li><a href="plattformsellside.html" data-i18n="footer.c1.5">Sell-Side</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col2">Unternehmen</h4>
+        <ul>
+          <li><a href="plattformabout.html" data-i18n="footer.c2.1">Über uns</a></li>
+          <li><a href="plattformcareers.html" data-i18n="footer.c2.2">Karriere</a></li>
+          <li><a href="plattformcontact.html" data-i18n="footer.c2.3">Kontakt</a></li>
+          <li><a href="plattformpress.html" data-i18n="footer.c2.4">Presse</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col3">Rechtliches</h4>
+        <ul>
+          <li><a href="plattformimprint.html" data-i18n="footer.c3.1">Impressum</a></li>
+          <li><a href="plattformprivacy.html" data-i18n="footer.c3.2">Datenschutz</a></li>
+          <li><a href="plattformterms.html" data-i18n="footer.c3.3">AGB</a></li>
+          <li><a href="plattformsecurity.html" data-i18n="footer.c3.4">Sicherheit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.</span>
+      <span data-i18n="footer.made">Made in Berlin</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const translations = {
+    de: {
+      'meta.title': 'TOTUS CRE · AI & IC-Memos',
+      'meta.desc': 'TOTUS CRE AI & IC-Memos · Investment-Committee-Memos, die sich selbst schreiben.',
+      'nav.product': 'Produkt',
+      'nav.underwriting': 'Underwriting',
+      'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side',
+      'nav.ai': 'AI & IC-Memos',
+      'nav.cta': 'Demo anfragen',
+
+      'hero.badge': 'Modul 04 · AI-Powered',
+      'hero.h1': 'Investment-Memos, die sich <em>selbst schreiben</em>.',
+      'hero.sub': 'IC-Memos werden direkt aus Underwriting-Daten generiert, strukturiert, immer aktuell und mit AI-Assistenz für Executive Summary, Investment Thesis und Risiko-Identifikation.',
+      'hero.cta1': 'Demo anfragen',
+      'hero.cta2': 'So funktioniert es',
+      'hero.s1': 'statt 2 Tage Memo-Vorbereitung',
+      'hero.s2': 'aktuelle Daten · jederzeit',
+      'hero.s3': 'Auto-Übersetzung',
+
+      'memo.tag': 'IC-Memo · Draft v3',
+      'memo.title': 'Office Tower, Mainzer Landstraße · Investment Proposal',
+      'memo.stamp': 'Zur<br/>Prüfung',
+      'memo.author': 'Autor:',
+      'memo.date': 'Datum:',
+      'memo.ic': 'IC-Termin:',
+      'memo.s1': 'Executive Summary',
+      'memo.s1d': 'Vorgeschlagener Ankauf eines <span class="hl">Class-A Office-Towers</span> in Frankfurt-City zu €68,5 Mio. · Yield on Cost <span class="hl">5,8 %</span>, IRR (5J) <span class="hl">11,4 %</span>, WAULT 6,2 Jahre. Anker-Mieter ist Deloitte (Restlaufzeit 8,4 Jahre).',
+      'memo.s2': 'Key Financials',
+      'memo.k.price': 'Kaufpreis',
+      'memo.s3': 'Investment Thesis',
+      'memo.t1': 'A-Lage Frankfurt-City mit nachweislicher Mieternachfrage trotz Marktabkühlung.',
+      'memo.t2': 'Bonität der Top-3 Mieter (Deloitte, KPMG, A&O) deutlich über Marktdurchschnitt.',
+      'memo.t3': 'Cap-Rate-Cushion von ~75 bps vor Erreichen der Mindest-IRR.',
+      'memo.s4': 'Risk Assessment',
+      'memo.r.low': 'Niedrig', 'memo.r.med': 'Mittel', 'memo.r.high': 'Hoch',
+      'memo.r1': 'Mieterbonität: Top-3 mit Investment Grade Rating.',
+      'memo.r2': 'Re-Letting-Risiko in Jahr 4 (KPMG Vertragsende).',
+      'memo.r3': 'Exit Cap Rate-Annahme bei aktueller Marktvolatilität.',
+      'memo.f1': 'Generiert aus Underwriting v12',
+      'memo.page': 'Seite 1 / 12',
+      'memo.confidential': 'Vertraulich · TOTUS CRE',
+
+      'float.lbl': 'AI hat aktualisiert',
+      'float.val': 'Exec Summary · vor 8 Min',
+
+      'why.eyebrow': 'Status Quo',
+      'why.title': 'IC-Memos kosten heute <em>Tage</em>, und sind veraltet, sobald sie fertig sind.',
+      'why.desc': 'Der typische IC-Memo-Prozess: Excel öffnen, Zahlen kopieren, Word-Template ausfüllen, Powerpoint daneben bauen, alle drei am Vortag nochmal aktualisieren. Vier Probleme, die das fast unvermeidbar machen.',
+      'why.1.t': '2-3 Tage Vorlauf',
+      'why.1.d': 'Memo-Vorbereitung blockiert Analysten und Investment Manager: Zeit, die im Deal-Sourcing fehlt.',
+      'why.2.t': 'Veraltete Daten',
+      'why.2.d': 'Annahmen ändern sich bis zum IC-Termin, manuelles Memo bleibt auf dem Stand der Erstellung.',
+      'why.3.t': 'Inkonsistenz',
+      'why.3.d': 'Jedes Memo sieht anders aus, jeder Autor strukturiert anders, schlecht für Vergleichbarkeit.',
+      'why.4.t': 'Tool-Sprung',
+      'why.4.d': 'Excel-Modell, Word-Memo, Powerpoint-Deck, drei Tools, dreimal die gleichen Zahlen, dreimal das Risiko.',
+
+      'how.eyebrow': 'So funktioniert es',
+      'how.title': 'Vom Underwriting zum unterschriebenen Memo, in <em>fünf Schritten</em>.',
+      'how.desc': 'Der gesamte Memo-Prozess läuft in TOTUS, von der ersten Datenübernahme bis zur finalen IC-Unterschrift, mit AI-Unterstützung an jedem Schritt.',
+      'flow.1.t': '<em>Daten ziehen</em>',
+      'flow.1.d': 'Cashflow-KPIs, Rent Roll, Risk Score und Pipeline-Stage werden automatisch übernommen, kein manuelles Kopieren.',
+      'flow.1.v.s': 'Underwriting v12', 'flow.1.v.e': 'Memo Draft v1',
+      'flow.2.t': '<em>Template wählen</em>',
+      'flow.2.d': 'Fund-spezifisches Template, Family-Office-Format oder Komitee-Standard, einmal aufgesetzt, immer wiederverwendbar.',
+      'flow.2.v.s': 'Template: Fonds IC', 'flow.2.v.e': '12 Sektionen, 4 Tabellen',
+      'flow.3.t': 'AI generiert <em>den Entwurf</em>',
+      'flow.3.d': 'Executive Summary, Investment Thesis und Risk Assessment werden von der AI vorgeschlagen, basierend auf Deal-Daten und Memos vorheriger Deals.',
+      'flow.3.v.s': '+ Exec Summary', 'flow.3.v.m': 'Thesis', 'flow.3.v.e': 'Risks',
+      'flow.4.t': 'Team <em>reviewt & kommentiert</em>',
+      'flow.4.d': 'Multi-User-Review mit Inline-Kommentaren, @-Mentions und Vorschlagsmodus. Versionen werden automatisch protokolliert.',
+      'flow.4.v.s': 'v1 → v2 → v3', 'flow.4.v.e': '14 Kommentare aufgelöst',
+      'flow.5.t': '<em>Freigabe</em> & Vote',
+      'flow.5.d': 'IC-Mitglieder geben digital frei, mit Audit-Trail, Zeitstempel und finaler PDF-Version für die Akte.',
+      'flow.5.v.s': '3 / 5 freigegeben', 'flow.5.v.e': 'Final PDF · 12 Seiten',
+
+      'd1.eyebrow': 'AI Assistant',
+      'd1.title': 'AI mit <em>Deal-Kontext</em>, nicht aus dem Nichts.',
+      'd1.intro': 'Die TOTUS-AI kennt die Daten Ihres Deals, Ihre vorherigen Memos und die Schreibweise Ihres Hauses. Sie schlägt vor · Sie entscheiden. Mit Quellenangabe und Konfidenz-Anzeige bei jeder Generierung.',
+      'd1.l1.t': 'Executive Summary aus Underwriting-Daten',
+      'd1.l1.d': 'Ein klarer, faktischer Absatz auf Basis von Cashflow, Rent Roll und Risiko-Score, keine Halluzinationen, nur Daten.',
+      'd1.l2.t': 'Investment Thesis aus Comparables',
+      'd1.l2.d': 'Die AI vergleicht den Deal mit ähnlichen aus der eigenen Pipeline und schlägt eine kohärente Thesis vor.',
+      'd1.l3.t': 'Risiko-Identifikation',
+      'd1.l3.d': 'Re-Letting-Cliffs, Cap-Rate-Sensitivitäten, Konzentrations-Risiken, die AI markiert sie und schlägt Wording vor.',
+      'd1.l4.t': 'DE ↔ EN Auto-Übersetzung',
+      'd1.l4.d': 'Internationale Investoren bekommen das Memo auf Knopfdruck in Englisch, mit fachlich korrekter Terminologie.',
+
+      'ai.title': 'TOTUS AI Assistant',
+      'ai.sub': 'Trainiert auf Ihren vorherigen Memos',
+      'ai.status': 'Aktiv',
+      'ai.placeholder': 'z.B. Schreibe die Investment Thesis…',
+      'ai.sug.title': 'Vorschläge für dieses Memo',
+      'ai.s1.t': 'Executive Summary aktualisieren',
+      'ai.s1.d': 'Neue Rent-Roll-Daten zeigen WAULT von 6,2 J, aktueller Entwurf nennt noch 5,8 J.',
+      'ai.s1.a': 'Übernehmen',
+      'ai.conf': 'Konfidenz',
+      'ai.src': 'Quelle: Rent Roll, Underwriting v12',
+      'ai.s2.t': 'Zusätzliches Risiko identifiziert',
+      'ai.s2.d': 'KPMG-Vertrag läuft in Y4 aus · Re-Letting-Cliff. Empfehle: in Risk Section ergänzen.',
+      'ai.s2.a': 'Hinzufügen',
+      'ai.src2': 'Quelle: Rent Roll, Comparables',
+      'ai.s3.t': '3 vergleichbare Deals gefunden',
+      'ai.s3.d': 'Office Tower Eschborn (2024), CBD-Office HH (2025), Westend FFM (2025). Cap Rate-Spanne 5,1-5,9 %.',
+      'ai.s3.a': 'Anzeigen',
+      'ai.src3': 'Quelle: TOTUS-Datenbank',
+      'ai.act.title': 'Letzte AI-Aktivität',
+      'ai.a1': 'Exec Summary aktualisiert nach neuer Rent Roll <b>v3</b>',
+      'ai.a1.t': 'vor 8 Min',
+      'ai.a2': 'DE → EN Übersetzung für <b>internationale Investoren</b> erstellt',
+      'ai.a2.t': 'vor 1 Std',
+      'ai.a3': 'Investment Thesis basierend auf <b>3 Comparables</b> generiert',
+      'ai.a3.t': 'gestern',
+
+      'd2.eyebrow': 'Approval & Versioning',
+      'd2.title': 'Nachvollziehbar bis zur <em>letzten Annahme</em>.',
+      'd2.intro': 'Jede Änderung am Memo wird protokolliert: Wer, Wann, Was. Reviewer geben digital frei. Kommentare bleiben am Memo, nicht in einer parallelen E-Mail-Kette. Compliance freut sich, das Investmentteam auch.',
+      'd2.l1.t': 'Versionierung pro Speichern',
+      'd2.l1.d': 'Jede Version ist abrufbar, was hat sich seit v2 geändert, was hat die AI vorgeschlagen, was hat der Mensch akzeptiert.',
+      'd2.l2.t': 'Inline-Kommentare & @-Mentions',
+      'd2.l2.d': 'Diskussion direkt am Memo-Abschnitt. Mentions lösen Benachrichtigungen aus, ohne E-Mail-Flut.',
+      'd2.l3.t': 'Digitaler IC-Vote',
+      'd2.l3.d': 'Reviewer geben mit zwei Klicks frei oder lehnen ab, mit Begründung. Audit-Trail bleibt bestehen.',
+      'd2.l4.t': 'Finales PDF für die Akte',
+      'd2.l4.d': 'Nach finaler Freigabe wird ein versioniertes PDF erzeugt, für interne Akte, externe Prüfer und Investoren.',
+
+      'appr.eyebrow': 'IC-Memo · Approval',
+      'appr.title': 'Office Tower FFM · IC am 19.11.',
+      'appr.status': 'Pending Vote',
+      'appr.rev.title': 'IC-Mitglieder',
+      'appr.role.cio': 'CIO',
+      'appr.role.head': 'Head of IM',
+      'appr.role.risk': 'Risk',
+      'appr.role.cfo': 'CFO',
+      'appr.ver.title': 'Versionsverlauf',
+      'appr.cur': 'Aktuell',
+      'appr.v3': 'Risk Section ergänzt, Comparables eingebunden',
+      'appr.v3.t': 'heute · 14:22',
+      'appr.v2': 'Investment Thesis überarbeitet, KPI-Tabelle ergänzt',
+      'appr.v2.t': 'gestern · 16:45',
+      'appr.ai': 'TOTUS AI',
+      'appr.v1': 'Initialer Entwurf aus Underwriting v12 generiert',
+      'appr.v1.t': '15.11. · 09:12',
+      'appr.cm.title': 'Kommentare',
+      'cmt.t1': 'vor 2 Std',
+      'cmt.txt1': '<span class="mention">@J. Krämer</span> Bitte WAULT-Annahmen zur Renewal-Wahrscheinlichkeit ergänzen.',
+      'cmt.t2': 'heute · 09:14',
+      'cmt.txt2': 'Comparable mit Westend-Deal sehr stark. Sehe Mehrwert in Section 3.',
+
+      'vs.eyebrow': 'vs. Word + PowerPoint',
+      'vs.title': 'Vom Tool-Sprung zum <em>einen Workflow</em>.',
+      'vs.desc': 'Was heute über drei Tools verteilt ist: Excel-Modell, Word-Memo, Powerpoint-Deck, lebt in TOTUS in einem Dokument. Mit allen Daten live verlinkt.',
+      'vs.h1': 'Anforderung', 'vs.h2': 'Word + PPT',
+      'vs.r1.f': 'Erstellung', 'vs.r1.e': '2-3 Tage manuelle Arbeit', 'vs.r1.t': 'Erster Draft in ~30 Min',
+      'vs.r2.f': 'Datenstand', 'vs.r2.e': 'Snapshot zum Zeitpunkt der Erstellung', 'vs.r2.t': 'Live aus Underwriting',
+      'vs.r3.f': 'AI-Unterstützung', 'vs.r3.e': 'Generische Tools · kein Deal-Kontext', 'vs.r3.t': 'Trainiert auf Ihren Daten',
+      'vs.r4.f': 'Review-Workflow', 'vs.r4.e': 'E-Mail-Anhänge, Track Changes', 'vs.r4.t': 'Inline-Kommentare, Mentions, Voting',
+      'vs.r5.f': 'Audit-Trail', 'vs.r5.e': 'Versionschaos auf SharePoint', 'vs.r5.t': 'Vollständig pro Speichern',
+
+      'con.eyebrow': 'Integration',
+      'con.title': 'Das IC-Memo lebt <em>nicht alleine</em>.',
+      'con.desc': 'Es bezieht seine Daten aus den anderen Modulen, und gibt seine Entscheidungen wieder an sie zurück. So bleibt der Investment-Workflow geschlossen.',
+      'con.1.t': '← Underwriting',
+      'con.1.d': 'Cashflow-KPIs, Rent Roll, Szenarien werden live in das Memo übernommen, kein manuelles Kopieren.',
+      'con.2.t': '↔ Pipeline',
+      'con.2.d': 'Der IC-Beschluss bewegt den Deal automatisch in die nächste Stage, entweder „Closing“ oder „Hold“.',
+      'con.3.t': '→ Comparables-DB',
+      'con.3.d': 'Jedes finalisierte Memo fließt in die hauseigene Vergleichsdatenbank, bessere AI-Vorschläge mit jedem neuen Deal.',
+
+      'cta.eyebrow': 'Demo anfragen',
+      'cta.title': 'Sehen Sie, wie Ihr <em>nächstes IC-Memo</em> aussehen könnte.',
+      'cta.desc': 'In einer 30-Minuten-Demo zeigen wir das Memo-Modul anhand eines konkreten Deals, wenn Sie wollen, mit Ihrem aktuellen Memo-Template als Vorlage.',
+      'cta.btn1': 'Demo anfragen',
+      'cta.btn2': 'Zur Produktseite',
+
+      'footer.tagline': 'Die Decision-Plattform für professionelle Immobilieninvestments.',
+      'footer.col1': 'Produkt',
+      'footer.c1.1': 'Überblick', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC-Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Unternehmen',
+      'footer.c2.1': 'Über uns', 'footer.c2.2': 'Karriere', 'footer.c2.3': 'Kontakt', 'footer.c2.4': 'Presse',
+      'footer.col3': 'Rechtliches',
+      'footer.c3.1': 'Impressum', 'footer.c3.2': 'Datenschutz', 'footer.c3.3': 'AGB', 'footer.c3.4': 'Sicherheit',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.',
+      'footer.made': 'Made in Berlin'
+    },
+    en: {
+      'meta.title': 'TOTUS CRE AI & IC-Memos',
+      'meta.desc': 'TOTUS CRE AI & IC-Memos. Investment committee memos that write themselves.',
+      'nav.product': 'Product',
+      'nav.underwriting': 'Underwriting',
+      'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side',
+      'nav.ai': 'AI & IC Memos',
+      'nav.cta': 'Request demo',
+
+      'hero.badge': 'Module 04 · AI-Powered',
+      'hero.h1': 'Investment memos that <em>write themselves</em>.',
+      'hero.sub': 'IC memos are generated directly from underwriting data, structured, always up-to-date, with AI assistance for executive summary, investment thesis, and risk identification.',
+      'hero.cta1': 'Request demo',
+      'hero.cta2': 'How it works',
+      'hero.s1': 'instead of 2 days of memo prep',
+      'hero.s2': 'live data, always',
+      'hero.s3': 'Auto-translation',
+
+      'memo.tag': 'IC Memo · Draft v3',
+      'memo.title': 'Office Tower, Mainzer Landstraße · Investment Proposal',
+      'memo.stamp': 'For<br/>Review',
+      'memo.author': 'Author:',
+      'memo.date': 'Date:',
+      'memo.ic': 'IC Date:',
+      'memo.s1': 'Executive Summary',
+      'memo.s1d': 'Proposed acquisition of a <span class="hl">Class-A office tower</span> in Frankfurt CBD for €68.5M · Yield on Cost <span class="hl">5.8%</span>, IRR (5y) <span class="hl">11.4%</span>, WAULT 6.2 years. Anchor tenant Deloitte (remaining term 8.4 years).',
+      'memo.s2': 'Key Financials',
+      'memo.k.price': 'Purchase Price',
+      'memo.s3': 'Investment Thesis',
+      'memo.t1': 'Prime location in Frankfurt CBD with demonstrated tenant demand despite market cooling.',
+      'memo.t2': 'Credit quality of top-3 tenants (Deloitte, KPMG, A&O) materially above market.',
+      'memo.t3': 'Cap rate cushion of ~75 bps before reaching minimum target IRR.',
+      'memo.s4': 'Risk Assessment',
+      'memo.r.low': 'Low', 'memo.r.med': 'Medium', 'memo.r.high': 'High',
+      'memo.r1': 'Tenant credit: Top-3 with investment grade rating.',
+      'memo.r2': 'Re-letting risk in year 4 (KPMG lease expiry).',
+      'memo.r3': 'Exit cap rate assumption given current market volatility.',
+      'memo.f1': 'Generated from Underwriting v12',
+      'memo.page': 'Page 1 / 12',
+      'memo.confidential': 'Confidential · TOTUS CRE',
+
+      'float.lbl': 'AI just updated',
+      'float.val': 'Exec Summary · 8 min ago',
+
+      'why.eyebrow': 'Status Quo',
+      'why.title': 'IC memos cost <em>days</em> today, and are stale the moment they\'re done.',
+      'why.desc': 'The typical IC memo process: open Excel, copy numbers, fill Word template, build PowerPoint next to it, update all three the day before. Four problems that make this almost unavoidable.',
+      'why.1.t': '2-3 days lead time',
+      'why.1.d': 'Memo prep blocks analysts and investment managers, time missing from deal sourcing.',
+      'why.2.t': 'Stale data',
+      'why.2.d': "Assumptions change by IC day, the manual memo stays frozen at the time of authoring.",
+      'why.3.t': 'Inconsistency',
+      'why.3.d': 'Every memo looks different, every author structures differently, bad for comparability.',
+      'why.4.t': 'Tool-hopping',
+      'why.4.d': 'Excel model, Word memo, PowerPoint deck, three tools, the same numbers three times, the same risk three times.',
+
+      'how.eyebrow': 'How it works',
+      'how.title': 'From underwriting to signed memo, in <em>five steps</em>.',
+      'how.desc': "The entire memo process lives in TOTUS, from first data pull to final IC signature, with AI support at every step.",
+      'flow.1.t': '<em>Pull data</em>',
+      'flow.1.d': 'Cashflow KPIs, rent roll, risk score, and pipeline stage are auto-pulled, no manual copying.',
+      'flow.1.v.s': 'Underwriting v12', 'flow.1.v.e': 'Memo Draft v1',
+      'flow.2.t': '<em>Pick template</em>',
+      'flow.2.d': 'Fund-specific template, family office format, or committee standard, set up once, reused forever.',
+      'flow.2.v.s': 'Template: Fund IC', 'flow.2.v.e': '12 sections, 4 tables',
+      'flow.3.t': 'AI <em>drafts it</em>',
+      'flow.3.d': 'Executive summary, investment thesis, and risk assessment are proposed by AI, based on deal data and prior memos.',
+      'flow.3.v.s': '+ Exec Summary', 'flow.3.v.m': 'Thesis', 'flow.3.v.e': 'Risks',
+      'flow.4.t': 'Team <em>reviews & comments</em>',
+      'flow.4.d': 'Multi-user review with inline comments, @mentions, and suggestion mode. Versions are logged automatically.',
+      'flow.4.v.s': 'v1 → v2 → v3', 'flow.4.v.e': '14 comments resolved',
+      'flow.5.t': '<em>Approval</em> & vote',
+      'flow.5.d': 'IC members approve digitally, with audit trail, timestamps, and final PDF for the record.',
+      'flow.5.v.s': '3 / 5 approved', 'flow.5.v.e': 'Final PDF · 12 pages',
+
+      'd1.eyebrow': 'AI Assistant',
+      'd1.title': 'AI with <em>deal context</em>, not from thin air.',
+      'd1.intro': "TOTUS AI knows your deal's data, your prior memos, and your house style. It suggests, you decide. With source attribution and confidence indication on every generation.",
+      'd1.l1.t': 'Executive Summary from underwriting data',
+      'd1.l1.d': 'A clear, factual paragraph based on cashflow, rent roll, and risk score, no hallucinations, just data.',
+      'd1.l2.t': 'Investment Thesis from comparables',
+      'd1.l2.d': "The AI compares the deal to similar ones in your own pipeline and proposes a coherent thesis.",
+      'd1.l3.t': 'Risk identification',
+      'd1.l3.d': 'Re-letting cliffs, cap-rate sensitivities, concentration risks, the AI flags them and suggests wording.',
+      'd1.l4.t': 'DE ↔ EN auto-translation',
+      'd1.l4.d': 'International investors get the memo in English at the click of a button, with correct domain terminology.',
+
+      'ai.title': 'TOTUS AI Assistant',
+      'ai.sub': 'Trained on your prior memos',
+      'ai.status': 'Active',
+      'ai.placeholder': 'e.g. Write the investment thesis…',
+      'ai.sug.title': 'Suggestions for this memo',
+      'ai.s1.t': 'Update executive summary',
+      'ai.s1.d': 'New rent roll shows WAULT of 6.2y, current draft still says 5.8y.',
+      'ai.s1.a': 'Apply',
+      'ai.conf': 'Confidence',
+      'ai.src': 'Source: Rent Roll, Underwriting v12',
+      'ai.s2.t': 'Additional risk identified',
+      'ai.s2.d': 'KPMG lease expires in Y4, re-letting cliff. Recommend adding to Risk Section.',
+      'ai.s2.a': 'Add',
+      'ai.src2': 'Source: Rent Roll, Comparables',
+      'ai.s3.t': '3 comparable deals found',
+      'ai.s3.d': 'Office Tower Eschborn (2024), CBD Office HH (2025), Westend FFM (2025). Cap rate range 5.1-5.9%.',
+      'ai.s3.a': 'Show',
+      'ai.src3': 'Source: TOTUS database',
+      'ai.act.title': 'Recent AI activity',
+      'ai.a1': 'Exec Summary updated after new Rent Roll <b>v3</b>',
+      'ai.a1.t': '8 min ago',
+      'ai.a2': 'DE → EN translation created for <b>international investors</b>',
+      'ai.a2.t': '1 hr ago',
+      'ai.a3': 'Investment Thesis generated based on <b>3 comparables</b>',
+      'ai.a3.t': 'yesterday',
+
+      'd2.eyebrow': 'Approval & Versioning',
+      'd2.title': 'Traceable down to the <em>last assumption</em>.',
+      'd2.intro': "Every change to the memo is logged, who, when, what. Reviewers approve digitally. Comments stay on the memo, not in a parallel email chain. Compliance is happy, the investment team too.",
+      'd2.l1.t': 'Version per save',
+      'd2.l1.d': 'Every version is accessible, what changed since v2, what the AI suggested, what the human accepted.',
+      'd2.l2.t': 'Inline comments & @mentions',
+      'd2.l2.d': 'Discussion right on the memo section. Mentions trigger notifications, without email flooding.',
+      'd2.l3.t': 'Digital IC vote',
+      'd2.l3.d': 'Reviewers approve or reject with two clicks, with reasoning. Audit trail persists.',
+      'd2.l4.t': 'Final PDF for the record',
+      'd2.l4.d': 'After final approval, a versioned PDF is created, for internal records, external auditors, and investors.',
+
+      'appr.eyebrow': 'IC Memo · Approval',
+      'appr.title': 'Office Tower FFM · IC on Nov 19',
+      'appr.status': 'Pending Vote',
+      'appr.rev.title': 'IC Members',
+      'appr.role.cio': 'CIO',
+      'appr.role.head': 'Head of IM',
+      'appr.role.risk': 'Risk',
+      'appr.role.cfo': 'CFO',
+      'appr.ver.title': 'Version history',
+      'appr.cur': 'Current',
+      'appr.v3': 'Risk section added, comparables embedded',
+      'appr.v3.t': 'today · 14:22',
+      'appr.v2': 'Investment thesis revised, KPI table added',
+      'appr.v2.t': 'yesterday · 16:45',
+      'appr.ai': 'TOTUS AI',
+      'appr.v1': 'Initial draft generated from Underwriting v12',
+      'appr.v1.t': 'Nov 15 · 09:12',
+      'appr.cm.title': 'Comments',
+      'cmt.t1': '2 hrs ago',
+      'cmt.txt1': '<span class="mention">@J. Krämer</span> Please add WAULT assumptions on renewal probability.',
+      'cmt.t2': 'today · 09:14',
+      'cmt.txt2': 'Comparable with Westend deal is very strong. Real value-add in Section 3.',
+
+      'vs.eyebrow': 'vs. Word + PowerPoint',
+      'vs.title': 'From tool-hopping to <em>one workflow</em>.',
+      'vs.desc': "What lives across three tools today: Excel model, Word memo, PowerPoint deck, lives in TOTUS in one document. With all data live-linked.",
+      'vs.h1': 'Requirement', 'vs.h2': 'Word + PPT',
+      'vs.r1.f': 'Creation', 'vs.r1.e': '2-3 days of manual work', 'vs.r1.t': 'First draft in ~30 min',
+      'vs.r2.f': 'Data freshness', 'vs.r2.e': 'Snapshot at time of authoring', 'vs.r2.t': 'Live from underwriting',
+      'vs.r3.f': 'AI support', 'vs.r3.e': 'Generic tools · no deal context', 'vs.r3.t': 'Trained on your data',
+      'vs.r4.f': 'Review workflow', 'vs.r4.e': 'Email attachments, track changes', 'vs.r4.t': 'Inline comments, mentions, voting',
+      'vs.r5.f': 'Audit trail', 'vs.r5.e': 'Version chaos on SharePoint', 'vs.r5.t': 'Complete per save',
+
+      'con.eyebrow': 'Integration',
+      'con.title': "The IC memo doesn't <em>live alone</em>.",
+      'con.desc': "It pulls its data from the other modules, and returns its decisions back to them. The investment workflow stays closed-loop.",
+      'con.1.t': '← Underwriting',
+      'con.1.d': 'Cashflow KPIs, rent roll, scenarios live-pulled into the memo, no manual copying.',
+      'con.2.t': '↔ Pipeline',
+      'con.2.d': 'The IC decision automatically moves the deal to the next stage, either "Closing" or "Hold".',
+      'con.3.t': '→ Comparables DB',
+      'con.3.d': 'Every finalized memo flows into your in-house comparables database, better AI suggestions with each new deal.',
+
+      'cta.eyebrow': 'Request demo',
+      'cta.title': 'See what your <em>next IC memo</em> could look like.',
+      'cta.desc': "In a 30-minute demo, we'll show the memo module on a real deal, with your current memo template as a starting point, if you'd like.",
+      'cta.btn1': 'Request demo',
+      'cta.btn2': 'Back to product',
+
+      'footer.tagline': 'The decision platform for professional real estate investments.',
+      'footer.col1': 'Product',
+      'footer.c1.1': 'Overview', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Company',
+      'footer.c2.1': 'About', 'footer.c2.2': 'Careers', 'footer.c2.3': 'Contact', 'footer.c2.4': 'Press',
+      'footer.col3': 'Legal',
+      'footer.c3.1': 'Imprint', 'footer.c3.2': 'Privacy', 'footer.c3.3': 'Terms', 'footer.c3.4': 'Security',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). All rights reserved.',
+      'footer.made': 'Made in Berlin'
+    }
+  };
+
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+    const dict = translations[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+    });
+
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    var _md = document.querySelector('meta[name="description"]');
+    if (_md && dict['meta.desc']) _md.setAttribute('content', dict['meta.desc']);
+
+    document.querySelectorAll('.lang-toggle button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    try { localStorage.setItem('totus-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+  });
+
+  let initial = 'de';
+  try {
+    const stored = localStorage.getItem('totus-lang');
+    if (stored && translations[stored]) initial = stored;
+  } catch (e) {}
+  setLanguage(initial);
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  (function() {
+    const btn = document.getElementById('backTop');
+    if (!btn) return;
+    window.addEventListener('scroll', () => { btn.classList.toggle('show', window.scrollY > 600); }, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+</script>
+
+</body>
+</html>

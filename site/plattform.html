@@ -1,0 +1,2236 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="plattformfavicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="plattformfavicon16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="plattformfavicon32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="plattformfavicon48x48.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="plattformappletouchicon.png" />
+<meta name="theme-color" content="#0E5E63" />
+<link rel="canonical" href="https://totus.info/plattform.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://totus.info/plattform.html" />
+<meta property="og:title" content="TOTUS CRE · Von der Inbox zum IC-Memo" />
+<meta property="og:description" content="Die Decision-Plattform für institutionelle Immobilieninvestments. Deals erfassen, prüfen, underwriten und fundierte GO/NO-GO-Entscheidungen treffen, in einem System." />
+<meta property="og:image" content="https://totus.info/plattformogimage.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:site_name" content="TOTUS CRE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="TOTUS CRE · Von der Inbox zum IC-Memo" />
+<meta name="twitter:description" content="Die Decision-Plattform für institutionelle Immobilieninvestments. Deals erfassen, prüfen, underwriten und fundierte GO/NO-GO-Entscheidungen treffen, in einem System." />
+<meta name="twitter:image" content="https://totus.info/plattformogimage.png" />
+
+<title>TOTUS CRE · Von Exposé zu Investmententscheidung</title>
+<meta name="description" content="TOTUS CRE · Die Decision-Plattform für professionelle Immobilieninvestments." />
+
+
+<link rel="preload" href="interlatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="spacegrotesklatin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--slate);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;font-size:.9rem;font-weight:600;}
+.skip-link:focus{left:0;outline:3px solid var(--accent);outline-offset:2px;}
+
+/* Selbst gehostete Schriften - keine Verbindung zu Google */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url('interlatin.woff2') format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500 700;font-display:swap;src:url('spacegrotesklatin.woff2') format('woff2');}
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal: #0E5E63;
+    --teal-dark: #0A474B;
+    --teal-deep: #0A474B;
+    --teal-light: #4A8F93;
+    --teal-pale: #E3EFEF;
+    --slate: #16181D;
+    --slate-light: #2C2F36;
+    --cream: #F7F7F8;
+    --white: #FFFFFF;
+    --text: #16181D;
+    --text-muted: #555B66;
+    --accent: #0E5E63;
+    --accent-light: #E3EFEF;
+    --success: #1F7A4D;
+    --radius: 14px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+    --ease: cubic-bezier(.2,.7,.2,1);
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.55;
+  }
+
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+  ::selection { background: var(--teal); color: var(--white); }
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+  p { margin: 0; }
+
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+  @media (max-width: 720px) { .container { padding: 0 24px; } }
+  section { position: relative; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+  }
+  .eyebrow::before { content: ''; width: 24px; height: 1.5px; background: var(--teal); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 36px;
+    font-size: 0.95rem; font-weight: 600;
+    border-radius: 100px;
+    transition: all 0.3s var(--ease);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--teal); color: var(--white); }
+  .btn-primary:hover {
+    background: var(--teal-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(14, 94, 99, 0.3);
+  }
+  .btn-secondary { background: transparent; color: var(--slate); border-color: rgba(22, 24, 29, 0.15); }
+  .btn-secondary:hover { border-color: var(--teal); color: var(--teal-dark); }
+  .btn .arrow { width: 14px; height: 14px; transition: transform 0.25s var(--ease); }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 18px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(247, 247, 248, 0.85);
+    border-bottom: 1px solid rgba(14, 94, 99, 0.1);
+    transition: all 0.3s ease;
+  }
+  nav.scrolled { padding: 12px 48px; box-shadow: 0 4px 30px rgba(22, 24, 29, 0.06); }
+  @media (max-width: 720px) {
+    nav { padding: 14px 24px; }
+    nav.scrolled { padding: 10px 24px; }
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 12px; color: var(--text); }
+  .logo-mark {
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    flex: none;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 14px rgba(14, 94, 99, 0.25);
+  }
+  .nav-logo .brand-name {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a {
+    color: var(--text-muted);
+    font-size: 0.88rem; font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--teal-dark); }
+
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+
+  /* Rückverweis zur TOTUS CRE Hauptseite */
+  .nav-backlink {
+    color: var(--text-muted);
+    font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+  .nav-backlink:hover { color: var(--teal-dark); }
+  @media (max-width: 560px) { .nav-backlink { display: none; } }
+
+  /* LANGUAGE TOGGLE */
+  .lang-toggle {
+    display: inline-flex;
+    background: var(--white);
+    border: 1px solid rgba(14, 94, 99, 0.15);
+    border-radius: 100px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .lang-toggle button {
+    min-width: 40px;
+    min-height: 34px; /* Pill gesamt >= 40px hoch: Touch-Target */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    border-radius: 100px;
+    transition: all 0.25s var(--ease);
+    line-height: 1;
+  }
+  .lang-toggle button.active {
+    background: var(--slate);
+    color: var(--white);
+  }
+  .lang-toggle button:not(.active):hover { color: var(--slate); }
+
+  .nav-cta {
+    background: var(--slate);
+    color: var(--white) !important;
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s !important;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .nav-cta:hover { background: var(--teal-deep) !important; transform: translateY(-1px); }
+
+  /* Mobile-Menü: Burger-Toggle + Dropdown-Panel (Muster der Hauptseite) */
+  .nav-toggle {
+    display: none;
+    width: 44px; height: 44px;
+    align-items: center; justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(14, 94, 99, 0.25);
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--slate);
+    flex: none;
+  }
+  .nav-toggle svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+  .nav-toggle .icon-close { display: none; }
+  .nav-toggle[aria-expanded="true"] .icon-burger { display: none; }
+  .nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+  .nav-links .nav-backlink-menu { display: none; }
+
+  @media (max-width: 880px) {
+    .nav-toggle { display: inline-flex; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 8px 24px 16px;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(14, 94, 99, 0.15);
+      box-shadow: 0 24px 40px rgba(22, 24, 29, 0.10);
+      max-height: calc(100vh - 76px);
+      max-height: calc(100dvh - 76px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    .nav-links.is-open { display: flex; }
+    .nav-links a { padding: 14px 4px; border-bottom: 1px solid rgba(14, 94, 99, 0.12); font-size: 0.95rem; }
+    .nav-links a:last-child { border-bottom: 0; }
+    /* Backlink zur Hauptseite bleibt im Menü erreichbar (nav-right blendet ihn < 560px aus) */
+    .nav-links .nav-backlink-menu { display: block; }
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 140px 48px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.07) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 980px) {
+    .hero { padding: 120px 24px 80px; min-height: auto; }
+    .hero-content { grid-template-columns: 1fr; gap: 60px; }
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--teal-pale);
+    color: var(--teal-deep);
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    animation: fadeSlideUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: var(--teal);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  .hero h1 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--slate);
+    margin-bottom: 24px;
+    animation: fadeSlideUp 0.8s ease 0.15s forwards;
+    opacity: 0;
+  }
+  .hero h1 em { color: var(--teal); }
+
+  .hero-sub {
+    font-size: 1.12rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 40px;
+    animation: fadeSlideUp 0.8s ease 0.3s forwards;
+    opacity: 0;
+  }
+  .hero-sub strong { color: var(--slate); font-weight: 600; }
+
+  .hero-actions {
+    display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+    animation: fadeSlideUp 0.8s ease 0.45s forwards;
+    opacity: 0;
+  }
+  .hero-meta {
+    margin-top: 40px;
+    display: flex; align-items: center; gap: 18px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+    animation: fadeSlideUp 0.8s ease 0.6s forwards;
+    opacity: 0;
+  }
+  .hero-meta .dot-sep {
+    width: 3px; height: 3px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  .hero-visual {
+    position: relative;
+    animation: fadeSlideUp 0.8s ease 0.5s forwards;
+    opacity: 0;
+  }
+  .hero-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(22, 24, 29, 0.08), 0 1px 3px rgba(22, 24, 29, 0.04);
+    border: 1px solid rgba(14, 94, 99, 0.08);
+    position: relative;
+  }
+  .hero-card-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(22, 24, 29, 0.06);
+  }
+  .hero-card-title { font-weight: 600; font-size: 0.9rem; color: var(--slate); }
+  .hero-card-badge {
+    background: rgba(31, 122, 77, 0.1);
+    color: var(--success);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .deal-list { display: flex; flex-direction: column; gap: 12px; }
+  .deal-card {
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    transition: all 0.3s var(--ease);
+    border: 1px solid transparent;
+  }
+  .deal-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(14, 94, 99, 0.2);
+    box-shadow: 0 8px 20px rgba(22, 24, 29, 0.06);
+  }
+  .deal-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .deal-name {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    color: var(--slate);
+    letter-spacing: -0.01em;
+  }
+  .deal-loc { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+  .deal-status {
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 100px;
+    white-space: nowrap;
+  }
+  .deal-status.go { background: var(--teal-pale); color: var(--teal-deep); }
+  .deal-status.review { background: rgba(14, 94, 99, 0.15); color: #0A474B; }
+  .deal-status.hold { background: rgba(85, 91, 102, 0.1); color: var(--text-muted); }
+
+  .deal-metrics {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(22, 24, 29, 0.06);
+  }
+  .deal-metric .k {
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .deal-metric .v {
+    font-size: 0.95rem; font-weight: 700;
+    color: var(--slate);
+    letter-spacing: -0.01em;
+  }
+
+  .floating-card {
+    position: absolute;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    box-shadow: 0 12px 40px rgba(22, 24, 29, 0.1);
+    border: 1px solid rgba(14, 94, 99, 0.08);
+    display: flex; align-items: center; gap: 12px;
+    animation: float 6s ease-in-out infinite;
+    z-index: 2;
+  }
+  .floating-card.top-right { top: -20px; right: -30px; animation-delay: 0s; }
+  .floating-card.bottom-left { bottom: -15px; left: -25px; animation-delay: 3s; }
+  @media (max-width: 980px) {
+    .floating-card.top-right { right: 10px; }
+    .floating-card.bottom-left { left: 10px; }
+  }
+  .float-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: var(--teal-pale);
+    color: var(--teal-deep);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .float-icon svg { width: 18px; height: 18px; stroke: currentColor; }
+  .float-text .label {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 2px;
+    letter-spacing: 0.02em;
+  }
+  .float-text .value {
+    font-size: 0.92rem; font-weight: 700;
+    color: var(--slate);
+    letter-spacing: -0.01em;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SECTIONS */
+  section.section { padding: 120px 48px; }
+  @media (max-width: 720px) { section.section { padding: 80px 24px; } }
+  .section-inner { max-width: 1280px; margin: 0 auto; }
+  .section-head { max-width: 760px; margin-bottom: 64px; }
+  .section-title {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--slate);
+    margin-bottom: 20px;
+  }
+  .section-title em { color: var(--teal); }
+  .section-desc {
+    font-size: 1.05rem; line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 620px;
+  }
+
+  /* PROBLEM */
+  .problem-section {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--teal-pale) 100%);
+    border-top: 1px solid rgba(14, 94, 99, 0.1);
+    border-bottom: 1px solid rgba(14, 94, 99, 0.1);
+  }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 880px) { .problem-grid { grid-template-columns: 1fr; gap: 48px; } }
+  .problem-list {
+    display: flex; flex-direction: column;
+    list-style: none;
+    border-top: 1px solid rgba(14, 94, 99, 0.18);
+  }
+  .problem-item {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 4px;
+    border-bottom: 1px solid rgba(14, 94, 99, 0.18);
+    transition: all 0.25s var(--ease);
+  }
+  .problem-item:hover {
+    padding-left: 12px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .problem-item .num {
+    font-size: 0.78rem; font-weight: 700;
+    color: var(--teal);
+    letter-spacing: 0.04em;
+  }
+  .problem-item .desc {
+    font-size: 1rem;
+    color: var(--slate);
+    font-weight: 500;
+  }
+  .problem-item .icon {
+    width: 18px; height: 18px;
+    color: var(--teal);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: all 0.25s var(--ease);
+  }
+  .problem-item:hover .icon { opacity: 1; transform: translateX(0); }
+
+  /* MODULES */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 880px) { .modules-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 580px) { .modules-grid { grid-template-columns: 1fr; } }
+  .module {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 32px;
+    display: flex; flex-direction: column; gap: 16px;
+    border: 1px solid rgba(14, 94, 99, 0.1);
+    transition: all 0.3s var(--ease);
+    position: relative;
+    overflow: hidden;
+  }
+  .module::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 120px; height: 120px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .module:hover {
+    transform: translateY(-4px);
+    border-color: rgba(14, 94, 99, 0.3);
+    box-shadow: 0 20px 50px rgba(22, 24, 29, 0.08);
+  }
+  .module-num {
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    text-transform: uppercase;
+  }
+  .module-icon-wrap {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: var(--teal-pale);
+    color: var(--teal-deep);
+    display: grid; place-items: center;
+    margin-bottom: 4px;
+    transition: all 0.3s var(--ease);
+  }
+  .module:hover .module-icon-wrap {
+    background: var(--teal);
+    color: var(--white);
+    transform: scale(1.05);
+  }
+  .module-icon-wrap svg { width: 22px; height: 22px; stroke: currentColor; }
+  .module h3 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    color: var(--slate);
+    letter-spacing: -0.015em;
+  }
+  .module p {
+    font-size: 0.95rem; line-height: 1.6;
+    color: var(--text-muted);
+    flex: 1;
+  }
+  .module-link {
+    font-size: 0.82rem; font-weight: 600;
+    color: var(--teal-dark);
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 8px;
+    transition: all 0.25s var(--ease);
+  }
+  .module-link:hover { color: var(--teal-deep); }
+  .module-link .arr { transition: transform 0.25s var(--ease); }
+  .module:hover .module-link .arr { transform: translateX(3px); }
+
+  /* COMPARE */
+  .compare-section {
+    background: var(--slate);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .compare-section::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.18) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .compare-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%; left: -10%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.08) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .compare-section .section-title { color: var(--cream); position: relative; }
+  .compare-section .section-desc { color: rgba(247, 247, 248, 0.6); position: relative; }
+  .compare-section .eyebrow { color: var(--teal-light); }
+  .compare-section .eyebrow::before { background: var(--teal-light); }
+
+  .compare-table {
+    border: 1px solid rgba(247, 247, 248, 0.12);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: rgba(247, 247, 248, 0.02);
+    position: relative;
+  }
+  .compare-head, .compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1.1fr;
+    align-items: stretch;
+  }
+  .compare-head > div, .compare-row > div {
+    padding: 22px 28px;
+    border-bottom: 1px solid rgba(247, 247, 248, 0.08);
+    border-right: 1px solid rgba(247, 247, 248, 0.08);
+  }
+  .compare-head > div:last-child, .compare-row > div:last-child { border-right: 0; }
+  .compare-row:last-child > div { border-bottom: 0; }
+  .compare-head > div {
+    background: rgba(247, 247, 248, 0.03);
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(247, 247, 248, 0.5);
+  }
+  .compare-head .totus-col { color: var(--teal-light); }
+  .compare-row .feature {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(247, 247, 248, 0.85);
+  }
+  .compare-row .legacy {
+    font-size: 0.95rem;
+    color: rgba(247, 247, 248, 0.5);
+  }
+  .compare-row .totus {
+    font-size: 0.95rem;
+    color: var(--cream);
+    font-weight: 500;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .compare-row .totus::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 12px rgba(14, 94, 99, 0.5);
+  }
+  @media (max-width: 720px) {
+    .compare-head, .compare-row { grid-template-columns: 1fr; }
+    .compare-head > div, .compare-row > div { border-right: 0; padding: 16px 20px; }
+    .compare-head .feature-col { display: none; }
+  }
+
+  /* AUDIENCE */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 720px) { .audience-grid { grid-template-columns: 1fr; } }
+  .aud-item {
+    background: var(--white);
+    border: 1px solid rgba(14, 94, 99, 0.1);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+    transition: all 0.25s var(--ease);
+  }
+  .aud-item:hover {
+    border-color: var(--teal-light);
+    background: var(--teal-pale);
+    transform: translateY(-2px);
+  }
+  .aud-item .name {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.45rem;
+    color: var(--slate);
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+  }
+  .aud-item .name em { color: var(--teal); }
+  .aud-item .tag {
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 5px 12px;
+    background: var(--cream);
+    border-radius: 100px;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    padding: 140px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.10) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .final-cta::after {
+    content: '';
+    position: absolute;
+    top: 20%; right: 10%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.08) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .final-cta .container { position: relative; }
+  .final-cta .eyebrow { justify-content: center; margin-bottom: 24px; }
+  .final-cta h2 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--slate);
+    margin-bottom: 24px;
+    max-width: 900px;
+    margin-left: auto; margin-right: auto;
+  }
+  .final-cta h2 em { color: var(--teal); }
+  .final-cta p {
+    font-size: 1.12rem; line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto 40px;
+  }
+  .final-cta .ctas {
+    display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+  }
+  @media (max-width: 720px) { .final-cta { padding: 80px 24px; } }
+
+  /* FOOTER */
+  footer {
+    background: var(--slate);
+    color: rgba(247, 247, 248, 0.7);
+    padding: 80px 48px 32px;
+  }
+  @media (max-width: 720px) { footer { padding: 60px 24px 24px; } }
+  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+  }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .footer-brand .nav-logo { margin-bottom: 16px; color: var(--cream); }
+  .footer-brand .brand-name { color: var(--cream); }
+  .footer-tagline {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.1rem; line-height: 1.4;
+    color: rgba(247, 247, 248, 0.6);
+    max-width: 300px;
+  }
+  .footer-col h4 {
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 18px;
+  }
+  .footer-col ul {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .footer-col a {
+    font-size: 0.92rem;
+    color: rgba(247, 247, 248, 0.6);
+    transition: color 0.2s ease;
+  }
+  .footer-col a:hover { color: var(--teal-light); }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(247, 247, 248, 0.08);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+    font-size: 0.82rem;
+    color: rgba(247, 247, 248, 0.4);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ===== WORKFLOW STEPPER ===== */
+  .workflow-band { background: var(--slate); padding: 72px 48px; overflow: hidden; position: relative; }
+  .workflow-band::before { content: ''; position: absolute; top: -40%; left: 20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(14, 94, 99,0.14) 0%, transparent 60%); border-radius: 50%; pointer-events: none; }
+  @media (max-width: 720px) { .workflow-band { padding: 56px 24px; } }
+  .wf-inner { max-width: 1180px; margin: 0 auto; position: relative; }
+  .wf-head { text-align: center; margin-bottom: 44px; }
+  .wf-head .eyebrow { color: var(--accent); justify-content: center; }
+  .wf-head .eyebrow::before { background: var(--accent); }
+  .wf-title { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(1.7rem, 3vw, 2.3rem); color: var(--cream); letter-spacing: -0.02em; line-height: 1.15; }
+  .wf-title em { color: var(--teal-light); }
+  .wf-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+  @media (max-width: 880px) { .wf-track { grid-template-columns: 1fr; gap: 4px; } }
+  .wf-line { position: absolute; top: 27px; left: 10%; right: 10%; height: 2px; background: rgba(247, 247, 248,0.12); z-index: 0; }
+  .wf-line-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--teal), var(--teal-light)); transition: width 0.9s cubic-bezier(.2,.7,.2,1); }
+  @media (max-width: 880px) { .wf-line { display: none; } }
+  .wf-step { position: relative; z-index: 1; text-align: center; padding: 0 10px; cursor: pointer; }
+  @media (max-width: 880px) { .wf-step { display: grid; grid-template-columns: 54px 1fr; gap: 14px; text-align: left; align-items: start; padding: 10px 0; } }
+  .wf-dot { width: 54px; height: 54px; margin: 0 auto 14px; border-radius: 16px; background: var(--slate-light); border: 1.5px solid rgba(247, 247, 248,0.14); display: grid; place-items: center; color: rgba(247, 247, 248,0.45); transition: all 0.5s cubic-bezier(.2,.7,.2,1); }
+  @media (max-width: 880px) { .wf-dot { margin: 0; } }
+  .wf-dot svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+  .wf-step.active .wf-dot { background: var(--teal); border-color: var(--teal-light); color: var(--white); transform: scale(1.12); box-shadow: 0 0 0 8px rgba(14, 94, 99,0.15), 0 8px 30px rgba(14, 94, 99,0.4); }
+  .wf-step.done .wf-dot { background: var(--teal-deep); border-color: var(--teal); color: var(--teal-light); }
+  .wf-step.final.active .wf-dot { background: var(--accent); border-color: var(--accent-light); color: var(--slate); box-shadow: 0 0 0 8px rgba(14, 94, 99,0.18), 0 8px 30px rgba(14, 94, 99,0.4); }
+  .wf-step h4 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.05rem; color: rgba(247, 247, 248,0.5); margin-bottom: 4px; transition: color 0.4s; letter-spacing: -0.01em; }
+  .wf-step p { font-size: 0.74rem; color: rgba(247, 247, 248,0.35); line-height: 1.45; transition: color 0.4s; max-width: 180px; margin: 0 auto; }
+  @media (max-width: 880px) { .wf-step p { margin: 0; } }
+  .wf-step.active h4 { color: var(--cream); }
+  .wf-step.active p { color: rgba(247, 247, 248,0.65); }
+  .wf-step.done h4 { color: rgba(247, 247, 248,0.75); }
+
+  /* ===== CALCULATOR ===== */
+  .calc-section { background: linear-gradient(180deg, var(--cream) 0%, var(--teal-pale) 100%); padding: 100px 48px; border-top: 1px solid rgba(14, 94, 99,0.12); }
+  @media (max-width: 720px) { .calc-section { padding: 70px 24px; } }
+  .calc-inner { max-width: 980px; margin: 0 auto; }
+  .calc-card { background: var(--white); border-radius: 24px; border: 1px solid rgba(14, 94, 99,0.14); overflow: hidden; display: grid; grid-template-columns: 1.2fr 1fr; box-shadow: 0 24px 70px rgba(22, 24, 29,0.08); }
+  @media (max-width: 820px) { .calc-card { grid-template-columns: 1fr; } }
+  .calc-controls { padding: 40px; }
+  @media (max-width: 720px) { .calc-controls { padding: 28px 24px; } }
+  .calc-group { margin-bottom: 32px; }
+  .calc-group:last-child { margin-bottom: 0; }
+  .calc-label { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+  .calc-label .t { font-size: 0.9rem; font-weight: 600; color: var(--slate); }
+  .calc-label .v { font-family: var(--mono); font-size: 1.15rem; font-weight: 600; color: var(--teal-deep); }
+  input[type="range"].calc-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 3px; background: var(--teal-pale); outline: none; cursor: pointer; }
+  input[type="range"].calc-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; border-radius: 50%; background: var(--teal); border: 3px solid var(--white); box-shadow: 0 2px 10px rgba(14, 94, 99,0.4); cursor: grab; transition: transform 0.15s; }
+  input[type="range"].calc-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
+  input[type="range"].calc-slider::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--teal); border: 3px solid var(--white); box-shadow: 0 2px 10px rgba(14, 94, 99,0.4); cursor: grab; }
+  .calc-scale { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.68rem; color: var(--text-muted); margin-top: 8px; }
+  .calc-result { background: var(--slate); color: var(--cream); padding: 40px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+  .calc-result::before { content: ''; position: absolute; top: -30%; right: -30%; width: 340px; height: 340px; background: radial-gradient(circle, rgba(14, 94, 99,0.22) 0%, transparent 65%); border-radius: 50%; }
+  @media (max-width: 720px) { .calc-result { padding: 28px 24px; } }
+  .calc-result .lbl { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 10px; position: relative; }
+  .calc-big { font-family: var(--mono); font-size: clamp(2.6rem, 5vw, 3.8rem); font-weight: 600; color: var(--cream); line-height: 1; margin-bottom: 6px; position: relative; }
+  .calc-big .unit { font-size: 0.4em; color: var(--teal-light); font-weight: 500; }
+  .calc-sub { font-size: 0.85rem; color: rgba(247, 247, 248,0.6); line-height: 1.55; position: relative; margin-bottom: 18px; }
+  .calc-sub b { color: var(--accent); font-weight: 600; }
+  .calc-note { font-size: 0.68rem; color: rgba(247, 247, 248,0.35); line-height: 1.5; position: relative; padding-top: 14px; border-top: 1px dashed rgba(247, 247, 248,0.12); }
+
+  /* ===== BACK TO TOP ===== */
+  .back-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--slate); color: var(--cream); display: grid; place-items: center; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(12px); transition: all 0.35s cubic-bezier(.2,.7,.2,1); z-index: 900; box-shadow: 0 8px 30px rgba(22, 24, 29,0.3); border: 1px solid rgba(247, 247, 248,0.1); }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .back-top:hover { background: var(--teal-deep); transform: translateY(-3px); }
+  .back-top svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+
+  /* ===== AUTOMATION LIVE DEMO ===== */
+  .auto-section { background: var(--slate); padding: 110px 48px; position: relative; overflow: hidden; }
+  .auto-section::before { content: ''; position: absolute; top: -20%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(14, 94, 99,0.12) 0%, transparent 60%); border-radius: 50%; pointer-events: none; }
+  .auto-section::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14, 94, 99,0.07) 0%, transparent 60%); border-radius: 50%; pointer-events: none; }
+  @media (max-width: 720px) { .auto-section { padding: 70px 24px; } }
+  .auto-inner { max-width: 1180px; margin: 0 auto; position: relative; z-index: 1; }
+  .auto-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+  .auto-head .eyebrow { color: var(--accent); justify-content: center; }
+  .auto-head .eyebrow::before { background: var(--accent); }
+  .auto-head h2 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(1.9rem, 3.4vw, 2.7rem); color: var(--cream); letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 14px; }
+  .auto-head h2 em { color: var(--teal-light); }
+  .auto-head p { font-size: 1rem; color: rgba(247, 247, 248,0.55); line-height: 1.65; }
+
+  .auto-stage { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 18px; align-items: stretch; }
+  @media (max-width: 960px) { .auto-stage { grid-template-columns: 1fr; } }
+
+  .auto-panel { background: rgba(247, 247, 248,0.035); border: 1px solid rgba(247, 247, 248,0.09); border-radius: 20px; padding: 22px; backdrop-filter: blur(10px); position: relative; transition: border-color 0.5s, box-shadow 0.5s; display: flex; flex-direction: column; }
+  .auto-panel.live { border-color: rgba(14, 94, 99,0.55); box-shadow: 0 0 0 1px rgba(14, 94, 99,0.25), 0 20px 60px rgba(14, 94, 99,0.12); }
+  .auto-panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(247, 247, 248,0.07); }
+  .auto-panel-title { display: flex; align-items: center; gap: 9px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(247, 247, 248,0.55); }
+  .auto-panel-title svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.8; color: var(--teal-light); }
+  .auto-step-num { font-family: var(--mono); font-size: 0.62rem; color: rgba(247, 247, 248,0.3); background: rgba(247, 247, 248,0.06); padding: 3px 9px; border-radius: 100px; }
+
+  /* Panel 1: Email */
+  .mail-card { background: rgba(247, 247, 248,0.05); border: 1px solid rgba(247, 247, 248,0.1); border-radius: 12px; padding: 16px; opacity: 0; transform: translateY(14px); transition: all 0.6s cubic-bezier(.2,.7,.2,1); }
+  .mail-card.in { opacity: 1; transform: translateY(0); }
+  .mail-from { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .mail-avatar { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--teal), var(--teal-deep)); display: grid; place-items: center; font-size: 0.62rem; font-weight: 700; color: var(--white); flex-shrink: 0; }
+  .mail-meta .n { font-size: 0.78rem; font-weight: 600; color: var(--cream); }
+  .mail-meta .e { font-family: var(--mono); font-size: 0.62rem; color: rgba(247, 247, 248,0.4); }
+  .mail-subject { font-size: 0.85rem; font-weight: 600; color: var(--cream); margin-bottom: 10px; line-height: 1.35; }
+  .mail-attach { display: inline-flex; align-items: center; gap: 8px; background: rgba(14, 94, 99,0.12); border: 1px solid rgba(14, 94, 99,0.3); border-radius: 8px; padding: 7px 12px; font-family: var(--mono); font-size: 0.68rem; color: var(--teal-light); }
+  .mail-attach svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+  .mail-detect { margin-top: 14px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.68rem; color: var(--teal-light); opacity: 0; transition: opacity 0.5s; }
+  .mail-detect.in { opacity: 1; }
+  .mail-detect .pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--success); animation: pulse 1.6s infinite; }
+  .auto-vs { margin-top: auto; padding-top: 14px; font-size: 0.66rem; color: rgba(247, 247, 248,0.28); line-height: 1.5; }
+
+  /* Panel 2: Extraction */
+  .xt-doc { font-family: var(--mono); font-size: 0.66rem; color: rgba(247, 247, 248,0.4); display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .xt-doc .scanbar { flex: 1; height: 3px; border-radius: 2px; background: rgba(247, 247, 248,0.07); overflow: hidden; position: relative; }
+  .xt-doc .scanbar::after { content: ''; position: absolute; top: 0; left: -30%; width: 30%; height: 100%; background: linear-gradient(90deg, transparent, var(--teal-light), transparent); animation: scan 1.6s linear infinite; }
+  @keyframes scan { to { left: 100%; } }
+  .xt-rows { display: flex; flex-direction: column; gap: 7px; }
+  .xt-row { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; background: rgba(247, 247, 248,0.04); border: 1px solid rgba(247, 247, 248,0.06); border-radius: 9px; padding: 9px 13px; opacity: 0; transform: translateX(-10px); transition: all 0.45s cubic-bezier(.2,.7,.2,1); }
+  .xt-row.in { opacity: 1; transform: translateX(0); }
+  .xt-row .k { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(247, 247, 248,0.38); }
+  .xt-row .v { font-family: var(--mono); font-size: 0.8rem; font-weight: 600; color: var(--cream); }
+  .xt-row .v .conf { font-size: 0.6rem; color: var(--teal-light); margin-left: 8px; font-weight: 500; }
+
+  /* Panel 3: Screening */
+  .sc-profile { font-family: var(--mono); font-size: 0.64rem; color: rgba(247, 247, 248,0.4); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .sc-profile b { color: var(--accent); font-weight: 600; }
+  .sc-list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+  .sc-item { display: flex; align-items: center; gap: 11px; padding: 9px 13px; background: rgba(247, 247, 248,0.04); border: 1px solid rgba(247, 247, 248,0.06); border-radius: 9px; font-size: 0.76rem; color: rgba(247, 247, 248,0.45); transition: all 0.4s; }
+  .sc-item .tick { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid rgba(247, 247, 248,0.2); display: grid; place-items: center; flex-shrink: 0; transition: all 0.35s; }
+  .sc-item .tick svg { width: 9px; height: 9px; stroke: var(--white); fill: none; stroke-width: 2.5; opacity: 0; transition: opacity 0.25s; }
+  .sc-item.pass { color: var(--cream); border-color: rgba(31, 122, 77,0.3); }
+  .sc-item.pass .tick { background: var(--success); border-color: var(--success); }
+  .sc-item.pass .tick svg { opacity: 1; }
+  .sc-verdict { text-align: center; padding: 14px; border-radius: 12px; background: linear-gradient(135deg, rgba(14, 94, 99,0.14), rgba(14, 94, 99,0.06)); border: 1px solid rgba(14, 94, 99,0.35); opacity: 0; transform: scale(0.94); transition: all 0.5s cubic-bezier(.2,.7,.2,1); }
+  .sc-verdict.in { opacity: 1; transform: scale(1); }
+  .sc-verdict .badge { font-family: var(--mono); font-size: 0.82rem; font-weight: 700; color: var(--accent); letter-spacing: 0.04em; margin-bottom: 3px; }
+  .sc-verdict .sub { font-size: 0.68rem; color: rgba(247, 247, 248,0.5); }
+
+  /* Capability strip */
+  .cap-strip { margin-top: 44px; padding-top: 32px; border-top: 1px solid rgba(247, 247, 248,0.08); display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .cap-chip { display: inline-flex; align-items: center; gap: 8px; font-size: 0.76rem; color: rgba(247, 247, 248,0.6); background: rgba(247, 247, 248,0.045); border: 1px solid rgba(247, 247, 248,0.09); padding: 9px 16px; border-radius: 100px; transition: all 0.25s; }
+  .cap-chip:hover { border-color: var(--teal); color: var(--cream); transform: translateY(-2px); }
+  .cap-chip svg { width: 13px; height: 13px; stroke: var(--teal-light); fill: none; stroke-width: 1.8; flex-shrink: 0; }
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://totus.info/plattform.html#org",
+      "name": "TOTUS CRE UG (haftungsbeschränkt)",
+      "url": "https://totus.info/plattform.html",
+      "logo": "https://totus.info/plattformicon512.png",
+      "foundingDate": "2024",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Seegefelderstraße 22",
+        "postalCode": "13583",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@totus.info",
+        "contactType": "sales",
+        "availableLanguage": ["German", "English"]
+      },
+      "sameAs": ["https://www.linkedin.com/company/totussolutions/"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "TOTUS CRE",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Decision-Plattform für institutionelle Immobilieninvestments, von der Inbox bis zum IC-Memo.",
+      "publisher": { "@id": "https://totus.info/plattform.html#org" },
+      "offers": { "@type": "Offer", "availability": "https://schema.org/PreOrder", "url": "https://totus.info/plattformdemo.html" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<!-- ====================== NAV ====================== -->
+<nav id="nav">
+  <a href="plattform.html" class="nav-logo">
+    <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+    <span class="brand-name">Totus</span>
+  </a>
+  <div class="nav-links" id="navMenu">
+    <a href="#produkt" data-i18n="nav.product">Produkt</a>
+    <a href="#underwriting" data-i18n="nav.underwriting">Underwriting</a>
+    <a href="#pipeline" data-i18n="nav.pipeline">Pipeline</a>
+    <a href="#sell-side" data-i18n="nav.sellside">Sell-Side</a>
+    <a href="#ai" data-i18n="nav.ai">AI &amp; IC-Memos</a>
+    <a class="nav-backlink-menu" href="index.html">&larr; TOTUS CRE Übersicht</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-backlink" href="index.html">&larr; TOTUS CRE Übersicht</a>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="de" class="active" aria-label="Deutsch">DE</button>
+      <button data-lang="en" aria-label="English">EN</button>
+    </div>
+    <a href="#demo" class="nav-cta">
+      <span data-i18n="nav.cta">Demo anfragen</span>
+      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+        <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menü öffnen oder schließen">
+      <svg class="icon-burger" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ====================== HERO ====================== -->
+<section id="inhalt" class="hero">
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge" data-i18n="hero.badge">Neu · Decision-Plattform für CRE</div>
+
+      <h1 data-i18n-html="hero.h1">
+        Von Exposé zu<br/><em>Investmententscheidung</em><br/>, in einem System.
+      </h1>
+
+      <p class="hero-sub" data-i18n-html="hero.sub">
+        TOTUS CRE hilft professionellen Immobilieninvestoren, Deals zu erfassen, zu prüfen, sauber zu <strong>underwriten</strong> und fundierte <strong>GO/NO-GO-Entscheidungen</strong> zu treffen, von der Inbox bis zum IC-Memo.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#demo" class="btn btn-primary">
+          <span data-i18n="hero.cta1">Demo anfragen</span>
+          <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+            <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#produkt" class="btn btn-secondary" data-i18n="hero.cta2">Produkt ansehen</a>
+      </div>
+
+      <div class="hero-meta">
+        <span data-i18n="hero.meta1">Investment Manager</span>
+        <span class="dot-sep"></span>
+        <span data-i18n="hero.meta2">Asset Manager</span>
+        <span class="dot-sep"></span>
+        <span data-i18n="hero.meta3">Family Offices</span>
+        <span class="dot-sep"></span>
+        <span data-i18n="hero.meta4">CRE-Teams</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <span class="hero-card-title" data-i18n="card.title">Buy-Side Pipeline · Q4 2026</span>
+          <span class="hero-card-badge" data-i18n="card.badge">3 live</span>
+        </div>
+
+        <div class="deal-list">
+          <div class="deal-card">
+            <div class="deal-row">
+              <div>
+                <div class="deal-name">Office Tower, Mainzer Landstraße</div>
+                <div class="deal-loc" data-i18n="deal1.loc">Frankfurt am Main · 14.200 m²</div>
+              </div>
+              <span class="deal-status go" data-i18n="status.go">Go</span>
+            </div>
+            <div class="deal-metrics">
+              <div class="deal-metric"><div class="k" data-i18n="metric.yield">Yield</div><div class="v">5.8%</div></div>
+              <div class="deal-metric"><div class="k">IRR</div><div class="v">11.4%</div></div>
+              <div class="deal-metric"><div class="k" data-i18n="metric.risk">Risk</div><div class="v">A−</div></div>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <div class="deal-row">
+              <div>
+                <div class="deal-name" data-i18n="deal2.name">Logistik-Portfolio Nord</div>
+                <div class="deal-loc" data-i18n="deal2.loc">Hamburg / Bremen · 6 Objekte</div>
+              </div>
+              <span class="deal-status review" data-i18n="status.review">Review</span>
+            </div>
+            <div class="deal-metrics">
+              <div class="deal-metric"><div class="k" data-i18n="metric.yield">Yield</div><div class="v">6.4%</div></div>
+              <div class="deal-metric"><div class="k">IRR</div><div class="v">9.2%</div></div>
+              <div class="deal-metric"><div class="k" data-i18n="metric.risk">Risk</div><div class="v">B+</div></div>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <div class="deal-row">
+              <div>
+                <div class="deal-name" data-i18n="deal3.name">Wohnen Charlottenburg</div>
+                <div class="deal-loc" data-i18n="deal3.loc">Berlin · 84 Einheiten</div>
+              </div>
+              <span class="deal-status hold" data-i18n="status.hold">Hold</span>
+            </div>
+            <div class="deal-metrics">
+              <div class="deal-metric"><div class="k" data-i18n="metric.yield">Yield</div><div class="v">3.9%</div></div>
+              <div class="deal-metric"><div class="k">IRR</div><div class="v">7.1%</div></div>
+              <div class="deal-metric"><div class="k" data-i18n="metric.risk">Risk</div><div class="v">B</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-card top-right">
+        <div class="float-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+            <path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l2-2h14l2 2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="float-text">
+          <div class="label" data-i18n="float1.label">3 neue Exposés erfasst</div>
+          <div class="value" data-i18n="float1.value">Inbox · automatisch</div>
+        </div>
+      </div>
+
+      <div class="floating-card bottom-left">
+        <div class="float-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+            <path d="M4 19V5m0 14h16M4 19l5-7 4 3 7-9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="float-text">
+          <div class="label" data-i18n="float2.label">IC-Memo bereit</div>
+          <div class="value" data-i18n="float2.value">Office Tower · 12 Seiten</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PROBLEM ====================== -->
+
+<!-- WORKFLOW STEPPER -->
+<section class="workflow-band" id="workflow">
+  <div class="wf-inner">
+    <div class="wf-head">
+      <span class="eyebrow" data-i18n="wf.eyebrow">Der Weg eines Deals</span>
+      <h2 class="wf-title" data-i18n-html="wf.title">Von der Inbox zum IC-Memo, <em>ohne Reibungsverlust</em>.</h2>
+    </div>
+    <div class="wf-track" id="wfTrack">
+      <div class="wf-line"><div class="wf-line-fill" id="wfLineFill"></div></div>
+      <div class="wf-step" data-step="0">
+        <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l2-2h14l2 2" stroke-linejoin="round"/></svg></div>
+        <div><h4 data-i18n="wf.1.t">Inbox</h4><p data-i18n="wf.1.d">Exposés, E-Mails und Dokumente laufen automatisch ein.</p></div>
+      </div>
+      <div class="wf-step" data-step="1">
+        <div class="wf-dot"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg></div>
+        <div><h4 data-i18n="wf.2.t">Screening</h4><p data-i18n="wf.2.d">Kriterien-Check in Minuten: passt der Deal ins Mandat?</p></div>
+      </div>
+      <div class="wf-step" data-step="2">
+        <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h4 data-i18n="wf.3.t">Underwriting</h4><p data-i18n="wf.3.d">Cashflow, CapEx, Rent Roll, vergleichbar modelliert.</p></div>
+      </div>
+      <div class="wf-step" data-step="3">
+        <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM14 2v6h6M9 13h6M9 17h6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h4 data-i18n="wf.4.t">IC-Memo</h4><p data-i18n="wf.4.d">Strukturierte Entscheidungsvorlage, automatisch aufbereitet.</p></div>
+      </div>
+      <div class="wf-step final" data-step="4">
+        <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linejoin="round"/></svg></div>
+        <div><h4 data-i18n="wf.5.t">GO / NO-GO</h4><p data-i18n="wf.5.d">Fundierte Entscheidung, dokumentiert und nachvollziehbar.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section problem-section reveal">
+  <div class="section-inner">
+    <div class="problem-grid">
+      <div>
+        <span class="eyebrow" data-i18n="problem.eyebrow">Status Quo</span>
+        <h2 class="section-title" data-i18n-html="problem.title">
+          Immobilien-Deals werden noch immer in <em>E-Mails, Excel-Dateien</em> und verstreuten Tools geprüft.
+        </h2>
+        <p class="section-desc" data-i18n="problem.desc">
+          Viele Investment-Teams verlieren Zeit durch manuelle Exposé-Prüfung, unstrukturierte Pipelines und schwer vergleichbare Annahmen. Entscheidungen entstehen über Meetings, nicht in einem zentralen System.
+        </p>
+      </div>
+
+      <div>
+        <span class="eyebrow" data-i18n="problem.painsLabel">Pain Points</span>
+        <ul class="problem-list">
+          <li class="problem-item">
+            <span class="num">01</span>
+            <span class="desc" data-i18n="pain.1">Zu viele Exposés in der Inbox</span>
+            <svg class="icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9h10M9 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+          <li class="problem-item">
+            <span class="num">02</span>
+            <span class="desc" data-i18n="pain.2">Keine klare Deal-Pipeline</span>
+            <svg class="icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9h10M9 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+          <li class="problem-item">
+            <span class="num">03</span>
+            <span class="desc" data-i18n="pain.3">Manuelles Underwriting in Excel</span>
+            <svg class="icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9h10M9 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+          <li class="problem-item">
+            <span class="num">04</span>
+            <span class="desc" data-i18n="pain.4">Schwierige Vergleichbarkeit von Deals</span>
+            <svg class="icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9h10M9 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+          <li class="problem-item">
+            <span class="num">05</span>
+            <span class="desc" data-i18n="pain.5">IC-Memos kosten viel Zeit</span>
+            <svg class="icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9h10M9 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+          <li class="problem-item">
+            <span class="num">06</span>
+            <span class="desc" data-i18n="pain.6">Risiken werden zu spät erkannt</span>
+            <svg class="icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9h10M9 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+          <li class="problem-item">
+            <span class="num">07</span>
+            <span class="desc" data-i18n="pain.7">Buy-Side und Sell-Side laufen getrennt</span>
+            <svg class="icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9h10M9 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== MODULES ====================== -->
+
+<!-- AUTOMATION LIVE -->
+<section class="auto-section" id="automation">
+  <div class="auto-inner">
+    <div class="auto-head">
+      <span class="eyebrow" data-i18n="au.eyebrow">Automation live</span>
+      <h2 data-i18n-html="au.title">Sehen Sie zu, wie ein Exposé <em>sich selbst erfasst</em>.</h2>
+      <p data-i18n="au.desc">E-Mail-Annahme, PDF-Extraktion und Screening-Profile arbeiten zusammen, bevor Ihr Team das Exposé überhaupt geöffnet hat.</p>
+    </div>
+
+    <div class="auto-stage">
+      <!-- PANEL 1: EMAIL INTAKE -->
+      <div class="auto-panel" id="auPanel1">
+        <div class="auto-panel-head">
+          <span class="auto-panel-title">
+            <svg viewBox="0 0 24 24"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l2-2h14l2 2" stroke-linejoin="round"/></svg>
+            <span data-i18n="au.p1.t">E-Mail-Annahme</span>
+          </span>
+          <span class="auto-step-num">01</span>
+        </div>
+        <div class="mail-card" id="auMail">
+          <div class="mail-from">
+            <div class="mail-avatar">MB</div>
+            <div class="mail-meta">
+              <div class="n">Makler Broker GmbH</div>
+              <div class="e">deals@broker-cre.de</div>
+            </div>
+          </div>
+          <div class="mail-subject" data-i18n="au.mail.subj">Off-Market: Logistikzentrum Hamburg-Billbrook</div>
+          <span class="mail-attach">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM14 2v6h6" stroke-linejoin="round"/></svg>
+            Expose_HH_Billbrook.pdf · 8,4 MB
+          </span>
+          <div class="mail-detect" id="auDetect">
+            <span class="pulse-dot"></span>
+            <span data-i18n="au.mail.detect">Exposé erkannt · Extraktion gestartet</span>
+          </div>
+        </div>
+        <p class="auto-vs" data-i18n="au.p1.note">Dedizierte Deal-Inbox: Weiterleitungen, CCs und Datenraum-Einladungen werden automatisch angenommen.</p>
+      </div>
+
+      <!-- PANEL 2: PDF EXTRACTION -->
+      <div class="auto-panel" id="auPanel2">
+        <div class="auto-panel-head">
+          <span class="auto-panel-title">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM14 2v6h6M9 13h6M9 17h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="au.p2.t">PDF-Extraktion</span>
+          </span>
+          <span class="auto-step-num">02</span>
+        </div>
+        <div class="xt-doc">
+          <span>Expose_HH_Billbrook.pdf</span>
+          <div class="scanbar"></div>
+          <span id="auPct">0%</span>
+        </div>
+        <div class="xt-rows">
+          <div class="xt-row" data-xt="0"><span class="k" data-i18n="au.xt.1k">Objekttyp</span><span class="v">Logistik / Light Industrial<span class="conf">99%</span></span></div>
+          <div class="xt-row" data-xt="1"><span class="k" data-i18n="au.xt.2k">Mietfläche</span><span class="v">42.700 m²<span class="conf">98%</span></span></div>
+          <div class="xt-row" data-xt="2"><span class="k" data-i18n="au.xt.3k">Kaufpreis</span><span class="v">38,5 Mio. €<span class="conf">97%</span></span></div>
+          <div class="xt-row" data-xt="3"><span class="k" data-i18n="au.xt.4k">NKM p. a.</span><span class="v">2,31 Mio. €<span class="conf">96%</span></span></div>
+          <div class="xt-row" data-xt="4"><span class="k" data-i18n="au.xt.5k">Yield (brutto)</span><span class="v">6,0 %<span class="conf" data-i18n="au.xt.calc">berechnet</span></span></div>
+          <div class="xt-row" data-xt="5"><span class="k" data-i18n="au.xt.6k">WALT</span><span class="v">7,2 Jahre<span class="conf">94%</span></span></div>
+        </div>
+        <p class="auto-vs" data-i18n="au.p2.note">Rent Rolls, Teaser und Datenraum-Dokumente werden strukturiert ausgelesen, mit Konfidenz-Score je Feld.</p>
+      </div>
+
+      <!-- PANEL 3: SCREENING -->
+      <div class="auto-panel" id="auPanel3">
+        <div class="auto-panel-head">
+          <span class="auto-panel-title">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg>
+            <span data-i18n="au.p3.t">Screening-Profil</span>
+          </span>
+          <span class="auto-step-num">03</span>
+        </div>
+        <div class="sc-profile"><span data-i18n="au.sc.prof">Profil:</span> <b>»Logistik Core+ DACH«</b></div>
+        <div class="sc-list">
+          <div class="sc-item" data-sc="0"><span class="tick"><svg viewBox="0 0 12 12"><path d="M2.5 6l2.5 2.5L9.5 4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="au.sc.1">Yield ≥ 5,5 % · erfüllt (6,0 %)</span></div>
+          <div class="sc-item" data-sc="1"><span class="tick"><svg viewBox="0 0 12 12"><path d="M2.5 6l2.5 2.5L9.5 4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="au.sc.2">Ticket 20-60 Mio. € · erfüllt</span></div>
+          <div class="sc-item" data-sc="2"><span class="tick"><svg viewBox="0 0 12 12"><path d="M2.5 6l2.5 2.5L9.5 4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="au.sc.3">Top-7-Metropolregion · erfüllt</span></div>
+          <div class="sc-item" data-sc="3"><span class="tick"><svg viewBox="0 0 12 12"><path d="M2.5 6l2.5 2.5L9.5 4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="au.sc.4">WALT ≥ 5 Jahre · erfüllt (7,2 J.)</span></div>
+        </div>
+        <div class="sc-verdict" id="auVerdict">
+          <div class="badge" data-i18n="au.verdict.b">MATCH · 4/4 Kriterien</div>
+          <div class="sub" data-i18n="au.verdict.s">In Pipeline übernommen · Team benachrichtigt</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cap-strip">
+      <span class="cap-chip"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="au.cap.1">Automatischer Datenraum-Download</span></span>
+      <span class="cap-chip"><svg viewBox="0 0 24 24"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7" stroke-linejoin="round"/></svg><span data-i18n="au.cap.2">Automatische E-Mail-Annahme</span></span>
+      <span class="cap-chip"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke-linejoin="round"/></svg><span data-i18n="au.cap.3">PDF- &amp; Rent-Roll-Extraktion</span></span>
+      <span class="cap-chip"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg><span data-i18n="au.cap.4">Individuelle Screening-Profile</span></span>
+      <span class="cap-chip"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span data-i18n="au.cap.5">Dubletten-Erkennung</span></span>
+      <span class="cap-chip"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linejoin="round"/></svg><span data-i18n="au.cap.6">Sofortige Team-Benachrichtigung</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="produkt">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="modules.eyebrow">Plattform</span>
+      <h2 class="section-title" data-i18n-html="modules.title">TOTUS bringt Deal-Triage, Underwriting und Investment&shy;entscheidungen in <em>einen Workflow</em>.</h2>
+      <p class="section-desc" data-i18n="modules.desc">Sechs Module, ein System. Vom ersten Exposé in der Inbox bis zum strukturierten IC-Memo, alle Daten, Annahmen und Entscheidungen an einem Ort.</p>
+    </div>
+
+    <div class="modules-grid">
+      <article class="module">
+        <span class="module-num" data-i18n="mod1.num">01 · Inbox</span>
+        <div class="module-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l2-2h14l2 2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 data-i18n-html="mod1.title">Inbox &amp; Deal&nbsp;Triage</h3>
+        <p data-i18n="mod1.desc">Automatische Erfassung und Klassifizierung von Immobilienangeboten aus Exposés, E-Mails und Dokumenten.</p>
+        <a href="plattformprodukt.html" class="module-link"><span data-i18n="module.more">Mehr erfahren</span> <span class="arr">→</span></a>
+      </article>
+
+      <article class="module" id="pipeline">
+        <span class="module-num" data-i18n="mod2.num">02 · Pipeline</span>
+        <div class="module-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <rect x="3" y="4" width="5" height="16" rx="1" stroke-linejoin="round"/>
+            <rect x="9.5" y="4" width="5" height="11" rx="1" stroke-linejoin="round"/>
+            <rect x="16" y="4" width="5" height="6" rx="1" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 data-i18n="mod2.title">Buy-Side Pipeline</h3>
+        <p data-i18n="mod2.desc">Ein strukturierter Workflow von der ersten Prüfung bis zur Investmententscheidung: Kanban, Status, Aufgaben.</p>
+        <a href="plattformdealpipeline.html" class="module-link"><span data-i18n="module.more">Mehr erfahren</span> <span class="arr">→</span></a>
+      </article>
+
+      <article class="module" id="underwriting">
+        <span class="module-num" data-i18n="mod3.num">03 · Underwriting</span>
+        <div class="module-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M3 20V4m0 16h18M3 20l5-7 4 3 7-9" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="8" cy="13" r="1.5" fill="currentColor" stroke="none"/>
+            <circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+            <circle cx="19" cy="4" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3 data-i18n="mod3.title">Underwriting</h3>
+        <p data-i18n="mod3.desc">Cashflow, CapEx, Rent Roll, Annahmen und Screening-Kriterien in einem zentralen, vergleichbaren Modell.</p>
+        <a href="plattformunderwriting.html" class="module-link"><span data-i18n="module.more">Mehr erfahren</span> <span class="arr">→</span></a>
+      </article>
+
+      <article class="module" id="ai">
+        <span class="module-num" data-i18n="mod4.num">04 · IC-Memos</span>
+        <div class="module-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M5 3h11l3.5 3.5V21a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1z" stroke-linejoin="round"/>
+            <path d="M7 11h10M7 15h10M7 19h7" stroke-linecap="round"/>
+            <path d="M15 3v4h4" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 data-i18n="mod4.title">IC-Memos</h3>
+        <p data-i18n="mod4.desc">Automatisch vorbereitete Investment-Committee-Memos auf Basis der Deal-Daten, bereit zur Prüfung.</p>
+        <a href="plattformaiicmemos.html" class="module-link"><span data-i18n="module.more">Mehr erfahren</span> <span class="arr">→</span></a>
+      </article>
+
+      <article class="module">
+        <span class="module-num" data-i18n="mod5.num">05 · Risk</span>
+        <div class="module-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M12 3l9 3.5v6.5c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6.5L12 3z" stroke-linejoin="round"/>
+            <path d="M12 9v4.5M12 16.5v.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 data-i18n="mod5.title">Risk Scoring</h3>
+        <p data-i18n="mod5.desc">Frühzeitige Identifikation von Deal-Risiken, Annahmen-Lücken und kritischen Punkten im Underwriting.</p>
+        <a href="plattformunderwriting.html" class="module-link"><span data-i18n="module.more">Mehr erfahren</span> <span class="arr">→</span></a>
+      </article>
+
+      <article class="module" id="sell-side">
+        <span class="module-num" data-i18n="mod6.num">06 · Sell-Side</span>
+        <div class="module-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M3 12L12 3l9 9M5 10v11h14V10M10 21v-6h4v6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 data-i18n="mod6.title">Sell-Side Mandates</h3>
+        <p data-i18n="mod6.desc">Mandate, Gebote, Interessenten und Verkaufsprozesse strukturiert verwalten, genauso wie Ankäufe.</p>
+        <a href="plattformsellside.html" class="module-link"><span data-i18n="module.more">Mehr erfahren</span> <span class="arr">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== COMPARISON ====================== -->
+<section class="section compare-section reveal">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="compare.eyebrow">Differenzierung</span>
+      <h2 class="section-title" data-i18n-html="compare.title">Mehr als ein <em>Deal-CRM</em>.</h2>
+      <p class="section-desc" data-i18n="compare.desc">TOTUS ist nicht nur eine Pipeline für Deals. Die Plattform verbindet Deal-Erfassung, Analyse, Entscheidungsvorbereitung und Sell-Side-Steuerung in einem System.</p>
+    </div>
+
+    <div class="compare-table">
+      <div class="compare-head">
+        <div class="feature-col" data-i18n="compare.col1">Funktion</div>
+        <div data-i18n="compare.col2">Klassisches Deal-CRM</div>
+        <div class="totus-col">TOTUS CRE</div>
+      </div>
+      <div class="compare-row">
+        <div class="feature" data-i18n="compare.r1.f">Deal-Verwaltung</div>
+        <div class="legacy" data-i18n="compare.r1.l">Deals speichern</div>
+        <div class="totus" data-i18n="compare.r1.t">Deals prüfen, bewerten und entscheiden</div>
+      </div>
+      <div class="compare-row">
+        <div class="feature" data-i18n="compare.r2.f">Pipeline</div>
+        <div class="legacy" data-i18n="compare.r2.l">Pipeline verwalten</div>
+        <div class="totus" data-i18n="compare.r2.t">Workflow von Triage bis IC-Memo</div>
+      </div>
+      <div class="compare-row">
+        <div class="feature" data-i18n="compare.r3.f">Modellierung</div>
+        <div class="legacy" data-i18n="compare.r3.l">Manuelle Excel-Modelle</div>
+        <div class="totus" data-i18n="compare.r3.t">Integriertes Underwriting</div>
+      </div>
+      <div class="compare-row">
+        <div class="feature" data-i18n="compare.r4.f">Entscheidung</div>
+        <div class="legacy" data-i18n="compare.r4.l">Einzelne Notizen</div>
+        <div class="totus" data-i18n="compare.r4.t">Strukturierte Entscheidungslogik</div>
+      </div>
+      <div class="compare-row">
+        <div class="feature" data-i18n="compare.r5.f">Abdeckung</div>
+        <div class="legacy" data-i18n="compare.r5.l">Nur Buy-Side</div>
+        <div class="totus" data-i18n="compare.r5.t">Buy-Side und Sell-Side</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== AUDIENCE ====================== -->
+<section class="section reveal">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="aud.eyebrow">Zielgruppen</span>
+      <h2 class="section-title" data-i18n-html="aud.title">Gebaut für professionelle <em>CRE-Teams</em>.</h2>
+      <p class="section-desc" data-i18n="aud.desc">Investmentteams unterschiedlicher Größenordnung, von Boutique Family Offices bis zu institutionellen Fonds, nutzen TOTUS für strukturierte Entscheidungen.</p>
+    </div>
+
+    <div class="audience-grid">
+      <div class="aud-item">
+        <span class="name" data-i18n-html="aud.1.name">Investment <em>Manager</em></span>
+        <span class="tag" data-i18n="aud.1.tag">Buy-Side</span>
+      </div>
+      <div class="aud-item">
+        <span class="name" data-i18n-html="aud.2.name">Asset <em>Manager</em></span>
+        <span class="tag" data-i18n="aud.2.tag">Portfolio</span>
+      </div>
+      <div class="aud-item">
+        <span class="name" data-i18n-html="aud.3.name">Family <em>Offices</em></span>
+        <span class="tag" data-i18n="aud.3.tag">Private Capital</span>
+      </div>
+      <div class="aud-item">
+        <span class="name" data-i18n-html="aud.4.name">Immobilien<em>fonds</em></span>
+        <span class="tag" data-i18n="aud.4.tag">Fund Management</span>
+      </div>
+      <div class="aud-item">
+        <span class="name" data-i18n-html="aud.5.name">Private-Equity-<em>RE-Teams</em></span>
+        <span class="tag" data-i18n="aud.5.tag">Institutional</span>
+      </div>
+      <div class="aud-item">
+        <span class="name" data-i18n-html="aud.6.name">Transaction <em>Advisory</em></span>
+        <span class="tag" data-i18n="aud.6.tag">Advisory</span>
+      </div>
+      <div class="aud-item">
+        <span class="name" data-i18n-html="aud.7.name">Maklerhäuser, <em>institutionell</em></span>
+        <span class="tag" data-i18n="aud.7.tag">Sell-Side</span>
+      </div>
+      <div class="aud-item">
+        <span class="name" data-i18n-html="aud.8.name">CRE <em>Beratung</em></span>
+        <span class="tag" data-i18n="aud.8.tag">Advisory</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FINAL CTA ====================== -->
+
+<!-- TIME CALCULATOR -->
+<section class="calc-section reveal" id="calculator">
+  <div class="calc-inner">
+    <div class="section-head center" style="text-align:center; max-width:720px; margin:0 auto 44px;">
+      <span class="eyebrow" style="justify-content:center;" data-i18n="calc.eyebrow">Rechnen Sie selbst</span>
+      <h2 class="section-title" data-i18n-html="calc.title">Wie viel Zeit steckt in Ihrer <em>Deal-Prüfung</em>?</h2>
+      <p class="section-desc" style="margin:0 auto;" data-i18n="calc.desc">Bewegen Sie die Regler, wir zeigen, was strukturierte Erfassung und vergleichbares Underwriting rechnerisch bedeuten.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-controls">
+        <div class="calc-group">
+          <div class="calc-label">
+            <span class="t" data-i18n="calc.l1">Deals pro Monat im Screening</span>
+            <span class="v"><span id="calcDeals">20</span></span>
+          </div>
+          <input type="range" class="calc-slider" id="sliderDeals" min="5" max="100" value="20" step="5" />
+          <div class="calc-scale"><span>5</span><span>100</span></div>
+        </div>
+        <div class="calc-group">
+          <div class="calc-label">
+            <span class="t" data-i18n="calc.l2">Stunden pro Deal (manuell heute)</span>
+            <span class="v"><span id="calcHours">4</span>h</span>
+          </div>
+          <input type="range" class="calc-slider" id="sliderHours" min="1" max="12" value="4" step="0.5" />
+          <div class="calc-scale"><span>1h</span><span>12h</span></div>
+        </div>
+        <div class="calc-group">
+          <div class="calc-label">
+            <span class="t" data-i18n="calc.l3">Team-Mitglieder im Prozess</span>
+            <span class="v"><span id="calcTeam">3</span></span>
+          </div>
+          <input type="range" class="calc-slider" id="sliderTeam" min="1" max="15" value="3" step="1" />
+          <div class="calc-scale"><span>1</span><span>15</span></div>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="lbl" data-i18n="calc.r.lbl">Rechnerisches Einsparpotenzial</div>
+        <div class="calc-big"><span id="calcResult">144</span><span class="unit"> h/<span data-i18n="calc.r.unit">Monat</span></span></div>
+        <p class="calc-sub" data-i18n-html="calc.r.sub">Das entspricht etwa <b><span id="calcDays">18</span> Arbeitstagen</b> pro Monat, die Ihr Team in Analyse statt Datenerfassung stecken kann.</p>
+        <p class="calc-note" data-i18n="calc.r.note">Modellrechnung: ~60 % Zeitersparnis bei Erfassung, Strukturierung und Memo-Erstellung, basierend auf typischen manuellen Prozessen. Kein Leistungsversprechen; reale Werte hängen von Ihrem Setup ab.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal" id="demo">
+  <div class="container">
+    <span class="eyebrow" data-i18n="cta.eyebrow">Demo anfragen</span>
+    <h2 data-i18n-html="cta.title">Prüfen Sie Immobilien-Deals<br/><em>schneller, strukturierter</em> und nachvollziehbarer.</h2>
+    <p data-i18n="cta.desc">In einer kurzen Produktdemo zeigen wir, wie TOTUS CRE Ihren Investmentprozess strukturiert, von der Inbox bis zum IC-Memo.</p>
+    <div class="ctas">
+      <a href="plattformdemo.html" class="btn btn-primary">
+        <span data-i18n="cta.btn1">Demo anfragen</span>
+        <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+          <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="#produkt" class="btn btn-secondary" data-i18n="cta.btn2">Funktionen ansehen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<button class="back-top" id="backTop" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="plattform.html" class="nav-logo">
+          <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+          <span class="brand-name">Totus</span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Die Decision-Plattform für professionelle Immobilieninvestments.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col1">Produkt</h4>
+        <ul>
+          <li><a href="#produkt" data-i18n="footer.c1.1">Überblick</a></li>
+          <li><a href="#underwriting" data-i18n="footer.c1.2">Underwriting</a></li>
+          <li><a href="#pipeline" data-i18n="footer.c1.3">Deal Pipeline</a></li>
+          <li><a href="#ai" data-i18n="footer.c1.4">IC-Memos &amp; AI</a></li>
+          <li><a href="#sell-side" data-i18n="footer.c1.5">Sell-Side</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col2">Unternehmen</h4>
+        <ul>
+          <li><a href="plattformabout.html" data-i18n="footer.c2.1">Über uns</a></li>
+          <li><a href="plattformcareers.html" data-i18n="footer.c2.2">Karriere</a></li>
+          <li><a href="plattformcontact.html" data-i18n="footer.c2.3">Kontakt</a></li>
+          <li><a href="plattformpress.html" data-i18n="footer.c2.4">Presse</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col3">Rechtliches</h4>
+        <ul>
+          <li><a href="plattformimprint.html" data-i18n="footer.c3.1">Impressum</a></li>
+          <li><a href="plattformprivacy.html" data-i18n="footer.c3.2">Datenschutz</a></li>
+          <li><a href="plattformterms.html" data-i18n="footer.c3.3">AGB</a></li>
+          <li><a href="plattformsecurity.html" data-i18n="footer.c3.4">Sicherheit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.</span>
+      <span data-i18n="footer.made">Made in Berlin</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ===================== TRANSLATIONS ===================== */
+  const translations = {
+    de: {
+      'meta.title': 'TOTUS CRE · Von Exposé zu Investmententscheidung',
+      'meta.desc': 'TOTUS CRE · Die Decision-Plattform für professionelle Immobilieninvestments.',
+      'nav.product': 'Produkt',
+      'nav.underwriting': 'Underwriting',
+      'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side',
+      'nav.ai': 'AI & IC-Memos',
+      'nav.cta': 'Demo anfragen',
+
+      'hero.badge': 'Neu · Decision-Plattform für CRE',
+      'hero.h1': 'Von Exposé zu<br/><em>Investmententscheidung</em><br/>, in einem System.',
+      'hero.sub': 'TOTUS CRE hilft professionellen Immobilieninvestoren, Deals zu erfassen, zu prüfen, sauber zu <strong>underwriten</strong> und fundierte <strong>GO/NO-GO-Entscheidungen</strong> zu treffen, von der Inbox bis zum IC-Memo.',
+      'hero.cta1': 'Demo anfragen',
+      'hero.cta2': 'Produkt ansehen',
+      'hero.meta1': 'Investment Manager',
+      'hero.meta2': 'Asset Manager',
+      'hero.meta3': 'Family Offices',
+      'hero.meta4': 'CRE-Teams',
+
+      'card.title': 'Buy-Side Pipeline · Q4 2026',
+      'card.badge': '3 live',
+      'deal1.loc': 'Frankfurt am Main · 14.200 m²',
+      'deal2.name': 'Logistik-Portfolio Nord',
+      'deal2.loc': 'Hamburg / Bremen · 6 Objekte',
+      'deal3.name': 'Wohnen Charlottenburg',
+      'deal3.loc': 'Berlin · 84 Einheiten',
+      'status.go': 'Go',
+      'status.review': 'Review',
+      'status.hold': 'Hold',
+      'metric.yield': 'Yield',
+      'metric.risk': 'Risk',
+      'float1.label': '3 neue Exposés erfasst',
+      'float1.value': 'Inbox · automatisch',
+      'float2.label': 'IC-Memo bereit',
+      'float2.value': 'Office Tower · 12 Seiten',
+
+      'problem.eyebrow': 'Status Quo',
+      'problem.title': 'Immobilien-Deals werden noch immer in <em>E-Mails, Excel-Dateien</em> und verstreuten Tools geprüft.',
+      'problem.desc': 'Viele Investment-Teams verlieren Zeit durch manuelle Exposé-Prüfung, unstrukturierte Pipelines und schwer vergleichbare Annahmen. Entscheidungen entstehen über Meetings, nicht in einem zentralen System.',
+      'problem.painsLabel': 'Pain Points',
+      'pain.1': 'Zu viele Exposés in der Inbox',
+      'pain.2': 'Keine klare Deal-Pipeline',
+      'pain.3': 'Manuelles Underwriting in Excel',
+      'pain.4': 'Schwierige Vergleichbarkeit von Deals',
+      'pain.5': 'IC-Memos kosten viel Zeit',
+      'pain.6': 'Risiken werden zu spät erkannt',
+      'pain.7': 'Buy-Side und Sell-Side laufen getrennt',
+
+      'modules.eyebrow': 'Plattform',
+      'modules.title': 'TOTUS bringt Deal-Triage, Underwriting und Investment&shy;entscheidungen in <em>einen Workflow</em>.',
+      'modules.desc': 'Sechs Module, ein System. Vom ersten Exposé in der Inbox bis zum strukturierten IC-Memo, alle Daten, Annahmen und Entscheidungen an einem Ort.',
+      'module.more': 'Mehr erfahren',
+      'mod1.num': '01 · Inbox',
+      'mod1.title': 'Inbox &amp; Deal&nbsp;Triage',
+      'mod1.desc': 'Automatische Erfassung und Klassifizierung von Immobilienangeboten aus Exposés, E-Mails und Dokumenten.',
+      'mod2.num': '02 · Pipeline',
+      'mod2.title': 'Buy-Side Pipeline',
+      'mod2.desc': 'Ein strukturierter Workflow von der ersten Prüfung bis zur Investmententscheidung: Kanban, Status, Aufgaben.',
+      'mod3.num': '03 · Underwriting',
+      'mod3.title': 'Underwriting',
+      'mod3.desc': 'Cashflow, CapEx, Rent Roll, Annahmen und Screening-Kriterien in einem zentralen, vergleichbaren Modell.',
+      'mod4.num': '04 · IC-Memos',
+      'mod4.title': 'IC-Memos',
+      'mod4.desc': 'Automatisch vorbereitete Investment-Committee-Memos auf Basis der Deal-Daten, bereit zur Prüfung.',
+      'mod5.num': '05 · Risk',
+      'mod5.title': 'Risk Scoring',
+      'mod5.desc': 'Frühzeitige Identifikation von Deal-Risiken, Annahmen-Lücken und kritischen Punkten im Underwriting.',
+      'mod6.num': '06 · Sell-Side',
+      'mod6.title': 'Sell-Side Mandates',
+      'mod6.desc': 'Mandate, Gebote, Interessenten und Verkaufsprozesse strukturiert verwalten, genauso wie Ankäufe.',
+
+      'compare.eyebrow': 'Differenzierung',
+      'compare.title': 'Mehr als ein <em>Deal-CRM</em>.',
+      'compare.desc': 'TOTUS ist nicht nur eine Pipeline für Deals. Die Plattform verbindet Deal-Erfassung, Analyse, Entscheidungsvorbereitung und Sell-Side-Steuerung in einem System.',
+      'compare.col1': 'Funktion',
+      'compare.col2': 'Klassisches Deal-CRM',
+      'compare.r1.f': 'Deal-Verwaltung', 'compare.r1.l': 'Deals speichern', 'compare.r1.t': 'Deals prüfen, bewerten und entscheiden',
+      'compare.r2.f': 'Pipeline', 'compare.r2.l': 'Pipeline verwalten', 'compare.r2.t': 'Workflow von Triage bis IC-Memo',
+      'compare.r3.f': 'Modellierung', 'compare.r3.l': 'Manuelle Excel-Modelle', 'compare.r3.t': 'Integriertes Underwriting',
+      'compare.r4.f': 'Entscheidung', 'compare.r4.l': 'Einzelne Notizen', 'compare.r4.t': 'Strukturierte Entscheidungslogik',
+      'compare.r5.f': 'Abdeckung', 'compare.r5.l': 'Nur Buy-Side', 'compare.r5.t': 'Buy-Side und Sell-Side',
+
+      'aud.eyebrow': 'Zielgruppen',
+      'aud.title': 'Gebaut für professionelle <em>CRE-Teams</em>.',
+      'aud.desc': 'Investmentteams unterschiedlicher Größenordnung, von Boutique Family Offices bis zu institutionellen Fonds, nutzen TOTUS für strukturierte Entscheidungen.',
+      'aud.1.name': 'Investment <em>Manager</em>', 'aud.1.tag': 'Buy-Side',
+      'aud.2.name': 'Asset <em>Manager</em>', 'aud.2.tag': 'Portfolio',
+      'aud.3.name': 'Family <em>Offices</em>', 'aud.3.tag': 'Private Capital',
+      'aud.4.name': 'Immobilien<em>fonds</em>', 'aud.4.tag': 'Fund Management',
+      'aud.5.name': 'Private-Equity-<em>RE-Teams</em>', 'aud.5.tag': 'Institutional',
+      'aud.6.name': 'Transaction <em>Advisory</em>', 'aud.6.tag': 'Advisory',
+      'aud.7.name': 'Maklerhäuser, <em>institutionell</em>', 'aud.7.tag': 'Sell-Side',
+      'aud.8.name': 'CRE <em>Beratung</em>', 'aud.8.tag': 'Advisory',
+
+      'cta.eyebrow': 'Demo anfragen',
+      'cta.title': 'Prüfen Sie Immobilien-Deals<br/><em>schneller, strukturierter</em> und nachvollziehbarer.',
+      'cta.desc': 'In einer kurzen Produktdemo zeigen wir, wie TOTUS CRE Ihren Investmentprozess strukturiert, von der Inbox bis zum IC-Memo.',
+      'cta.btn1': 'Demo anfragen',
+      'cta.btn2': 'Funktionen ansehen',
+
+      'footer.tagline': 'Die Decision-Plattform für professionelle Immobilieninvestments.',
+      'footer.col1': 'Produkt',
+      'footer.c1.1': 'Überblick', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC-Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Unternehmen',
+      'footer.c2.1': 'Über uns', 'footer.c2.2': 'Karriere', 'footer.c2.3': 'Kontakt', 'footer.c2.4': 'Presse',
+      'footer.col3': 'Rechtliches',
+      'footer.c3.1': 'Impressum', 'footer.c3.2': 'Datenschutz', 'footer.c3.3': 'AGB', 'footer.c3.4': 'Sicherheit',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.',
+      'footer.made': 'Made in Berlin',
+
+      'au.eyebrow': 'Automation live',
+      'au.title': 'Sehen Sie zu, wie ein Exposé <em>sich selbst erfasst</em>.',
+      'au.desc': 'E-Mail-Annahme, PDF-Extraktion und Screening-Profile arbeiten zusammen, bevor Ihr Team das Exposé überhaupt geöffnet hat.',
+      'au.p1.t': 'E-Mail-Annahme',
+      'au.mail.subj': 'Off-Market: Logistikzentrum Hamburg-Billbrook',
+      'au.mail.detect': 'Exposé erkannt · Extraktion gestartet',
+      'au.p1.note': 'Dedizierte Deal-Inbox: Weiterleitungen, CCs und Datenraum-Einladungen werden automatisch angenommen.',
+      'au.p2.t': 'PDF-Extraktion',
+      'au.xt.1k': 'Objekttyp', 'au.xt.2k': 'Mietfläche', 'au.xt.3k': 'Kaufpreis', 'au.xt.4k': 'NKM p. a.', 'au.xt.5k': 'Yield (brutto)', 'au.xt.6k': 'WALT',
+      'au.xt.calc': 'berechnet',
+      'au.p2.note': 'Rent Rolls, Teaser und Datenraum-Dokumente werden strukturiert ausgelesen, mit Konfidenz-Score je Feld.',
+      'au.p3.t': 'Screening-Profil',
+      'au.sc.prof': 'Profil:',
+      'au.sc.1': 'Yield ≥ 5,5 % · erfüllt (6,0 %)',
+      'au.sc.2': 'Ticket 20-60 Mio. € · erfüllt',
+      'au.sc.3': 'Top-7-Metropolregion · erfüllt',
+      'au.sc.4': 'WALT ≥ 5 Jahre · erfüllt (7,2 J.)',
+      'au.verdict.b': 'MATCH · 4/4 Kriterien',
+      'au.verdict.s': 'In Pipeline übernommen · Team benachrichtigt',
+      'au.cap.1': 'Automatischer Datenraum-Download',
+      'au.cap.2': 'Automatische E-Mail-Annahme',
+      'au.cap.3': 'PDF- & Rent-Roll-Extraktion',
+      'au.cap.4': 'Individuelle Screening-Profile',
+      'au.cap.5': 'Dubletten-Erkennung',
+      'au.cap.6': 'Sofortige Team-Benachrichtigung',
+
+      'wf.eyebrow': 'Der Weg eines Deals',
+      'wf.title': 'Von der Inbox zum IC-Memo, <em>ohne Reibungsverlust</em>.',
+      'wf.1.t': 'Inbox', 'wf.1.d': 'Exposés, E-Mails und Dokumente laufen automatisch ein.',
+      'wf.2.t': 'Screening', 'wf.2.d': 'Kriterien-Check in Minuten: passt der Deal ins Mandat?',
+      'wf.3.t': 'Underwriting', 'wf.3.d': 'Cashflow, CapEx, Rent Roll, vergleichbar modelliert.',
+      'wf.4.t': 'IC-Memo', 'wf.4.d': 'Strukturierte Entscheidungsvorlage, automatisch aufbereitet.',
+      'wf.5.t': 'GO / NO-GO', 'wf.5.d': 'Fundierte Entscheidung, dokumentiert und nachvollziehbar.',
+
+      'calc.eyebrow': 'Rechnen Sie selbst',
+      'calc.title': 'Wie viel Zeit steckt in Ihrer <em>Deal-Prüfung</em>?',
+      'calc.desc': 'Bewegen Sie die Regler, wir zeigen, was strukturierte Erfassung und vergleichbares Underwriting rechnerisch bedeuten.',
+      'calc.l1': 'Deals pro Monat im Screening',
+      'calc.l2': 'Stunden pro Deal (manuell heute)',
+      'calc.l3': 'Team-Mitglieder im Prozess',
+      'calc.r.lbl': 'Rechnerisches Einsparpotenzial',
+      'calc.r.unit': 'Monat',
+      'calc.r.sub': 'Das entspricht etwa <b><span id="calcDays">18</span> Arbeitstagen</b> pro Monat, die Ihr Team in Analyse statt Datenerfassung stecken kann.',
+      'calc.r.note': 'Modellrechnung: ~60 % Zeitersparnis bei Erfassung, Strukturierung und Memo-Erstellung, basierend auf typischen manuellen Prozessen. Kein Leistungsversprechen; reale Werte hängen von Ihrem Setup ab.'
+    },
+    en: {
+      'meta.title': 'TOTUS CRE: From Exposé to Investment Decision',
+      'meta.desc': 'TOTUS CRE: The decision platform for professional real estate investments.',
+      'nav.product': 'Product',
+      'nav.underwriting': 'Underwriting',
+      'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side',
+      'nav.ai': 'AI & IC Memos',
+      'nav.cta': 'Request demo',
+
+      'hero.badge': 'New · Decision platform for CRE',
+      'hero.h1': 'From teaser to<br/><em>investment decision</em><br/>, in one system.',
+      'hero.sub': 'TOTUS CRE helps professional real estate investors capture, screen, <strong>underwrite</strong> cleanly, and make sound <strong>GO/NO-GO decisions</strong>, from inbox to IC memo.',
+      'hero.cta1': 'Request demo',
+      'hero.cta2': 'View product',
+      'hero.meta1': 'Investment Managers',
+      'hero.meta2': 'Asset Managers',
+      'hero.meta3': 'Family Offices',
+      'hero.meta4': 'CRE Teams',
+
+      'card.title': 'Buy-Side Pipeline · Q4 2026',
+      'card.badge': '3 live',
+      'deal1.loc': 'Frankfurt am Main · 14,200 sqm',
+      'deal2.name': 'Logistics Portfolio North',
+      'deal2.loc': 'Hamburg / Bremen · 6 assets',
+      'deal3.name': 'Residential Charlottenburg',
+      'deal3.loc': 'Berlin · 84 units',
+      'status.go': 'Go',
+      'status.review': 'Review',
+      'status.hold': 'Hold',
+      'metric.yield': 'Yield',
+      'metric.risk': 'Risk',
+      'float1.label': '3 new teasers ingested',
+      'float1.value': 'Inbox · automated',
+      'float2.label': 'IC memo ready',
+      'float2.value': 'Office Tower · 12 pages',
+
+      'problem.eyebrow': 'Status Quo',
+      'problem.title': 'Real estate deals are still screened in <em>emails, Excel files</em>, and scattered tools.',
+      'problem.desc': 'Many investment teams lose time to manual teaser review, unstructured pipelines, and assumptions that are hard to compare. Decisions happen in meetings, not in a central system.',
+      'problem.painsLabel': 'Pain Points',
+      'pain.1': 'Too many teasers in the inbox',
+      'pain.2': 'No clear deal pipeline',
+      'pain.3': 'Manual underwriting in Excel',
+      'pain.4': 'Deals are hard to compare',
+      'pain.5': 'IC memos take too much time',
+      'pain.6': 'Risks identified too late',
+      'pain.7': 'Buy-side and sell-side run separately',
+
+      'modules.eyebrow': 'Platform',
+      'modules.title': 'TOTUS brings deal triage, underwriting, and investment decisions into <em>one workflow</em>.',
+      'modules.desc': 'Six modules, one system. From the first teaser in the inbox to a structured IC memo, every datapoint, assumption, and decision in one place.',
+      'module.more': 'Learn more',
+      'mod1.num': '01 · Inbox',
+      'mod1.title': 'Inbox &amp; Deal Triage',
+      'mod1.desc': 'Automatic ingestion and classification of property offerings from teasers, emails, and documents.',
+      'mod2.num': '02 · Pipeline',
+      'mod2.title': 'Buy-Side Pipeline',
+      'mod2.desc': 'A structured workflow from first screen to investment decision, kanban, status, tasks.',
+      'mod3.num': '03 · Underwriting',
+      'mod3.title': 'Underwriting',
+      'mod3.desc': 'Cashflow, CapEx, rent roll, assumptions, and screening criteria in one central, comparable model.',
+      'mod4.num': '04 · IC Memos',
+      'mod4.title': 'IC Memos',
+      'mod4.desc': 'Auto-prepared Investment Committee memos based on deal data, ready for review.',
+      'mod5.num': '05 · Risk',
+      'mod5.title': 'Risk Scoring',
+      'mod5.desc': 'Early identification of deal risks, assumption gaps, and critical underwriting points.',
+      'mod6.num': '06 · Sell-Side',
+      'mod6.title': 'Sell-Side Mandates',
+      'mod6.desc': 'Manage mandates, bids, prospects, and sale processes, as structured as acquisitions.',
+
+      'compare.eyebrow': 'Differentiation',
+      'compare.title': 'More than a <em>deal CRM</em>.',
+      'compare.desc': "TOTUS isn't just a pipeline for deals. The platform connects deal capture, analysis, decision prep, and sell-side execution in one system.",
+      'compare.col1': 'Capability',
+      'compare.col2': 'Traditional Deal CRM',
+      'compare.r1.f': 'Deal management', 'compare.r1.l': 'Store deals', 'compare.r1.t': 'Screen, evaluate, and decide on deals',
+      'compare.r2.f': 'Pipeline', 'compare.r2.l': 'Manage pipeline', 'compare.r2.t': 'Workflow from triage to IC memo',
+      'compare.r3.f': 'Modeling', 'compare.r3.l': 'Manual Excel models', 'compare.r3.t': 'Integrated underwriting',
+      'compare.r4.f': 'Decision', 'compare.r4.l': 'Loose notes', 'compare.r4.t': 'Structured decision logic',
+      'compare.r5.f': 'Coverage', 'compare.r5.l': 'Buy-side only', 'compare.r5.t': 'Buy-side and sell-side',
+
+      'aud.eyebrow': 'Audience',
+      'aud.title': 'Built for professional <em>CRE teams</em>.',
+      'aud.desc': 'Investment teams of every scale, from boutique family offices to institutional funds, use TOTUS for structured decisions.',
+      'aud.1.name': 'Investment <em>Managers</em>', 'aud.1.tag': 'Buy-Side',
+      'aud.2.name': 'Asset <em>Managers</em>', 'aud.2.tag': 'Portfolio',
+      'aud.3.name': 'Family <em>Offices</em>', 'aud.3.tag': 'Private Capital',
+      'aud.4.name': 'Real Estate <em>Funds</em>', 'aud.4.tag': 'Fund Management',
+      'aud.5.name': 'Private Equity <em>RE Teams</em>', 'aud.5.tag': 'Institutional',
+      'aud.6.name': 'Transaction <em>Advisory</em>', 'aud.6.tag': 'Advisory',
+      'aud.7.name': 'Institutional <em>Brokerages</em>', 'aud.7.tag': 'Sell-Side',
+      'aud.8.name': 'CRE <em>Consulting</em>', 'aud.8.tag': 'Advisory',
+
+      'cta.eyebrow': 'Request demo',
+      'cta.title': 'Screen real estate deals<br/><em>faster, more structured</em>, more traceable.',
+      'cta.desc': "In a short product demo we'll show how TOTUS CRE structures your investment process, from inbox to IC memo.",
+      'cta.btn1': 'Request demo',
+      'cta.btn2': 'View features',
+
+      'footer.tagline': 'The decision platform for professional real estate investments.',
+      'footer.col1': 'Product',
+      'footer.c1.1': 'Overview', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Company',
+      'footer.c2.1': 'About', 'footer.c2.2': 'Careers', 'footer.c2.3': 'Contact', 'footer.c2.4': 'Press',
+      'footer.col3': 'Legal',
+      'footer.c3.1': 'Imprint', 'footer.c3.2': 'Privacy', 'footer.c3.3': 'Terms', 'footer.c3.4': 'Security',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). All rights reserved.',
+      'footer.made': 'Made in Berlin',
+
+      'au.eyebrow': 'Automation, live',
+      'au.title': 'Watch a teaser <em>capture itself</em>.',
+      'au.desc': "Email intake, PDF extraction, and screening profiles work together, before your team has even opened the teaser.",
+      'au.p1.t': 'Email intake',
+      'au.mail.subj': 'Off-market: Logistics center Hamburg-Billbrook',
+      'au.mail.detect': 'Teaser detected, extraction started',
+      'au.p1.note': 'Dedicated deal inbox: forwards, CCs, and data room invitations are accepted automatically.',
+      'au.p2.t': 'PDF extraction',
+      'au.xt.1k': 'Asset type', 'au.xt.2k': 'Lettable area', 'au.xt.3k': 'Purchase price', 'au.xt.4k': 'NOI p.a.', 'au.xt.5k': 'Yield (gross)', 'au.xt.6k': 'WALT',
+      'au.xt.calc': 'calculated',
+      'au.p2.note': 'Rent rolls, teasers, and data room documents are read out in structured form, with a confidence score per field.',
+      'au.p3.t': 'Screening profile',
+      'au.sc.prof': 'Profile:',
+      'au.sc.1': 'Yield ≥ 5.5%, met (6.0%)',
+      'au.sc.2': 'Ticket €20-60m · met',
+      'au.sc.3': 'Top-7 metro region, met',
+      'au.sc.4': 'WALT ≥ 5 years, met (7.2 y)',
+      'au.verdict.b': 'MATCH · 4/4 criteria',
+      'au.verdict.s': 'Added to pipeline · Team notified',
+      'au.cap.1': 'Automatic data room download',
+      'au.cap.2': 'Automatic email intake',
+      'au.cap.3': 'PDF & rent roll extraction',
+      'au.cap.4': 'Custom screening profiles',
+      'au.cap.5': 'Duplicate detection',
+      'au.cap.6': 'Instant team notification',
+
+      'wf.eyebrow': "A deal's journey",
+      'wf.title': 'From inbox to IC memo, <em>without friction</em>.',
+      'wf.1.t': 'Inbox', 'wf.1.d': 'Teasers, emails, and documents flow in automatically.',
+      'wf.2.t': 'Screening', 'wf.2.d': 'Criteria check in minutes: does the deal fit the mandate?',
+      'wf.3.t': 'Underwriting', 'wf.3.d': 'Cashflow, CapEx, rent roll, modeled comparably.',
+      'wf.4.t': 'IC Memo', 'wf.4.d': 'Structured decision document, prepared automatically.',
+      'wf.5.t': 'GO / NO-GO', 'wf.5.d': 'A confident decision, documented and traceable.',
+
+      'calc.eyebrow': 'Run the numbers',
+      'calc.title': 'How much time goes into your <em>deal review</em>?',
+      'calc.desc': 'Move the sliders, we show what structured capture and comparable underwriting mean, arithmetically.',
+      'calc.l1': 'Deals per month in screening',
+      'calc.l2': 'Hours per deal (manual today)',
+      'calc.l3': 'Team members in the process',
+      'calc.r.lbl': 'Calculated saving potential',
+      'calc.r.unit': 'month',
+      'calc.r.sub': 'That is roughly <b><span id="calcDays">18</span> working days</b> per month your team can put into analysis instead of data entry.',
+      'calc.r.note': 'Model calculation: ~60% time saving on capture, structuring, and memo creation, based on typical manual processes. Not a performance promise; real values depend on your setup.'
+    }
+  };
+
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+    const dict = translations[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    var _md = document.querySelector('meta[name="description"]');
+    if (_md && dict['meta.desc']) _md.setAttribute('content', dict['meta.desc']);
+
+    document.querySelectorAll('.lang-toggle button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    try { localStorage.setItem('totus-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.getAttribute('data-lang'));
+      const sd = document.getElementById('sliderDeals');
+      if (sd) sd.dispatchEvent(new Event('input'));
+    });
+  });
+
+  // Init: stored > default
+  let initial = 'de';
+  try {
+    const stored = localStorage.getItem('totus-lang');
+    if (stored && translations[stored]) initial = stored;
+  } catch (e) {}
+  setLanguage(initial);
+
+  // Nav shadow on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // Mobile-Menü (Burger-Toggle, Escape, Outside-Click)
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.getElementById('navMenu');
+  if (navToggle && navMenu) {
+    const setMenuOpen = (open) => {
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navMenu.classList.toggle('is-open', open);
+    };
+    const menuIsOpen = () => navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.addEventListener('click', () => setMenuOpen(!menuIsOpen()));
+    navMenu.addEventListener('click', (e) => {
+      if (e.target.closest && e.target.closest('a')) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuIsOpen()) { setMenuOpen(false); navToggle.focus(); }
+    });
+    document.addEventListener('click', (e) => {
+      if (menuIsOpen() && !navMenu.contains(e.target) && !navToggle.contains(e.target)) setMenuOpen(false);
+    });
+    const mqNav = window.matchMedia('(max-width: 880px)');
+    if (mqNav.addEventListener) mqNav.addEventListener('change', (e) => { if (!e.matches) setMenuOpen(false); });
+  }
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ===== AUTOMATION LIVE DEMO, loop =====
+  (function() {
+    const sec = document.getElementById('automation');
+    if (!sec) return;
+    const mail = document.getElementById('auMail');
+    const detect = document.getElementById('auDetect');
+    const panels = [document.getElementById('auPanel1'), document.getElementById('auPanel2'), document.getElementById('auPanel3')];
+    const xtRows = sec.querySelectorAll('.xt-row');
+    const scItems = sec.querySelectorAll('.sc-item');
+    const verdict = document.getElementById('auVerdict');
+    const pct = document.getElementById('auPct');
+    let timeouts = [], started = false;
+
+    function t(fn, ms) { timeouts.push(setTimeout(fn, ms)); }
+    function resetAll() {
+      timeouts.forEach(clearTimeout); timeouts = [];
+      mail.classList.remove('in'); detect.classList.remove('in');
+      panels.forEach(p => p.classList.remove('live'));
+      xtRows.forEach(r => r.classList.remove('in'));
+      scItems.forEach(s => s.classList.remove('pass'));
+      verdict.classList.remove('in');
+      if (pct) pct.textContent = '0%';
+    }
+    function run() {
+      resetAll();
+      // Phase 1: email arrives
+      t(() => { panels[0].classList.add('live'); mail.classList.add('in'); }, 300);
+      t(() => detect.classList.add('in'), 1400);
+      // Phase 2: extraction
+      t(() => { panels[0].classList.remove('live'); panels[1].classList.add('live'); }, 2300);
+      xtRows.forEach((row, i) => {
+        t(() => {
+          row.classList.add('in');
+          if (pct) pct.textContent = Math.round(((i + 1) / xtRows.length) * 100) + '%';
+        }, 2600 + i * 420);
+      });
+      // Phase 3: screening
+      const scStart = 2600 + xtRows.length * 420 + 500;
+      t(() => { panels[1].classList.remove('live'); panels[2].classList.add('live'); }, scStart);
+      scItems.forEach((item, i) => {
+        t(() => item.classList.add('pass'), scStart + 300 + i * 460);
+      });
+      // Verdict
+      const vStart = scStart + 300 + scItems.length * 460 + 300;
+      t(() => verdict.classList.add('in'), vStart);
+      // Hold, then loop
+      t(run, vStart + 3400);
+    }
+    const auIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !started) { started = true; run(); auIo.disconnect(); }
+      });
+    }, { threshold: 0.25 });
+    auIo.observe(sec);
+  })();
+
+
+  // ===== WORKFLOW STEPPER, auto-advance =====
+  (function() {
+    const steps = document.querySelectorAll('.wf-step');
+    const fill = document.getElementById('wfLineFill');
+    if (!steps.length) return;
+    let current = 0, timer = null, started = false;
+
+    function setStep(idx) {
+      current = idx;
+      steps.forEach((s, i) => {
+        s.classList.toggle('active', i === idx);
+        s.classList.toggle('done', i < idx);
+      });
+      if (fill) fill.style.width = (idx / (steps.length - 1)) * 100 + '%';
+    }
+    function advance() { setStep((current + 1) % steps.length); }
+    function startLoop() {
+      if (timer) clearInterval(timer);
+      timer = setInterval(advance, 2200);
+    }
+    // Click to jump
+    steps.forEach((s, i) => s.addEventListener('click', () => { setStep(i); startLoop(); }));
+    // Start when visible
+    const wfIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !started) { started = true; setStep(0); startLoop(); wfIo.disconnect(); }
+      });
+    }, { threshold: 0.3 });
+    wfIo.observe(document.getElementById('workflow'));
+  })();
+
+  // ===== CALCULATOR =====
+  (function() {
+    const sd = document.getElementById('sliderDeals');
+    const sh = document.getElementById('sliderHours');
+    const st = document.getElementById('sliderTeam');
+    if (!sd) return;
+    const outDeals = document.getElementById('calcDeals');
+    const outHours = document.getElementById('calcHours');
+    const outTeam = document.getElementById('calcTeam');
+    const outResult = document.getElementById('calcResult');
+    let displayed = 0, raf = null;
+
+    function animateTo(target) {
+      cancelAnimationFrame(raf);
+      const startVal = displayed, diff = target - startVal, t0 = performance.now();
+      function tick(t) {
+        const p = Math.min((t - t0) / 450, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        displayed = Math.round(startVal + diff * eased);
+        outResult.textContent = displayed;
+        if (p < 1) raf = requestAnimationFrame(tick);
+      }
+      raf = requestAnimationFrame(tick);
+    }
+    function calc() {
+      const deals = +sd.value, hours = +sh.value, team = +st.value;
+      outDeals.textContent = deals;
+      outHours.textContent = hours % 1 === 0 ? hours : hours.toFixed(1);
+      outTeam.textContent = team;
+      // Model: 60% saving on manual effort, team coordination factor small
+      const monthlyManual = deals * hours * (1 + (team - 1) * 0.12);
+      const saved = Math.round(monthlyManual * 0.6);
+      animateTo(saved);
+      const outDays = document.getElementById('calcDays');
+      if (outDays) outDays.textContent = Math.max(1, Math.round(saved / 8));
+    }
+    [sd, sh, st].forEach(s => s.addEventListener('input', calc));
+    calc();
+  })();
+
+  // ===== BACK TO TOP =====
+  (function() {
+    const btn = document.getElementById('backTop');
+    if (!btn) return;
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('show', window.scrollY > 600);
+    }, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="plattformfavicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="plattformfavicon16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="plattformfavicon32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="plattformfavicon48x48.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="plattformappletouchicon.png" />
+<meta name="theme-color" content="#0E5E63" />
+<link rel="canonical" href="https://totus.info/plattformpress.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://totus.info/plattformpress.html" />
+<meta property="og:title" content="Presse · TOTUS CRE" />
+<meta property="og:description" content="Pressekontakt, Brand-Assets und Fact-Sheet der TOTUS CRE UG. Anfragen werden direkt von der Geschäftsführung beantwortet." />
+<meta property="og:image" content="https://totus.info/plattformogimage.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:site_name" content="TOTUS CRE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Presse · TOTUS CRE" />
+<meta name="twitter:description" content="Pressekontakt, Brand-Assets und Fact-Sheet der TOTUS CRE UG. Anfragen werden direkt von der Geschäftsführung beantwortet." />
+<meta name="twitter:image" content="https://totus.info/plattformogimage.png" />
+
+<title>TOTUS CRE · Presse</title>
+<meta name="description" content="Pressekontakt und Brand-Assets der TOTUS CRE UG (haftungsbeschränkt)." />
+
+
+<link rel="preload" href="interlatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="spacegrotesklatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="plattformjetbrainsmono.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--slate);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;font-size:.9rem;font-weight:600;}
+.skip-link:focus{left:0;outline:3px solid var(--accent);outline-offset:2px;}
+
+/* Selbst gehostete Schriften - keine Verbindung zu Google */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url('interlatin.woff2') format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500 700;font-display:swap;src:url('spacegrotesklatin.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url('plattformjetbrainsmono.woff2') format('woff2');}
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --teal: #0E5E63; --teal-dark: #0A474B; --teal-deep: #0A474B;
+    --teal-light: #4A8F93; --teal-pale: #E3EFEF;
+    --slate: #16181D; --slate-light: #2C2F36;
+    --cream: #F7F7F8; --white: #FFFFFF;
+    --text: #16181D; --text-muted: #555B66;
+    --accent: #0E5E63; --accent-light: #E3EFEF; --accent-deep: #0A474B;
+    --radius: 14px; --radius-sm: 10px;
+    --ease: cubic-bezier(.2,.7,.2,1);
+    --mono: 'JetBrains Mono', monospace;
+  }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+  ::selection { background: var(--teal); color: var(--white); }
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+  p { margin: 0; }
+  section { position: relative; }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; }
+  .eyebrow::before { content: ''; width: 24px; height: 1.5px; background: var(--teal); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 0.9rem; font-weight: 600; border-radius: 100px; transition: all 0.3s var(--ease); border: 1.5px solid transparent; cursor: pointer; white-space: nowrap; }
+  .btn-primary { background: var(--teal); color: var(--white); }
+  .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(14, 94, 99, 0.3); }
+  .btn .arrow { width: 14px; height: 14px; transition: transform 0.25s var(--ease); }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(20px); background: rgba(247, 247, 248, 0.85); border-bottom: 1px solid rgba(14, 94, 99, 0.1); transition: all 0.3s ease; }
+  nav.scrolled { padding: 12px 48px; box-shadow: 0 4px 30px rgba(22, 24, 29, 0.06); }
+  @media (max-width: 720px) { nav { padding: 14px 24px; } nav.scrolled { padding: 10px 24px; } }
+  .nav-logo { display: flex; align-items: center; gap: 12px; color: var(--text); }
+  .logo-mark { width: 40px; height: 40px; border-radius: 12px; flex: none; object-fit: cover; box-shadow: 0 4px 14px rgba(14, 94, 99, 0.25); }
+  .nav-logo .brand-name { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.5rem; letter-spacing: -0.02em; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--teal-dark); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .lang-toggle { display: inline-flex; background: var(--white); border: 1px solid rgba(14, 94, 99, 0.15); border-radius: 100px; padding: 3px; gap: 2px; }
+  .lang-toggle button { padding: 6px 12px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted); border-radius: 100px; transition: all 0.25s var(--ease); line-height: 1; }
+  .lang-toggle button.active { background: var(--slate); color: var(--white); }
+  .lang-toggle button:not(.active):hover { color: var(--slate); }
+  .nav-cta { background: var(--slate); color: var(--white) !important; padding: 10px 24px; border-radius: 100px; font-size: 0.85rem !important; font-weight: 600 !important; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s !important; }
+  .nav-cta:hover { background: var(--teal-deep) !important; transform: translateY(-1px); }
+  @media (max-width: 880px) { .nav-links { display: none; } }
+
+  /* HERO */
+  .hero { padding: 160px 48px 60px; position: relative; overflow: hidden; text-align: center; }
+  .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1000px; height: 700px; background: radial-gradient(ellipse, rgba(14, 94, 99, 0.10) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+  .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero .eyebrow { justify-content: center; }
+  .hero h1 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -0.03em; color: var(--slate); margin-bottom: 22px; animation: fadeSlideUp 0.8s ease 0.1s forwards; opacity: 0; }
+  .hero h1 em { color: var(--teal); }
+  .hero-sub { font-size: 1.15rem; line-height: 1.6; color: var(--text-muted); max-width: 600px; margin: 0 auto; animation: fadeSlideUp 0.8s ease 0.25s forwards; opacity: 0; }
+  @media (max-width: 720px) { .hero { padding: 120px 24px 40px; } }
+  @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* PRESS CONTACT */
+  .contact-section { padding: 60px 48px 80px; }
+  @media (max-width: 720px) { .contact-section { padding: 40px 24px 60px; } }
+  .contact-inner { max-width: 720px; margin: 0 auto; }
+
+  .press-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 36px;
+    border: 1px solid rgba(14, 94, 99, 0.12);
+    transition: all 0.3s var(--ease);
+    position: relative;
+    overflow: hidden;
+  }
+  .press-card::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.10) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .press-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--teal-light);
+    box-shadow: 0 18px 44px rgba(22, 24, 29, 0.07);
+  }
+
+  .press-icon {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    background: var(--accent-light);
+    color: var(--accent-deep);
+    display: grid; place-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .press-icon svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+
+  .press-card h2 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.7rem;
+    color: var(--slate);
+    margin-bottom: 10px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+  .press-card h2 em { color: var(--teal); }
+  .press-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    max-width: 540px;
+  }
+
+  .press-mail {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--slate); color: var(--cream);
+    padding: 14px 22px; border-radius: 100px;
+    font-family: var(--mono); font-size: 0.92rem; font-weight: 500;
+    transition: all 0.25s var(--ease);
+    margin-bottom: 22px;
+  }
+  .press-mail:hover { background: var(--teal-deep); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(22, 24, 29, 0.25); }
+  .press-mail svg { width: 14px; height: 14px; transition: transform 0.2s; }
+  .press-mail:hover svg { transform: translateX(3px); }
+
+  .press-meta {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px dashed rgba(14, 94, 99, 0.2);
+    display: flex; flex-direction: column; gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .press-meta-row { display: flex; align-items: center; gap: 10px; }
+  .press-meta-row svg { width: 14px; height: 14px; color: var(--teal); flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  .press-meta-row b { color: var(--slate); font-weight: 600; }
+
+  /* SECTIONS */
+  section.section { padding: 80px 48px; }
+  @media (max-width: 720px) { section.section { padding: 60px 24px; } }
+  .section-inner { max-width: 1080px; margin: 0 auto; }
+  .section-head { max-width: 720px; margin-bottom: 36px; }
+  .section-head.center { margin: 0 auto 40px; text-align: center; }
+  .section-head.center .eyebrow { justify-content: center; }
+  .section-title { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(1.8rem, 3.2vw, 2.4rem); line-height: 1.12; letter-spacing: -0.025em; color: var(--slate); margin-bottom: 12px; }
+  .section-title em { color: var(--teal); }
+  .section-desc { font-size: 1rem; line-height: 1.6; color: var(--text-muted); max-width: 580px; }
+
+  /* BRAND ASSETS */
+  .brand-section { background: var(--white); }
+  .brand-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; max-width: 980px; margin: 0 auto; }
+  @media (max-width: 760px) { .brand-grid { grid-template-columns: 1fr; } }
+
+  .brand-card {
+    background: var(--cream);
+    border: 1px solid rgba(14, 94, 99, 0.10);
+    border-radius: 20px;
+    padding: 28px;
+    transition: all 0.3s var(--ease);
+  }
+  .brand-card:hover { transform: translateY(-2px); border-color: var(--teal-light); box-shadow: 0 14px 36px rgba(22, 24, 29, 0.05); }
+
+  .brand-card-head {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .brand-card h3 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.25rem;
+    color: var(--slate);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .brand-card .lbl {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 4px 10px;
+    background: var(--white);
+    border-radius: 100px;
+    border: 1px solid rgba(14, 94, 99, 0.12);
+  }
+
+  .logo-preview {
+    background: linear-gradient(135deg, var(--teal-pale) 0%, rgba(227, 239, 239, 0.4) 100%);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: grid; place-items: center;
+    margin-bottom: 18px;
+    min-height: 160px;
+  }
+  .logo-preview img {
+    width: 100px; height: 100px;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(14, 94, 99, 0.25);
+  }
+
+  .download-row {
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .download-link {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--white);
+    border: 1px solid rgba(14, 94, 99, 0.18);
+    color: var(--slate);
+    padding: 8px 14px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: all 0.25s var(--ease);
+  }
+  .download-link:hover { background: var(--teal); color: var(--white); border-color: var(--teal); transform: translateY(-1px); }
+  .download-link svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+
+  /* COLOR PALETTE */
+  .palette {
+    display: flex; flex-direction: column; gap: 8px;
+    margin-top: 18px;
+  }
+  .color-row {
+    display: grid; grid-template-columns: 36px 1fr auto; gap: 14px;
+    align-items: center;
+    padding: 8px 0;
+  }
+  .color-swatch {
+    width: 36px; height: 36px;
+    border-radius: 9px;
+    border: 1px solid rgba(22, 24, 29, 0.08);
+  }
+  .color-info { display: flex; flex-direction: column; gap: 1px; }
+  .color-info .name { font-size: 0.82rem; color: var(--slate); font-weight: 600; }
+  .color-info .role { font-size: 0.7rem; color: var(--text-muted); font-family: var(--mono); }
+  .color-hex {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--white);
+    padding: 4px 9px;
+    border-radius: 6px;
+    border: 1px solid rgba(14, 94, 99, 0.12);
+    cursor: pointer;
+    transition: all 0.2s var(--ease);
+  }
+  .color-hex:hover { color: var(--teal-deep); border-color: var(--teal-light); }
+
+  /* FACT SHEET */
+  .factsheet-section { background: var(--cream); }
+  .factsheet {
+    background: var(--white);
+    border-radius: 20px;
+    border: 1px solid rgba(14, 94, 99, 0.12);
+    overflow: hidden;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .fact-row {
+    display: grid; grid-template-columns: 220px 1fr;
+    gap: 24px;
+    padding: 18px 28px;
+    border-bottom: 1px solid rgba(14, 94, 99, 0.08);
+    align-items: center;
+  }
+  .fact-row:last-child { border-bottom: 0; }
+  @media (max-width: 580px) {
+    .fact-row { grid-template-columns: 1fr; gap: 6px; padding: 16px 22px; }
+  }
+  .fact-k {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .fact-v {
+    font-size: 0.92rem;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+  .fact-v.serif { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.1rem; }
+  .fact-v.mono { font-family: var(--mono); font-size: 0.85rem; }
+  .fact-v b { font-weight: 600; }
+
+  /* ABOUT LINK */
+  .about-link-section { background: var(--white); padding: 60px 48px; text-align: center; }
+  @media (max-width: 720px) { .about-link-section { padding: 50px 24px; } }
+  .about-link-inner { max-width: 580px; margin: 0 auto; }
+  .about-link-inner p { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(1.2rem, 1.8vw, 1.45rem); color: var(--slate); line-height: 1.5; margin-bottom: 22px; }
+  .about-link-inner p em { color: var(--teal); font-style: italic; }
+  .about-link-inner .btn { background: var(--slate); color: var(--cream); }
+  .about-link-inner .btn:hover { background: var(--teal-deep); transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer { background: var(--slate); color: rgba(247, 247, 248, 0.7); padding: 80px 48px 32px; }
+  @media (max-width: 720px) { footer { padding: 60px 24px 24px; } }
+  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .footer-brand .nav-logo { margin-bottom: 16px; color: var(--cream); }
+  .footer-brand .brand-name { color: var(--cream); }
+  .footer-tagline { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.4; color: rgba(247, 247, 248, 0.6); max-width: 300px; }
+  .footer-col h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-col a { font-size: 0.92rem; color: rgba(247, 247, 248, 0.6); transition: color 0.2s; }
+  .footer-col a:hover { color: var(--teal-light); }
+  .footer-bottom { padding-top: 32px; border-top: 1px solid rgba(247, 247, 248, 0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.82rem; color: rgba(247, 247, 248, 0.4); }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .back-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--slate); color: var(--cream); display: grid; place-items: center; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(12px); transition: all 0.35s cubic-bezier(.2,.7,.2,1); z-index: 900; box-shadow: 0 8px 30px rgba(22, 24, 29,0.3); border: 1px solid rgba(247, 247, 248,0.1); }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .back-top:hover { background: var(--teal-deep); transform: translateY(-3px); }
+  .back-top svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<nav id="nav">
+  <a href="plattform.html" class="nav-logo">
+    <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+    <span class="brand-name">Totus</span>
+  </a>
+  <div class="nav-links">
+    <a href="plattformprodukt.html" data-i18n="nav.product">Produkt</a>
+    <a href="plattformunderwriting.html" data-i18n="nav.underwriting">Underwriting</a>
+    <a href="plattformdealpipeline.html" data-i18n="nav.pipeline">Pipeline</a>
+    <a href="plattformsellside.html" data-i18n="nav.sellside">Sell-Side</a>
+    <a href="plattformaiicmemos.html" data-i18n="nav.ai">AI &amp; IC-Memos</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="de" class="active" aria-label="Deutsch">DE</button>
+      <button data-lang="en" aria-label="English">EN</button>
+    </div>
+    <a href="plattformdemo.html" class="nav-cta">
+      <span data-i18n="nav.cta">Demo anfragen</span>
+      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+        <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<section id="inhalt" class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow" data-i18n="hero.eyebrow">Presse</span>
+    <h1 data-i18n-html="hero.h1">Schreibt über uns?<br/><em>Schreibt uns.</em></h1>
+    <p class="hero-sub" data-i18n="hero.sub">Wir sind ein kleines Team und antworten direkt. Hier finden Sie den Pressekontakt, Brand-Assets und die wichtigsten Eckdaten zum Unternehmen.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="press-card">
+      <div class="press-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="13" rx="1"/><path d="M17 9h3v9a1 1 0 01-1 1h-2M7 11h6M7 14h6" stroke-linejoin="round"/></svg>
+      </div>
+      <h2 data-i18n-html="pc.t">Direkt an den <em>Founder</em>.</h2>
+      <p data-i18n="pc.d">Pressanfragen, Interview-Anfragen und Hintergrundgespräche werden direkt von der Geschäftsführung beantwortet, kein PR-Filter, keine Comms-Agentur. Schreiben Sie uns, was Sie brauchen, und wir melden uns zurück.</p>
+
+      <a href="mailto:press@totus.info" class="press-mail">
+        press@totus.info
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div class="press-meta">
+        <div class="press-meta-row">
+          <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5"/><path d="M7 4v3l2 1" stroke-linecap="round"/></svg>
+          <span><b data-i18n="pc.m1.k">Antwortzeit:</b> <span data-i18n="pc.m1.v">in der Regel innerhalb 24h, spätestens 2 Werktage</span></span>
+        </div>
+        <div class="press-meta-row">
+          <svg viewBox="0 0 14 14"><path d="M7 1c2.5 0 4.5 2 4.5 4.5C11.5 8.5 7 13 7 13s-4.5-4.5-4.5-7.5C2.5 3 4.5 1 7 1z"/><circle cx="7" cy="5.5" r="1.5"/></svg>
+          <span><b data-i18n="pc.m2.k">Sprachen:</b> <span data-i18n="pc.m2.v">Deutsch, Englisch</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section brand-section reveal">
+  <div class="section-inner">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="brand.eyebrow">Brand-Assets</span>
+      <h2 class="section-title" data-i18n-html="brand.title">Logo &amp; <em>Farben</em>.</h2>
+      <p class="section-desc" data-i18n="brand.desc">Für Berichterstattung, Citations oder Embeds. Bitte nicht verändern, nicht recolorieren.</p>
+    </div>
+
+    <div class="brand-grid">
+      <!-- LOGO -->
+      <div class="brand-card">
+        <div class="brand-card-head">
+          <h3 data-i18n="brand.l.t">Logo</h3>
+          <span class="lbl">Mark</span>
+        </div>
+        <div class="logo-preview">
+          <img src="data:image/jpeg;base64,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" alt="TOTUS Logo" />
+        </div>
+        <div class="download-row">
+          <a href="plattformtotuslogo.jpg" download class="download-link">
+            <svg viewBox="0 0 14 14"><path d="M7 1v9M3 6l4 4 4-4M2 13h10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            JPG · 423×423
+          </a>
+          <a href="mailto:press@totus.info?subject=Logo-Anfrage%20(SVG%2FPNG)" class="download-link">
+            <svg viewBox="0 0 14 14"><rect x="2" y="3" width="10" height="8" rx="1"/><path d="M2 5l5 3 5-3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="brand.l.svg">SVG / hochauflösend anfragen</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- COLORS -->
+      <div class="brand-card">
+        <div class="brand-card-head">
+          <h3 data-i18n="brand.c.t">Farbpalette</h3>
+          <span class="lbl">Hex</span>
+        </div>
+        <div class="palette">
+          <div class="color-row">
+            <div class="color-swatch" style="background: #0E5E63;"></div>
+            <div class="color-info">
+              <span class="name">Teal</span>
+              <span class="role" data-i18n="brand.c.1">Primary · Accent</span>
+            </div>
+            <span class="color-hex">#0E5E63</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: #0A474B;"></div>
+            <div class="color-info">
+              <span class="name">Teal Deep</span>
+              <span class="role" data-i18n="brand.c.2">Hover · Focus</span>
+            </div>
+            <span class="color-hex">#0A474B</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: #16181D;"></div>
+            <div class="color-info">
+              <span class="name">Slate</span>
+              <span class="role" data-i18n="brand.c.3">Text · Dark UI</span>
+            </div>
+            <span class="color-hex">#16181D</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: #0E5E63;"></div>
+            <div class="color-info">
+              <span class="name">Accent Gold</span>
+              <span class="role" data-i18n="brand.c.4">Highlights · Featured</span>
+            </div>
+            <span class="color-hex">#0E5E63</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: #F7F7F8; border-color: rgba(22, 24, 29,0.18);"></div>
+            <div class="color-info">
+              <span class="name">Cream</span>
+              <span class="role" data-i18n="brand.c.5">Background</span>
+            </div>
+            <span class="color-hex">#F7F7F8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section factsheet-section reveal">
+  <div class="section-inner">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="fact.eyebrow">Fact-Sheet</span>
+      <h2 class="section-title" data-i18n-html="fact.title">Das Unternehmen <em>in zwölf Zeilen</em>.</h2>
+      <p class="section-desc" data-i18n="fact.desc">Was Sie für Berichterstattung an Eckdaten brauchen. Stand: November 2026.</p>
+    </div>
+
+    <div class="factsheet">
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.1.k">Firmierung</div>
+        <div class="fact-v serif">TOTUS CRE UG (haftungsbeschränkt)</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.2.k">Rechtsform</div>
+        <div class="fact-v" data-i18n="f.2.v">Unternehmergesellschaft (haftungsbeschränkt) nach deutschem Recht</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.3.k">Gegründet</div>
+        <div class="fact-v" data-i18n="f.3.v">2024 in Berlin</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.4.k">Sitz</div>
+        <div class="fact-v">Seegefelderstraße 22, 13583 Berlin</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.5.k">Geschäftsführer</div>
+        <div class="fact-v serif">Paul Harm</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.6.k">Team-Größe</div>
+        <div class="fact-v" data-i18n="f.6.v">4 Personen (Stand November 2026)</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.7.k">Produkt</div>
+        <div class="fact-v" data-i18n="f.7.v">Decision-Plattform für institutionelle Immobilieninvestments: Underwriting, Deal Pipeline, IC-Memos, Sell-Side</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.8.k">Zielmarkt</div>
+        <div class="fact-v" data-i18n="f.8.v">DACH · Institutionelle Investment-Teams</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.9.k">Finanzierung</div>
+        <div class="fact-v" data-i18n="f.9.v">Pre-Seed (Business Angels aus Real-Estate- und Tech-Umfeld)</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.10.k">Registergericht</div>
+        <div class="fact-v mono">Amtsgericht Charlottenburg · HRB 234567</div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.11.k">Website</div>
+        <div class="fact-v mono"><a href="https://totus.info/index.html" style="color: var(--teal-dark);">totus.info</a></div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-k" data-i18n="f.12.k">Kontakt</div>
+        <div class="fact-v mono"><a href="mailto:press@totus.info" style="color: var(--teal-dark);">press@totus.info</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-link-section reveal">
+  <div class="about-link-inner">
+    <p data-i18n-html="al.t">Wenn Sie die <em>längere Geschichte</em> brauchen, warum es uns gibt, wer dahinter steckt, wie wir arbeiten, finden Sie sie hier.</p>
+    <a href="plattformabout.html" class="btn">
+      <span data-i18n="al.cta">Über uns lesen</span>
+      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<button class="back-top" id="backTop" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="plattform.html" class="nav-logo">
+          <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+          <span class="brand-name">Totus</span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Die Decision-Plattform für professionelle Immobilieninvestments.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col1">Produkt</h4>
+        <ul>
+          <li><a href="plattformprodukt.html" data-i18n="footer.c1.1">Überblick</a></li>
+          <li><a href="plattformunderwriting.html" data-i18n="footer.c1.2">Underwriting</a></li>
+          <li><a href="plattformdealpipeline.html" data-i18n="footer.c1.3">Deal Pipeline</a></li>
+          <li><a href="plattformaiicmemos.html" data-i18n="footer.c1.4">IC-Memos &amp; AI</a></li>
+          <li><a href="plattformsellside.html" data-i18n="footer.c1.5">Sell-Side</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col2">Unternehmen</h4>
+        <ul>
+          <li><a href="plattformabout.html" data-i18n="footer.c2.1">Über uns</a></li>
+          <li><a href="plattformcareers.html" data-i18n="footer.c2.2">Karriere</a></li>
+          <li><a href="plattformcontact.html" data-i18n="footer.c2.3">Kontakt</a></li>
+          <li><a href="plattformpress.html" data-i18n="footer.c2.4">Presse</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col3">Rechtliches</h4>
+        <ul>
+          <li><a href="plattformimprint.html" data-i18n="footer.c3.1">Impressum</a></li>
+          <li><a href="plattformprivacy.html" data-i18n="footer.c3.2">Datenschutz</a></li>
+          <li><a href="plattformterms.html" data-i18n="footer.c3.3">AGB</a></li>
+          <li><a href="plattformsecurity.html" data-i18n="footer.c3.4">Sicherheit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.</span>
+      <span data-i18n="footer.made">Made in Berlin</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const translations = {
+    de: {
+      'nav.product': 'Produkt', 'nav.underwriting': 'Underwriting', 'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side', 'nav.ai': 'AI & IC-Memos', 'nav.cta': 'Demo anfragen',
+
+      'meta.title': 'TOTUS CRE · Presse',
+      'meta.desc': 'Pressekontakt und Brand-Assets der TOTUS CRE UG (haftungsbeschränkt).',
+
+      'hero.eyebrow': 'Presse',
+      'hero.h1': 'Schreibt über uns?<br/><em>Schreibt uns.</em>',
+      'hero.sub': 'Wir sind ein kleines Team und antworten direkt. Hier finden Sie den Pressekontakt, Brand-Assets und die wichtigsten Eckdaten zum Unternehmen.',
+
+      'pc.t': 'Direkt an den <em>Founder</em>.',
+      'pc.d': 'Pressanfragen, Interview-Anfragen und Hintergrundgespräche werden direkt von der Geschäftsführung beantwortet, kein PR-Filter, keine Comms-Agentur. Schreiben Sie uns, was Sie brauchen, und wir melden uns zurück.',
+      'pc.m1.k': 'Antwortzeit:', 'pc.m1.v': 'in der Regel innerhalb 24h, spätestens 2 Werktage',
+      'pc.m2.k': 'Sprachen:', 'pc.m2.v': 'Deutsch, Englisch',
+
+      'brand.eyebrow': 'Brand-Assets',
+      'brand.title': 'Logo &amp; <em>Farben</em>.',
+      'brand.desc': 'Für Berichterstattung, Citations oder Embeds. Bitte nicht verändern, nicht recolorieren.',
+      'brand.l.t': 'Logo',
+      'brand.l.svg': 'SVG / hochauflösend anfragen',
+      'brand.c.t': 'Farbpalette',
+      'brand.c.1': 'Primary · Accent',
+      'brand.c.2': 'Hover · Focus',
+      'brand.c.3': 'Text · Dark UI',
+      'brand.c.4': 'Highlights · Featured',
+      'brand.c.5': 'Background',
+
+      'fact.eyebrow': 'Fact-Sheet',
+      'fact.title': 'Das Unternehmen <em>in zwölf Zeilen</em>.',
+      'fact.desc': 'Was Sie für Berichterstattung an Eckdaten brauchen. Stand: November 2026.',
+      'f.1.k': 'Firmierung',
+      'f.2.k': 'Rechtsform', 'f.2.v': 'Unternehmergesellschaft (haftungsbeschränkt) nach deutschem Recht',
+      'f.3.k': 'Gegründet', 'f.3.v': '2024 in Berlin',
+      'f.4.k': 'Sitz',
+      'f.5.k': 'Geschäftsführer',
+      'f.6.k': 'Team-Größe', 'f.6.v': '4 Personen (Stand November 2026)',
+      'f.7.k': 'Produkt', 'f.7.v': 'Decision-Plattform für institutionelle Immobilieninvestments: Underwriting, Deal Pipeline, IC-Memos, Sell-Side',
+      'f.8.k': 'Zielmarkt', 'f.8.v': 'DACH · Institutionelle Investment-Teams',
+      'f.9.k': 'Finanzierung', 'f.9.v': 'Pre-Seed (Business Angels aus Real-Estate- und Tech-Umfeld)',
+      'f.10.k': 'Registergericht',
+      'f.11.k': 'Website',
+      'f.12.k': 'Kontakt',
+
+      'al.t': 'Wenn Sie die <em>längere Geschichte</em> brauchen, warum es uns gibt, wer dahinter steckt, wie wir arbeiten, finden Sie sie hier.',
+      'al.cta': 'Über uns lesen',
+
+      'footer.tagline': 'Die Decision-Plattform für professionelle Immobilieninvestments.',
+      'footer.col1': 'Produkt',
+      'footer.c1.1': 'Überblick', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC-Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Unternehmen',
+      'footer.c2.1': 'Über uns', 'footer.c2.2': 'Karriere', 'footer.c2.3': 'Kontakt', 'footer.c2.4': 'Presse',
+      'footer.col3': 'Rechtliches',
+      'footer.c3.1': 'Impressum', 'footer.c3.2': 'Datenschutz', 'footer.c3.3': 'AGB', 'footer.c3.4': 'Sicherheit',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.',
+      'footer.made': 'Made in Berlin'
+    },
+    en: {
+      'nav.product': 'Product', 'nav.underwriting': 'Underwriting', 'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side', 'nav.ai': 'AI & IC Memos', 'nav.cta': 'Request demo',
+
+      'meta.title': 'TOTUS CRE · Press',
+      'meta.desc': 'Press contact and brand assets of TOTUS CRE UG (haftungsbeschränkt).',
+
+      'hero.eyebrow': 'Press',
+      'hero.h1': 'Writing about us?<br/><em>Write to us.</em>',
+      'hero.sub': "We're a small team and we reply directly. Here is the press contact, brand assets, and the key company facts.",
+
+      'pc.t': 'Directly to the <em>founder</em>.',
+      'pc.d': 'Press inquiries, interview requests, and background conversations are handled directly by management, no PR filter, no comms agency. Tell us what you need, and we get back to you.',
+      'pc.m1.k': 'Response time:', 'pc.m1.v': 'usually within 24h, at most 2 business days',
+      'pc.m2.k': 'Languages:', 'pc.m2.v': 'German, English',
+
+      'brand.eyebrow': 'Brand assets',
+      'brand.title': 'Logo &amp; <em>colors</em>.',
+      'brand.desc': 'For coverage, citations, or embeds. Please do not modify, do not recolor.',
+      'brand.l.t': 'Logo',
+      'brand.l.svg': 'Request SVG / hi-res',
+      'brand.c.t': 'Color palette',
+      'brand.c.1': 'Primary · Accent',
+      'brand.c.2': 'Hover · Focus',
+      'brand.c.3': 'Text · Dark UI',
+      'brand.c.4': 'Highlights · Featured',
+      'brand.c.5': 'Background',
+
+      'fact.eyebrow': 'Fact sheet',
+      'fact.title': 'The company <em>in twelve lines</em>.',
+      'fact.desc': 'What you need in key facts for coverage. As of November 2026.',
+      'f.1.k': 'Company name',
+      'f.2.k': 'Legal form', 'f.2.v': 'Unternehmergesellschaft (limited liability) under German law',
+      'f.3.k': 'Founded', 'f.3.v': '2024 in Berlin',
+      'f.4.k': 'Headquarters',
+      'f.5.k': 'Managing director',
+      'f.6.k': 'Team size', 'f.6.v': '4 people (as of November 2026)',
+      'f.7.k': 'Product', 'f.7.v': 'Decision platform for institutional real estate investments, underwriting, deal pipeline, IC memos, sell-side',
+      'f.8.k': 'Target market', 'f.8.v': 'DACH · Institutional investment teams',
+      'f.9.k': 'Funding', 'f.9.v': 'Pre-seed (business angels from real estate and tech)',
+      'f.10.k': 'Commercial register',
+      'f.11.k': 'Website',
+      'f.12.k': 'Contact',
+
+      'al.t': "If you need the <em>longer story</em>, why we exist, who's behind it, how we work, you'll find it here.",
+      'al.cta': 'Read about us',
+
+      'footer.tagline': 'The decision platform for professional real estate investments.',
+      'footer.col1': 'Product',
+      'footer.c1.1': 'Overview', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Company',
+      'footer.c2.1': 'About', 'footer.c2.2': 'Careers', 'footer.c2.3': 'Contact', 'footer.c2.4': 'Press',
+      'footer.col3': 'Legal',
+      'footer.c3.1': 'Imprint', 'footer.c3.2': 'Privacy', 'footer.c3.3': 'Terms', 'footer.c3.4': 'Security',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). All rights reserved.',
+      'footer.made': 'Made in Berlin'
+    }
+  };
+
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+    const dict = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    var _md = document.querySelector('meta[name="description"]');
+    if (_md && dict['meta.desc']) _md.setAttribute('content', dict['meta.desc']);
+    document.querySelectorAll('.lang-toggle button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem('totus-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+  });
+
+  let initial = 'de';
+  try {
+    const stored = localStorage.getItem('totus-lang');
+    if (stored && translations[stored]) initial = stored;
+  } catch (e) {}
+  setLanguage(initial);
+
+  // Click-to-copy on hex codes
+  document.querySelectorAll('.color-hex').forEach(el => {
+    el.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(el.textContent);
+        const original = el.textContent;
+        el.textContent = '✓ Copied';
+        el.style.color = '#1F7A4D';
+        setTimeout(() => {
+          el.textContent = original;
+          el.style.color = '';
+        }, 1200);
+      } catch (e) {}
+    });
+  });
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  (function() {
+    const btn = document.getElementById('backTop');
+    if (!btn) return;
+    window.addEventListener('scroll', () => { btn.classList.toggle('show', window.scrollY > 600); }, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+</script>
+
+</body>
+</html>

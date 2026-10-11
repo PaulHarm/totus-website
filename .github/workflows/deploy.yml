@@ -10,31 +10,24 @@ concurrency:
   group: deploy
   cancel-in-progress: false
 
+env:
+  SFTP_HOST: 5020037797.ssh.w2.strato.hosting
+  # Startverzeichnis des SFTP-Benutzers ist bereits /v6 (Ziel von totus.info)
+  REMOTE_DIR: /
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Tools installieren
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp sshpass
-
-      - name: Verbindung testen
-        env:
-          SFTP_HOST: ${{ secrets.STRATO_HOST }}
-          SFTP_USER: ${{ secrets.STRATO_USER }}
-          SSHPASS: ${{ secrets.STRATO_PASSWORD }}
-          REMOTE_DIR: ${{ secrets.STRATO_REMOTE_DIR }}
-        run: |
-          echo "Benutzer-Laenge: ${#SFTP_USER}, Passwort-Laenge: ${#SSHPASS}"
-          echo "ls $REMOTE_DIR" | sshpass -e sftp -v -o StrictHostKeyChecking=no -o PreferredAuthentications=password,keyboard-interactive -o PubkeyAuthentication=no -b - "$SFTP_USER@$SFTP_HOST" 2>&1 | grep -Ev '^debug1: (Reading|kex|SSH2_MSG|expecting|rekey|channel|Requesting|Sending env|Local version|Remote protocol|compat|Authenticating|Connecting|Connection established|identity file|Server host key|Host|Next|Sent)' | tail -40
+      - name: lftp installieren
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
       - name: Per SFTP zu STRATO hochladen
         env:
-          SFTP_HOST: ${{ secrets.STRATO_HOST }}
           SFTP_USER: ${{ secrets.STRATO_USER }}
           SFTP_PASS: ${{ secrets.STRATO_PASSWORD }}
-          REMOTE_DIR: ${{ secrets.STRATO_REMOTE_DIR }}
         run: |
           lftp -c "set sftp:auto-confirm yes; set net:max-retries 2; \
             open -u \"$SFTP_USER\",\"$SFTP_PASS\" sftp://$SFTP_HOST; \

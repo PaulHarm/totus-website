@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="plattformfavicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="plattformfavicon16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="plattformfavicon32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="plattformfavicon48x48.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="plattformappletouchicon.png" />
+<meta name="theme-color" content="#0E5E63" />
+<link rel="canonical" href="https://totus.info/plattformterms.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://totus.info/plattformterms.html" />
+<meta property="og:title" content="AGB · TOTUS CRE" />
+<meta property="og:description" content="Allgemeine Geschäftsbedingungen der TOTUS CRE UG (haftungsbeschränkt) für die Nutzung der TOTUS-Plattform." />
+<meta property="og:image" content="https://totus.info/plattformogimage.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:site_name" content="TOTUS CRE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AGB · TOTUS CRE" />
+<meta name="twitter:description" content="Allgemeine Geschäftsbedingungen der TOTUS CRE UG (haftungsbeschränkt) für die Nutzung der TOTUS-Plattform." />
+<meta name="twitter:image" content="https://totus.info/plattformogimage.png" />
+
+<title>TOTUS CRE · Allgemeine Geschäftsbedingungen</title>
+<meta name="description" content="AGB der TOTUS CRE UG (haftungsbeschränkt) für die Bereitstellung der Decision-Plattform für institutionelle Immobilieninvestments." />
+
+
+<link rel="preload" href="interlatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="spacegrotesklatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="plattformjetbrainsmono.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--slate);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;font-size:.9rem;font-weight:600;}
+.skip-link:focus{left:0;outline:3px solid var(--accent);outline-offset:2px;}
+
+/* Selbst gehostete Schriften - keine Verbindung zu Google */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url('interlatin.woff2') format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500 700;font-display:swap;src:url('spacegrotesklatin.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url('plattformjetbrainsmono.woff2') format('woff2');}
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --teal: #0E5E63; --teal-dark: #0A474B; --teal-deep: #0A474B;
+    --teal-light: #4A8F93; --teal-pale: #E3EFEF;
+    --slate: #16181D; --slate-light: #2C2F36;
+    --cream: #F7F7F8; --white: #FFFFFF;
+    --text: #16181D; --text-muted: #555B66;
+    --accent: #0E5E63; --accent-light: #E3EFEF; --accent-deep: #0A474B;
+    --success: #1F7A4D;
+    --radius: 14px; --radius-sm: 10px;
+    --ease: cubic-bezier(.2,.7,.2,1);
+    --mono: 'JetBrains Mono', monospace;
+  }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+  ::selection { background: var(--teal); color: var(--white); }
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+  p { margin: 0; }
+  section { position: relative; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(20px); background: rgba(247, 247, 248, 0.85); border-bottom: 1px solid rgba(14, 94, 99, 0.1); transition: all 0.3s ease; }
+  nav.scrolled { padding: 12px 48px; box-shadow: 0 4px 30px rgba(22, 24, 29, 0.06); }
+  @media (max-width: 720px) { nav { padding: 14px 24px; } nav.scrolled { padding: 10px 24px; } }
+  .nav-logo { display: flex; align-items: center; gap: 12px; color: var(--text); }
+  .logo-mark { width: 40px; height: 40px; border-radius: 12px; flex: none; object-fit: cover; box-shadow: 0 4px 14px rgba(14, 94, 99, 0.25); }
+  .nav-logo .brand-name { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.5rem; letter-spacing: -0.02em; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--teal-dark); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .lang-toggle { display: inline-flex; background: var(--white); border: 1px solid rgba(14, 94, 99, 0.15); border-radius: 100px; padding: 3px; gap: 2px; }
+  .lang-toggle button { padding: 6px 12px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted); border-radius: 100px; transition: all 0.25s var(--ease); line-height: 1; }
+  .lang-toggle button.active { background: var(--slate); color: var(--white); }
+  .lang-toggle button:not(.active):hover { color: var(--slate); }
+  .nav-cta { background: var(--slate); color: var(--white) !important; padding: 10px 24px; border-radius: 100px; font-size: 0.85rem !important; font-weight: 600 !important; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s !important; }
+  .nav-cta:hover { background: var(--teal-deep) !important; transform: translateY(-1px); }
+  .nav-cta .arrow { width: 14px; height: 14px; transition: transform 0.25s var(--ease); }
+  .nav-cta:hover .arrow { transform: translateX(3px); }
+  @media (max-width: 880px) { .nav-links { display: none; } }
+
+  .legal-hero { padding: 140px 48px 40px; position: relative; overflow: hidden; border-bottom: 1px solid rgba(14, 94, 99, 0.10); background: var(--white); }
+  .legal-hero::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14, 94, 99, 0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+  .legal-hero-inner { max-width: 1180px; margin: 0 auto; position: relative; }
+  .crumb { display: inline-flex; align-items: center; gap: 8px; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px; font-family: var(--mono); }
+  .crumb a { color: var(--teal-dark); }
+  .crumb a:hover { color: var(--teal-deep); }
+  .crumb svg { width: 10px; height: 10px; opacity: 0.5; }
+  .crumb .current { color: var(--slate); }
+
+  .legal-hero h1 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.05; letter-spacing: -0.025em; color: var(--slate); margin-bottom: 18px; }
+  .legal-hero h1 em { color: var(--teal); }
+  .legal-meta { display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .legal-meta-item { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-muted); background: var(--cream); padding: 7px 14px; border-radius: 100px; border: 1px solid rgba(14, 94, 99, 0.10); }
+  .legal-meta-item b { color: var(--slate); font-weight: 600; }
+  .legal-meta-item svg { width: 13px; height: 13px; color: var(--teal); flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  @media (max-width: 720px) { .legal-hero { padding: 110px 24px 30px; } }
+
+  .keyterms-strip { background: linear-gradient(135deg, var(--accent-light) 0%, rgba(227, 239, 239, 0.4) 100%); border-bottom: 1px solid rgba(14, 94, 99, 0.18); padding: 36px 48px; }
+  @media (max-width: 720px) { .keyterms-strip { padding: 32px 24px; } }
+  .keyterms-inner { max-width: 1180px; margin: 0 auto; }
+  .keyterms-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; font-size: 0.78rem; color: var(--accent-deep); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .keyterms-head svg { width: 16px; height: 16px; color: var(--accent-deep); stroke: currentColor; fill: none; stroke-width: 1.8; }
+  .kt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 880px) { .kt-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .kt-grid { grid-template-columns: 1fr; } }
+  .kt-card { background: var(--white); border-radius: var(--radius-sm); padding: 16px 18px; border: 1px solid rgba(14, 94, 99, 0.22); }
+  .kt-card .num { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.7rem; color: var(--accent-deep); line-height: 1; letter-spacing: -0.02em; margin-bottom: 4px; }
+  .kt-card .num em { }
+  .kt-card .k { font-size: 0.7rem; color: var(--text-muted); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px; }
+  .kt-card .v { font-size: 0.78rem; color: var(--slate); line-height: 1.4; }
+
+  .legal-main { padding: 60px 48px 100px; }
+  @media (max-width: 720px) { .legal-main { padding: 40px 24px 60px; } }
+  .legal-grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; align-items: start; }
+  @media (max-width: 980px) { .legal-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+  .toc { position: sticky; top: 96px; align-self: start; background: var(--white); border-radius: var(--radius); border: 1px solid rgba(14, 94, 99, 0.10); padding: 24px; max-height: calc(100vh - 120px); overflow-y: auto; }
+  @media (max-width: 980px) { .toc { position: static; padding: 20px; max-height: none; } }
+  .toc-lbl { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .toc-lbl::after { content: ''; flex: 1; height: 1px; background: rgba(22, 24, 29, 0.08); }
+  .toc-list { list-style: none; display: flex; flex-direction: column; }
+  .toc-list a { display: flex; align-items: baseline; gap: 10px; padding: 7px 0 7px 14px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.35; border-left: 2px solid transparent; transition: all 0.2s var(--ease); }
+  .toc-list a:hover { color: var(--teal-deep); border-left-color: var(--teal-light); padding-left: 18px; }
+  .toc-list a .n { font-family: var(--mono); font-size: 0.68rem; font-weight: 600; color: var(--teal); flex-shrink: 0; }
+
+  .legal-content { max-width: 720px; color: var(--slate); }
+  .legal-content section { padding-bottom: 44px; scroll-margin-top: 90px; }
+
+  .sec-num { font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; color: var(--teal-deep); text-transform: uppercase; margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px; }
+  .sec-num .dot { width: 5px; height: 5px; background: var(--teal); border-radius: 50%; }
+
+  .legal-content h2 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.65rem; color: var(--slate); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
+  .legal-content h2 em { color: var(--teal); }
+  .legal-content h3 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.05rem; color: var(--slate); line-height: 1.2; margin: 24px 0 10px; letter-spacing: -0.005em; }
+  .legal-content p { font-size: 0.94rem; line-height: 1.72; color: var(--slate); margin-bottom: 14px; }
+  .legal-content p:last-child { margin-bottom: 0; }
+  .legal-content b, .legal-content strong { color: var(--slate); font-weight: 600; }
+  .legal-content em { color: var(--teal-deep); font-style: italic; }
+
+  .subpara { display: grid; grid-template-columns: 36px 1fr; gap: 12px; margin-bottom: 14px; }
+  .subpara .lbl { font-family: var(--mono); font-size: 0.78rem; font-weight: 600; color: var(--teal-deep); line-height: 1.7; }
+  .subpara p { margin: 0; }
+
+  .legal-content ul { list-style: none; padding: 0; margin: 8px 0 18px; display: flex; flex-direction: column; gap: 6px; }
+  .legal-content ul li { position: relative; padding-left: 18px; font-size: 0.92rem; line-height: 1.6; color: var(--slate); }
+  .legal-content ul li::before { content: ''; position: absolute; left: 0; top: 11px; width: 6px; height: 1.5px; background: var(--teal); }
+  .legal-content ul li b { color: var(--slate); }
+
+  .callout { background: var(--teal-pale); border-radius: var(--radius-sm); padding: 18px 22px; margin: 18px 0; border-left: 3px solid var(--teal); display: grid; grid-template-columns: 24px 1fr; gap: 14px; align-items: start; }
+  .callout .ic { width: 22px; height: 22px; border-radius: 50%; background: var(--teal); color: var(--white); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
+  .callout .ic svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-width: 2; }
+  .callout p { font-size: 0.86rem !important; color: var(--teal-deep) !important; line-height: 1.55 !important; margin: 0 !important; }
+  .callout a { color: var(--teal-deep); text-decoration: underline; text-underline-offset: 2px; }
+  .callout.amber { background: var(--accent-light); border-left-color: var(--accent); }
+  .callout.amber .ic { background: var(--accent); color: var(--slate); }
+  .callout.amber p { color: var(--accent-deep) !important; }
+  .callout.amber a { color: var(--accent-deep); }
+  .callout.slate { background: #F1F4F7; border-left-color: var(--slate-light); }
+  .callout.slate .ic { background: var(--slate); color: var(--white); }
+  .callout.slate p { color: var(--slate) !important; }
+
+  .sla-table { background: var(--white); border: 1px solid rgba(14, 94, 99, 0.12); border-radius: var(--radius); overflow: hidden; margin: 18px 0; }
+  .sla-head { display: grid; grid-template-columns: 1.2fr 1fr 1fr; background: var(--cream); border-bottom: 1px solid rgba(14, 94, 99, 0.12); }
+  .sla-head > div { padding: 12px 16px; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; }
+  .sla-row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; border-bottom: 1px solid rgba(14, 94, 99, 0.08); }
+  .sla-row:last-child { border-bottom: 0; }
+  .sla-row > div { padding: 14px 16px; font-size: 0.85rem; color: var(--slate); }
+  .sla-row .lvl { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1rem; }
+  .sla-row .lvl.std { color: var(--slate); }
+  .sla-row .lvl.ent { color: var(--accent-deep); }
+  .sla-row .uptime { font-family: var(--mono); font-weight: 600; }
+  .sla-row .uptime.high { color: var(--success); }
+  .sla-row .credit { font-size: 0.82rem; color: var(--text-muted); }
+  @media (max-width: 720px) {
+    .sla-head { display: none; }
+    .sla-row { grid-template-columns: 1fr; gap: 4px; padding: 14px; }
+    .sla-row > div { padding: 0; }
+  }
+
+  .legal-foot-links { margin-top: 60px; padding-top: 28px; border-top: 1px solid rgba(14, 94, 99, 0.12); }
+  .legal-foot-lbl { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 16px; }
+  .legal-foot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 580px) { .legal-foot-grid { grid-template-columns: 1fr; } }
+  .legal-foot-link { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid rgba(14, 94, 99, 0.10); border-radius: var(--radius-sm); padding: 14px 18px; transition: all 0.2s var(--ease); }
+  .legal-foot-link:hover { border-color: var(--teal-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(22, 24, 29, 0.05); }
+  .legal-foot-link .ttl { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.05rem; color: var(--slate); }
+  .legal-foot-link svg { width: 14px; height: 14px; color: var(--teal-deep); transition: transform 0.2s var(--ease); }
+  .legal-foot-link:hover svg { transform: translateX(3px); }
+
+  footer { background: var(--slate); color: rgba(247, 247, 248, 0.7); padding: 80px 48px 32px; }
+  @media (max-width: 720px) { footer { padding: 60px 24px 24px; } }
+  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .footer-brand .nav-logo { margin-bottom: 16px; color: var(--cream); }
+  .footer-brand .brand-name { color: var(--cream); }
+  .footer-tagline { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.4; color: rgba(247, 247, 248, 0.6); max-width: 300px; }
+  .footer-col h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-col a { font-size: 0.92rem; color: rgba(247, 247, 248, 0.6); transition: color 0.2s; }
+  .footer-col a:hover { color: var(--teal-light); }
+  .footer-bottom { padding-top: 32px; border-top: 1px solid rgba(247, 247, 248, 0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.82rem; color: rgba(247, 247, 248, 0.4); }
+
+  .back-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--slate); color: var(--cream); display: grid; place-items: center; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(12px); transition: all 0.35s cubic-bezier(.2,.7,.2,1); z-index: 900; box-shadow: 0 8px 30px rgba(22, 24, 29,0.3); border: 1px solid rgba(247, 247, 248,0.1); }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .back-top:hover { background: var(--teal-deep); transform: translateY(-3px); }
+  .back-top svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<nav id="nav">
+  <a href="plattform.html" class="nav-logo">
+    <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+    <span class="brand-name">Totus</span>
+  </a>
+  <div class="nav-links">
+    <a href="plattformprodukt.html" data-i18n="nav.product">Produkt</a>
+    <a href="plattformunderwriting.html" data-i18n="nav.underwriting">Underwriting</a>
+    <a href="plattformdealpipeline.html" data-i18n="nav.pipeline">Pipeline</a>
+    <a href="plattformsellside.html" data-i18n="nav.sellside">Sell-Side</a>
+    <a href="plattformaiicmemos.html" data-i18n="nav.ai">AI &amp; IC-Memos</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="de" class="active" aria-label="Deutsch">DE</button>
+      <button data-lang="en" aria-label="English">EN</button>
+    </div>
+    <a href="plattformdemo.html" class="nav-cta">
+      <span data-i18n="nav.cta">Demo anfragen</span>
+      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+        <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<section id="inhalt" class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="crumb">
+      <a href="plattform.html">TOTUS</a>
+      <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.5 1.5L7 5l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-i18n="crumb.legal">Rechtliches</span>
+      <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.5 1.5L7 5l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="current" data-i18n="crumb.terms">AGB</span>
+    </div>
+    <h1 data-i18n="hero.h1">Allgemeine Geschäftsbedingungen.</h1>
+    <div class="legal-meta">
+      <div class="legal-meta-item">
+        <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5"/><path d="M7 4v3l2 1" stroke-linecap="round"/></svg>
+        <span><b data-i18n="hero.updated.k">Stand:</b> <span data-i18n="hero.updated.v">12. November 2026</span></span>
+      </div>
+      <div class="legal-meta-item">
+        <svg viewBox="0 0 14 14"><path d="M3 5h8M3 7h8M3 9h5" stroke-linecap="round"/></svg>
+        <span data-i18n="hero.scope">Version 1.0 · B2B-Nutzung</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="keyterms-strip">
+  <div class="keyterms-inner">
+    <div class="keyterms-head">
+      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linejoin="round"/></svg>
+      <span data-i18n="kt.title">Vertrags-Eckpunkte auf einen Blick</span>
+    </div>
+    <div class="kt-grid">
+      <div class="kt-card">
+        <div class="num">12 <em data-i18n="kt.1.s">Monate</em></div>
+        <div class="k" data-i18n="kt.1.k">Mindestlaufzeit</div>
+        <div class="v" data-i18n="kt.1.v">Verlängert sich um 12 Monate, wenn nicht gekündigt wird.</div>
+      </div>
+      <div class="kt-card">
+        <div class="num">3 <em data-i18n="kt.2.s">Monate</em></div>
+        <div class="k" data-i18n="kt.2.k">Kündigungsfrist</div>
+        <div class="v" data-i18n="kt.2.v">Schriftliche Kündigung zum Ende der jeweiligen Laufzeit.</div>
+      </div>
+      <div class="kt-card">
+        <div class="num">99,5<em>%</em></div>
+        <div class="k" data-i18n="kt.3.k">Verfügbarkeit SLA</div>
+        <div class="v" data-i18n="kt.3.v">Standard-Plan. Enterprise: 99,9 % mit Service Credits.</div>
+      </div>
+      <div class="kt-card">
+        <div class="num"><em data-i18n="kt.4.s">Berlin</em></div>
+        <div class="k" data-i18n="kt.4.k">Gerichtsstand</div>
+        <div class="v" data-i18n="kt.4.v">Deutsches Recht, ausschließlicher Gerichtsstand Berlin.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="legal-main">
+  <div class="legal-grid">
+
+    <aside class="toc">
+      <div class="toc-lbl" data-i18n="toc.lbl">Inhalt</div>
+      <ul class="toc-list">
+        <li><a href="#sec-1"><span class="n">§ 1</span><span data-i18n="toc.1">Geltungsbereich</span></a></li>
+        <li><a href="#sec-2"><span class="n">§ 2</span><span data-i18n="toc.2">Vertragsabschluss</span></a></li>
+        <li><a href="#sec-3"><span class="n">§ 3</span><span data-i18n="toc.3">Leistungsumfang</span></a></li>
+        <li><a href="#sec-4"><span class="n">§ 4</span><span data-i18n="toc.4">Nutzungsrechte</span></a></li>
+        <li><a href="#sec-5"><span class="n">§ 5</span><span data-i18n="toc.5">Pflichten des Kunden</span></a></li>
+        <li><a href="#sec-6"><span class="n">§ 6</span><span data-i18n="toc.6">Vergütung &amp; Zahlung</span></a></li>
+        <li><a href="#sec-7"><span class="n">§ 7</span><span data-i18n="toc.7">Laufzeit &amp; Kündigung</span></a></li>
+        <li><a href="#sec-8"><span class="n">§ 8</span><span data-i18n="toc.8">SLA &amp; Verfügbarkeit</span></a></li>
+        <li><a href="#sec-9"><span class="n">§ 9</span><span data-i18n="toc.9">Gewährleistung &amp; Haftung</span></a></li>
+        <li><a href="#sec-10"><span class="n">§ 10</span><span data-i18n="toc.10">Geistiges Eigentum</span></a></li>
+        <li><a href="#sec-11"><span class="n">§ 11</span><span data-i18n="toc.11">Geheimhaltung</span></a></li>
+        <li><a href="#sec-12"><span class="n">§ 12</span><span data-i18n="toc.12">Höhere Gewalt &amp; Änderungen</span></a></li>
+        <li><a href="#sec-13"><span class="n">§ 13</span><span data-i18n="toc.13">Schlussbestimmungen</span></a></li>
+      </ul>
+    </aside>
+
+    <div class="legal-content">
+
+      <section id="sec-1">
+        <div class="sec-num"><span class="dot"></span>§ 1</div>
+        <h2 data-i18n="s1.t">Geltungsbereich.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n-html="s1.p1">Diese Allgemeinen Geschäftsbedingungen („<b>AGB</b>“) gelten für sämtliche Verträge zwischen der <b>TOTUS CRE UG (haftungsbeschränkt)</b>, Seegefelderstraße 22, 13583 Berlin („<b>TOTUS</b>“) und ihren Kunden („<b>Kunde</b>“) über die Nutzung der TOTUS-Plattform und damit verbundene Leistungen.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n-html="s1.p2">Die Leistungen von TOTUS richten sich <b>ausschließlich an Unternehmer</b> im Sinne von § 14 BGB, juristische Personen des öffentlichen Rechts und öffentlich-rechtliche Sondervermögen. Eine Nutzung durch Verbraucher ist ausgeschlossen.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n="s1.p3">Abweichende, entgegenstehende oder ergänzende Geschäftsbedingungen des Kunden werden nur dann Vertragsbestandteil, wenn TOTUS ihrer Geltung ausdrücklich schriftlich zustimmt.</p>
+        </div>
+      </section>
+
+      <section id="sec-2">
+        <div class="sec-num"><span class="dot"></span>§ 2</div>
+        <h2 data-i18n="s2.t">Vertragsabschluss.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n="s2.p1">Die Darstellung der TOTUS-Plattform auf der Website stellt kein bindendes Angebot dar, sondern eine Aufforderung zur Abgabe eines Angebots.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n-html="s2.p2">Der Vertrag kommt durch Unterzeichnung einer <b>individuell ausgehandelten Leistungsbeschreibung („Order Form“)</b> oder durch ausdrückliche schriftliche Annahme eines TOTUS-Angebots zustande. Online-Bestellprozesse für Standardpakete werden durch eine Bestätigung per E-Mail wirksam.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n="s2.p3">Pilot- oder Testphasen werden gesondert vereinbart. Bei kostenlosen Testphasen besteht kein Anspruch auf Verfügbarkeit oder Mängelfreiheit.</p>
+        </div>
+      </section>
+
+      <section id="sec-3">
+        <div class="sec-num"><span class="dot"></span>§ 3</div>
+        <h2 data-i18n="s3.t">Leistungsumfang.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n-html="s3.p1">TOTUS stellt dem Kunden über das Internet eine cloud-basierte Software („<b>TOTUS-Plattform</b>“) zur Nutzung bereit. Der konkrete Leistungsumfang ergibt sich aus dem jeweils gewählten Tarif und der individuellen Order Form. Zentrale Module:</p>
+        </div>
+        <ul>
+          <li data-i18n="s3.l1">Underwriting mit Cashflow-Modellierung und Szenarienanalyse</li>
+          <li data-i18n="s3.l2">Deal-Pipeline mit Kanban-Workflow und Reporting</li>
+          <li data-i18n="s3.l3">IC-Memo-Generierung mit AI-Assistenz</li>
+          <li data-i18n="s3.l4">Sell-Side-Mandate mit Bieter-Tracking und integriertem Datenraum</li>
+          <li data-i18n="s3.l5">Multi-User-Kollaboration und granulare Zugriffsrechte</li>
+        </ul>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n="s3.p2">TOTUS ist berechtigt, die Plattform weiterzuentwickeln und einzelne Funktionen zu ändern, zu erweitern oder zu ersetzen, soweit der Kernzweck der vertraglichen Leistung nicht beeinträchtigt wird.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n-html="s3.p3">Die Plattform wird auf Servern <b>ausschließlich in der EU (Frankfurt)</b> betrieben. Details zur Datenverarbeitung regelt die <a href="plattformprivacy.html">Datenschutzerklärung</a> und der auf Wunsch separat abgeschlossene Auftragsverarbeitungsvertrag.</p>
+        </div>
+      </section>
+
+      <section id="sec-4">
+        <div class="sec-num"><span class="dot"></span>§ 4</div>
+        <h2 data-i18n="s4.t">Nutzungsrechte.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n-html="s4.p1">Der Kunde erhält für die Vertragslaufzeit ein <b>einfaches, nicht ausschließliches, nicht übertragbares</b> und nicht unterlizenzierbares Recht zur Nutzung der TOTUS-Plattform durch die im Vertrag bezeichneten Nutzer:innen („<b>autorisierte Nutzer</b>“).</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n="s4.p2">Die Nutzung erfolgt ausschließlich für interne Geschäftszwecke des Kunden. Eine Bereitstellung der Plattform an Dritte (z.B. als ASP, Hosting oder im Rahmen von Outsourcing) ist nur mit vorheriger schriftlicher Zustimmung von TOTUS zulässig.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n="s4.p3">Der Kunde darf die Plattform nicht reverse-engineeren, dekompilieren oder versuchen, den Quellcode zu rekonstruieren. Performance-Tests und Benchmarks erfordern unsere vorherige Zustimmung.</p>
+        </div>
+      </section>
+
+      <section id="sec-5">
+        <div class="sec-num"><span class="dot"></span>§ 5</div>
+        <h2 data-i18n="s5.t">Pflichten des Kunden.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n="s5.p1">Der Kunde verpflichtet sich, Zugangsdaten vertraulich zu behandeln und nur den autorisierten Nutzern zur Verfügung zu stellen. Bei Verdacht auf Kompromittierung ist TOTUS unverzüglich zu informieren.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n="s5.p2">Der Kunde ist für die in die Plattform eingespeisten Daten („Kundendaten“) allein verantwortlich. Er stellt sicher, dass er zur Verarbeitung dieser Daten berechtigt ist und keine Rechte Dritter verletzt werden.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n-html="s5.p3">Der Kunde wird die Plattform nicht missbräuchlich nutzen. Insbesondere wird er <b>keine Schadsoftware einspeisen</b>, keine rechtswidrigen Inhalte hochladen und die Sicherheit der Plattform nicht durch Lasttests oder Penetrationstests gefährden, sofern nicht vorher schriftlich vereinbart.</p>
+        </div>
+      </section>
+
+      <section id="sec-6">
+        <div class="sec-num"><span class="dot"></span>§ 6</div>
+        <h2 data-i18n="s6.t">Vergütung &amp; Zahlung.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n-html="s6.p1">Die Höhe der Vergütung richtet sich nach dem jeweiligen Tarif und der individuellen Order Form. Alle Preise verstehen sich <b>zuzüglich der gesetzlichen Umsatzsteuer</b>.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n-html="s6.p2">Die jährliche Lizenzgebühr ist <b>im Voraus zahlbar</b> innerhalb von 30 Tagen nach Rechnungsdatum. Eine quartalsweise Zahlung ist auf Wunsch möglich (mit einem Aufschlag von 5 %).</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n="s6.p3">Bei Zahlungsverzug fallen Verzugszinsen in Höhe von 9 Prozentpunkten über dem Basiszinssatz an. Nach erfolgloser Mahnung und 30 Tagen Verzug ist TOTUS berechtigt, den Zugang zur Plattform zu sperren.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(4)</span>
+          <p data-i18n-html="s6.p4">Preisanpassungen kann TOTUS einmal jährlich vornehmen, frühestens 12 Monate nach Vertragsbeginn. Anpassungen werden mit einer Frist von <b>3 Monaten</b> schriftlich angekündigt. Bei Anhebung um mehr als 5 % steht dem Kunden ein Sonderkündigungsrecht zu.</p>
+        </div>
+      </section>
+
+      <section id="sec-7">
+        <div class="sec-num"><span class="dot"></span>§ 7</div>
+        <h2 data-i18n="s7.t">Laufzeit &amp; Kündigung.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n-html="s7.p1">Der Vertrag beginnt mit dem in der Order Form vereinbarten Datum und läuft <b>mindestens 12 Monate</b>. Er verlängert sich automatisch um jeweils weitere 12 Monate, wenn er nicht mit einer Frist von <b>3 Monaten</b> zum Ende der jeweiligen Laufzeit schriftlich gekündigt wird.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n="s7.p2">Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Ein wichtiger Grund liegt insbesondere vor bei: nachhaltigem Verstoß der anderen Partei gegen wesentliche Vertragspflichten, Insolvenz, oder anhaltender Unterschreitung der zugesicherten Verfügbarkeit.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n-html="s7.p3">Nach Vertragsende stellt TOTUS dem Kunden die Kundendaten für <b>30 Tage</b> in einem strukturierten, maschinenlesbaren Format zum Export bereit. Anschließend werden die Daten gelöscht (außer gesetzliche Aufbewahrungspflichten stehen entgegen).</p>
+        </div>
+      </section>
+
+      <section id="sec-8">
+        <div class="sec-num"><span class="dot"></span>§ 8</div>
+        <h2 data-i18n="s8.t">Service-Level &amp; Verfügbarkeit.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n="s8.p1">TOTUS gewährleistet die folgende Verfügbarkeit der Plattform im Jahresdurchschnitt, gemessen am produktiven Betrieb:</p>
+        </div>
+
+        <div class="sla-table">
+          <div class="sla-head">
+            <div data-i18n="sla.h1">Tarif</div>
+            <div data-i18n="sla.h2">Verfügbarkeit</div>
+            <div data-i18n="sla.h3">Service Credits</div>
+          </div>
+          <div class="sla-row">
+            <div class="lvl std" data-i18n="sla.r1.l">Standard</div>
+            <div class="uptime high">99,5 %</div>
+            <div class="credit" data-i18n="sla.r1.c">Keine Credits</div>
+          </div>
+          <div class="sla-row">
+            <div class="lvl std" data-i18n="sla.r2.l">Professional</div>
+            <div class="uptime high">99,7 %</div>
+            <div class="credit" data-i18n="sla.r2.c">Bis 10 % der Monatsgebühr</div>
+          </div>
+          <div class="sla-row">
+            <div class="lvl ent" data-i18n="sla.r3.l">Enterprise</div>
+            <div class="uptime high">99,9 %</div>
+            <div class="credit" data-i18n="sla.r3.c">Bis 25 % der Monatsgebühr</div>
+          </div>
+        </div>
+
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n-html="s8.p2">Geplante Wartungsarbeiten werden nach Möglichkeit außerhalb der Geschäftszeiten (Mo-Fr, 9-18 Uhr CET) durchgeführt und mindestens <b>48 Stunden im Voraus</b> angekündigt. Sie zählen nicht zur Nichtverfügbarkeit.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n="s8.p3">Ausfälle durch höhere Gewalt, Probleme bei Vorlieferanten oder durch den Kunden verursachte Störungen zählen nicht zur Nichtverfügbarkeit.</p>
+        </div>
+      </section>
+
+      <section id="sec-9">
+        <div class="sec-num"><span class="dot"></span>§ 9</div>
+        <h2 data-i18n-html="s9.t">Gewährleistung &amp; <em>Haftung</em>.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n="s9.p1">TOTUS gewährleistet die vereinbarte Beschaffenheit der Plattform. Bei Mängeln steht dem Kunden zunächst das Recht auf Nacherfüllung zu. Schlägt diese fehl, kann der Kunde mindern oder vom Vertrag zurücktreten.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n-html="s9.p2">TOTUS haftet unbeschränkt bei <b>Vorsatz und grober Fahrlässigkeit</b>, bei Verletzung von Leben, Körper und Gesundheit, sowie nach dem Produkthaftungsgesetz und im Umfang einer übernommenen Garantie.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n-html="s9.p3">Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten („Kardinalpflichten“) ist die Haftung auf den <b>vertragstypisch vorhersehbaren Schaden</b> begrenzt, höchstens jedoch auf die <b>Vergütung der letzten 12 Vertragsmonate</b>.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(4)</span>
+          <p data-i18n="s9.p4">Bei leicht fahrlässiger Verletzung nicht wesentlicher Vertragspflichten ist die Haftung ausgeschlossen. Die Haftung für entgangenen Gewinn, mittelbare Schäden und Folgeschäden ist im Rahmen der vorgenannten Begrenzungen ebenfalls ausgeschlossen.</p>
+        </div>
+
+        <div class="callout amber">
+          <div class="ic"><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5"/><path d="M7 4v4M7 10v.5" stroke-linecap="round"/></svg></div>
+          <p data-i18n-html="s9.note"><b>Hinweis:</b> Die TOTUS-Plattform unterstützt Investmententscheidungen, sie ersetzt sie nicht. Investmententscheidungen verantwortet stets der Kunde.</p>
+        </div>
+      </section>
+
+      <section id="sec-10">
+        <div class="sec-num"><span class="dot"></span>§ 10</div>
+        <h2 data-i18n="s10.t">Geistiges Eigentum.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n="s10.p1">Sämtliche Rechte an der TOTUS-Plattform, der Software, dem Quellcode, Designs, Datenmodellen, Algorithmen und sonstigen Schutzgegenständen verbleiben ausschließlich bei TOTUS bzw. ihren Lizenzgebern.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n-html="s10.p2">An den vom Kunden in die Plattform eingespeisten Kundendaten erwirbt TOTUS <b>keine Eigentumsrechte</b>. TOTUS darf diese Daten ausschließlich zur Erbringung der vertraglichen Leistungen verwenden.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(3)</span>
+          <p data-i18n-html="s10.p3">TOTUS ist berechtigt, <b>aggregierte und anonymisierte Daten</b> zur Verbesserung der Plattform, zur Erstellung von Marktanalysen und für Statistiken zu nutzen, sofern keine Rückschlüsse auf den Kunden oder einzelne Personen möglich sind.</p>
+        </div>
+      </section>
+
+      <section id="sec-11">
+        <div class="sec-num"><span class="dot"></span>§ 11</div>
+        <h2 data-i18n="s11.t">Geheimhaltung.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n="s11.p1">Die Parteien verpflichten sich, alle als vertraulich gekennzeichneten oder ihrer Natur nach vertraulichen Informationen, die ihnen im Rahmen der Vertragsbeziehung zugänglich werden, vertraulich zu behandeln und nicht an Dritte weiterzugeben.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n="s11.p2">Diese Pflicht gilt für die Dauer von 5 Jahren über das Vertragsende hinaus. Ausgenommen sind Informationen, die nachweislich öffentlich bekannt sind, der empfangenden Partei bereits bekannt waren oder unabhängig entwickelt wurden.</p>
+        </div>
+      </section>
+
+      <section id="sec-12">
+        <div class="sec-num"><span class="dot"></span>§ 12</div>
+        <h2 data-i18n="s12.t">Höhere Gewalt &amp; Änderungen.</h2>
+        <div class="subpara">
+          <span class="lbl">(1)</span>
+          <p data-i18n="s12.p1">Bei Ereignissen höherer Gewalt (insb. Naturkatastrophen, Krieg, Streik, behördliche Maßnahmen, IT-Großstörungen Dritter) ruhen die Leistungspflichten der betroffenen Partei für die Dauer und im Umfang der Auswirkung. Dauert der Zustand länger als 90 Tage, steht beiden Parteien ein außerordentliches Kündigungsrecht zu.</p>
+        </div>
+        <div class="subpara">
+          <span class="lbl">(2)</span>
+          <p data-i18n-html="s12.p2">TOTUS kann diese AGB mit einer Ankündigungsfrist von <b>6 Wochen</b> ändern, wenn die Änderung erforderlich ist, das vertragliche Gleichgewicht nicht wesentlich stört und für den Kunden zumutbar ist. Der Kunde kann der Änderung widersprechen; in diesem Fall endet der Vertrag zum Wirksamwerden der Änderung.</p>
+        </div>
+
+        <div class="callout slate">
+          <div class="ic"><svg viewBox="0 0 14 14"><path d="M3 7l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p data-i18n="s12.note">Bei Vertragsänderungen, die zu Lasten des Kunden gehen, gilt grundsätzlich der vereinbarte Stand. Anpassungen erfordern Zustimmung beider Parteien.</p>
+        </div>
+      </section>
+
+      <section id="sec-13">
+        <div class="sec-num"><span class="dot"></span>§ 13</div>
+        <h2 data-i18n="s13.t">Schlussbestimmungen.</h2>
+
+        <h3 data-i18n="s13.h1">Anwendbares Recht</h3>
+        <p data-i18n-html="s13.p1">Es gilt das <b>Recht der Bundesrepublik Deutschland</b> unter Ausschluss des UN-Kaufrechts und der Verweisungsnormen des deutschen Internationalen Privatrechts.</p>
+
+        <h3 data-i18n="s13.h2">Gerichtsstand</h3>
+        <p data-i18n-html="s13.p2">Ausschließlicher Gerichtsstand für alle Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag ist <b>Berlin</b>, sofern der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist.</p>
+
+        <h3 data-i18n="s13.h3">Schriftform</h3>
+        <p data-i18n="s13.p3">Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieser Textformklausel. E-Mail genügt.</p>
+
+        <h3 data-i18n="s13.h4">Salvatorische Klausel</h3>
+        <p data-i18n-html="s13.p4">Sollten einzelne Bestimmungen dieses Vertrags unwirksam sein oder werden, so bleibt die <b>Wirksamkeit der übrigen Bestimmungen unberührt</b>. Die unwirksame Bestimmung wird durch eine wirksame ersetzt, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.</p>
+      </section>
+
+      <div class="legal-foot-links">
+        <div class="legal-foot-lbl" data-i18n="foot.lbl">Weitere rechtliche Seiten</div>
+        <div class="legal-foot-grid">
+          <a href="plattformimprint.html" class="legal-foot-link">
+            <span class="ttl" data-i18n="foot.imprint">Impressum</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="plattformprivacy.html" class="legal-foot-link">
+            <span class="ttl" data-i18n="foot.privacy">Datenschutz</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="plattformsecurity.html" class="legal-foot-link">
+            <span class="ttl" data-i18n="foot.security">Sicherheit</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<button class="back-top" id="backTop" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="plattform.html" class="nav-logo">
+          <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+          <span class="brand-name">Totus</span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Die Decision-Plattform für professionelle Immobilieninvestments.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col1">Produkt</h4>
+        <ul>
+          <li><a href="plattformprodukt.html" data-i18n="footer.c1.1">Überblick</a></li>
+          <li><a href="plattformunderwriting.html" data-i18n="footer.c1.2">Underwriting</a></li>
+          <li><a href="plattformdealpipeline.html" data-i18n="footer.c1.3">Deal Pipeline</a></li>
+          <li><a href="plattformaiicmemos.html" data-i18n="footer.c1.4">IC-Memos &amp; AI</a></li>
+          <li><a href="plattformsellside.html" data-i18n="footer.c1.5">Sell-Side</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col2">Unternehmen</h4>
+        <ul>
+          <li><a href="plattformabout.html" data-i18n="footer.c2.1">Über uns</a></li>
+          <li><a href="plattformcareers.html" data-i18n="footer.c2.2">Karriere</a></li>
+          <li><a href="plattformcontact.html" data-i18n="footer.c2.3">Kontakt</a></li>
+          <li><a href="plattformpress.html" data-i18n="footer.c2.4">Presse</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col3">Rechtliches</h4>
+        <ul>
+          <li><a href="plattformimprint.html" data-i18n="footer.c3.1">Impressum</a></li>
+          <li><a href="plattformprivacy.html" data-i18n="footer.c3.2">Datenschutz</a></li>
+          <li><a href="plattformterms.html" data-i18n="footer.c3.3">AGB</a></li>
+          <li><a href="plattformsecurity.html" data-i18n="footer.c3.4">Sicherheit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.</span>
+      <span data-i18n="footer.made">Made in Berlin</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const translations = {
+    de: {
+      'meta.title': 'TOTUS CRE · Allgemeine Geschäftsbedingungen',
+      'meta.desc': 'AGB der TOTUS CRE UG (haftungsbeschränkt) für die Bereitstellung der Decision-Plattform für institutionelle Immobilieninvestments.',
+      'nav.product': 'Produkt', 'nav.underwriting': 'Underwriting', 'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side', 'nav.ai': 'AI & IC-Memos', 'nav.cta': 'Demo anfragen',
+      'crumb.legal': 'Rechtliches', 'crumb.terms': 'AGB',
+
+      'hero.h1': 'Allgemeine Geschäftsbedingungen.',
+      'hero.updated.k': 'Stand:', 'hero.updated.v': '12. November 2026',
+      'hero.scope': 'Version 1.0 · B2B-Nutzung',
+
+      'kt.title': 'Vertrags-Eckpunkte auf einen Blick',
+      'kt.1.s': 'Monate', 'kt.1.k': 'Mindestlaufzeit', 'kt.1.v': 'Verlängert sich um 12 Monate, wenn nicht gekündigt wird.',
+      'kt.2.s': 'Monate', 'kt.2.k': 'Kündigungsfrist', 'kt.2.v': 'Schriftliche Kündigung zum Ende der jeweiligen Laufzeit.',
+      'kt.3.k': 'Verfügbarkeit SLA', 'kt.3.v': 'Standard-Plan. Enterprise: 99,9 % mit Service Credits.',
+      'kt.4.s': 'Berlin', 'kt.4.k': 'Gerichtsstand', 'kt.4.v': 'Deutsches Recht, ausschließlicher Gerichtsstand Berlin.',
+
+      'toc.lbl': 'Inhalt',
+      'toc.1': 'Geltungsbereich', 'toc.2': 'Vertragsabschluss', 'toc.3': 'Leistungsumfang',
+      'toc.4': 'Nutzungsrechte', 'toc.5': 'Pflichten des Kunden', 'toc.6': 'Vergütung & Zahlung',
+      'toc.7': 'Laufzeit & Kündigung', 'toc.8': 'SLA & Verfügbarkeit', 'toc.9': 'Gewährleistung & Haftung',
+      'toc.10': 'Geistiges Eigentum', 'toc.11': 'Geheimhaltung', 'toc.12': 'Höhere Gewalt & Änderungen', 'toc.13': 'Schlussbestimmungen',
+
+      's1.t': 'Geltungsbereich.',
+      's1.p1': 'Diese Allgemeinen Geschäftsbedingungen („<b>AGB</b>“) gelten für sämtliche Verträge zwischen der <b>TOTUS CRE UG (haftungsbeschränkt)</b>, Seegefelderstraße 22, 13583 Berlin („<b>TOTUS</b>“) und ihren Kunden („<b>Kunde</b>“) über die Nutzung der TOTUS-Plattform und damit verbundene Leistungen.',
+      's1.p2': 'Die Leistungen von TOTUS richten sich <b>ausschließlich an Unternehmer</b> im Sinne von § 14 BGB, juristische Personen des öffentlichen Rechts und öffentlich-rechtliche Sondervermögen. Eine Nutzung durch Verbraucher ist ausgeschlossen.',
+      's1.p3': 'Abweichende, entgegenstehende oder ergänzende Geschäftsbedingungen des Kunden werden nur dann Vertragsbestandteil, wenn TOTUS ihrer Geltung ausdrücklich schriftlich zustimmt.',
+
+      's2.t': 'Vertragsabschluss.',
+      's2.p1': 'Die Darstellung der TOTUS-Plattform auf der Website stellt kein bindendes Angebot dar, sondern eine Aufforderung zur Abgabe eines Angebots.',
+      's2.p2': 'Der Vertrag kommt durch Unterzeichnung einer <b>individuell ausgehandelten Leistungsbeschreibung („Order Form“)</b> oder durch ausdrückliche schriftliche Annahme eines TOTUS-Angebots zustande. Online-Bestellprozesse für Standardpakete werden durch eine Bestätigung per E-Mail wirksam.',
+      's2.p3': 'Pilot- oder Testphasen werden gesondert vereinbart. Bei kostenlosen Testphasen besteht kein Anspruch auf Verfügbarkeit oder Mängelfreiheit.',
+
+      's3.t': 'Leistungsumfang.',
+      's3.p1': 'TOTUS stellt dem Kunden über das Internet eine cloud-basierte Software („<b>TOTUS-Plattform</b>“) zur Nutzung bereit. Der konkrete Leistungsumfang ergibt sich aus dem jeweils gewählten Tarif und der individuellen Order Form. Zentrale Module:',
+      's3.l1': 'Underwriting mit Cashflow-Modellierung und Szenarienanalyse',
+      's3.l2': 'Deal-Pipeline mit Kanban-Workflow und Reporting',
+      's3.l3': 'IC-Memo-Generierung mit AI-Assistenz',
+      's3.l4': 'Sell-Side-Mandate mit Bieter-Tracking und integriertem Datenraum',
+      's3.l5': 'Multi-User-Kollaboration und granulare Zugriffsrechte',
+      's3.p2': 'TOTUS ist berechtigt, die Plattform weiterzuentwickeln und einzelne Funktionen zu ändern, zu erweitern oder zu ersetzen, soweit der Kernzweck der vertraglichen Leistung nicht beeinträchtigt wird.',
+      's3.p3': 'Die Plattform wird auf Servern <b>ausschließlich in der EU (Frankfurt)</b> betrieben. Details zur Datenverarbeitung regelt die <a href="plattformprivacy.html">Datenschutzerklärung</a> und der auf Wunsch separat abgeschlossene Auftragsverarbeitungsvertrag.',
+
+      's4.t': 'Nutzungsrechte.',
+      's4.p1': 'Der Kunde erhält für die Vertragslaufzeit ein <b>einfaches, nicht ausschließliches, nicht übertragbares</b> und nicht unterlizenzierbares Recht zur Nutzung der TOTUS-Plattform durch die im Vertrag bezeichneten Nutzer:innen („<b>autorisierte Nutzer</b>“).',
+      's4.p2': 'Die Nutzung erfolgt ausschließlich für interne Geschäftszwecke des Kunden. Eine Bereitstellung der Plattform an Dritte (z.B. als ASP, Hosting oder im Rahmen von Outsourcing) ist nur mit vorheriger schriftlicher Zustimmung von TOTUS zulässig.',
+      's4.p3': 'Der Kunde darf die Plattform nicht reverse-engineeren, dekompilieren oder versuchen, den Quellcode zu rekonstruieren. Performance-Tests und Benchmarks erfordern unsere vorherige Zustimmung.',
+
+      's5.t': 'Pflichten des Kunden.',
+      's5.p1': 'Der Kunde verpflichtet sich, Zugangsdaten vertraulich zu behandeln und nur den autorisierten Nutzern zur Verfügung zu stellen. Bei Verdacht auf Kompromittierung ist TOTUS unverzüglich zu informieren.',
+      's5.p2': 'Der Kunde ist für die in die Plattform eingespeisten Daten („Kundendaten“) allein verantwortlich. Er stellt sicher, dass er zur Verarbeitung dieser Daten berechtigt ist und keine Rechte Dritter verletzt werden.',
+      's5.p3': 'Der Kunde wird die Plattform nicht missbräuchlich nutzen. Insbesondere wird er <b>keine Schadsoftware einspeisen</b>, keine rechtswidrigen Inhalte hochladen und die Sicherheit der Plattform nicht durch Lasttests oder Penetrationstests gefährden, sofern nicht vorher schriftlich vereinbart.',
+
+      's6.t': 'Vergütung & Zahlung.',
+      's6.p1': 'Die Höhe der Vergütung richtet sich nach dem jeweiligen Tarif und der individuellen Order Form. Alle Preise verstehen sich <b>zuzüglich der gesetzlichen Umsatzsteuer</b>.',
+      's6.p2': 'Die jährliche Lizenzgebühr ist <b>im Voraus zahlbar</b> innerhalb von 30 Tagen nach Rechnungsdatum. Eine quartalsweise Zahlung ist auf Wunsch möglich (mit einem Aufschlag von 5 %).',
+      's6.p3': 'Bei Zahlungsverzug fallen Verzugszinsen in Höhe von 9 Prozentpunkten über dem Basiszinssatz an. Nach erfolgloser Mahnung und 30 Tagen Verzug ist TOTUS berechtigt, den Zugang zur Plattform zu sperren.',
+      's6.p4': 'Preisanpassungen kann TOTUS einmal jährlich vornehmen, frühestens 12 Monate nach Vertragsbeginn. Anpassungen werden mit einer Frist von <b>3 Monaten</b> schriftlich angekündigt. Bei Anhebung um mehr als 5 % steht dem Kunden ein Sonderkündigungsrecht zu.',
+
+      's7.t': 'Laufzeit & Kündigung.',
+      's7.p1': 'Der Vertrag beginnt mit dem in der Order Form vereinbarten Datum und läuft <b>mindestens 12 Monate</b>. Er verlängert sich automatisch um jeweils weitere 12 Monate, wenn er nicht mit einer Frist von <b>3 Monaten</b> zum Ende der jeweiligen Laufzeit schriftlich gekündigt wird.',
+      's7.p2': 'Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Ein wichtiger Grund liegt insbesondere vor bei: nachhaltigem Verstoß der anderen Partei gegen wesentliche Vertragspflichten, Insolvenz, oder anhaltender Unterschreitung der zugesicherten Verfügbarkeit.',
+      's7.p3': 'Nach Vertragsende stellt TOTUS dem Kunden die Kundendaten für <b>30 Tage</b> in einem strukturierten, maschinenlesbaren Format zum Export bereit. Anschließend werden die Daten gelöscht (außer gesetzliche Aufbewahrungspflichten stehen entgegen).',
+
+      's8.t': 'Service-Level & Verfügbarkeit.',
+      's8.p1': 'TOTUS gewährleistet die folgende Verfügbarkeit der Plattform im Jahresdurchschnitt, gemessen am produktiven Betrieb:',
+      'sla.h1': 'Tarif', 'sla.h2': 'Verfügbarkeit', 'sla.h3': 'Service Credits',
+      'sla.r1.l': 'Standard', 'sla.r1.c': 'Keine Credits',
+      'sla.r2.l': 'Professional', 'sla.r2.c': 'Bis 10 % der Monatsgebühr',
+      'sla.r3.l': 'Enterprise', 'sla.r3.c': 'Bis 25 % der Monatsgebühr',
+      's8.p2': 'Geplante Wartungsarbeiten werden nach Möglichkeit außerhalb der Geschäftszeiten (Mo-Fr, 9-18 Uhr CET) durchgeführt und mindestens <b>48 Stunden im Voraus</b> angekündigt. Sie zählen nicht zur Nichtverfügbarkeit.',
+      's8.p3': 'Ausfälle durch höhere Gewalt, Probleme bei Vorlieferanten oder durch den Kunden verursachte Störungen zählen nicht zur Nichtverfügbarkeit.',
+
+      's9.t': 'Gewährleistung & <em>Haftung</em>.',
+      's9.p1': 'TOTUS gewährleistet die vereinbarte Beschaffenheit der Plattform. Bei Mängeln steht dem Kunden zunächst das Recht auf Nacherfüllung zu. Schlägt diese fehl, kann der Kunde mindern oder vom Vertrag zurücktreten.',
+      's9.p2': 'TOTUS haftet unbeschränkt bei <b>Vorsatz und grober Fahrlässigkeit</b>, bei Verletzung von Leben, Körper und Gesundheit, sowie nach dem Produkthaftungsgesetz und im Umfang einer übernommenen Garantie.',
+      's9.p3': 'Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten („Kardinalpflichten“) ist die Haftung auf den <b>vertragstypisch vorhersehbaren Schaden</b> begrenzt, höchstens jedoch auf die <b>Vergütung der letzten 12 Vertragsmonate</b>.',
+      's9.p4': 'Bei leicht fahrlässiger Verletzung nicht wesentlicher Vertragspflichten ist die Haftung ausgeschlossen. Die Haftung für entgangenen Gewinn, mittelbare Schäden und Folgeschäden ist im Rahmen der vorgenannten Begrenzungen ebenfalls ausgeschlossen.',
+      's9.note': '<b>Hinweis:</b> Die TOTUS-Plattform unterstützt Investmententscheidungen, sie ersetzt sie nicht. Investmententscheidungen verantwortet stets der Kunde.',
+
+      's10.t': 'Geistiges Eigentum.',
+      's10.p1': 'Sämtliche Rechte an der TOTUS-Plattform, der Software, dem Quellcode, Designs, Datenmodellen, Algorithmen und sonstigen Schutzgegenständen verbleiben ausschließlich bei TOTUS bzw. ihren Lizenzgebern.',
+      's10.p2': 'An den vom Kunden in die Plattform eingespeisten Kundendaten erwirbt TOTUS <b>keine Eigentumsrechte</b>. TOTUS darf diese Daten ausschließlich zur Erbringung der vertraglichen Leistungen verwenden.',
+      's10.p3': 'TOTUS ist berechtigt, <b>aggregierte und anonymisierte Daten</b> zur Verbesserung der Plattform, zur Erstellung von Marktanalysen und für Statistiken zu nutzen, sofern keine Rückschlüsse auf den Kunden oder einzelne Personen möglich sind.',
+
+      's11.t': 'Geheimhaltung.',
+      's11.p1': 'Die Parteien verpflichten sich, alle als vertraulich gekennzeichneten oder ihrer Natur nach vertraulichen Informationen, die ihnen im Rahmen der Vertragsbeziehung zugänglich werden, vertraulich zu behandeln und nicht an Dritte weiterzugeben.',
+      's11.p2': 'Diese Pflicht gilt für die Dauer von 5 Jahren über das Vertragsende hinaus. Ausgenommen sind Informationen, die nachweislich öffentlich bekannt sind, der empfangenden Partei bereits bekannt waren oder unabhängig entwickelt wurden.',
+
+      's12.t': 'Höhere Gewalt & Änderungen.',
+      's12.p1': 'Bei Ereignissen höherer Gewalt (insb. Naturkatastrophen, Krieg, Streik, behördliche Maßnahmen, IT-Großstörungen Dritter) ruhen die Leistungspflichten der betroffenen Partei für die Dauer und im Umfang der Auswirkung. Dauert der Zustand länger als 90 Tage, steht beiden Parteien ein außerordentliches Kündigungsrecht zu.',
+      's12.p2': 'TOTUS kann diese AGB mit einer Ankündigungsfrist von <b>6 Wochen</b> ändern, wenn die Änderung erforderlich ist, das vertragliche Gleichgewicht nicht wesentlich stört und für den Kunden zumutbar ist. Der Kunde kann der Änderung widersprechen; in diesem Fall endet der Vertrag zum Wirksamwerden der Änderung.',
+      's12.note': 'Bei Vertragsänderungen, die zu Lasten des Kunden gehen, gilt grundsätzlich der vereinbarte Stand. Anpassungen erfordern Zustimmung beider Parteien.',
+
+      's13.t': 'Schlussbestimmungen.',
+      's13.h1': 'Anwendbares Recht',
+      's13.p1': 'Es gilt das <b>Recht der Bundesrepublik Deutschland</b> unter Ausschluss des UN-Kaufrechts und der Verweisungsnormen des deutschen Internationalen Privatrechts.',
+      's13.h2': 'Gerichtsstand',
+      's13.p2': 'Ausschließlicher Gerichtsstand für alle Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag ist <b>Berlin</b>, sofern der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist.',
+      's13.h3': 'Schriftform',
+      's13.p3': 'Änderungen und Ergänzungen dieses Vertrags bedürfen der Textform. Dies gilt auch für die Aufhebung dieser Textformklausel. E-Mail genügt.',
+      's13.h4': 'Salvatorische Klausel',
+      's13.p4': 'Sollten einzelne Bestimmungen dieses Vertrags unwirksam sein oder werden, so bleibt die <b>Wirksamkeit der übrigen Bestimmungen unberührt</b>. Die unwirksame Bestimmung wird durch eine wirksame ersetzt, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.',
+
+      'foot.lbl': 'Weitere rechtliche Seiten',
+      'foot.imprint': 'Impressum', 'foot.privacy': 'Datenschutz', 'foot.security': 'Sicherheit',
+
+      'footer.tagline': 'Die Decision-Plattform für professionelle Immobilieninvestments.',
+      'footer.col1': 'Produkt',
+      'footer.c1.1': 'Überblick', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC-Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Unternehmen',
+      'footer.c2.1': 'Über uns', 'footer.c2.2': 'Karriere', 'footer.c2.3': 'Kontakt', 'footer.c2.4': 'Presse',
+      'footer.col3': 'Rechtliches',
+      'footer.c3.1': 'Impressum', 'footer.c3.2': 'Datenschutz', 'footer.c3.3': 'AGB', 'footer.c3.4': 'Sicherheit',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.',
+      'footer.made': 'Made in Berlin'
+    },
+    en: {
+      'meta.title': 'TOTUS CRE · General Terms and Conditions',
+      'meta.desc': 'General Terms and Conditions of TOTUS CRE UG (haftungsbeschränkt) for providing the decision platform for institutional real estate investments.',
+      'nav.product': 'Product', 'nav.underwriting': 'Underwriting', 'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side', 'nav.ai': 'AI & IC Memos', 'nav.cta': 'Request demo',
+      'crumb.legal': 'Legal', 'crumb.terms': 'Terms',
+
+      'hero.h1': 'Terms of Service.',
+      'hero.updated.k': 'Last updated:', 'hero.updated.v': 'November 12, 2026',
+      'hero.scope': 'Version 1.0 · B2B use',
+
+      'kt.title': 'Key contract terms at a glance',
+      'kt.1.s': 'months', 'kt.1.k': 'Minimum term', 'kt.1.v': 'Auto-renews for 12 months unless terminated.',
+      'kt.2.s': 'months', 'kt.2.k': 'Notice period', 'kt.2.v': 'Written notice before end of current term.',
+      'kt.3.k': 'Availability SLA', 'kt.3.v': 'Standard plan. Enterprise: 99.9% with service credits.',
+      'kt.4.s': 'Berlin', 'kt.4.k': 'Jurisdiction', 'kt.4.v': 'German law, exclusive jurisdiction Berlin.',
+
+      'toc.lbl': 'Contents',
+      'toc.1': 'Scope', 'toc.2': 'Contract conclusion', 'toc.3': 'Services',
+      'toc.4': 'Usage rights', 'toc.5': 'Customer obligations', 'toc.6': 'Fees & payment',
+      'toc.7': 'Term & termination', 'toc.8': 'SLA & availability', 'toc.9': 'Warranty & liability',
+      'toc.10': 'Intellectual property', 'toc.11': 'Confidentiality', 'toc.12': 'Force majeure & changes', 'toc.13': 'Final provisions',
+
+      's1.t': 'Scope.',
+      's1.p1': 'These General Terms and Conditions ("<b>Terms</b>") apply to all contracts between <b>TOTUS CRE UG (haftungsbeschränkt)</b>, Seegefelderstraße 22, 13583 Berlin ("<b>TOTUS</b>") and its customers ("<b>Customer</b>") regarding the use of the TOTUS platform and related services.',
+      's1.p2': "TOTUS's services are directed <b>exclusively at entrepreneurs</b> within the meaning of § 14 BGB, legal entities under public law, and special funds under public law. Use by consumers is excluded.",
+      's1.p3': "Deviating, conflicting, or supplementary terms of the Customer only become part of the contract if TOTUS expressly agrees to their validity in writing.",
+
+      's2.t': 'Contract conclusion.',
+      's2.p1': 'The presentation of the TOTUS platform on the website does not constitute a binding offer, but an invitation to submit an offer.',
+      's2.p2': 'The contract is concluded by signing an <b>individually negotiated service description ("Order Form")</b> or by express written acceptance of a TOTUS offer. Online ordering processes for standard packages become effective upon confirmation by email.',
+      's2.p3': "Pilot or trial phases are agreed separately. For free trial phases, there is no claim to availability or freedom from defects.",
+
+      's3.t': 'Services.',
+      's3.p1': 'TOTUS provides the Customer with cloud-based software ("<b>TOTUS platform</b>") over the internet. The specific scope of services results from the selected plan and the individual Order Form. Core modules:',
+      's3.l1': 'Underwriting with cashflow modeling and scenario analysis',
+      's3.l2': 'Deal pipeline with kanban workflow and reporting',
+      's3.l3': 'IC memo generation with AI assistance',
+      's3.l4': 'Sell-side mandates with bidder tracking and integrated data room',
+      's3.l5': 'Multi-user collaboration and granular access rights',
+      's3.p2': 'TOTUS is entitled to further develop the platform and to change, expand, or replace individual functions, provided the core purpose of the contractual service is not impaired.',
+      's3.p3': 'The platform is operated on servers <b>exclusively in the EU (Frankfurt)</b>. Details on data processing are governed by the <a href="plattformprivacy.html">Privacy Policy</a> and the Data Processing Agreement concluded separately on request.',
+
+      's4.t': 'Usage rights.',
+      's4.p1': 'For the term of the contract, the Customer receives a <b>simple, non-exclusive, non-transferable</b>, and non-sublicensable right to use the TOTUS platform through the users designated in the contract ("<b>authorized users</b>").',
+      's4.p2': "The use is exclusively for the Customer's internal business purposes. Provision of the platform to third parties (e.g. as ASP, hosting, or as part of outsourcing) is only permitted with prior written consent of TOTUS.",
+      's4.p3': "The Customer may not reverse engineer, decompile, or attempt to reconstruct the source code of the platform. Performance tests and benchmarks require our prior consent.",
+
+      's5.t': 'Customer obligations.',
+      's5.p1': 'The Customer agrees to treat access credentials confidentially and to make them available only to authorized users. If compromise is suspected, TOTUS must be notified without delay.',
+      's5.p2': "The Customer is solely responsible for the data fed into the platform (\"Customer data\"). They ensure they are entitled to process this data and that no third-party rights are violated.",
+      's5.p3': "The Customer will not misuse the platform. In particular, they will <b>not introduce malware</b>, will not upload unlawful content, and will not endanger the security of the platform through load tests or penetration tests unless previously agreed in writing.",
+
+      's6.t': 'Fees & payment.',
+      's6.p1': 'The amount of the fees depends on the respective plan and the individual Order Form. All prices are <b>exclusive of statutory VAT</b>.',
+      's6.p2': 'The annual license fee is <b>payable in advance</b> within 30 days of the invoice date. Quarterly payment is possible upon request (with a 5% surcharge).',
+      's6.p3': 'In case of late payment, interest of 9 percentage points above the base rate accrues. After unsuccessful reminder and 30 days delay, TOTUS is entitled to block access to the platform.',
+      's6.p4': 'TOTUS may adjust prices once per year, at the earliest 12 months after the contract start. Adjustments are announced in writing with a notice period of <b>3 months</b>. In case of increases of more than 5%, the Customer has a special termination right.',
+
+      's7.t': 'Term & termination.',
+      's7.p1': 'The contract starts on the date agreed in the Order Form and runs for <b>at least 12 months</b>. It auto-renews for another 12 months unless terminated in writing with a notice period of <b>3 months</b> to the end of the respective term.',
+      's7.p2': "The right to extraordinary termination for cause remains unaffected. Cause exists in particular for: sustained breach of essential contractual obligations by the other party, insolvency, or sustained underperformance of the guaranteed availability.",
+      's7.p3': "After contract end, TOTUS provides the Customer with the Customer data for <b>30 days</b> in a structured, machine-readable format for export. The data is then deleted (unless statutory retention obligations apply).",
+
+      's8.t': 'Service level & availability.',
+      's8.p1': 'TOTUS guarantees the following availability of the platform, measured as an annual average during productive operation:',
+      'sla.h1': 'Plan', 'sla.h2': 'Availability', 'sla.h3': 'Service credits',
+      'sla.r1.l': 'Standard', 'sla.r1.c': 'No credits',
+      'sla.r2.l': 'Professional', 'sla.r2.c': 'Up to 10% of monthly fee',
+      'sla.r3.l': 'Enterprise', 'sla.r3.c': 'Up to 25% of monthly fee',
+      's8.p2': 'Planned maintenance is, where possible, performed outside business hours (Mon-Fri, 9-18 CET) and announced at least <b>48 hours in advance</b>. It does not count towards unavailability.',
+      's8.p3': 'Outages due to force majeure, problems with upstream suppliers, or disturbances caused by the Customer do not count towards unavailability.',
+
+      's9.t': 'Warranty & <em>liability</em>.',
+      's9.p1': "TOTUS warrants the agreed properties of the platform. In case of defects, the Customer is first entitled to subsequent performance. If this fails, the Customer can reduce the fee or withdraw from the contract.",
+      's9.p2': 'TOTUS is liable without limitation in cases of <b>intent and gross negligence</b>, injury to life, body, and health, under the Product Liability Act, and within the scope of an assumed guarantee.',
+      's9.p3': 'In case of slightly negligent breach of essential contractual obligations ("cardinal obligations"), liability is limited to the <b>contract-typical foreseeable damage</b>, but at most to the <b>fees of the last 12 contract months</b>.',
+      's9.p4': "In case of slightly negligent breach of non-essential contractual obligations, liability is excluded. Liability for lost profits, indirect damages, and consequential damages is also excluded within the above limitations.",
+      's9.note': '<b>Note:</b> The TOTUS platform supports investment decisions, it does not replace them. The Customer is always responsible for investment decisions.',
+
+      's10.t': 'Intellectual property.',
+      's10.p1': "All rights to the TOTUS platform, software, source code, designs, data models, algorithms, and other protected works remain exclusively with TOTUS or its licensors.",
+      's10.p2': "TOTUS acquires <b>no ownership rights</b> to Customer data fed into the platform. TOTUS may only use this data to provide the contractual services.",
+      's10.p3': 'TOTUS is entitled to use <b>aggregated and anonymized data</b> to improve the platform, create market analyses, and for statistics, provided no conclusions about the Customer or individuals are possible.',
+
+      's11.t': 'Confidentiality.',
+      's11.p1': "The parties agree to treat all information marked confidential or confidential by nature, which becomes accessible to them in the context of the contractual relationship, confidentially and not to pass it on to third parties.",
+      's11.p2': "This obligation applies for 5 years beyond the end of the contract. Exempt is information that is demonstrably publicly known, was already known to the receiving party, or was independently developed.",
+
+      's12.t': 'Force majeure & changes.',
+      's12.p1': "In events of force majeure (especially natural disasters, war, strikes, government measures, major IT outages of third parties), the affected party's obligations to perform are suspended for the duration and extent of the impact. If the condition lasts longer than 90 days, both parties have an extraordinary termination right.",
+      's12.p2': 'TOTUS may change these Terms with a notice period of <b>6 weeks</b> if the change is necessary, does not significantly disturb the contractual balance, and is reasonable for the Customer. The Customer can object to the change; in this case, the contract ends when the change takes effect.',
+      's12.note': "For contract changes that are to the Customer's disadvantage, the agreed state generally applies. Adjustments require consent of both parties.",
+
+      's13.t': 'Final provisions.',
+      's13.h1': 'Applicable law',
+      's13.p1': 'The <b>law of the Federal Republic of Germany</b> applies, excluding the UN Convention on Contracts for the International Sale of Goods and the reference rules of German Private International Law.',
+      's13.h2': 'Jurisdiction',
+      's13.p2': 'The exclusive jurisdiction for all disputes arising from or in connection with this contract is <b>Berlin</b>, provided the Customer is a merchant, legal entity under public law, or special fund under public law.',
+      's13.h3': 'Written form',
+      's13.p3': 'Amendments and additions to this contract require text form. This also applies to the cancellation of this text form clause. Email is sufficient.',
+      's13.h4': 'Severability',
+      's13.p4': 'Should individual provisions of this contract be or become invalid, the <b>validity of the remaining provisions remains unaffected</b>. The invalid provision shall be replaced by a valid one that comes closest to the economic purpose of the invalid provision.',
+
+      'foot.lbl': 'Other legal pages',
+      'foot.imprint': 'Imprint', 'foot.privacy': 'Privacy', 'foot.security': 'Security',
+
+      'footer.tagline': 'The decision platform for professional real estate investments.',
+      'footer.col1': 'Product',
+      'footer.c1.1': 'Overview', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Company',
+      'footer.c2.1': 'About', 'footer.c2.2': 'Careers', 'footer.c2.3': 'Contact', 'footer.c2.4': 'Press',
+      'footer.col3': 'Legal',
+      'footer.c3.1': 'Imprint', 'footer.c3.2': 'Privacy', 'footer.c3.3': 'Terms', 'footer.c3.4': 'Security',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). All rights reserved.',
+      'footer.made': 'Made in Berlin'
+    }
+  };
+
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+    const dict = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    var _md = document.querySelector('meta[name="description"]');
+    if (_md && dict['meta.desc']) _md.setAttribute('content', dict['meta.desc']);
+    document.querySelectorAll('.lang-toggle button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem('totus-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+  });
+
+  let initial = 'de';
+  try {
+    const stored = localStorage.getItem('totus-lang');
+    if (stored && translations[stored]) initial = stored;
+  } catch (e) {}
+  setLanguage(initial);
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  (function() {
+    const btn = document.getElementById('backTop');
+    if (!btn) return;
+    window.addEventListener('scroll', () => { btn.classList.toggle('show', window.scrollY > 600); }, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+</script>
+
+</body>
+</html>

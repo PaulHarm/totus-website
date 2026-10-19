@@ -1,0 +1,5 @@
+__pycache__/
+qa/
+.site-state/
+.openai/
+*.tar.gz

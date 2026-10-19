@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="plattformfavicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="plattformfavicon16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="plattformfavicon32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="plattformfavicon48x48.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="plattformappletouchicon.png" />
+<meta name="theme-color" content="#0E5E63" />
+<link rel="canonical" href="https://totus.info/plattformprivacy.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://totus.info/plattformprivacy.html" />
+<meta property="og:title" content="Datenschutz · TOTUS CRE" />
+<meta property="og:description" content="Datenschutzerklärung der TOTUS CRE UG: EU-Hosting, transparente Sub-Prozessoren, keine Datenverarbeitung außerhalb der EU ohne Garantien." />
+<meta property="og:image" content="https://totus.info/plattformogimage.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:site_name" content="TOTUS CRE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Datenschutz · TOTUS CRE" />
+<meta name="twitter:description" content="Datenschutzerklärung der TOTUS CRE UG: EU-Hosting, transparente Sub-Prozessoren, keine Datenverarbeitung außerhalb der EU ohne Garantien." />
+<meta name="twitter:image" content="https://totus.info/plattformogimage.png" />
+
+<title>TOTUS CRE · Datenschutzerklärung</title>
+<meta name="description" content="Datenschutzerklärung gemäß DSGVO der TOTUS CRE UG (haftungsbeschränkt)." />
+
+
+<link rel="preload" href="interlatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="spacegrotesklatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="plattformjetbrainsmono.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--slate);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;font-size:.9rem;font-weight:600;}
+.skip-link:focus{left:0;outline:3px solid var(--accent);outline-offset:2px;}
+
+/* Selbst gehostete Schriften - keine Verbindung zu Google */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url('interlatin.woff2') format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500 700;font-display:swap;src:url('spacegrotesklatin.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url('plattformjetbrainsmono.woff2') format('woff2');}
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --teal: #0E5E63; --teal-dark: #0A474B; --teal-deep: #0A474B;
+    --teal-light: #4A8F93; --teal-pale: #E3EFEF;
+    --slate: #16181D; --slate-light: #2C2F36;
+    --cream: #F7F7F8; --white: #FFFFFF;
+    --text: #16181D; --text-muted: #555B66;
+    --accent: #0E5E63; --accent-light: #E3EFEF; --accent-deep: #0A474B;
+    --success: #1F7A4D;
+    --radius: 14px; --radius-sm: 10px;
+    --ease: cubic-bezier(.2,.7,.2,1);
+    --mono: 'JetBrains Mono', monospace;
+  }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+  ::selection { background: var(--teal); color: var(--white); }
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+  p { margin: 0; }
+  section { position: relative; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(20px); background: rgba(247, 247, 248, 0.85); border-bottom: 1px solid rgba(14, 94, 99, 0.1); transition: all 0.3s ease; }
+  nav.scrolled { padding: 12px 48px; box-shadow: 0 4px 30px rgba(22, 24, 29, 0.06); }
+  @media (max-width: 720px) { nav { padding: 14px 24px; } nav.scrolled { padding: 10px 24px; } }
+  .nav-logo { display: flex; align-items: center; gap: 12px; color: var(--text); }
+  .logo-mark { width: 40px; height: 40px; border-radius: 12px; flex: none; object-fit: cover; box-shadow: 0 4px 14px rgba(14, 94, 99, 0.25); }
+  .nav-logo .brand-name { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.5rem; letter-spacing: -0.02em; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--teal-dark); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  /* Rückverweis zur TOTUS CRE Hauptseite (wie plattform/index.html) */
+  .nav-backlink { color: var(--text-muted); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.01em; white-space: nowrap; transition: color 0.2s; }
+  .nav-backlink:hover { color: var(--teal-dark); }
+  /* Schmale Viewports: Demo-CTA weicht, der Weg zurück bleibt erreichbar */
+  @media (max-width: 640px) { .nav-cta { display: none; } }
+  .lang-toggle { display: inline-flex; background: var(--white); border: 1px solid rgba(14, 94, 99, 0.15); border-radius: 100px; padding: 3px; gap: 2px; }
+  .lang-toggle button { padding: 6px 12px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted); border-radius: 100px; transition: all 0.25s var(--ease); line-height: 1; }
+  .lang-toggle button.active { background: var(--slate); color: var(--white); }
+  .lang-toggle button:not(.active):hover { color: var(--slate); }
+  .nav-cta { background: var(--slate); color: var(--white) !important; padding: 10px 24px; border-radius: 100px; font-size: 0.85rem !important; font-weight: 600 !important; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s !important; }
+  .nav-cta:hover { background: var(--teal-deep) !important; transform: translateY(-1px); }
+  .nav-cta .arrow { width: 14px; height: 14px; transition: transform 0.25s var(--ease); }
+  .nav-cta:hover .arrow { transform: translateX(3px); }
+  @media (max-width: 880px) { .nav-links { display: none; } }
+
+  .legal-hero { padding: 140px 48px 40px; position: relative; overflow: hidden; border-bottom: 1px solid rgba(14, 94, 99, 0.10); background: var(--white); }
+  .legal-hero::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14, 94, 99, 0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+  .legal-hero-inner { max-width: 1180px; margin: 0 auto; position: relative; }
+  .crumb { display: inline-flex; align-items: center; gap: 8px; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px; font-family: var(--mono); }
+  .crumb a { color: var(--teal-dark); }
+  .crumb a:hover { color: var(--teal-deep); }
+  .crumb svg { width: 10px; height: 10px; opacity: 0.5; }
+  .crumb .current { color: var(--slate); }
+
+  .legal-hero h1 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.05; letter-spacing: -0.025em; color: var(--slate); margin-bottom: 18px; }
+  .legal-hero h1 em { color: var(--teal); }
+  .legal-meta { display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .legal-meta-item { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-muted); background: var(--cream); padding: 7px 14px; border-radius: 100px; border: 1px solid rgba(14, 94, 99, 0.10); }
+  .legal-meta-item b { color: var(--slate); font-weight: 600; }
+  .legal-meta-item svg { width: 13px; height: 13px; color: var(--teal); flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  @media (max-width: 720px) { .legal-hero { padding: 110px 24px 30px; } }
+
+  .overview-strip { background: linear-gradient(135deg, var(--teal-pale) 0%, rgba(227, 239, 239, 0.4) 100%); border-bottom: 1px solid rgba(14, 94, 99, 0.10); padding: 36px 48px; }
+  @media (max-width: 720px) { .overview-strip { padding: 32px 24px; } }
+  .overview-inner { max-width: 1180px; margin: 0 auto; }
+  .overview-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; font-size: 0.78rem; color: var(--teal-deep); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .overview-head svg { width: 16px; height: 16px; color: var(--teal); stroke: currentColor; fill: none; stroke-width: 1.8; }
+
+  .overview-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 880px) { .overview-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .overview-grid { grid-template-columns: 1fr; } }
+  .ov-card { background: var(--white); border-radius: var(--radius-sm); padding: 16px 18px; border: 1px solid rgba(14, 94, 99, 0.12); }
+  .ov-card .ic { width: 30px; height: 30px; border-radius: 8px; background: var(--teal-pale); color: var(--teal-deep); display: grid; place-items: center; margin-bottom: 10px; }
+  .ov-card .ic svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  .ov-card h5 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1rem; color: var(--slate); line-height: 1.2; margin-bottom: 4px; }
+  .ov-card p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; }
+
+  .legal-main { padding: 60px 48px 100px; }
+  @media (max-width: 720px) { .legal-main { padding: 40px 24px 60px; } }
+  .legal-grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; align-items: start; }
+  @media (max-width: 980px) { .legal-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+  .toc { position: sticky; top: 96px; align-self: start; background: var(--white); border-radius: var(--radius); border: 1px solid rgba(14, 94, 99, 0.10); padding: 24px; max-height: calc(100vh - 120px); overflow-y: auto; }
+  @media (max-width: 980px) { .toc { position: static; padding: 20px; max-height: none; } }
+  .toc-lbl { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .toc-lbl::after { content: ''; flex: 1; height: 1px; background: rgba(22, 24, 29, 0.08); }
+  .toc-list { list-style: none; display: flex; flex-direction: column; }
+  .toc-list a { display: flex; align-items: baseline; gap: 10px; padding: 7px 0 7px 14px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.35; border-left: 2px solid transparent; transition: all 0.2s var(--ease); }
+  .toc-list a:hover { color: var(--teal-deep); border-left-color: var(--teal-light); padding-left: 18px; }
+  .toc-list a .n { font-family: var(--mono); font-size: 0.68rem; font-weight: 600; color: var(--teal); flex-shrink: 0; }
+
+  .legal-content { max-width: 720px; color: var(--slate); }
+  .legal-content section { padding-bottom: 44px; scroll-margin-top: 90px; }
+
+  .sec-num { font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; color: var(--teal-deep); text-transform: uppercase; margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px; }
+  .sec-num .dot { width: 5px; height: 5px; background: var(--teal); border-radius: 50%; }
+
+  .legal-content h2 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.65rem; color: var(--slate); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
+  .legal-content h2 em { color: var(--teal); }
+  .legal-content h3 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.15rem; color: var(--slate); line-height: 1.2; margin: 24px 0 10px; letter-spacing: -0.01em; }
+  .legal-content p { font-size: 0.94rem; line-height: 1.72; color: var(--slate); margin-bottom: 14px; }
+  .legal-content p:last-child { margin-bottom: 0; }
+  .legal-content b, .legal-content strong { color: var(--slate); font-weight: 600; }
+  .legal-content em { color: var(--teal-deep); font-style: italic; }
+
+  .contact-card { background: var(--white); border: 1px solid rgba(14, 94, 99, 0.12); border-radius: var(--radius); padding: 24px 26px; margin-bottom: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+  @media (max-width: 580px) { .contact-card { grid-template-columns: 1fr; } }
+  .contact-row { display: flex; flex-direction: column; }
+  .contact-row .k { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 5px; }
+  .contact-row .v { font-family: var(--mono); font-size: 0.9rem; color: var(--slate); font-weight: 500; line-height: 1.4; }
+  .contact-row .v.serif { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.1rem; font-weight: 400; }
+  .contact-row .v a { color: var(--teal-dark); transition: color 0.2s; }
+  .contact-row .v a:hover { color: var(--teal-deep); }
+
+  .legal-content ul { list-style: none; padding: 0; margin: 8px 0 18px; display: flex; flex-direction: column; gap: 6px; }
+  .legal-content ul li { position: relative; padding-left: 18px; font-size: 0.92rem; line-height: 1.6; color: var(--slate); }
+  .legal-content ul li::before { content: ''; position: absolute; left: 0; top: 11px; width: 6px; height: 1.5px; background: var(--teal); }
+  .legal-content ul li b { color: var(--slate); }
+
+  .callout { background: var(--teal-pale); border-radius: var(--radius-sm); padding: 18px 22px; margin: 18px 0; border-left: 3px solid var(--teal); display: grid; grid-template-columns: 24px 1fr; gap: 14px; align-items: start; }
+  .callout .ic { width: 22px; height: 22px; border-radius: 50%; background: var(--teal); color: var(--white); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
+  .callout .ic svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-width: 2; }
+  .callout p { font-size: 0.86rem !important; color: var(--teal-deep) !important; line-height: 1.55 !important; margin: 0 !important; }
+  .callout a { color: var(--teal-deep); text-decoration: underline; text-underline-offset: 2px; }
+  .callout a:hover { color: var(--teal-dark); }
+
+  .callout.amber { background: var(--accent-light); border-left-color: var(--accent); }
+  .callout.amber .ic { background: var(--accent); color: var(--slate); }
+  .callout.amber p { color: var(--accent-deep) !important; }
+  .callout.amber a { color: var(--accent-deep); }
+
+  .processors-table { background: var(--white); border: 1px solid rgba(14, 94, 99, 0.12); border-radius: var(--radius); overflow: hidden; margin: 18px 0; }
+  .pt-head { display: grid; grid-template-columns: 1.2fr 1.5fr 1fr 0.9fr; background: var(--cream); border-bottom: 1px solid rgba(14, 94, 99, 0.12); }
+  .pt-head > div { padding: 12px 16px; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; }
+  .pt-row { display: grid; grid-template-columns: 1.2fr 1.5fr 1fr 0.9fr; border-bottom: 1px solid rgba(14, 94, 99, 0.08); transition: background 0.2s var(--ease); }
+  .pt-row:last-child { border-bottom: 0; }
+  .pt-row:hover { background: rgba(14, 94, 99, 0.03); }
+  .pt-row > div { padding: 14px 16px; font-size: 0.82rem; color: var(--slate); line-height: 1.4; }
+  .pt-row .name { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 0.98rem; color: var(--slate); }
+  .pt-row .name .sub { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: var(--text-muted); display: block; margin-top: 2px; }
+  .pt-row .loc { font-family: var(--mono); font-size: 0.74rem; color: var(--text-muted); }
+  .pt-row .loc.eu { color: var(--success); }
+  .pt-row .loc.eu::before { content: '🇪🇺 '; }
+  .pt-row .loc.us::before { content: '🇺🇸 '; }
+  .pt-row .basis { font-family: var(--mono); font-size: 0.7rem; color: var(--teal-deep); background: var(--teal-pale); padding: 4px 8px; border-radius: 6px; align-self: start; margin-top: 2px; width: max-content; }
+
+  @media (max-width: 720px) {
+    .pt-head { display: none; }
+    .pt-row { grid-template-columns: 1fr; gap: 4px; padding: 16px; }
+    .pt-row > div { padding: 0; }
+    .pt-row .loc::before { content: ''; }
+  }
+
+  .rights-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 18px 0; }
+  @media (max-width: 580px) { .rights-grid { grid-template-columns: 1fr; } }
+  .right-card { background: var(--white); border: 1px solid rgba(14, 94, 99, 0.12); border-radius: var(--radius-sm); padding: 16px 18px; transition: all 0.2s var(--ease); }
+  .right-card:hover { transform: translateY(-2px); border-color: var(--teal-light); box-shadow: 0 8px 24px rgba(22, 24, 29, 0.05); }
+  .right-card .num { font-family: var(--mono); font-size: 0.62rem; font-weight: 700; color: var(--teal); letter-spacing: 0.06em; margin-bottom: 6px; }
+  .right-card h5 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.05rem; color: var(--slate); line-height: 1.2; margin-bottom: 4px; }
+  .right-card p { font-size: 0.78rem !important; color: var(--text-muted) !important; line-height: 1.5 !important; margin: 0 !important; }
+  .right-card .art { font-family: var(--mono); font-size: 0.65rem; color: var(--text-muted); margin-top: 6px; padding-top: 8px; border-top: 1px dashed rgba(14, 94, 99, 0.18); }
+
+  .legal-foot-links { margin-top: 60px; padding-top: 28px; border-top: 1px solid rgba(14, 94, 99, 0.12); }
+  .legal-foot-lbl { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 16px; }
+  .legal-foot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 580px) { .legal-foot-grid { grid-template-columns: 1fr; } }
+  .legal-foot-link { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid rgba(14, 94, 99, 0.10); border-radius: var(--radius-sm); padding: 14px 18px; transition: all 0.2s var(--ease); }
+  .legal-foot-link:hover { border-color: var(--teal-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(22, 24, 29, 0.05); }
+  .legal-foot-link .ttl { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.05rem; color: var(--slate); }
+  .legal-foot-link svg { width: 14px; height: 14px; color: var(--teal-deep); transition: transform 0.2s var(--ease); }
+  .legal-foot-link:hover svg { transform: translateX(3px); }
+
+  footer { background: var(--slate); color: rgba(247, 247, 248, 0.7); padding: 80px 48px 32px; }
+  @media (max-width: 720px) { footer { padding: 60px 24px 24px; } }
+  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .footer-brand .nav-logo { margin-bottom: 16px; color: var(--cream); }
+  .footer-brand .brand-name { color: var(--cream); }
+  .footer-tagline { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.4; color: rgba(247, 247, 248, 0.6); max-width: 300px; }
+  .footer-col h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-col a { font-size: 0.92rem; color: rgba(247, 247, 248, 0.6); transition: color 0.2s; }
+  .footer-col a:hover { color: var(--teal-light); }
+  .footer-bottom { padding-top: 32px; border-top: 1px solid rgba(247, 247, 248, 0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.82rem; color: rgba(247, 247, 248, 0.4); }
+
+  .back-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--slate); color: var(--cream); display: grid; place-items: center; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(12px); transition: all 0.35s cubic-bezier(.2,.7,.2,1); z-index: 900; box-shadow: 0 8px 30px rgba(22, 24, 29,0.3); border: 1px solid rgba(247, 247, 248,0.1); }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .back-top:hover { background: var(--teal-deep); transform: translateY(-3px); }
+  .back-top svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<nav id="nav">
+  <a href="plattform.html" class="nav-logo">
+    <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+    <span class="brand-name">Totus</span>
+  </a>
+  <div class="nav-links">
+    <a href="plattformprodukt.html" data-i18n="nav.product">Produkt</a>
+    <a href="plattformunderwriting.html" data-i18n="nav.underwriting">Underwriting</a>
+    <a href="plattformdealpipeline.html" data-i18n="nav.pipeline">Pipeline</a>
+    <a href="plattformsellside.html" data-i18n="nav.sellside">Sell-Side</a>
+    <a href="plattformaiicmemos.html" data-i18n="nav.ai">AI &amp; IC-Memos</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-backlink" href="index.html">&larr; TOTUS CRE Übersicht</a>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="de" class="active" aria-label="Deutsch">DE</button>
+      <button data-lang="en" aria-label="English">EN</button>
+    </div>
+    <a href="plattformdemo.html" class="nav-cta">
+      <span data-i18n="nav.cta">Demo anfragen</span>
+      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+        <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<section id="inhalt" class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="crumb">
+      <a href="plattform.html">TOTUS</a>
+      <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.5 1.5L7 5l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-i18n="crumb.legal">Rechtliches</span>
+      <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.5 1.5L7 5l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="current" data-i18n="crumb.privacy">Datenschutz</span>
+    </div>
+    <h1 data-i18n="hero.h1">Datenschutzerklärung.</h1>
+    <div class="legal-meta">
+      <div class="legal-meta-item">
+        <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5"/><path d="M7 4v3l2 1" stroke-linecap="round"/></svg>
+        <span><b data-i18n="hero.updated.k">Stand:</b> <span data-i18n="hero.updated.v">12. November 2026</span></span>
+      </div>
+      <div class="legal-meta-item">
+        <svg viewBox="0 0 14 14"><rect x="2.5" y="6" width="9" height="6" rx="1"/><path d="M4.5 6V4a2.5 2.5 0 015 0v2"/></svg>
+        <span data-i18n="hero.dsgvo">DSGVO-konform · EU-Hosting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="overview-strip">
+  <div class="overview-inner">
+    <div class="overview-head">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16v.5" stroke-linecap="round"/></svg>
+      <span data-i18n="ov.title">Auf einen Blick</span>
+    </div>
+    <div class="overview-grid">
+      <div class="ov-card">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke-linecap="round"/></svg></div>
+        <h5 data-i18n="ov.1.t">100% EU-Hosting</h5>
+        <p data-i18n="ov.1.d">Daten werden ausschließlich in Frankfurt (Hetzner) verarbeitet.</p>
+      </div>
+      <div class="ov-card">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke-linecap="round"/></svg></div>
+        <h5 data-i18n="ov.2.t">Verschlüsselt</h5>
+        <p data-i18n="ov.2.d">TLS 1.3 in transit, AES-256 at rest. Standard.</p>
+      </div>
+      <div class="ov-card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11H7a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-2M9 11V8a3 3 0 116 0v3M9 11h6" stroke-linejoin="round"/></svg></div>
+        <h5 data-i18n="ov.3.t">Kein Verkauf</h5>
+        <p data-i18n="ov.3.d">Wir verkaufen keine Daten, weder Ihre noch die Ihrer Nutzer.</p>
+      </div>
+      <div class="ov-card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l2-2h14l2 2" stroke-linejoin="round"/></svg></div>
+        <h5 data-i18n="ov.4.t">Ihr Recht jederzeit</h5>
+        <p data-i18n="ov.4.d">Auskunft, Berichtigung, Löschung, kostenlos per Mail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="legal-main">
+  <div class="legal-grid">
+
+    <aside class="toc">
+      <div class="toc-lbl" data-i18n="toc.lbl">Inhalt</div>
+      <ul class="toc-list">
+        <li><a href="#sec-1"><span class="n">01</span><span data-i18n="toc.1">Verantwortlicher</span></a></li>
+        <li><a href="#sec-2"><span class="n">02</span><span data-i18n="toc.2">Geltungsbereich</span></a></li>
+        <li><a href="#sec-3"><span class="n">03</span><span data-i18n="toc.3">Server-Log-Dateien</span></a></li>
+        <li><a href="#sec-4"><span class="n">04</span><span data-i18n="toc.4">Cookies &amp; Speicher</span></a></li>
+        <li><a href="#sec-5"><span class="n">05</span><span data-i18n="toc.5">Kontakt &amp; Demo-Anfragen</span></a></li>
+        <li><a href="#sec-6"><span class="n">06</span><span data-i18n="toc.6">Karriere-Bewerbungen</span></a></li>
+        <li><a href="#sec-7"><span class="n">07</span><span data-i18n="toc.7">TOTUS-Plattform</span></a></li>
+        <li><a href="#sec-8"><span class="n">08</span><span data-i18n="toc.8">Auftragsverarbeiter</span></a></li>
+        <li><a href="#sec-9"><span class="n">09</span><span data-i18n="toc.9">AI-Verarbeitung</span></a></li>
+        <li><a href="#sec-10"><span class="n">10</span><span data-i18n="toc.10">Speicherdauer</span></a></li>
+        <li><a href="#sec-11"><span class="n">11</span><span data-i18n="toc.11">Ihre Rechte</span></a></li>
+        <li><a href="#sec-12"><span class="n">12</span><span data-i18n="toc.12">Beschwerderecht</span></a></li>
+        <li><a href="#sec-13"><span class="n">13</span><span data-i18n="toc.13">Änderungen</span></a></li>
+      </ul>
+    </aside>
+
+    <div class="legal-content">
+
+      <section id="sec-1">
+        <div class="sec-num"><span class="dot"></span>01 · Art. 4 Nr. 7 DSGVO</div>
+        <h2 data-i18n="s1.t">Verantwortlicher.</h2>
+        <p data-i18n="s1.p1">Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website und in der TOTUS-Plattform im Sinne der Datenschutz-Grundverordnung ist:</p>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <span class="k" data-i18n="s1.c.firm">Firmierung</span>
+            <span class="v serif">TOTUS CRE UG<br/>(haftungsbeschränkt)</span>
+          </div>
+          <div class="contact-row">
+            <span class="k" data-i18n="s1.c.addr">Anschrift</span>
+            <span class="v">Seegefelder Straße 22<br/>13583 Berlin</span>
+          </div>
+          <div class="contact-row">
+            <span class="k" data-i18n="s1.c.contact">Datenschutz-Kontakt</span>
+            <span class="v"><a href="mailto:hello@totus.info">hello@totus.info</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="k" data-i18n="s1.c.tel">Telefon</span>
+            <span class="v">Auf Anfrage per E-Mail</span>
+          </div>
+        </div>
+
+        <p data-i18n-html="s1.p2">Datenschutzanfragen werden direkt von der Geschäftsführung bearbeitet. Wir haben aktuell <b>keinen externen Datenschutzbeauftragten bestellt</b>, da wir als Unternehmen mit weniger als 20 Personen, die regelmäßig personenbezogene Daten verarbeiten, nicht unter die Bestellpflicht nach § 38 BDSG fallen. Anfragen senden Sie bitte direkt an die oben genannte E-Mail-Adresse.</p>
+      </section>
+
+      <section id="sec-2">
+        <div class="sec-num"><span class="dot"></span>02</div>
+        <h2 data-i18n="s2.t">Geltungsbereich &amp; Allgemeines.</h2>
+        <p data-i18n-html="s2.p1">Diese Datenschutzerklärung gilt für die Website <em>totus.info</em>, für die TOTUS-Plattform unter <em>app.totus.info</em> und für alle damit verbundenen Kommunikationskanäle (E-Mail, Telefon, Demo-Anfragen, Karriere-Bewerbungen).</p>
+        <p data-i18n="s2.p2">Wir verarbeiten personenbezogene Daten nur in dem Umfang, der zur Erbringung unserer Leistungen, zur Beantwortung von Anfragen oder aufgrund gesetzlicher Vorgaben erforderlich ist. Die Datenverarbeitung erfolgt ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, BDSG, TDDDG).</p>
+      </section>
+
+      <section id="sec-3">
+        <div class="sec-num"><span class="dot"></span>03 · Art. 6 Abs. 1 lit. f DSGVO</div>
+        <h2 data-i18n="s3.t">Server-Log-Dateien.</h2>
+        <p data-i18n="s3.p1">Beim Aufruf unserer Website werden automatisch technische Informationen erfasst, die Ihr Browser an unseren Server übermittelt:</p>
+        <ul>
+          <li data-i18n="s3.l1">IP-Adresse (anonymisiert nach 7 Tagen)</li>
+          <li data-i18n="s3.l2">Browsertyp und -version, Betriebssystem</li>
+          <li data-i18n="s3.l3">Referrer-URL und aufgerufene URL</li>
+          <li data-i18n="s3.l4">Zeitpunkt des Zugriffs</li>
+        </ul>
+        <p data-i18n-html="s3.p2">Rechtsgrundlage: <b>Art. 6 Abs. 1 lit. f DSGVO</b> (berechtigtes Interesse an Sicherheit, Stabilität und Funktionsfähigkeit unserer Dienste). Diese Daten werden nach 30 Tagen automatisch gelöscht.</p>
+      </section>
+
+      <section id="sec-4">
+        <div class="sec-num"><span class="dot"></span>04 · § 25 TDDDG</div>
+        <h2 data-i18n="s4.t">Cookies &amp; lokaler Speicher.</h2>
+        <p data-i18n-html="s4.p1">Unsere Website verwendet ausschließlich <b>technisch notwendige Cookies und Local Storage</b>. Dazu gehören:</p>
+        <ul>
+          <li data-i18n="s4.l1">Sprach-Präferenz (DE/EN-Toggle, Local Storage)</li>
+          <li data-i18n="s4.l2">Authentifizierungs-Token bei eingeloggten Nutzern (HttpOnly Cookie, nur für app.totus.info)</li>
+          <li data-i18n="s4.l3">CSRF-Schutz-Token (Session-Cookie)</li>
+        </ul>
+        <p data-i18n-html="s4.p2">Tracking- oder Werbe-Cookies setzen wir <b>nicht</b> ein. Es gibt daher keine Notwendigkeit eines Cookie-Banners mit Opt-In nach § 25 Abs. 2 TDDDG.</p>
+
+        <div class="callout">
+          <div class="ic"><svg viewBox="0 0 14 14"><path d="M3 7l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p data-i18n="s4.note">Sie können Cookies in Ihrem Browser jederzeit löschen oder deren Setzung einschränken. Bei eingeschränkten Cookies kann es zu Funktionseinschränkungen bei der Anmeldung kommen.</p>
+        </div>
+      </section>
+
+      <section id="sec-5">
+        <div class="sec-num"><span class="dot"></span>05 · Art. 6 Abs. 1 lit. b, f DSGVO</div>
+        <h2 data-i18n="s5.t">Kontakt &amp; Demo-Anfragen.</h2>
+        <p data-i18n="s5.p1">Wenn Sie uns per E-Mail, Telefon oder über das Demo-Formular kontaktieren, verarbeiten wir folgende Daten:</p>
+        <ul>
+          <li data-i18n="s5.l1">Name, Geschäftliche E-Mail-Adresse, Unternehmen, Rolle</li>
+          <li data-i18n="s5.l2">Art des Unternehmens, Schwerpunkt-Interesse</li>
+          <li data-i18n="s5.l3">Inhalt Ihrer Nachricht und beigefügter Kontext zum aktuellen Setup</li>
+          <li data-i18n="s5.l4">Zeitstempel und IP-Adresse zum Zeitpunkt der Anfrage</li>
+        </ul>
+        <p data-i18n-html="s5.p2">Rechtsgrundlage: <b>Art. 6 Abs. 1 lit. b DSGVO</b> (vorvertragliche Maßnahmen auf Ihre Anfrage hin) sowie <b>lit. f DSGVO</b> (berechtigtes Interesse an der Beantwortung Ihrer Anfrage).</p>
+        <p data-i18n-html="s5.p3">Die Daten werden in unserem CRM gespeichert und nach Abschluss der Bearbeitung, spätestens nach <b>24 Monaten Inaktivität</b>, gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.</p>
+      </section>
+
+      <section id="sec-6">
+        <div class="sec-num"><span class="dot"></span>06 · § 26 BDSG</div>
+        <h2 data-i18n="s6.t">Karriere-Bewerbungen.</h2>
+        <p data-i18n="s6.p1">Wenn Sie sich auf eine Stelle bei uns bewerben, verarbeiten wir die mit der Bewerbung übermittelten Daten (Name, Kontaktdaten, CV, Anschreiben, Referenzen) ausschließlich zum Zweck des Bewerbungsverfahrens.</p>
+        <p data-i18n-html="s6.p2">Rechtsgrundlage: <b>§ 26 Abs. 1 BDSG</b> (Anbahnung eines Beschäftigungsverhältnisses). Bei Zustandekommen eines Arbeitsverhältnisses werden die Daten in unsere Personalakte überführt. Bei Ablehnung werden die Bewerbungsunterlagen nach <b>6 Monaten</b> gelöscht.</p>
+
+        <div class="callout">
+          <div class="ic"><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5"/><path d="M7 4v4M7 10v.5" stroke-linecap="round"/></svg></div>
+          <p data-i18n-html="s6.note">Mit Ihrer Bewerbung können Sie der Aufnahme in unseren <b>Talent Pool</b> zustimmen, dann speichern wir Ihre Unterlagen für 24 Monate, um Sie ggf. auf passende künftige Positionen anzusprechen.</p>
+        </div>
+      </section>
+
+      <section id="sec-7">
+        <div class="sec-num"><span class="dot"></span>07 · Art. 6 Abs. 1 lit. b DSGVO</div>
+        <h2 data-i18n="s7.t">Nutzung der TOTUS-Plattform.</h2>
+        <p data-i18n="s7.p1">Als Software-as-a-Service-Anbieter verarbeiten wir Daten von Nutzer:innen der TOTUS-Plattform im Rahmen eines abgeschlossenen Nutzungsvertrags. Hierzu gehören:</p>
+        <ul>
+          <li data-i18n="s7.l1">Stammdaten der Nutzer:innen (Name, E-Mail, Rolle, Unternehmen)</li>
+          <li data-i18n="s7.l2">Authentifizierungs- und Session-Daten (inkl. SSO-Integration)</li>
+          <li data-i18n="s7.l3">Plattform-Nutzungsdaten (Zugriffszeitpunkte, aufgerufene Module, Audit-Logs)</li>
+          <li data-i18n="s7.l4">Investment-Daten und Deal-Informationen, die der Kunde in die Plattform einspeist</li>
+        </ul>
+        <p data-i18n-html="s7.p2">Für Plattform-Nutzer:innen unserer Geschäftskunden ist der jeweilige Kunde der <b>datenschutzrechtlich Verantwortliche</b>. Wir agieren als <b>Auftragsverarbeiter</b> gemäß Art. 28 DSGVO auf Basis eines abgeschlossenen Auftragsverarbeitungsvertrags (AVV).</p>
+      </section>
+
+      <section id="sec-8">
+        <div class="sec-num"><span class="dot"></span>08 · Art. 28 DSGVO</div>
+        <h2 data-i18n="s8.t">Auftragsverarbeiter &amp; Sub-Prozessoren.</h2>
+        <p data-i18n="s8.p1">Zur Bereitstellung unserer Dienste setzen wir technische Dienstleister ein, die als Auftragsverarbeiter im Sinne von Art. 28 DSGVO tätig sind. Wir haben mit jedem AVVs abgeschlossen und überprüfen ihre Datenschutz-Compliance regelmäßig.</p>
+
+        <div class="processors-table">
+          <div class="pt-head">
+            <div data-i18n="pt.h1">Dienstleister</div>
+            <div data-i18n="pt.h2">Zweck</div>
+            <div data-i18n="pt.h3">Standort</div>
+            <div data-i18n="pt.h4">Grundlage</div>
+          </div>
+          <div class="pt-row">
+            <div class="name">Hetzner Online GmbH<span class="sub" data-i18n="pt.r1.s">Hosting · ISO 27001</span></div>
+            <div data-i18n="pt.r1.p">Server-Infrastruktur, Datenbanken, Backups</div>
+            <div class="loc eu" data-i18n="pt.r1.l">Frankfurt &amp; Falkenstein, DE</div>
+            <div class="basis">Art. 28</div>
+          </div>
+          <div class="pt-row">
+            <div class="name">Strato AG<span class="sub" data-i18n="pt.r2.s">Business-E-Mail · ISO 27001</span></div>
+            <div data-i18n="pt.r2.p">Geschäfts-E-Mail-Hosting (hello@totus.info)</div>
+            <div class="loc eu" data-i18n="pt.r2.l">Berlin &amp; Karlsruhe, DE</div>
+            <div class="basis">Art. 28</div>
+          </div>
+          <div class="pt-row">
+            <div class="name">Postmark (ActiveCampaign)<span class="sub" data-i18n="pt.r3.s">Transaktionale Mails</span></div>
+            <div data-i18n="pt.r3.p">Versand von System-E-Mails, Passwort-Resets</div>
+            <div class="loc us" data-i18n="pt.r3.l">Chicago, USA</div>
+            <div class="basis">SCC + DPF</div>
+          </div>
+          <div class="pt-row">
+            <div class="name">Anthropic Ireland<span class="sub" data-i18n="pt.r4.s">AI · kein Training auf Kundendaten</span></div>
+            <div data-i18n="pt.r4.p">Claude API für AI-Deal-Assessments, IC-Memos, Meeting-Notes</div>
+            <div class="loc eu" data-i18n="pt.r4.l">Dublin, IE</div>
+            <div class="basis">Art. 28</div>
+          </div>
+          <div class="pt-row">
+            <div class="name">Google Ireland<span class="sub" data-i18n="pt.r5.s">Google Maps Platform</span></div>
+            <div data-i18n="pt.r5.p">Location- und Infrastruktur-Analyse für Deal-Standorte</div>
+            <div class="loc eu" data-i18n="pt.r5.l">Dublin, IE</div>
+            <div class="basis">SCC + DPF</div>
+          </div>
+        </div>
+
+        <p data-i18n-html="s8.p2">Die vollständige Liste der Sub-Prozessoren mit aktuellen Versionen unserer AVVs senden wir Kunden auf Anfrage zu, <a href="mailto:hello@totus.info">hello@totus.info</a>.</p>
+      </section>
+
+      <section id="sec-9">
+        <div class="sec-num"><span class="dot"></span>09 · Art. 6 Abs. 1 lit. b DSGVO</div>
+        <h2 data-i18n="s9.t">AI-Verarbeitung mit Claude (Anthropic).</h2>
+        <p data-i18n-html="s9.p1">Für AI-gestützte Features in der Plattform, wie automatisierte Deal-Assessments, IC-Memo-Generierung und Meeting-Notes, nutzen wir die <b>Claude API von Anthropic Ireland Limited</b> (Dublin, EU).</p>
+        <p data-i18n-html="s9.p2">Eingaben in die AI-Features werden verschlüsselt an Anthropic übermittelt und dort verarbeitet, ausschließlich innerhalb der EU. <b>Es findet kein Training auf Kundendaten statt</b>, vertraglich mit Anthropic abgesichert. Daten werden nach Verarbeitung gemäß den Anthropic-Aufbewahrungsfristen gelöscht.</p>
+        <p data-i18n-html="s9.p3">Rechtsgrundlage: <b>Art. 6 Abs. 1 lit. b DSGVO</b> (Vertragserfüllung) für Plattform-Nutzer. Die Auftragsverarbeitung erfolgt nach Art. 28 DSGVO auf Basis eines abgeschlossenen AVV mit Anthropic Ireland.</p>
+      </section>
+
+      <section id="sec-10">
+        <div class="sec-num"><span class="dot"></span>10 · Art. 5 Abs. 1 lit. e DSGVO</div>
+        <h2 data-i18n="s10.t">Speicherdauer.</h2>
+        <p data-i18n="s10.p1">Wir speichern personenbezogene Daten nur so lange, wie es zur Erfüllung des jeweiligen Zwecks erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Im Detail:</p>
+        <ul>
+          <li><b data-i18n="s10.l1.k">Server-Logs:</b> <span data-i18n="s10.l1.v">30 Tage (IP-Anonymisierung nach 7 Tagen)</span></li>
+          <li><b data-i18n="s10.l2.k">Demo-Anfragen / CRM-Daten:</b> <span data-i18n="s10.l2.v">24 Monate nach letztem Kontakt</span></li>
+          <li><b data-i18n="s10.l3.k">Bewerbungsunterlagen (abgelehnt):</b> <span data-i18n="s10.l3.v">6 Monate</span></li>
+          <li><b data-i18n="s10.l4.k">Bewerbungsunterlagen (Talent Pool):</b> <span data-i18n="s10.l4.v">24 Monate mit Einwilligung</span></li>
+          <li><b data-i18n="s10.l5.k">Vertrags- &amp; Rechnungsdaten:</b> <span data-i18n="s10.l5.v">10 Jahre (§ 147 AO)</span></li>
+          <li><b data-i18n="s10.l6.k">Plattform-Daten (Kunden):</b> <span data-i18n="s10.l6.v">Während Vertragsdauer + 30 Tage Backup-Cycle</span></li>
+        </ul>
+      </section>
+
+      <section id="sec-11">
+        <div class="sec-num"><span class="dot"></span>11 · Art. 15 bis 22 DSGVO</div>
+        <h2 data-i18n-html="s11.t">Ihre Rechte als <em>betroffene Person</em>.</h2>
+        <p data-i18n="s11.p1">Nach der DSGVO stehen Ihnen umfassende Rechte hinsichtlich Ihrer personenbezogenen Daten zu. Wir bearbeiten alle Anfragen kostenlos und innerhalb der gesetzlichen Frist von einem Monat.</p>
+
+        <div class="rights-grid">
+          <div class="right-card">
+            <div class="num">01</div>
+            <h5 data-i18n="r.1.t">Auskunft</h5>
+            <p data-i18n="r.1.d">Welche Daten zu Ihrer Person verarbeiten wir?</p>
+            <div class="art">Art. 15 DSGVO</div>
+          </div>
+          <div class="right-card">
+            <div class="num">02</div>
+            <h5 data-i18n="r.2.t">Berichtigung</h5>
+            <p data-i18n="r.2.d">Berichtigung unrichtiger oder unvollständiger Daten.</p>
+            <div class="art">Art. 16 DSGVO</div>
+          </div>
+          <div class="right-card">
+            <div class="num">03</div>
+            <h5 data-i18n="r.3.t">Löschung</h5>
+            <p data-i18n="r.3.d">„Recht auf Vergessenwerden“, Löschung Ihrer Daten.</p>
+            <div class="art">Art. 17 DSGVO</div>
+          </div>
+          <div class="right-card">
+            <div class="num">04</div>
+            <h5 data-i18n="r.4.t">Einschränkung</h5>
+            <p data-i18n="r.4.d">Einschränkung der Verarbeitung in bestimmten Fällen.</p>
+            <div class="art">Art. 18 DSGVO</div>
+          </div>
+          <div class="right-card">
+            <div class="num">05</div>
+            <h5 data-i18n="r.5.t">Datenübertragbarkeit</h5>
+            <p data-i18n="r.5.d">Erhalt Ihrer Daten in strukturiertem Format zur Übertragung.</p>
+            <div class="art">Art. 20 DSGVO</div>
+          </div>
+          <div class="right-card">
+            <div class="num">06</div>
+            <h5 data-i18n="r.6.t">Widerspruch</h5>
+            <p data-i18n="r.6.d">Widerspruch gegen Verarbeitung bei berechtigtem Interesse.</p>
+            <div class="art">Art. 21 DSGVO</div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <div class="ic"><svg viewBox="0 0 14 14"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p data-i18n-html="s11.note">Um eines dieser Rechte auszuüben, schreiben Sie uns formlos an <a href="mailto:hello@totus.info">hello@totus.info</a>, wir bestätigen Eingang innerhalb von 48 Stunden.</p>
+        </div>
+      </section>
+
+      <section id="sec-12">
+        <div class="sec-num"><span class="dot"></span>12 · Art. 77 DSGVO</div>
+        <h2 data-i18n="s12.t">Beschwerderecht bei der Aufsichtsbehörde.</h2>
+        <p data-i18n="s12.p1">Unbeschadet anderer Rechtsbehelfe steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.</p>
+        <p data-i18n="s12.p2">Zuständige Aufsichtsbehörde für TOTUS:</p>
+        <div class="contact-card">
+          <div class="contact-row">
+            <span class="k" data-i18n="s12.c.auth">Behörde</span>
+            <span class="v serif" data-i18n="s12.c.auth.v">Berliner Beauftragte für<br/>Datenschutz und Informationsfreiheit</span>
+          </div>
+          <div class="contact-row">
+            <span class="k" data-i18n="s12.c.addr">Anschrift</span>
+            <span class="v">Friedrichstraße 219<br/>10969 Berlin</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="sec-13">
+        <div class="sec-num"><span class="dot"></span>13</div>
+        <h2 data-i18n="s13.t">Änderungen dieser Datenschutzerklärung.</h2>
+        <p data-i18n="s13.p1">Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen umzusetzen. Die jeweils aktuelle Version finden Sie immer auf dieser Seite.</p>
+
+        <div class="callout amber">
+          <div class="ic"><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5"/><path d="M7 4v4M7 10v.5" stroke-linecap="round"/></svg></div>
+          <p data-i18n-html="s13.note">Wesentliche Änderungen kündigen wir mindestens <b>14 Tage im Voraus</b> per E-Mail an alle aktiven Plattform-Nutzer:innen an.</p>
+        </div>
+      </section>
+
+      <div class="legal-foot-links">
+        <div class="legal-foot-lbl" data-i18n="foot.lbl">Weitere rechtliche Seiten</div>
+        <div class="legal-foot-grid">
+          <a href="plattformimprint.html" class="legal-foot-link">
+            <span class="ttl" data-i18n="foot.imprint">Impressum</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="plattformterms.html" class="legal-foot-link">
+            <span class="ttl" data-i18n="foot.terms">AGB</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="plattformsecurity.html" class="legal-foot-link">
+            <span class="ttl" data-i18n="foot.security">Sicherheit</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<button class="back-top" id="backTop" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="plattform.html" class="nav-logo">
+          <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+          <span class="brand-name">Totus</span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Die Decision-Plattform für professionelle Immobilieninvestments.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col1">Produkt</h4>
+        <ul>
+          <li><a href="plattformprodukt.html" data-i18n="footer.c1.1">Überblick</a></li>
+          <li><a href="plattformunderwriting.html" data-i18n="footer.c1.2">Underwriting</a></li>
+          <li><a href="plattformdealpipeline.html" data-i18n="footer.c1.3">Deal Pipeline</a></li>
+          <li><a href="plattformaiicmemos.html" data-i18n="footer.c1.4">IC-Memos &amp; AI</a></li>
+          <li><a href="plattformsellside.html" data-i18n="footer.c1.5">Sell-Side</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col2">Unternehmen</h4>
+        <ul>
+          <li><a href="plattformabout.html" data-i18n="footer.c2.1">Über uns</a></li>
+          <li><a href="plattformcareers.html" data-i18n="footer.c2.2">Karriere</a></li>
+          <li><a href="plattformcontact.html" data-i18n="footer.c2.3">Kontakt</a></li>
+          <li><a href="plattformpress.html" data-i18n="footer.c2.4">Presse</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col3">Rechtliches</h4>
+        <ul>
+          <li><a href="plattformimprint.html" data-i18n="footer.c3.1">Impressum</a></li>
+          <li><a href="plattformprivacy.html" data-i18n="footer.c3.2">Datenschutz</a></li>
+          <li><a href="plattformterms.html" data-i18n="footer.c3.3">AGB</a></li>
+          <li><a href="plattformsecurity.html" data-i18n="footer.c3.4">Sicherheit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.</span>
+      <span data-i18n="footer.made">Made in Berlin</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const translations = {
+    de: {
+      'meta.title': 'TOTUS CRE · Datenschutzerklärung',
+      'meta.desc': 'Datenschutzerklärung gemäß DSGVO der TOTUS CRE UG (haftungsbeschränkt).',
+      'nav.product': 'Produkt', 'nav.underwriting': 'Underwriting', 'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side', 'nav.ai': 'AI & IC-Memos', 'nav.cta': 'Demo anfragen',
+      'crumb.legal': 'Rechtliches', 'crumb.privacy': 'Datenschutz',
+
+      'hero.h1': 'Datenschutzerklärung.',
+      'hero.updated.k': 'Stand:', 'hero.updated.v': '12. November 2026',
+      'hero.dsgvo': 'DSGVO-konform · EU-Hosting',
+
+      'ov.title': 'Auf einen Blick',
+      'ov.1.t': '100% EU-Hosting', 'ov.1.d': 'Daten werden ausschließlich in Frankfurt (Hetzner) verarbeitet.',
+      'ov.2.t': 'Verschlüsselt', 'ov.2.d': 'TLS 1.3 in transit, AES-256 at rest. Standard.',
+      'ov.3.t': 'Kein Verkauf', 'ov.3.d': 'Wir verkaufen keine Daten, weder Ihre noch die Ihrer Nutzer.',
+      'ov.4.t': 'Ihr Recht jederzeit', 'ov.4.d': 'Auskunft, Berichtigung, Löschung, kostenlos per Mail.',
+
+      'toc.lbl': 'Inhalt',
+      'toc.1': 'Verantwortlicher', 'toc.2': 'Geltungsbereich', 'toc.3': 'Server-Log-Dateien',
+      'toc.4': 'Cookies & Speicher', 'toc.5': 'Kontakt & Demo-Anfragen', 'toc.6': 'Karriere-Bewerbungen',
+      'toc.7': 'TOTUS-Plattform', 'toc.8': 'Auftragsverarbeiter', 'toc.9': 'AI-Verarbeitung',
+      'toc.10': 'Speicherdauer', 'toc.11': 'Ihre Rechte', 'toc.12': 'Beschwerderecht', 'toc.13': 'Änderungen',
+
+      's1.t': 'Verantwortlicher.',
+      's1.p1': 'Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website und in der TOTUS-Plattform im Sinne der Datenschutz-Grundverordnung ist:',
+      's1.c.firm': 'Firmierung', 's1.c.addr': 'Anschrift', 's1.c.contact': 'Datenschutz-Kontakt', 's1.c.tel': 'Telefon',
+      's1.p2': 'Datenschutzanfragen werden direkt von der Geschäftsführung bearbeitet. Wir haben aktuell <b>keinen externen Datenschutzbeauftragten bestellt</b>, da wir als Unternehmen mit weniger als 20 Personen, die regelmäßig personenbezogene Daten verarbeiten, nicht unter die Bestellpflicht nach § 38 BDSG fallen. Anfragen senden Sie bitte direkt an die oben genannte E-Mail-Adresse.',
+
+      's2.t': 'Geltungsbereich & Allgemeines.',
+      's2.p1': 'Diese Datenschutzerklärung gilt für die Website <em>totus.info</em>, für die TOTUS-Plattform unter <em>app.totus.info</em> und für alle damit verbundenen Kommunikationskanäle (E-Mail, Telefon, Demo-Anfragen, Karriere-Bewerbungen).',
+      's2.p2': 'Wir verarbeiten personenbezogene Daten nur in dem Umfang, der zur Erbringung unserer Leistungen, zur Beantwortung von Anfragen oder aufgrund gesetzlicher Vorgaben erforderlich ist. Die Datenverarbeitung erfolgt ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, BDSG, TDDDG).',
+
+      's3.t': 'Server-Log-Dateien.',
+      's3.p1': 'Beim Aufruf unserer Website werden automatisch technische Informationen erfasst, die Ihr Browser an unseren Server übermittelt:',
+      's3.l1': 'IP-Adresse (anonymisiert nach 7 Tagen)',
+      's3.l2': 'Browsertyp und -version, Betriebssystem',
+      's3.l3': 'Referrer-URL und aufgerufene URL',
+      's3.l4': 'Zeitpunkt des Zugriffs',
+      's3.p2': 'Rechtsgrundlage: <b>Art. 6 Abs. 1 lit. f DSGVO</b> (berechtigtes Interesse an Sicherheit, Stabilität und Funktionsfähigkeit unserer Dienste). Diese Daten werden nach 30 Tagen automatisch gelöscht.',
+
+      's4.t': 'Cookies & lokaler Speicher.',
+      's4.p1': 'Unsere Website verwendet ausschließlich <b>technisch notwendige Cookies und Local Storage</b>. Dazu gehören:',
+      's4.l1': 'Sprach-Präferenz (DE/EN-Toggle, Local Storage)',
+      's4.l2': 'Authentifizierungs-Token bei eingeloggten Nutzern (HttpOnly Cookie, nur für app.totus.info)',
+      's4.l3': 'CSRF-Schutz-Token (Session-Cookie)',
+      's4.p2': 'Tracking- oder Werbe-Cookies setzen wir <b>nicht</b> ein. Es gibt daher keine Notwendigkeit eines Cookie-Banners mit Opt-In nach § 25 Abs. 2 TDDDG.',
+      's4.note': 'Sie können Cookies in Ihrem Browser jederzeit löschen oder deren Setzung einschränken. Bei eingeschränkten Cookies kann es zu Funktionseinschränkungen bei der Anmeldung kommen.',
+
+      's5.t': 'Kontakt & Demo-Anfragen.',
+      's5.p1': 'Wenn Sie uns per E-Mail, Telefon oder über das Demo-Formular kontaktieren, verarbeiten wir folgende Daten:',
+      's5.l1': 'Name, Geschäftliche E-Mail-Adresse, Unternehmen, Rolle',
+      's5.l2': 'Art des Unternehmens, Schwerpunkt-Interesse',
+      's5.l3': 'Inhalt Ihrer Nachricht und beigefügter Kontext zum aktuellen Setup',
+      's5.l4': 'Zeitstempel und IP-Adresse zum Zeitpunkt der Anfrage',
+      's5.p2': 'Rechtsgrundlage: <b>Art. 6 Abs. 1 lit. b DSGVO</b> (vorvertragliche Maßnahmen auf Ihre Anfrage hin) sowie <b>lit. f DSGVO</b> (berechtigtes Interesse an der Beantwortung Ihrer Anfrage).',
+      's5.p3': 'Die Daten werden in unserem CRM gespeichert und nach Abschluss der Bearbeitung, spätestens nach <b>24 Monaten Inaktivität</b>, gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.',
+
+      's6.t': 'Karriere-Bewerbungen.',
+      's6.p1': 'Wenn Sie sich auf eine Stelle bei uns bewerben, verarbeiten wir die mit der Bewerbung übermittelten Daten (Name, Kontaktdaten, CV, Anschreiben, Referenzen) ausschließlich zum Zweck des Bewerbungsverfahrens.',
+      's6.p2': 'Rechtsgrundlage: <b>§ 26 Abs. 1 BDSG</b> (Anbahnung eines Beschäftigungsverhältnisses). Bei Zustandekommen eines Arbeitsverhältnisses werden die Daten in unsere Personalakte überführt. Bei Ablehnung werden die Bewerbungsunterlagen nach <b>6 Monaten</b> gelöscht.',
+      's6.note': 'Mit Ihrer Bewerbung können Sie der Aufnahme in unseren <b>Talent Pool</b> zustimmen, dann speichern wir Ihre Unterlagen für 24 Monate, um Sie ggf. auf passende künftige Positionen anzusprechen.',
+
+      's7.t': 'Nutzung der TOTUS-Plattform.',
+      's7.p1': 'Als Software-as-a-Service-Anbieter verarbeiten wir Daten von Nutzer:innen der TOTUS-Plattform im Rahmen eines abgeschlossenen Nutzungsvertrags. Hierzu gehören:',
+      's7.l1': 'Stammdaten der Nutzer:innen (Name, E-Mail, Rolle, Unternehmen)',
+      's7.l2': 'Authentifizierungs- und Session-Daten (inkl. SSO-Integration)',
+      's7.l3': 'Plattform-Nutzungsdaten (Zugriffszeitpunkte, aufgerufene Module, Audit-Logs)',
+      's7.l4': 'Investment-Daten und Deal-Informationen, die der Kunde in die Plattform einspeist',
+      's7.p2': 'Für Plattform-Nutzer:innen unserer Geschäftskunden ist der jeweilige Kunde der <b>datenschutzrechtlich Verantwortliche</b>. Wir agieren als <b>Auftragsverarbeiter</b> gemäß Art. 28 DSGVO auf Basis eines abgeschlossenen Auftragsverarbeitungsvertrags (AVV).',
+
+      's8.t': 'Auftragsverarbeiter & Sub-Prozessoren.',
+      's8.p1': 'Zur Bereitstellung unserer Dienste setzen wir technische Dienstleister ein, die als Auftragsverarbeiter im Sinne von Art. 28 DSGVO tätig sind. Wir haben mit jedem AVVs abgeschlossen und überprüfen ihre Datenschutz-Compliance regelmäßig.',
+      'pt.h1': 'Dienstleister', 'pt.h2': 'Zweck', 'pt.h3': 'Standort', 'pt.h4': 'Grundlage',
+      'pt.r1.l': 'Frankfurt & Falkenstein, DE', 'pt.r2.l': 'Berlin & Karlsruhe, DE', 'pt.r3.l': 'Chicago, USA', 'pt.r4.l': 'Dublin, IE', 'pt.r5.l': 'Dublin, IE',
+      'pt.r1.s': 'Hosting · ISO 27001', 'pt.r1.p': 'Server-Infrastruktur, Datenbanken, Backups',
+      'pt.r2.s': 'Business-E-Mail · ISO 27001', 'pt.r2.p': 'Geschäfts-E-Mail-Hosting (hello@totus.info)',
+      'pt.r3.s': 'Transaktionale Mails', 'pt.r3.p': 'Versand von System-E-Mails, Passwort-Resets',
+      'pt.r4.s': 'AI · kein Training auf Kundendaten', 'pt.r4.p': 'Claude API für AI-Deal-Assessments, IC-Memos, Meeting-Notes',
+      'pt.r5.s': 'Google Maps Platform', 'pt.r5.p': 'Location- und Infrastruktur-Analyse für Deal-Standorte',
+      's8.p2': 'Die vollständige Liste der Sub-Prozessoren mit aktuellen Versionen unserer AVVs senden wir Kunden auf Anfrage zu, <a href="mailto:hello@totus.info">hello@totus.info</a>.',
+
+      's9.t': 'AI-Verarbeitung mit Claude (Anthropic).',
+      's9.p1': 'Für AI-gestützte Features in der Plattform, wie automatisierte Deal-Assessments, IC-Memo-Generierung und Meeting-Notes, nutzen wir die <b>Claude API von Anthropic Ireland Limited</b> (Dublin, EU).',
+      's9.p2': 'Eingaben in die AI-Features werden verschlüsselt an Anthropic übermittelt und dort verarbeitet, ausschließlich innerhalb der EU. <b>Es findet kein Training auf Kundendaten statt</b>, vertraglich mit Anthropic abgesichert. Daten werden nach Verarbeitung gemäß den Anthropic-Aufbewahrungsfristen gelöscht.',
+      's9.p3': 'Rechtsgrundlage: <b>Art. 6 Abs. 1 lit. b DSGVO</b> (Vertragserfüllung) für Plattform-Nutzer. Die Auftragsverarbeitung erfolgt nach Art. 28 DSGVO auf Basis eines abgeschlossenen AVV mit Anthropic Ireland.',
+
+      's10.t': 'Speicherdauer.',
+      's10.p1': 'Wir speichern personenbezogene Daten nur so lange, wie es zur Erfüllung des jeweiligen Zwecks erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Im Detail:',
+      's10.l1.k': 'Server-Logs:', 's10.l1.v': '30 Tage (IP-Anonymisierung nach 7 Tagen)',
+      's10.l2.k': 'Demo-Anfragen / CRM-Daten:', 's10.l2.v': '24 Monate nach letztem Kontakt',
+      's10.l3.k': 'Bewerbungsunterlagen (abgelehnt):', 's10.l3.v': '6 Monate',
+      's10.l4.k': 'Bewerbungsunterlagen (Talent Pool):', 's10.l4.v': '24 Monate mit Einwilligung',
+      's10.l5.k': 'Vertrags- & Rechnungsdaten:', 's10.l5.v': '10 Jahre (§ 147 AO)',
+      's10.l6.k': 'Plattform-Daten (Kunden):', 's10.l6.v': 'Während Vertragsdauer + 30 Tage Backup-Cycle',
+
+      's11.t': 'Ihre Rechte als <em>betroffene Person</em>.',
+      's11.p1': 'Nach der DSGVO stehen Ihnen umfassende Rechte hinsichtlich Ihrer personenbezogenen Daten zu. Wir bearbeiten alle Anfragen kostenlos und innerhalb der gesetzlichen Frist von einem Monat.',
+      'r.1.t': 'Auskunft', 'r.1.d': 'Welche Daten zu Ihrer Person verarbeiten wir?',
+      'r.2.t': 'Berichtigung', 'r.2.d': 'Berichtigung unrichtiger oder unvollständiger Daten.',
+      'r.3.t': 'Löschung', 'r.3.d': '„Recht auf Vergessenwerden“, Löschung Ihrer Daten.',
+      'r.4.t': 'Einschränkung', 'r.4.d': 'Einschränkung der Verarbeitung in bestimmten Fällen.',
+      'r.5.t': 'Datenübertragbarkeit', 'r.5.d': 'Erhalt Ihrer Daten in strukturiertem Format zur Übertragung.',
+      'r.6.t': 'Widerspruch', 'r.6.d': 'Widerspruch gegen Verarbeitung bei berechtigtem Interesse.',
+      's11.note': 'Um eines dieser Rechte auszuüben, schreiben Sie uns formlos an <a href="mailto:hello@totus.info">hello@totus.info</a>, wir bestätigen Eingang innerhalb von 48 Stunden.',
+
+      's12.t': 'Beschwerderecht bei der Aufsichtsbehörde.',
+      's12.p1': 'Unbeschadet anderer Rechtsbehelfe steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.',
+      's12.p2': 'Zuständige Aufsichtsbehörde für TOTUS:',
+      's12.c.auth': 'Behörde', 's12.c.auth.v': 'Berliner Beauftragte für\nDatenschutz und Informationsfreiheit',
+      's12.c.addr': 'Anschrift',
+
+      's13.t': 'Änderungen dieser Datenschutzerklärung.',
+      's13.p1': 'Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen umzusetzen. Die jeweils aktuelle Version finden Sie immer auf dieser Seite.',
+      's13.note': 'Wesentliche Änderungen kündigen wir mindestens <b>14 Tage im Voraus</b> per E-Mail an alle aktiven Plattform-Nutzer:innen an.',
+
+      'foot.lbl': 'Weitere rechtliche Seiten',
+      'foot.imprint': 'Impressum', 'foot.terms': 'AGB', 'foot.security': 'Sicherheit',
+
+      'footer.tagline': 'Die Decision-Plattform für professionelle Immobilieninvestments.',
+      'footer.col1': 'Produkt',
+      'footer.c1.1': 'Überblick', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC-Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Unternehmen',
+      'footer.c2.1': 'Über uns', 'footer.c2.2': 'Karriere', 'footer.c2.3': 'Kontakt', 'footer.c2.4': 'Presse',
+      'footer.col3': 'Rechtliches',
+      'footer.c3.1': 'Impressum', 'footer.c3.2': 'Datenschutz', 'footer.c3.3': 'AGB', 'footer.c3.4': 'Sicherheit',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.',
+      'footer.made': 'Made in Berlin'
+    },
+    en: {
+      'meta.title': 'TOTUS CRE · Privacy Policy',
+      'meta.desc': 'Privacy policy pursuant to the GDPR of TOTUS CRE UG (haftungsbeschränkt).',
+      'nav.product': 'Product', 'nav.underwriting': 'Underwriting', 'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side', 'nav.ai': 'AI & IC Memos', 'nav.cta': 'Request demo',
+      'crumb.legal': 'Legal', 'crumb.privacy': 'Privacy',
+
+      'hero.h1': 'Privacy Policy.',
+      'hero.updated.k': 'Last updated:', 'hero.updated.v': 'November 12, 2026',
+      'hero.dsgvo': 'GDPR compliant · EU hosting',
+
+      'ov.title': 'At a glance',
+      'ov.1.t': '100% EU hosting', 'ov.1.d': 'Data is processed exclusively in Frankfurt (Hetzner).',
+      'ov.2.t': 'Encrypted', 'ov.2.d': 'TLS 1.3 in transit, AES-256 at rest. Standard.',
+      'ov.3.t': 'No selling', 'ov.3.d': "We don't sell data, neither yours nor your users'.",
+      'ov.4.t': 'Your rights, any time', 'ov.4.d': 'Access, correction, deletion, free of charge by email.',
+
+      'toc.lbl': 'Contents',
+      'toc.1': 'Controller', 'toc.2': 'Scope', 'toc.3': 'Server logs',
+      'toc.4': 'Cookies & storage', 'toc.5': 'Contact & demo requests', 'toc.6': 'Career applications',
+      'toc.7': 'TOTUS platform', 'toc.8': 'Sub-processors', 'toc.9': 'AI processing',
+      'toc.10': 'Retention', 'toc.11': 'Your rights', 'toc.12': 'Right to complain', 'toc.13': 'Changes',
+
+      's1.t': 'Controller.',
+      's1.p1': 'Responsible for the processing of personal data on this website and in the TOTUS platform within the meaning of the GDPR is:',
+      's1.c.firm': 'Company name', 's1.c.addr': 'Address', 's1.c.contact': 'Privacy contact', 's1.c.tel': 'Phone',
+      's1.p2': 'Privacy requests are handled directly by management. We have currently <b>not appointed an external Data Protection Officer</b>, as we, with fewer than 20 people regularly processing personal data, do not fall under the appointment requirement per § 38 BDSG. Please send your inquiries directly to the email address above.',
+
+      's2.t': 'Scope & general information.',
+      's2.p1': 'This privacy policy applies to the website <em>totus.info</em>, the TOTUS platform at <em>app.totus.info</em>, and all associated communication channels (email, phone, demo requests, career applications).',
+      's2.p2': 'We process personal data only to the extent necessary to provide our services, respond to inquiries, or comply with legal requirements. Processing is based exclusively on legal provisions (GDPR, BDSG, TDDDG).',
+
+      's3.t': 'Server log files.',
+      's3.p1': 'When you visit our website, technical information is automatically recorded that your browser transmits to our server:',
+      's3.l1': 'IP address (anonymized after 7 days)',
+      's3.l2': 'Browser type and version, operating system',
+      's3.l3': 'Referrer URL and accessed URL',
+      's3.l4': 'Time of access',
+      's3.p2': 'Legal basis: <b>Art. 6 (1) (f) GDPR</b> (legitimate interest in security, stability, and functionality of our services). This data is automatically deleted after 30 days.',
+
+      's4.t': 'Cookies & local storage.',
+      's4.p1': 'Our website uses exclusively <b>technically necessary cookies and local storage</b>. These include:',
+      's4.l1': 'Language preference (DE/EN toggle, local storage)',
+      's4.l2': 'Authentication token for logged-in users (HttpOnly cookie, only for app.totus.info)',
+      's4.l3': 'CSRF protection token (session cookie)',
+      's4.p2': "We do <b>not</b> use tracking or advertising cookies. Therefore there is no need for a cookie banner with opt-in per § 25 (2) TDDDG.",
+      's4.note': "You can delete cookies in your browser at any time or restrict their setting. With restricted cookies, login functionality may be limited.",
+
+      's5.t': 'Contact & demo requests.',
+      's5.p1': 'When you contact us by email, phone, or via the demo form, we process the following data:',
+      's5.l1': 'Name, business email, company, role',
+      's5.l2': 'Company type, primary interest',
+      's5.l3': 'Content of your message and attached context about current setup',
+      's5.l4': 'Timestamp and IP address at the time of inquiry',
+      's5.p2': 'Legal basis: <b>Art. 6 (1) (b) GDPR</b> (pre-contractual measures at your request) and <b>(f) GDPR</b> (legitimate interest in answering your inquiry).',
+      's5.p3': 'The data is stored in our CRM and deleted after processing, at the latest after <b>24 months of inactivity</b>, unless statutory retention obligations apply.',
+
+      's6.t': 'Career applications.',
+      's6.p1': 'When you apply for a position with us, we process the data submitted with your application (name, contact details, CV, cover letter, references) exclusively for the purpose of the application process.',
+      's6.p2': 'Legal basis: <b>§ 26 (1) BDSG</b> (initiation of an employment relationship). If an employment relationship is established, the data is transferred to our personnel file. If rejected, application documents are deleted after <b>6 months</b>.',
+      's6.note': 'With your application you can consent to inclusion in our <b>Talent Pool</b>, we then store your documents for 24 months to potentially approach you for suitable future positions.',
+
+      's7.t': 'Use of the TOTUS platform.',
+      's7.p1': 'As a Software-as-a-Service provider, we process data of TOTUS platform users in the context of a concluded service agreement. This includes:',
+      's7.l1': 'Master data of users (name, email, role, company)',
+      's7.l2': 'Authentication and session data (incl. SSO integration)',
+      's7.l3': 'Platform usage data (access times, accessed modules, audit logs)',
+      's7.l4': 'Investment data and deal information that the customer feeds into the platform',
+      's7.p2': 'For platform users of our business customers, the respective customer is the <b>data protection controller</b>. We act as <b>processor</b> per Art. 28 GDPR on the basis of a concluded Data Processing Agreement (DPA).',
+
+      's8.t': 'Sub-processors & service providers.',
+      's8.p1': 'To provide our services we use technical service providers acting as processors per Art. 28 GDPR. We have concluded DPAs with each and regularly review their data protection compliance.',
+      'pt.h1': 'Service provider', 'pt.h2': 'Purpose', 'pt.h3': 'Location', 'pt.h4': 'Basis',
+      'pt.r1.l': 'Frankfurt & Falkenstein, DE', 'pt.r2.l': 'Berlin & Karlsruhe, DE', 'pt.r3.l': 'Chicago, USA', 'pt.r4.l': 'Dublin, IE', 'pt.r5.l': 'Dublin, IE',
+      'pt.r1.s': 'Hosting · ISO 27001', 'pt.r1.p': 'Server infrastructure, databases, backups',
+      'pt.r2.s': 'Business email · ISO 27001', 'pt.r2.p': 'Business email hosting (hello@totus.info)',
+      'pt.r3.s': 'Transactional emails', 'pt.r3.p': 'Sending system emails, password resets',
+      'pt.r4.s': 'AI · no training on customer data', 'pt.r4.p': 'Claude API for AI deal assessments, IC memos, meeting notes',
+      'pt.r5.s': 'Google Maps Platform', 'pt.r5.p': 'Location and infrastructure analysis for deal locations',
+      's8.p2': 'The complete list of sub-processors with current versions of our DPAs is sent to customers upon request, <a href="mailto:hello@totus.info">hello@totus.info</a>.',
+
+      's9.t': 'AI processing with Claude (Anthropic).',
+      's9.p1': 'For AI-powered features in the platform, such as automated deal assessments, IC memo generation, and meeting notes, we use the <b>Claude API by Anthropic Ireland Limited</b> (Dublin, EU).',
+      's9.p2': 'Inputs to AI features are transmitted to Anthropic encrypted and processed there, exclusively within the EU. <b>No training on customer data takes place</b>, contractually guaranteed with Anthropic. Data is deleted after processing per Anthropic retention periods.',
+      's9.p3': 'Legal basis: <b>Art. 6 (1) (b) GDPR</b> (contract performance) for platform users. Processing per Art. 28 GDPR on the basis of a concluded DPA with Anthropic Ireland.',
+
+      's10.t': 'Retention.',
+      's10.p1': 'We store personal data only as long as necessary to fulfill the respective purpose or as statutory retention obligations require. In detail:',
+      's10.l1.k': 'Server logs:', 's10.l1.v': '30 days (IP anonymization after 7 days)',
+      's10.l2.k': 'Demo requests / CRM data:', 's10.l2.v': '24 months after last contact',
+      's10.l3.k': 'Rejected applications:', 's10.l3.v': '6 months',
+      's10.l4.k': 'Applications (Talent Pool):', 's10.l4.v': '24 months with consent',
+      's10.l5.k': 'Contract & invoice data:', 's10.l5.v': '10 years (§ 147 AO)',
+      's10.l6.k': 'Platform data (customers):', 's10.l6.v': 'During contract term + 30-day backup cycle',
+
+      's11.t': 'Your rights as a <em>data subject</em>.',
+      's11.p1': 'Under the GDPR you have comprehensive rights regarding your personal data. We process all requests free of charge within the statutory deadline of one month.',
+      'r.1.t': 'Access', 'r.1.d': 'What data about you do we process?',
+      'r.2.t': 'Correction', 'r.2.d': 'Correction of inaccurate or incomplete data.',
+      'r.3.t': 'Deletion', 'r.3.d': '"Right to be forgotten", deletion of your data.',
+      'r.4.t': 'Restriction', 'r.4.d': 'Restriction of processing in certain cases.',
+      'r.5.t': 'Data portability', 'r.5.d': 'Receipt of your data in a structured format for transfer.',
+      'r.6.t': 'Objection', 'r.6.d': 'Objection to processing based on legitimate interest.',
+      's11.note': 'To exercise any of these rights, write to us informally at <a href="mailto:hello@totus.info">hello@totus.info</a>, we confirm receipt within 48 hours.',
+
+      's12.t': 'Right to complain to the supervisory authority.',
+      's12.p1': 'Without prejudice to other remedies, you have the right to complain to a supervisory authority if you believe the processing of your data violates the GDPR.',
+      's12.p2': 'Competent supervisory authority for TOTUS:',
+      's12.c.auth': 'Authority', 's12.c.auth.v': 'Berlin Commissioner for\nData Protection and Freedom of Information',
+      's12.c.addr': 'Address',
+
+      's13.t': 'Changes to this privacy policy.',
+      's13.p1': "We reserve the right to adapt this privacy policy to always meet current legal requirements or to implement changes to our services. You can find the current version on this page.",
+      's13.note': 'We announce material changes at least <b>14 days in advance</b> by email to all active platform users.',
+
+      'foot.lbl': 'Other legal pages',
+      'foot.imprint': 'Imprint', 'foot.terms': 'Terms', 'foot.security': 'Security',
+
+      'footer.tagline': 'The decision platform for professional real estate investments.',
+      'footer.col1': 'Product',
+      'footer.c1.1': 'Overview', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Company',
+      'footer.c2.1': 'About', 'footer.c2.2': 'Careers', 'footer.c2.3': 'Contact', 'footer.c2.4': 'Press',
+      'footer.col3': 'Legal',
+      'footer.c3.1': 'Imprint', 'footer.c3.2': 'Privacy', 'footer.c3.3': 'Terms', 'footer.c3.4': 'Security',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). All rights reserved.',
+      'footer.made': 'Made in Berlin'
+    }
+  };
+
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+    const dict = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    var _md = document.querySelector('meta[name="description"]');
+    if (_md && dict['meta.desc']) _md.setAttribute('content', dict['meta.desc']);
+    document.querySelectorAll('.lang-toggle button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem('totus-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+  });
+
+  let initial = 'de';
+  try {
+    const stored = localStorage.getItem('totus-lang');
+    if (stored && translations[stored]) initial = stored;
+  } catch (e) {}
+  setLanguage(initial);
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  (function() {
+    const btn = document.getElementById('backTop');
+    if (!btn) return;
+    window.addEventListener('scroll', () => { btn.classList.toggle('show', window.scrollY > 600); }, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+</script>
+
+</body>
+</html>

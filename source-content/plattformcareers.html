@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="plattformfavicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="plattformfavicon16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="plattformfavicon32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="plattformfavicon48x48.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="plattformappletouchicon.png" />
+<meta name="theme-color" content="#0E5E63" />
+<link rel="canonical" href="https://totus.info/plattformcareers.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://totus.info/plattformcareers.html" />
+<meta property="og:title" content="Karriere · TOTUS CRE" />
+<meta property="og:description" content="Vier Personen in Berlin, Pre-Seed-finanziert, erste DACH-Kunden. Offene Stellen: Senior Frontend Engineer & Founder Associate. Founder-led Hiring." />
+<meta property="og:image" content="https://totus.info/plattformogimage.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:site_name" content="TOTUS CRE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Karriere · TOTUS CRE" />
+<meta name="twitter:description" content="Vier Personen in Berlin, Pre-Seed-finanziert, erste DACH-Kunden. Offene Stellen: Senior Frontend Engineer & Founder Associate. Founder-led Hiring." />
+<meta name="twitter:image" content="https://totus.info/plattformogimage.png" />
+
+<title>TOTUS CRE · Karriere</title>
+<meta name="description" content="Offene Stellen bei TOTUS CRE · Wir bauen die Decision-Plattform für institutionelles Immobilieninvestment in Berlin." />
+
+
+<link rel="preload" href="interlatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="spacegrotesklatin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="plattformjetbrainsmono.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--slate);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;font-size:.9rem;font-weight:600;}
+.skip-link:focus{left:0;outline:3px solid var(--accent);outline-offset:2px;}
+
+/* Selbst gehostete Schriften - keine Verbindung zu Google */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url('interlatin.woff2') format('woff2');}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500 700;font-display:swap;src:url('spacegrotesklatin.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url('plattformjetbrainsmono.woff2') format('woff2');}
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --teal: #0E5E63; --teal-dark: #0A474B; --teal-deep: #0A474B;
+    --teal-light: #4A8F93; --teal-pale: #E3EFEF;
+    --slate: #16181D; --slate-light: #2C2F36;
+    --cream: #F7F7F8; --white: #FFFFFF;
+    --text: #16181D; --text-muted: #555B66;
+    --accent: #0E5E63; --accent-light: #E3EFEF; --accent-deep: #0A474B;
+    --success: #1F7A4D;
+    --radius: 14px; --radius-sm: 10px;
+    --ease: cubic-bezier(.2,.7,.2,1);
+    --mono: 'JetBrains Mono', monospace;
+  }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+  ::selection { background: var(--teal); color: var(--white); }
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+  p { margin: 0; }
+  section { position: relative; }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; }
+  .eyebrow::before { content: ''; width: 24px; height: 1.5px; background: var(--teal); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; font-size: 0.95rem; font-weight: 600; border-radius: 100px; transition: all 0.3s var(--ease); border: 1.5px solid transparent; cursor: pointer; white-space: nowrap; }
+  .btn-primary { background: var(--teal); color: var(--white); }
+  .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(14, 94, 99, 0.3); }
+  .btn .arrow { width: 14px; height: 14px; transition: transform 0.25s var(--ease); }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(20px); background: rgba(247, 247, 248, 0.85); border-bottom: 1px solid rgba(14, 94, 99, 0.1); transition: all 0.3s ease; }
+  nav.scrolled { padding: 12px 48px; box-shadow: 0 4px 30px rgba(22, 24, 29, 0.06); }
+  @media (max-width: 720px) { nav { padding: 14px 24px; } nav.scrolled { padding: 10px 24px; } }
+  .nav-logo { display: flex; align-items: center; gap: 12px; color: var(--text); }
+  .logo-mark { width: 40px; height: 40px; border-radius: 12px; flex: none; object-fit: cover; box-shadow: 0 4px 14px rgba(14, 94, 99, 0.25); }
+  .nav-logo .brand-name { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.5rem; letter-spacing: -0.02em; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--teal-dark); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .lang-toggle { display: inline-flex; background: var(--white); border: 1px solid rgba(14, 94, 99, 0.15); border-radius: 100px; padding: 3px; gap: 2px; }
+  .lang-toggle button { padding: 6px 12px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted); border-radius: 100px; transition: all 0.25s var(--ease); line-height: 1; }
+  .lang-toggle button.active { background: var(--slate); color: var(--white); }
+  .lang-toggle button:not(.active):hover { color: var(--slate); }
+  .nav-cta { background: var(--slate); color: var(--white) !important; padding: 10px 24px; border-radius: 100px; font-size: 0.85rem !important; font-weight: 600 !important; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s !important; }
+  .nav-cta:hover { background: var(--teal-deep) !important; transform: translateY(-1px); }
+  @media (max-width: 880px) { .nav-links { display: none; } }
+
+  .hero { padding: 160px 48px 80px; position: relative; overflow: hidden; text-align: center; }
+  .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1000px; height: 700px; background: radial-gradient(ellipse, rgba(14, 94, 99, 0.10) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+  .hero::after { content: ''; position: absolute; bottom: -300px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14, 94, 99, 0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+  .hero-inner { max-width: 820px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero .eyebrow { justify-content: center; }
+  .hero h1 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(2.6rem, 5.5vw, 4.6rem); line-height: 1.04; letter-spacing: -0.03em; color: var(--slate); margin-bottom: 24px; animation: fadeSlideUp 0.8s ease 0.1s forwards; opacity: 0; }
+  .hero h1 em { color: var(--teal); }
+  .hero-sub { font-size: 1.18rem; line-height: 1.6; color: var(--text-muted); max-width: 620px; margin: 0 auto 32px; animation: fadeSlideUp 0.8s ease 0.25s forwards; opacity: 0; }
+  .hero-meta { display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center; animation: fadeSlideUp 0.8s ease 0.4s forwards; opacity: 0; }
+  .meta-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--white); border: 1px solid rgba(14, 94, 99, 0.12); border-radius: 100px; font-size: 0.8rem; color: var(--text-muted); }
+  .meta-pill b { color: var(--slate); font-weight: 600; }
+  .meta-pill svg { width: 13px; height: 13px; color: var(--teal); flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  @media (max-width: 720px) { .hero { padding: 120px 24px 50px; } }
+  @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  section.section { padding: 100px 48px; }
+  @media (max-width: 720px) { section.section { padding: 70px 24px; } }
+  .section-inner { max-width: 1180px; margin: 0 auto; }
+  .section-head { max-width: 720px; margin-bottom: 48px; }
+  .section-head.center { margin: 0 auto 48px; text-align: center; }
+  .section-head.center .eyebrow { justify-content: center; }
+  .section-title { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1.12; letter-spacing: -0.025em; color: var(--slate); margin-bottom: 14px; }
+  .section-title em { color: var(--teal); }
+  .section-desc { font-size: 1rem; line-height: 1.65; color: var(--text-muted); max-width: 580px; }
+  .section-head.center .section-desc { margin: 0 auto; }
+
+  /* WHY: 3 cards (reduced from 4) */
+  .why-section { background: var(--white); }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 880px) { .why-grid { grid-template-columns: 1fr; } }
+  .why-card { background: var(--cream); border: 1px solid rgba(14, 94, 99, 0.10); border-radius: var(--radius); padding: 28px; transition: all 0.3s var(--ease); }
+  .why-card:hover { transform: translateY(-3px); border-color: var(--teal-light); box-shadow: 0 14px 36px rgba(22, 24, 29, 0.06); background: var(--white); }
+  .why-card .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--teal-pale); color: var(--teal-deep); display: grid; place-items: center; margin-bottom: 18px; }
+  .why-card .ic svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+  .why-card h3 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.25rem; color: var(--slate); line-height: 1.2; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .why-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* POSITIONS */
+  .positions-section { background: var(--cream); }
+  .positions-list { display: flex; flex-direction: column; gap: 16px; max-width: 980px; margin: 0 auto; }
+
+  .position-card {
+    background: var(--white);
+    border: 1px solid rgba(14, 94, 99, 0.12);
+    border-radius: 20px;
+    padding: 32px 36px;
+    transition: all 0.3s var(--ease);
+    position: relative;
+    overflow: hidden;
+  }
+  .position-card:hover { transform: translateY(-3px); border-color: var(--teal-light); box-shadow: 0 18px 44px rgba(22, 24, 29, 0.07); }
+  .position-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(14, 94, 99, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  @media (max-width: 720px) { .position-card { padding: 24px; } }
+
+  .pos-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 18px; }
+  .pos-tag-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .pos-tag {
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em;
+    color: var(--teal-deep); background: var(--teal-pale);
+    padding: 4px 10px; border-radius: 100px;
+    text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .pos-tag.live::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--success);
+    border-radius: 50%;
+  }
+  .pos-tag.berlin { color: var(--accent-deep); background: var(--accent-light); }
+
+  .pos-title { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(1.5rem, 2.4vw, 1.85rem); color: var(--slate); line-height: 1.15; letter-spacing: -0.015em; margin-bottom: 6px; }
+  .pos-meta {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .pos-meta span { color: var(--teal-deep); font-weight: 600; }
+
+  .pos-summary { font-size: 0.95rem; line-height: 1.65; color: var(--slate); margin: 16px 0 20px; max-width: 720px; }
+
+  .pos-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 20px 0; padding: 22px 0; border-top: 1px solid rgba(22, 24, 29, 0.06); }
+  @media (max-width: 720px) { .pos-cols { grid-template-columns: 1fr; gap: 22px; } }
+  .pos-col h5 { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 12px; }
+  .pos-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .pos-col li { position: relative; padding-left: 18px; font-size: 0.88rem; line-height: 1.55; color: var(--slate); }
+  .pos-col li::before { content: ''; position: absolute; left: 0; top: 9px; width: 7px; height: 1.5px; background: var(--teal); }
+
+  .pos-footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid rgba(22, 24, 29, 0.06); }
+  .pos-stack {
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+  .stack-pill {
+    font-family: var(--mono); font-size: 0.7rem;
+    color: var(--text-muted); background: var(--cream);
+    padding: 5px 10px; border-radius: 6px;
+    border: 1px solid rgba(14, 94, 99, 0.10);
+  }
+  .pos-apply {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--teal);
+    color: var(--white);
+    padding: 12px 22px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.25s var(--ease);
+  }
+  .pos-apply:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(14, 94, 99, 0.3); }
+  .pos-apply svg { width: 13px; height: 13px; transition: transform 0.2s; }
+  .pos-apply:hover svg { transform: translateX(3px); }
+
+  /* HIRING PROCESS */
+  .hiring-section { background: var(--white); }
+  .hiring-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 880px) { .hiring-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .hiring-grid { grid-template-columns: 1fr; } }
+
+  .step-card { background: var(--cream); border-radius: var(--radius); padding: 24px; border: 1px solid rgba(14, 94, 99, 0.10); transition: all 0.3s var(--ease); position: relative; }
+  .step-card:hover { transform: translateY(-3px); border-color: var(--teal-light); }
+  .step-num {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 2.2rem;
+    color: var(--teal-light);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .step-card h4 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.15rem;
+    color: var(--slate);
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .step-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+  .step-card .when {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(14, 94, 99, 0.18);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--teal-deep);
+    letter-spacing: 0.03em;
+  }
+
+  /* PERKS */
+  .perks-section { background: var(--cream); }
+  .perks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 980px; margin: 0 auto; }
+  @media (max-width: 880px) { .perks-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .perks-grid { grid-template-columns: 1fr; } }
+  .perk { background: var(--white); border: 1px solid rgba(14, 94, 99, 0.10); border-radius: var(--radius-sm); padding: 20px; display: flex; flex-direction: column; gap: 8px; transition: all 0.25s var(--ease); }
+  .perk:hover { transform: translateY(-2px); border-color: var(--teal-light); }
+  .perk .ic { width: 32px; height: 32px; border-radius: 8px; background: var(--teal-pale); color: var(--teal-deep); display: grid; place-items: center; }
+  .perk .ic svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  .perk h5 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.05rem; color: var(--slate); line-height: 1.2; }
+  .perk p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* CTA */
+  .careers-cta { background: var(--slate); color: var(--cream); padding: 90px 48px; overflow: hidden; }
+  .careers-cta::before { content: ''; position: absolute; top: -30%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(14, 94, 99, 0.18) 0%, transparent 60%); border-radius: 50%; pointer-events: none; }
+  .careers-cta::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14, 94, 99, 0.10) 0%, transparent 60%); border-radius: 50%; pointer-events: none; }
+  @media (max-width: 720px) { .careers-cta { padding: 70px 24px; } }
+  .careers-cta-inner { max-width: 720px; margin: 0 auto; text-align: center; position: relative; }
+  .careers-cta-inner .eyebrow { color: var(--accent); justify-content: center; }
+  .careers-cta-inner .eyebrow::before { background: var(--accent); }
+  .careers-cta-inner h2 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: clamp(2rem, 3.6vw, 2.6rem); color: var(--cream); margin-bottom: 16px; line-height: 1.15; letter-spacing: -0.025em; }
+  .careers-cta-inner h2 em { color: var(--accent); }
+  .careers-cta-inner p { font-size: 1rem; line-height: 1.65; color: rgba(247, 247, 248, 0.7); margin-bottom: 28px; }
+  .careers-cta-inner .btn-primary { background: var(--accent); color: var(--slate); }
+  .careers-cta-inner .btn-primary:hover { background: #C29845; }
+
+  /* FOOTER */
+  footer { background: var(--slate); color: rgba(247, 247, 248, 0.7); padding: 80px 48px 32px; }
+  @media (max-width: 720px) { footer { padding: 60px 24px 24px; } }
+  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .footer-brand .nav-logo { margin-bottom: 16px; color: var(--cream); }
+  .footer-brand .brand-name { color: var(--cream); }
+  .footer-tagline { font-family: 'Space Grotesk', 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.4; color: rgba(247, 247, 248, 0.6); max-width: 300px; }
+  .footer-col h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-col a { font-size: 0.92rem; color: rgba(247, 247, 248, 0.6); transition: color 0.2s; }
+  .footer-col a:hover { color: var(--teal-light); }
+  .footer-bottom { padding-top: 32px; border-top: 1px solid rgba(247, 247, 248, 0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.82rem; color: rgba(247, 247, 248, 0.4); }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .back-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--slate); color: var(--cream); display: grid; place-items: center; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(12px); transition: all 0.35s cubic-bezier(.2,.7,.2,1); z-index: 900; box-shadow: 0 8px 30px rgba(22, 24, 29,0.3); border: 1px solid rgba(247, 247, 248,0.1); }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .back-top:hover { background: var(--teal-deep); transform: translateY(-3px); }
+  .back-top svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<nav id="nav">
+  <a href="plattform.html" class="nav-logo">
+    <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+    <span class="brand-name">Totus</span>
+  </a>
+  <div class="nav-links">
+    <a href="plattformprodukt.html" data-i18n="nav.product">Produkt</a>
+    <a href="plattformunderwriting.html" data-i18n="nav.underwriting">Underwriting</a>
+    <a href="plattformdealpipeline.html" data-i18n="nav.pipeline">Pipeline</a>
+    <a href="plattformsellside.html" data-i18n="nav.sellside">Sell-Side</a>
+    <a href="plattformaiicmemos.html" data-i18n="nav.ai">AI &amp; IC-Memos</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="de" class="active" aria-label="Deutsch">DE</button>
+      <button data-lang="en" aria-label="English">EN</button>
+    </div>
+    <a href="plattformdemo.html" class="nav-cta">
+      <span data-i18n="nav.cta">Demo anfragen</span>
+      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14">
+        <path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<section id="inhalt" class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow" data-i18n="hero.eyebrow">Karriere</span>
+    <h1 data-i18n-html="hero.h1">Bauen Sie mit an dem, was <em>Investment-Teams brauchen</em>.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Vier Personen in Berlin. Pre-Seed-finanziert. Erste DACH-Kunden. Wir suchen Menschen, die ernsthaft bauen wollen, keine Karriere-Theater.</p>
+    <div class="hero-meta">
+      <span class="meta-pill">
+        <svg viewBox="0 0 14 14"><path d="M7 1c2.5 0 4.5 2 4.5 4.5C11.5 8.5 7 13 7 13s-4.5-4.5-4.5-7.5C2.5 3 4.5 1 7 1z"/><circle cx="7" cy="5.5" r="1.5"/></svg>
+        <span><b data-i18n="hero.m1.k">Standort:</b> <span data-i18n="hero.m1.v">Berlin</span></span>
+      </span>
+      <span class="meta-pill">
+        <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5"/><path d="M5 7l1.5 1.5L9 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b data-i18n="hero.m2.k">Offen:</b> <span data-i18n="hero.m2.v">2 Stellen</span></span>
+      </span>
+      <span class="meta-pill">
+        <svg viewBox="0 0 14 14"><path d="M3 4h8M3 7h8M3 10h5" stroke-linecap="round"/></svg>
+        <span><b data-i18n="hero.m3.k">Hiring:</b> <span data-i18n="hero.m3.v">Founder-led</span></span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section why-section reveal">
+  <div class="section-inner">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="why.eyebrow">Warum hier</span>
+      <h2 class="section-title" data-i18n-html="why.title">Drei Gründe, warum es <em>jetzt</em> interessant ist.</h2>
+      <p class="section-desc" data-i18n="why.desc">Wir sind ehrlich darüber, was wir sind: ein kleines Team früh in der Reise. Genau das macht es interessant.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linejoin="round"/></svg></div>
+        <h3 data-i18n="why.1.t">Echte Verantwortung</h3>
+        <p data-i18n="why.1.d">Bei vier Personen gibt es keine „Junior“-Rollen. Sie bauen Komponenten, die direkt in Kundenhand gehen, und Sie sehen den Impact innerhalb von Wochen.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 6V4m0 16v-2M6 12H4m16 0h-2M7 7l-1.4-1.4m12.8 12.8L17 17m0-10l1.4-1.4M5.6 18.4L7 17M12 16a4 4 0 100-8 4 4 0 000 8z" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="why.2.t">Equity &amp; Wachstum</h3>
+        <p data-i18n="why.2.d">Pre-Seed bedeutet: alle frühen Mitarbeitenden erhalten eine signifikante Equity-Beteiligung. Wir bauen langfristig, und teilen den Aufstieg.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-12V4l-8-2-8 2v6c0 8 8 12 8 12z" stroke-linejoin="round"/></svg></div>
+        <h3 data-i18n="why.3.t">Founder-led Hiring</h3>
+        <p data-i18n="why.3.d">Sie sprechen direkt mit Paul, keine ATS-Black-Box, keine HR-Filter. Wenn Sie überzeugen, sind Sie schnell drin. Wenn nicht, erfahren Sie ehrlich warum.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POSITIONS -->
+<section class="section positions-section reveal">
+  <div class="section-inner">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="pos.eyebrow">Offene Stellen</span>
+      <h2 class="section-title" data-i18n-html="pos.title">Aktuell <em>2 offene Positionen</em>.</h2>
+      <p class="section-desc" data-i18n="pos.desc">Wir hiren bewusst langsam. Jede Person, die dazukommt, prägt das Team. Daher öffnen wir nur Stellen, die wir auch wirklich gerade brauchen.</p>
+    </div>
+
+    <div class="positions-list">
+
+      <!-- Position 1: Senior Frontend Engineer -->
+      <article class="position-card">
+        <div class="pos-tag-row">
+          <span class="pos-tag live" data-i18n="pos.1.s">Live</span>
+          <span class="pos-tag berlin" data-i18n="pos.1.loc">Berlin · Remote DACH</span>
+          <span class="pos-tag" data-i18n="pos.1.type">Vollzeit</span>
+        </div>
+        <h3 class="pos-title" data-i18n="pos.1.t">Senior Frontend Engineer (m/w/d)</h3>
+        <div class="pos-meta"><span data-i18n="pos.1.level">Senior</span> · <span data-i18n="pos.1.years">5+ Jahre Erfahrung</span></div>
+
+        <p class="pos-summary" data-i18n="pos.1.sum">Verantwortlich für die Plattform-UI, von komplexen Underwriting-Tabellen über interaktive Cashflow-Visualisierungen bis zum Deal-Pipeline-Kanban. Sie arbeiten eng mit unseren beiden Engineers und Paul am Produkt-Roadmap.</p>
+
+        <div class="pos-cols">
+          <div class="pos-col">
+            <h5 data-i18n="pos.1.r.t">Was Sie mitbringen</h5>
+            <ul>
+              <li data-i18n="pos.1.r.1">5+ Jahre Frontend-Erfahrung, idealerweise mit React/TypeScript in produktiven Umgebungen</li>
+              <li data-i18n="pos.1.r.2">Sicheres Gespür für UI/UX bei datenintensiven Interfaces: Sie wissen, wie viele Spalten zu viel sind</li>
+              <li data-i18n="pos.1.r.3">Erfahrung mit Visualisierungs-Libraries (D3, Recharts, oder eigene SVG-Setups)</li>
+              <li data-i18n="pos.1.r.4">Pragmatische Haltung: kein Framework-Maximalismus, kein Best-Practice-Theater</li>
+            </ul>
+          </div>
+          <div class="pos-col">
+            <h5 data-i18n="pos.1.b.t">Was wir bieten</h5>
+            <ul>
+              <li data-i18n="pos.1.b.1">Signifikante Equity-Beteiligung (typisch 0,5-2 % je nach Senioritätslevel)</li>
+              <li data-i18n="pos.1.b.2">Marktübliches Gehalt (€75-95k DACH-Range, je nach Erfahrung)</li>
+              <li data-i18n="pos.1.b.3">Direkter Kontakt zu Investment-Teams als Sparring-Partner, keine Spec-Tickets</li>
+              <li data-i18n="pos.1.b.4">Hybrid: Office in Spandau, Remote-Tage flexibel</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pos-footer">
+          <div class="pos-stack">
+            <span class="stack-pill">React</span>
+            <span class="stack-pill">TypeScript</span>
+            <span class="stack-pill">Tailwind</span>
+            <span class="stack-pill">D3.js</span>
+            <span class="stack-pill">Vite</span>
+          </div>
+          <a href="mailto:careers@totus.info?subject=Application: Senior Frontend Engineer" class="pos-apply">
+            <span data-i18n="pos.apply">Bewerben</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Position 2: Founder Associate -->
+      <article class="position-card">
+        <div class="pos-tag-row">
+          <span class="pos-tag live" data-i18n="pos.2.s">Live</span>
+          <span class="pos-tag berlin" data-i18n="pos.2.loc">Berlin · vor Ort</span>
+          <span class="pos-tag" data-i18n="pos.2.type">Vollzeit</span>
+        </div>
+        <h3 class="pos-title" data-i18n="pos.2.t">Founder Associate (m/w/d)</h3>
+        <div class="pos-meta"><span data-i18n="pos.2.level">Allrounder</span> · <span data-i18n="pos.2.years">2+ Jahre Erfahrung</span></div>
+
+        <p class="pos-summary" data-i18n="pos.2.sum">Direkt an Paul angedockt: Customer-Onboarding, Pilotbegleitung, kommerzielle Vorbereitung, Operative-Prozesse. Eine Rolle für Menschen, die später selbst gründen wollen oder eine breite Operating-Ausbildung suchen.</p>
+
+        <div class="pos-cols">
+          <div class="pos-col">
+            <h5 data-i18n="pos.2.r.t">Was Sie mitbringen</h5>
+            <ul>
+              <li data-i18n="pos.2.r.1">2+ Jahre Erfahrung in Consulting, Banking, Asset Management, oder einem schnell wachsenden Startup</li>
+              <li data-i18n="pos.2.r.2">Strukturiertes Denken und sauberes Schreiben: Sie können IC-Memos, Kunden-E-Mails und interne Briefings gleichermaßen</li>
+              <li data-i18n="pos.2.r.3">Affinität zu Immobilien-Themen wäre ideal, kein Muss, aber Sie sollten Spaß daran haben</li>
+              <li data-i18n="pos.2.r.4">Selbstständig genug, dass Sie ohne tägliches Briefing arbeiten können</li>
+            </ul>
+          </div>
+          <div class="pos-col">
+            <h5 data-i18n="pos.2.b.t">Was wir bieten</h5>
+            <ul>
+              <li data-i18n="pos.2.b.1">Equity-Beteiligung im üblichen Pre-Seed-Rahmen für frühe Mitarbeiter</li>
+              <li data-i18n="pos.2.b.2">Marktübliches Gehalt (€55-75k, je nach Erfahrung)</li>
+              <li data-i18n="pos.2.b.3">Direkter Zugang zu Investment-Entscheidern bei Kunden: Lernkurve ungebremst</li>
+              <li data-i18n="pos.2.b.4">Klare Karrierepfade in Richtung Head of Operations oder Founder-Spin-out nach 24+ Monaten</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pos-footer">
+          <div class="pos-stack">
+            <span class="stack-pill">Notion</span>
+            <span class="stack-pill">Linear</span>
+            <span class="stack-pill">Slack</span>
+            <span class="stack-pill">Excel</span>
+          </div>
+          <a href="mailto:careers@totus.info?subject=Application: Founder Associate" class="pos-apply">
+            <span data-i18n="pos.apply">Bewerben</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- HIRING PROCESS -->
+<section class="section hiring-section reveal">
+  <div class="section-inner">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="hp.eyebrow">Hiring-Prozess</span>
+      <h2 class="section-title" data-i18n-html="hp.title">Schnell, fair, <em>respektvoll</em>.</h2>
+      <p class="section-desc" data-i18n="hp.desc">Wir wissen, wie wertvoll Ihre Zeit ist. Vier Schritte, klare Erwartungen, ehrliches Feedback in jeder Phase.</p>
+    </div>
+
+    <div class="hiring-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h4 data-i18n="hp.1.t">Bewerbung</h4>
+        <p data-i18n="hp.1.d">CV plus formloses Anschreiben an careers@totus.info. Keine Online-Formulare. Paul liest jede Bewerbung selbst.</p>
+        <div class="when" data-i18n="hp.1.w">Antwort &lt; 5 Werktage</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h4 data-i18n="hp.2.t">Erstgespräch</h4>
+        <p data-i18n="hp.2.d">45 Minuten mit Paul. Beidseitiges Kennenlernen, Klärung der Erwartungen, ehrliche Diskussion zur Rolle.</p>
+        <div class="when" data-i18n="hp.2.w">Innerhalb 2 Wochen</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h4 data-i18n="hp.3.t">Fach-Deep-Dive</h4>
+        <p data-i18n="hp.3.d">Engineering: bezahlte Take-Home-Aufgabe (~4h) plus Walkthrough. Founder Associate: Case-Study zu einem realen Kunden-Szenario.</p>
+        <div class="when" data-i18n="hp.3.w">Innerhalb 1 Woche</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h4 data-i18n="hp.4.t">Team-Tag</h4>
+        <p data-i18n="hp.4.d">Halber Tag im Office in Spandau. Sie arbeiten mit dem Team, sehen den Tagesablauf, lernen alle kennen.</p>
+        <div class="when" data-i18n="hp.4.w">Bezahlt · voll vergütet</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERKS -->
+<section class="section perks-section reveal">
+  <div class="section-inner">
+    <div class="section-head center">
+      <span class="eyebrow" data-i18n="pk.eyebrow">Was wir bieten</span>
+      <h2 class="section-title" data-i18n-html="pk.title">Faire Standards. <em>Keine Foosball-Bullshit.</em></h2>
+      <p class="section-desc" data-i18n="pk.desc">Wir versprechen keine Kicker-Tische oder Smoothie-Bars. Wir versprechen Dinge, die wirklich zählen.</p>
+    </div>
+
+    <div class="perks-grid">
+      <div class="perk">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 6V4m0 16v-2M6 12H4m16 0h-2" stroke-linecap="round"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h5 data-i18n="pk.1.t">Equity für alle</h5>
+        <p data-i18n="pk.1.d">Jede Person im Team hat Equity. Pre-Seed-Stunde, die Beteiligung wird etwas bedeuten, wenn es funktioniert.</p>
+      </div>
+      <div class="perk">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9" stroke-linejoin="round"/></svg></div>
+        <h5 data-i18n="pk.2.t">Flexible Arbeit</h5>
+        <p data-i18n="pk.2.d">Office in Spandau. Hybrid-Setup mit ~2 Office-Tagen pro Woche. Remote-Wochen für tiefes Arbeiten möglich.</p>
+      </div>
+      <div class="perk">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 7L12 3 4 7v10l8 4 8-4V7z" stroke-linejoin="round"/><path d="M12 11v10M4 7l8 4 8-4" stroke-linejoin="round"/></svg></div>
+        <h5 data-i18n="pk.3.t">Equipment-Budget</h5>
+        <p data-i18n="pk.3.d">MacBook Pro, externer Monitor, ergonomischer Stuhl: Sie wählen das Setup, das für Sie funktioniert. Bis €3.000 Onboarding-Budget.</p>
+      </div>
+      <div class="perk">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M19 14l-7 7-7-7M19 4l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h5 data-i18n="pk.4.t">Weiterbildung</h5>
+        <p data-i18n="pk.4.d">€1.500 pro Jahr für Bücher, Konferenzen, Kurse. Plus ein 2-Tage-Off-Site pro Quartal in einer DACH-Stadt.</p>
+      </div>
+      <div class="perk">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M16 3v4M8 3v4M3 9h18" stroke-linejoin="round"/></svg></div>
+        <h5 data-i18n="pk.5.t">28 Urlaubstage</h5>
+        <p data-i18n="pk.5.d">28 Tage bezahlter Urlaub plus alle Berliner Feiertage. Wir messen Output, nicht Stunden.</p>
+      </div>
+      <div class="perk">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22a10 10 0 100-20 10 10 0 000 20zM12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h5 data-i18n="pk.6.t">Office-Lunch</h5>
+        <p data-i18n="pk.6.d">An Office-Tagen Mittagessen aufs Haus. Café neben dem Office, manchmal Team-Lunch im Restaurant um die Ecke.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="careers-cta reveal">
+  <div class="careers-cta-inner">
+    <span class="eyebrow" data-i18n="cta.eyebrow">Initiativbewerbung</span>
+    <h2 data-i18n-html="cta.title">Keine passende Rolle, aber <em>Interesse</em>?</h2>
+    <p data-i18n="cta.desc">Schreiben Sie uns trotzdem. Wenn Ihr Profil zur Mission passt, finden wir gemeinsam einen Weg, oder wir melden uns, sobald wir hiren.</p>
+    <a href="mailto:careers@totus.info?subject=Initiativbewerbung" class="btn btn-primary">
+      <span data-i18n="cta.btn">Bewerbung an careers@totus.info</span>
+      <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h8M7 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<button class="back-top" id="backTop" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="plattform.html" class="nav-logo">
+          <img class="logo-mark" src="data:image/jpeg;base64,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" alt="TOTUS" />
+          <span class="brand-name">Totus</span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Die Decision-Plattform für professionelle Immobilieninvestments.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col1">Produkt</h4>
+        <ul>
+          <li><a href="plattformprodukt.html" data-i18n="footer.c1.1">Überblick</a></li>
+          <li><a href="plattformunderwriting.html" data-i18n="footer.c1.2">Underwriting</a></li>
+          <li><a href="plattformdealpipeline.html" data-i18n="footer.c1.3">Deal Pipeline</a></li>
+          <li><a href="plattformaiicmemos.html" data-i18n="footer.c1.4">IC-Memos &amp; AI</a></li>
+          <li><a href="plattformsellside.html" data-i18n="footer.c1.5">Sell-Side</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col2">Unternehmen</h4>
+        <ul>
+          <li><a href="plattformabout.html" data-i18n="footer.c2.1">Über uns</a></li>
+          <li><a href="plattformcareers.html" data-i18n="footer.c2.2">Karriere</a></li>
+          <li><a href="plattformcontact.html" data-i18n="footer.c2.3">Kontakt</a></li>
+          <li><a href="plattformpress.html" data-i18n="footer.c2.4">Presse</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col3">Rechtliches</h4>
+        <ul>
+          <li><a href="plattformimprint.html" data-i18n="footer.c3.1">Impressum</a></li>
+          <li><a href="plattformprivacy.html" data-i18n="footer.c3.2">Datenschutz</a></li>
+          <li><a href="plattformterms.html" data-i18n="footer.c3.3">AGB</a></li>
+          <li><a href="plattformsecurity.html" data-i18n="footer.c3.4">Sicherheit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.</span>
+      <span data-i18n="footer.made">Made in Berlin</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const translations = {
+    de: {
+      'meta.title': 'TOTUS CRE · Karriere',
+      'meta.desc': 'Offene Stellen bei TOTUS CRE · Wir bauen die Decision-Plattform für institutionelles Immobilieninvestment in Berlin.',
+      'nav.product': 'Produkt', 'nav.underwriting': 'Underwriting', 'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side', 'nav.ai': 'AI & IC-Memos', 'nav.cta': 'Demo anfragen',
+
+      'hero.eyebrow': 'Karriere',
+      'hero.h1': 'Bauen Sie mit an dem, was <em>Investment-Teams brauchen</em>.',
+      'hero.sub': 'Vier Personen in Berlin. Pre-Seed-finanziert. Erste DACH-Kunden. Wir suchen Menschen, die ernsthaft bauen wollen, keine Karriere-Theater.',
+      'hero.m1.k': 'Standort:', 'hero.m1.v': 'Berlin',
+      'hero.m2.k': 'Offen:', 'hero.m2.v': '2 Stellen',
+      'hero.m3.k': 'Hiring:', 'hero.m3.v': 'Founder-led',
+
+      'why.eyebrow': 'Warum hier',
+      'why.title': 'Drei Gründe, warum es <em>jetzt</em> interessant ist.',
+      'why.desc': 'Wir sind ehrlich darüber, was wir sind: ein kleines Team früh in der Reise. Genau das macht es interessant.',
+      'why.1.t': 'Echte Verantwortung',
+      'why.1.d': 'Bei vier Personen gibt es keine „Junior“-Rollen. Sie bauen Komponenten, die direkt in Kundenhand gehen, und Sie sehen den Impact innerhalb von Wochen.',
+      'why.2.t': 'Equity & Wachstum',
+      'why.2.d': 'Pre-Seed bedeutet: alle frühen Mitarbeitenden erhalten eine signifikante Equity-Beteiligung. Wir bauen langfristig, und teilen den Aufstieg.',
+      'why.3.t': 'Founder-led Hiring',
+      'why.3.d': 'Sie sprechen direkt mit Paul, keine ATS-Black-Box, keine HR-Filter. Wenn Sie überzeugen, sind Sie schnell drin. Wenn nicht, erfahren Sie ehrlich warum.',
+
+      'pos.eyebrow': 'Offene Stellen',
+      'pos.title': 'Aktuell <em>2 offene Positionen</em>.',
+      'pos.desc': 'Wir hiren bewusst langsam. Jede Person, die dazukommt, prägt das Team. Daher öffnen wir nur Stellen, die wir auch wirklich gerade brauchen.',
+      'pos.apply': 'Bewerben',
+
+      'pos.1.s': 'Live', 'pos.1.loc': 'Berlin · Remote DACH', 'pos.1.type': 'Vollzeit',
+      'pos.1.t': 'Senior Frontend Engineer (m/w/d)',
+      'pos.1.level': 'Senior', 'pos.1.years': '5+ Jahre Erfahrung',
+      'pos.1.sum': 'Verantwortlich für die Plattform-UI, von komplexen Underwriting-Tabellen über interaktive Cashflow-Visualisierungen bis zum Deal-Pipeline-Kanban. Sie arbeiten eng mit unseren beiden Engineers und Paul am Produkt-Roadmap.',
+      'pos.1.r.t': 'Was Sie mitbringen',
+      'pos.1.r.1': '5+ Jahre Frontend-Erfahrung, idealerweise mit React/TypeScript in produktiven Umgebungen',
+      'pos.1.r.2': 'Sicheres Gespür für UI/UX bei datenintensiven Interfaces: Sie wissen, wie viele Spalten zu viel sind',
+      'pos.1.r.3': 'Erfahrung mit Visualisierungs-Libraries (D3, Recharts, oder eigene SVG-Setups)',
+      'pos.1.r.4': 'Pragmatische Haltung: kein Framework-Maximalismus, kein Best-Practice-Theater',
+      'pos.1.b.t': 'Was wir bieten',
+      'pos.1.b.1': 'Signifikante Equity-Beteiligung (typisch 0,5-2 % je nach Senioritätslevel)',
+      'pos.1.b.2': 'Marktübliches Gehalt (€75-95k DACH-Range, je nach Erfahrung)',
+      'pos.1.b.3': 'Direkter Kontakt zu Investment-Teams als Sparring-Partner, keine Spec-Tickets',
+      'pos.1.b.4': 'Hybrid: Office in Spandau, Remote-Tage flexibel',
+
+      'pos.2.s': 'Live', 'pos.2.loc': 'Berlin · vor Ort', 'pos.2.type': 'Vollzeit',
+      'pos.2.t': 'Founder Associate (m/w/d)',
+      'pos.2.level': 'Allrounder', 'pos.2.years': '2+ Jahre Erfahrung',
+      'pos.2.sum': 'Direkt an Paul angedockt: Customer-Onboarding, Pilotbegleitung, kommerzielle Vorbereitung, Operative-Prozesse. Eine Rolle für Menschen, die später selbst gründen wollen oder eine breite Operating-Ausbildung suchen.',
+      'pos.2.r.t': 'Was Sie mitbringen',
+      'pos.2.r.1': '2+ Jahre Erfahrung in Consulting, Banking, Asset Management, oder einem schnell wachsenden Startup',
+      'pos.2.r.2': 'Strukturiertes Denken und sauberes Schreiben: Sie können IC-Memos, Kunden-E-Mails und interne Briefings gleichermaßen',
+      'pos.2.r.3': 'Affinität zu Immobilien-Themen wäre ideal, kein Muss, aber Sie sollten Spaß daran haben',
+      'pos.2.r.4': 'Selbstständig genug, dass Sie ohne tägliches Briefing arbeiten können',
+      'pos.2.b.t': 'Was wir bieten',
+      'pos.2.b.1': 'Equity-Beteiligung im üblichen Pre-Seed-Rahmen für frühe Mitarbeiter',
+      'pos.2.b.2': 'Marktübliches Gehalt (€55-75k, je nach Erfahrung)',
+      'pos.2.b.3': 'Direkter Zugang zu Investment-Entscheidern bei Kunden: Lernkurve ungebremst',
+      'pos.2.b.4': 'Klare Karrierepfade in Richtung Head of Operations oder Founder-Spin-out nach 24+ Monaten',
+
+      'hp.eyebrow': 'Hiring-Prozess',
+      'hp.title': 'Schnell, fair, <em>respektvoll</em>.',
+      'hp.desc': 'Wir wissen, wie wertvoll Ihre Zeit ist. Vier Schritte, klare Erwartungen, ehrliches Feedback in jeder Phase.',
+      'hp.1.t': 'Bewerbung', 'hp.1.d': 'CV plus formloses Anschreiben an careers@totus.info. Keine Online-Formulare. Paul liest jede Bewerbung selbst.', 'hp.1.w': 'Antwort < 5 Werktage',
+      'hp.2.t': 'Erstgespräch', 'hp.2.d': '45 Minuten mit Paul. Beidseitiges Kennenlernen, Klärung der Erwartungen, ehrliche Diskussion zur Rolle.', 'hp.2.w': 'Innerhalb 2 Wochen',
+      'hp.3.t': 'Fach-Deep-Dive', 'hp.3.d': 'Engineering: bezahlte Take-Home-Aufgabe (~4h) plus Walkthrough. Founder Associate: Case-Study zu einem realen Kunden-Szenario.', 'hp.3.w': 'Innerhalb 1 Woche',
+      'hp.4.t': 'Team-Tag', 'hp.4.d': 'Halber Tag im Office in Spandau. Sie arbeiten mit dem Team, sehen den Tagesablauf, lernen alle kennen.', 'hp.4.w': 'Bezahlt · voll vergütet',
+
+      'pk.eyebrow': 'Was wir bieten',
+      'pk.title': 'Faire Standards. <em>Keine Foosball-Bullshit.</em>',
+      'pk.desc': 'Wir versprechen keine Kicker-Tische oder Smoothie-Bars. Wir versprechen Dinge, die wirklich zählen.',
+      'pk.1.t': 'Equity für alle', 'pk.1.d': 'Jede Person im Team hat Equity. Pre-Seed-Stunde, die Beteiligung wird etwas bedeuten, wenn es funktioniert.',
+      'pk.2.t': 'Flexible Arbeit', 'pk.2.d': 'Office in Spandau. Hybrid-Setup mit ~2 Office-Tagen pro Woche. Remote-Wochen für tiefes Arbeiten möglich.',
+      'pk.3.t': 'Equipment-Budget', 'pk.3.d': 'MacBook Pro, externer Monitor, ergonomischer Stuhl: Sie wählen das Setup, das für Sie funktioniert. Bis €3.000 Onboarding-Budget.',
+      'pk.4.t': 'Weiterbildung', 'pk.4.d': '€1.500 pro Jahr für Bücher, Konferenzen, Kurse. Plus ein 2-Tage-Off-Site pro Quartal in einer DACH-Stadt.',
+      'pk.5.t': '28 Urlaubstage', 'pk.5.d': '28 Tage bezahlter Urlaub plus alle Berliner Feiertage. Wir messen Output, nicht Stunden.',
+      'pk.6.t': 'Office-Lunch', 'pk.6.d': 'An Office-Tagen Mittagessen aufs Haus. Café neben dem Office, manchmal Team-Lunch im Restaurant um die Ecke.',
+
+      'cta.eyebrow': 'Initiativbewerbung',
+      'cta.title': 'Keine passende Rolle, aber <em>Interesse</em>?',
+      'cta.desc': 'Schreiben Sie uns trotzdem. Wenn Ihr Profil zur Mission passt, finden wir gemeinsam einen Weg, oder wir melden uns, sobald wir hiren.',
+      'cta.btn': 'Bewerbung an careers@totus.info',
+
+      'footer.tagline': 'Die Decision-Plattform für professionelle Immobilieninvestments.',
+      'footer.col1': 'Produkt',
+      'footer.c1.1': 'Überblick', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC-Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Unternehmen',
+      'footer.c2.1': 'Über uns', 'footer.c2.2': 'Karriere', 'footer.c2.3': 'Kontakt', 'footer.c2.4': 'Presse',
+      'footer.col3': 'Rechtliches',
+      'footer.c3.1': 'Impressum', 'footer.c3.2': 'Datenschutz', 'footer.c3.3': 'AGB', 'footer.c3.4': 'Sicherheit',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). Alle Rechte vorbehalten.',
+      'footer.made': 'Made in Berlin'
+    },
+    en: {
+      'meta.title': 'TOTUS CRE, Careers',
+      'meta.desc': 'Open positions at TOTUS CRE. We build the decision platform for institutional real estate investment in Berlin.',
+      'nav.product': 'Product', 'nav.underwriting': 'Underwriting', 'nav.pipeline': 'Pipeline',
+      'nav.sellside': 'Sell-Side', 'nav.ai': 'AI & IC Memos', 'nav.cta': 'Request demo',
+
+      'hero.eyebrow': 'Careers',
+      'hero.h1': 'Help build what <em>investment teams need</em>.',
+      'hero.sub': "Four people in Berlin. Pre-seed funded. First DACH customers. We're looking for people who want to seriously build, no career theater.",
+      'hero.m1.k': 'Location:', 'hero.m1.v': 'Berlin',
+      'hero.m2.k': 'Open:', 'hero.m2.v': '2 positions',
+      'hero.m3.k': 'Hiring:', 'hero.m3.v': 'Founder-led',
+
+      'why.eyebrow': 'Why here',
+      'why.title': 'Three reasons why <em>now</em> is interesting.',
+      'why.desc': "We're honest about what we are: a small team early in the journey. That's exactly what makes it interesting.",
+      'why.1.t': 'Real responsibility',
+      'why.1.d': "With four people there are no 'junior' roles. You build components that go directly into customer hands, and you see impact within weeks.",
+      'why.2.t': 'Equity & growth',
+      'why.2.d': "Pre-seed means: all early employees get significant equity. We build long-term, and share the upside.",
+      'why.3.t': 'Founder-led hiring',
+      'why.3.d': "You talk directly with Paul, no ATS black box, no HR filters. If you convince, you're in fast. If not, you'll hear an honest reason why.",
+
+      'pos.eyebrow': 'Open positions',
+      'pos.title': 'Currently <em>2 open positions</em>.',
+      'pos.desc': 'We hire deliberately slowly. Every person joining shapes the team. So we only open roles we actually need right now.',
+      'pos.apply': 'Apply',
+
+      'pos.1.s': 'Live', 'pos.1.loc': 'Berlin · Remote DACH', 'pos.1.type': 'Full-time',
+      'pos.1.t': 'Senior Frontend Engineer (m/f/d)',
+      'pos.1.level': 'Senior', 'pos.1.years': '5+ years experience',
+      'pos.1.sum': "Responsible for the platform UI, from complex underwriting tables and interactive cashflow visualizations to the deal pipeline kanban. You'll work closely with our two engineers and Paul on product roadmap.",
+      'pos.1.r.t': 'What you bring',
+      'pos.1.r.1': '5+ years of frontend experience, ideally with React/TypeScript in production environments',
+      'pos.1.r.2': 'Strong instincts for UI/UX in data-intensive interfaces, you know when too many columns is too many',
+      'pos.1.r.3': 'Experience with visualization libraries (D3, Recharts, or custom SVG setups)',
+      'pos.1.r.4': 'Pragmatic attitude: no framework maximalism, no best-practice theater',
+      'pos.1.b.t': 'What we offer',
+      'pos.1.b.1': 'Significant equity (typically 0.5-2% depending on seniority level)',
+      'pos.1.b.2': 'Market salary (€75-95k DACH range, depending on experience)',
+      'pos.1.b.3': 'Direct contact with investment teams as sparring partners, no spec tickets',
+      'pos.1.b.4': 'Hybrid: office in Spandau, remote days flexible',
+
+      'pos.2.s': 'Live', 'pos.2.loc': 'Berlin · on-site', 'pos.2.type': 'Full-time',
+      'pos.2.t': 'Founder Associate (m/f/d)',
+      'pos.2.level': 'Generalist', 'pos.2.years': '2+ years experience',
+      'pos.2.sum': "Plugged in directly to Paul: customer onboarding, pilot accompaniment, commercial prep, operational processes. A role for people who later want to found themselves or seek a broad operating education.",
+      'pos.2.r.t': 'What you bring',
+      'pos.2.r.1': '2+ years experience in consulting, banking, asset management, or a fast-growing startup',
+      'pos.2.r.2': 'Structured thinking and clean writing, you can do IC memos, customer emails, and internal briefings equally',
+      'pos.2.r.3': 'Affinity for real estate topics would be ideal, not required, but you should enjoy it',
+      'pos.2.r.4': "Independent enough to work without daily briefings",
+      'pos.2.b.t': 'What we offer',
+      'pos.2.b.1': 'Equity in typical pre-seed range for early employees',
+      'pos.2.b.2': 'Market salary (€55-75k, depending on experience)',
+      'pos.2.b.3': 'Direct access to investment decision-makers at customers, unbraked learning curve',
+      'pos.2.b.4': 'Clear career paths toward Head of Operations or founder spin-out after 24+ months',
+
+      'hp.eyebrow': 'Hiring process',
+      'hp.title': 'Fast, fair, <em>respectful</em>.',
+      'hp.desc': 'We know how valuable your time is. Four steps, clear expectations, honest feedback at every stage.',
+      'hp.1.t': 'Application', 'hp.1.d': 'CV plus informal cover letter to careers@totus.info. No online forms. Paul reads every application himself.', 'hp.1.w': 'Reply < 5 business days',
+      'hp.2.t': 'First call', 'hp.2.d': '45 minutes with Paul. Mutual getting-to-know, clarification of expectations, honest discussion of the role.', 'hp.2.w': 'Within 2 weeks',
+      'hp.3.t': 'Deep dive', 'hp.3.d': 'Engineering: paid take-home task (~4h) plus walkthrough. Founder Associate: case study on a real customer scenario.', 'hp.3.w': 'Within 1 week',
+      'hp.4.t': 'Team day', 'hp.4.d': 'Half day at the office in Spandau. You work with the team, see daily flow, meet everyone.', 'hp.4.w': 'Paid · fully compensated',
+
+      'pk.eyebrow': 'What we offer',
+      'pk.title': 'Fair standards. <em>No foosball bullshit.</em>',
+      'pk.desc': "We don't promise foosball tables or smoothie bars. We promise things that actually matter.",
+      'pk.1.t': 'Equity for all', 'pk.1.d': "Every person on the team has equity. Pre-seed hour, the stake will mean something when it works.",
+      'pk.2.t': 'Flexible work', 'pk.2.d': 'Office in Spandau. Hybrid setup with ~2 office days per week. Remote weeks for deep work possible.',
+      'pk.3.t': 'Equipment budget', 'pk.3.d': 'MacBook Pro, external monitor, ergonomic chair, you choose the setup that works for you. Up to €3,000 onboarding budget.',
+      'pk.4.t': 'Learning', 'pk.4.d': '€1,500 per year for books, conferences, courses. Plus a 2-day off-site per quarter in a DACH city.',
+      'pk.5.t': '28 vacation days', 'pk.5.d': "28 days of paid vacation plus all Berlin holidays. We measure output, not hours.",
+      'pk.6.t': 'Office lunch', 'pk.6.d': "Lunch on us on office days. Café next to the office, sometimes team lunch at the restaurant around the corner.",
+
+      'cta.eyebrow': 'Open application',
+      'cta.title': 'No fitting role, but <em>interested</em>?',
+      'cta.desc': 'Write to us anyway. If your profile matches the mission, we find a way together, or we reach out once we hire.',
+      'cta.btn': 'Application to careers@totus.info',
+
+      'footer.tagline': 'The decision platform for professional real estate investments.',
+      'footer.col1': 'Product',
+      'footer.c1.1': 'Overview', 'footer.c1.2': 'Underwriting', 'footer.c1.3': 'Deal Pipeline', 'footer.c1.4': 'IC Memos & AI', 'footer.c1.5': 'Sell-Side',
+      'footer.col2': 'Company',
+      'footer.c2.1': 'About', 'footer.c2.2': 'Careers', 'footer.c2.3': 'Contact', 'footer.c2.4': 'Press',
+      'footer.col3': 'Legal',
+      'footer.c3.1': 'Imprint', 'footer.c3.2': 'Privacy', 'footer.c3.3': 'Terms', 'footer.c3.4': 'Security',
+      'footer.copy': '© 2026 TOTUS CRE UG (haftungsbeschränkt). All rights reserved.',
+      'footer.made': 'Made in Berlin'
+    }
+  };
+
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    document.documentElement.lang = lang;
+    const dict = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    var _md = document.querySelector('meta[name="description"]');
+    if (_md && dict['meta.desc']) _md.setAttribute('content', dict['meta.desc']);
+    document.querySelectorAll('.lang-toggle button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem('totus-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+  });
+
+  let initial = 'de';
+  try {
+    const stored = localStorage.getItem('totus-lang');
+    if (stored && translations[stored]) initial = stored;
+  } catch (e) {}
+  setLanguage(initial);
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  (function() {
+    const btn = document.getElementById('backTop');
+    if (!btn) return;
+    window.addEventListener('scroll', () => { btn.classList.toggle('show', window.scrollY > 600); }, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+</script>
+
+</body>
+</html>

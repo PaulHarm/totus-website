@@ -1,0 +1,156 @@
+/* PANI's original bear, Fraunces/Plex typography and palette from pani-hv.de. */
+@font-face{font-family:"PANI Fraunces";src:url(pani-fraunces.woff2) format("woff2");font-style:normal;font-weight:300 600;font-display:swap}
+@font-face{font-family:"PANI Plex";src:url(pani-plex.woff2) format("woff2");font-style:normal;font-weight:400 600;font-display:swap}
+.pani-lockup{display:inline-flex;align-items:center;gap:14px;color:#254b3e;vertical-align:middle}
+.pani-lockup>img{width:31px;height:50px;object-fit:contain;flex-shrink:0}
+.pani-wordmark{display:flex;flex-direction:column;justify-content:center;gap:7px;min-height:50px;padding-left:16px;border-left:1px solid currentColor}
+.pani-wordmark b{font-family:"PANI Fraunces",Georgia,serif;font-size:30px;line-height:1;font-weight:500;letter-spacing:.15em}
+.pani-wordmark small{font-family:"PANI Plex",Arial,sans-serif;font-size:8px;line-height:1.25;font-weight:500;letter-spacing:.19em;text-transform:uppercase}
+.pani-sage{background:#eaf0e7;color:#254b3e}
+.pani-stone{background:#f0f1eb;color:#254b3e}
+.product-card:is(.pani-sage,.pani-stone){border:1px solid #dce2dc}
+.product-card:is(.pani-sage,.pani-stone) h3{margin-block:19px 17px}
+.product-card:is(.pani-sage,.pani-stone) p{font-family:"PANI Plex",Arial,sans-serif;font-size:14px;color:#5b665f}
+.product-card .pani-lockup{gap:12px}
+.product-card .pani-lockup>img{width:27px;height:44px}
+.product-card .pani-wordmark{min-height:44px;padding-left:14px;gap:5px}
+.product-card .pani-wordmark b{font-size:27px}
+.product-card .pani-wordmark small{font-size:8px}
+.mini-logo img[src="pani-bear.svg"]{height:30px;width:21px}
+.product-strip>a>img[src="pani-bear.svg"]{height:31px;width:20px}
+
+.pani-page{--paper:#fff;--ink:#254b3e;--text:#202d28;--muted:#5b665f;--line:#dce2dc;--soft:#f3f5f2;--sage:#eaf0e7;--lime:#e4ecdf}
+.pani-page main{font-family:"PANI Plex",Arial,sans-serif}
+.pani-page main :is(h1,h2,h3){font-family:"PANI Fraunces",Georgia,serif;letter-spacing:-.025em;font-weight:400}
+.pani-page main .eyebrow{font-family:"PANI Plex",Arial,sans-serif;font-size:10px;letter-spacing:.11em;font-weight:500}
+.pani-page .site-header{background:rgba(255,255,255,.96)}
+.pani-page .product-hero{padding-bottom:65px}
+.pani-page .breadcrumb{margin-bottom:40px;font-size:12px}
+.pani-page .product-hero-grid{gap:56px;grid-template-columns:1.05fr 1fr}
+.pani-brand-intro{margin-bottom:30px}
+.pani-brand-intro .pani-lockup>img{height:60px;width:37px}
+.pani-brand-intro .pani-wordmark{min-height:60px;padding-left:18px;gap:8px}
+.pani-brand-intro .pani-wordmark b{font-size:34px}
+.pani-brand-intro .pani-wordmark small{font-size:9px}
+.pani-page .product-hero .eyebrow{margin-bottom:20px}
+.pani-page .product-hero h1{font-size:clamp(40px,4.2vw,62px);line-height:1.12}
+.pani-page .product-hero .hero-description{font-size:16px;line-height:1.75;max-width:480px;margin-top:23px}
+.pani-page .button{font-family:"PANI Plex",Arial,sans-serif;font-size:14px;letter-spacing:0}
+.pani-page .button:hover{background:#19382d}
+.pani-page .text-link{font-size:14px}
+.pani-page .status-pill{font-size:11px;background:#f3f5f2;border-color:#dce2dc}
+.pani-page .product-hero-preview{height:auto;min-height:400px;padding:0;border:1px solid #dce2dc;border-radius:4px;box-shadow:0 20px 45px #19382d08;align-self:center}
+.pani-software-bar{padding:24px 25px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid #d0dacd;background:rgba(255,255,255,.55)}
+.pani-software-bar .pani-lockup{gap:10px}
+.pani-software-bar .pani-lockup>img{width:24px;height:39px}
+.pani-software-bar .pani-wordmark{min-height:39px;gap:5px;padding-left:12px}
+.pani-software-bar .pani-wordmark b{font-size:23px}
+.pani-software-bar .pani-wordmark small{font-size:7px}
+.pani-software-bar>span:last-child{font-size:9px;letter-spacing:.1em;color:#5b665f;white-space:nowrap}
+.pani-page .product-hero-preview .preview-image{width:calc(100% - 44px);margin:26px 0 0 22px;max-height:none;height:auto;min-height:0;object-fit:contain;object-position:top left;border:1px solid #dce2dc;border-radius:3px;box-shadow:0 10px 25px #19382d0d}
+.pani-page .preview-caption{margin:24px 22px;font-size:9px;letter-spacing:.1em;display:flex;justify-content:space-between;gap:10px}
+.pani-origin{border-top:1px solid var(--line);padding-block:34px 45px;display:grid;grid-template-columns:1fr 1.1fr auto;gap:40px;align-items:center}
+.pani-origin .eyebrow{font-size:9px;margin-bottom:12px}
+.pani-origin h2{font-size:29px;line-height:1.2}
+.pani-origin>p{font-size:14px;line-height:1.75;max-width:440px}
+.pani-origin>.text-link{white-space:nowrap}
+.pani-page .gallery-section{background:#f3f5f2;border-block:1px solid #e6eae4}
+.pani-page .gallery-frame{border-color:#dce2dc;box-shadow:0 15px 40px #19382d08}
+.pani-page .window-bar{background:#eaf0e7}
+.pani-page .tab-list button{font-family:"PANI Plex",Arial,sans-serif;font-size:13px}
+.pani-page .tab-list button[aria-selected="true"]{color:#254b3e;border-color:#254b3e}
+.pani-page .feature-grid article{padding:26px 0 0;border-top-color:#cbd7c7}
+.pani-page .feature-grid h3{font-size:27px;line-height:1.2}
+.pani-page .feature-grid p,.pani-page .workflow-grid p{font-size:15px;line-height:1.75}
+.pani-page .workflow-grid article>span{background:#eaf0e7;color:#254b3e;border:1px solid #cfdbca;font-family:"PANI Plex",Arial,sans-serif;font-size:11px}
+.pani-page .workflow-grid h3{font-size:23px}
+.pani-page .cta-section{background:#eaf0e7;border-top:1px solid #dce2dc}
+.pani-page :focus-visible{outline-color:#a97730}
+.pani-page .pani-app{background:#fff;box-shadow:0 22px 55px #19382d0d}
+.pani-app .pani-software-bar{background:#edf2e9}
+.pani-app-tabs{display:flex;gap:26px;padding:0 24px;border-bottom:1px solid #dce2dc}
+.pani-app-tabs button{padding:16px 0 13px;border-bottom:2px solid transparent;font-size:13px;line-height:1.4;color:#5b665f;white-space:nowrap}
+.pani-app-tabs button[aria-selected="true"]{border-bottom-color:#254b3e;color:#254b3e;font-weight:500}
+.pani-app-tabs button:hover{color:#254b3e}
+.pani-app-content{display:grid;padding:26px 24px 22px;min-height:335px}
+.pani-app-panel{grid-area:1/1;min-width:0}
+/* Reserve the tallest view while keeping inactive content out of sight and focus. */
+.pani-app-panel[hidden]{display:block!important;visibility:hidden;pointer-events:none}
+.pani-page .pani-app-panel h3{font-size:27px;line-height:1.2;letter-spacing:-.02em}
+.pani-app-lead{font-size:12px;margin-top:8px;line-height:1.5}
+.pani-app-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding-block:22px;border-bottom:1px solid #e3e7df}
+.pani-app-stats>div{display:flex;flex-direction:column;gap:4px}
+.pani-app-stats>div+div{border-left:1px solid #e3e7df;padding-left:16px}
+.pani-app-stats strong{font-family:"PANI Fraunces",Georgia,serif;font-size:30px;font-weight:400;line-height:1}
+.pani-app-stats span{font-size:11px;color:#5b665f}
+.pani-app-rows{padding-top:5px}
+.pani-app-row{display:flex;align-items:center;gap:10px;padding-top:18px}
+.pani-app-row>div{min-width:0;flex:1}
+.pani-app-row h4{font-family:"PANI Plex",Arial,sans-serif;font-size:13px;line-height:1.4;font-weight:500;letter-spacing:0;overflow-wrap:anywhere}
+.pani-app-row p{font-size:11px;margin-top:3px;line-height:1.5}
+.pani-row-mark{width:24px;height:24px;flex:none;border:1px solid #cad8c4;border-radius:50%;color:#6d8765;display:grid;place-items:center}
+.pani-row-mark svg{width:14px;height:14px}
+.pani-row-status{padding:4px 7px;background:#f0f4ec;border-radius:2px;font-size:9px;color:#46613c;white-space:nowrap}
+.pani-app-note{border-top:1px solid #e3e7df;background:#f8faf6;padding:13px 18px;font-size:10px;text-align:center;color:#5b665f;line-height:1.5}
+@media(max-width:1150px){
+ .pani-page .product-hero-grid{gap:34px}
+ .pani-page .product-hero h1{font-size:43px}
+ .pani-origin{gap:24px;grid-template-columns:1fr 1fr}
+ .pani-origin>.text-link{grid-column:2;margin-top:-18px}
+ .pani-software-bar{padding:23px 20px}
+}
+@media(max-width:900px){
+ .pani-page .product-hero-grid{grid-template-columns:1fr;gap:40px}
+ .pani-page .product-hero h1{font-size:55px}
+ .pani-page .product-hero .hero-description{max-width:620px}
+ .pani-page .product-hero-preview{width:100%;max-width:700px;min-height:0}
+}
+@media(max-width:700px){
+ .pani-page .product-hero{padding-bottom:40px}
+ .pani-page .breadcrumb{font-size:11px;margin-bottom:30px;gap:8px}
+ .pani-brand-intro{margin-bottom:26px}
+ .pani-brand-intro .pani-lockup>img{height:50px;width:31px}
+ .pani-brand-intro .pani-wordmark{min-height:50px;padding-left:16px;gap:7px}
+ .pani-brand-intro .pani-wordmark b{font-size:30px}
+ .pani-brand-intro .pani-wordmark small{font-size:8px}
+ .pani-page .product-hero h1{font-size:clamp(34px,9.3vw,52px);letter-spacing:-.03em}
+ .pani-page .product-hero .eyebrow{font-size:9px;letter-spacing:.08em}
+ .pani-page .product-hero .hero-description{font-size:15px}
+ .pani-page .hero-actions{gap:14px}
+ .pani-page .hero-actions :is(.button,.text-link){font-size:13px}
+ .pani-page .status-pill{font-size:10px;margin-top:22px}
+ .pani-software-bar{padding:20px 18px}
+ .pani-software-bar>span:last-child{font-size:8px;letter-spacing:.05em}
+ .pani-page .product-hero-preview .preview-image{width:calc(100% - 28px);margin:18px 0 0 14px}
+ .pani-page .preview-caption{margin:18px 15px;font-size:8px}
+ .pani-origin{grid-template-columns:1fr;gap:20px;padding-block:30px 35px}
+ .pani-origin>.text-link{grid-column:auto;margin-top:0;justify-self:start}
+ .pani-origin h2{font-size:30px}
+ .pani-page main h2{font-size:35px}
+ .pani-page .feature-grid h3{font-size:25px}
+ .pani-page .workflow-grid{grid-template-columns:1fr}
+ .pani-page .workflow-grid article{display:grid;grid-template-columns:34px 1fr;column-gap:16px}
+ .pani-page .workflow-grid article>span{grid-row:1/3;margin-bottom:0}
+ .pani-page .workflow-grid article>p{grid-column:2}
+ .pani-page .workflow-grid h3{font-size:24px;margin-bottom:10px}
+ .pani-page .tab-list button{font-size:12px}
+ .pani-app-tabs{gap:22px;padding-inline:18px}
+ .pani-app-tabs button{font-size:12px}
+ .pani-app-content{padding:24px 18px 22px;min-height:330px}
+ .pani-page .pani-app-panel h3{font-size:25px}
+ .pani-row-status{font-size:8px;padding:3px 5px}
+ .pani-app-row{gap:8px}
+ .pani-app-row h4{font-size:12px}
+ .pani-app-row p{font-size:10px}
+ .pani-app-note{font-size:9px}
+}
+@media(max-width:380px){
+ .pani-page .product-hero h1{font-size:32px}
+ .pani-page main h2{font-size:31px}
+ .pani-software-bar>span:last-child{max-width:70px;white-space:normal;text-align:right}
+ .pani-app-content{padding-inline:14px;min-height:350px}
+ .pani-app-tabs{gap:18px;padding-inline:14px}
+ .pani-app-row{flex-wrap:wrap}
+ .pani-row-status{margin-left:32px}
+ .pani-app-row>div{flex-basis:calc(100% - 32px)}
+}
